@@ -1,4 +1,5 @@
 import csv
+'''
 from scapy.layers.inet import IP, TCP
 from scapy.all import *
 
@@ -24,10 +25,10 @@ def filter_pcap(dirname, pcap, time, port, ip):
     #             print 'Found'
 
     #print 'done'
-
+'''
 
 def csv_filter_http_c2(item=None, items=None):
-    if item['Proto'] != 'tcp':
+    if item['Proto'] != 'tcp' or '-TCP-CC' not in item['Label']:
         return
     items.append(item)
     print item
@@ -44,7 +45,7 @@ def read_csv(csv_path, csv_filter):
         for h, v in zip(headers, row):
             item[h] = v
             # columns[h].append(v)
-            csv_filter(item, items)
+        csv_filter(item=item, items=items)
     # print(columns)
     print(items)
 
@@ -68,4 +69,4 @@ def read_csv(csv_path, csv_filter):
     return headers, items
 
 if __name__ == '__main__':
-    read_csv('C:\Users\hfu\Documents\\flows\CTU-13\CTU-13-5\\0\\capture20110815-2.binetflow.2format', csv_filter_http_c2())
+    read_csv('C:\Users\hfu\Documents\\flows\CTU-13\CTU-13-5\\0\\capture20110815-2.binetflow.2format', csv_filter_http_c2)
