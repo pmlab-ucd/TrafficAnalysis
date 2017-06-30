@@ -1,0 +1,1 @@
+{"domain": "api.dianping.com", "post_body": "", "platform": "unknown", "referrer": "unknown", "uri": "/v1/metadata/get_cities_with_deals?appkey=334421635&sign=707A20FC4D7B476C700AD25AD426D23E02B5CD2B", "label": 1, "headers": {"user-agent": "Jakarta Commons-HttpClient/3.1", "host": "api.dianping.com"}, "timestamp": "2015-07-09_12-08-12-156646"}

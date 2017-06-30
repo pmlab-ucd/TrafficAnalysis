@@ -87,9 +87,13 @@ def print_http_requests(pcap, label):
             print('IP: %s -> %s   (len=%d ttl=%d DF=%d MF=%d offset=%d)' %
                   (inet_to_str(ip.src), inet_to_str(ip.dst), ip.len, ip.ttl, do_not_fragment, more_fragments, fragment_offset))
             print('HTTP request: %s\n' % repr(request))
+            print tcp.sport, tcp.dport
             flow['label'] = label
             flow['post_body'] = request.body
-            flow['domain'] = request.headers['host']
+            try:
+                flow['domain'] = request.headers['host']
+            except:
+                flow['domain'] = str(inet_to_str(ip.dst))
             flow['uri'] = request.uri
             flow['headers'] = request.headers
             flow['platform'] = 'unknown'
@@ -113,9 +117,9 @@ def test(pcap_dir):
             if str(name).endswith('.pcap'):
                 pcap_path = os.path.join(root, name)
                 if '\\0\\' in pcap_path:
-                    label = '0'
+                    label = 0
                 elif '\\1\\' in pcap_path:
-                    label = '1'
+                    label = 1
                 else:
                     label = 'unknown'
                 """Open up a test pcap file and print out the packets"""
@@ -123,12 +127,16 @@ def test(pcap_dir):
                 with open(pcap_path, 'rb') as f:
                     pcap = dpkt.pcap.Reader(f)
                     flows = print_http_requests(pcap, label)
-                    out_dir = os.curdir + '\\pcap_json\\' + label + '\\'
+                    out_dir = os.curdir + '\\output\\' + os.path.basename(os.path.dirname(root)) + '\\' + str(label) + '\\'
+                    print out_dir
                     if not os.path.exists(out_dir):
                         os.makedirs(out_dir)
                     for flow in flows:
                         with open(out_dir + flow['domain'] + '_' + flow['timestamp'] + '.json', 'w') as outfile:
-                            json.dump(flow, outfile)
+                            try:
+                                json.dump(flow, outfile)
+                            except UnicodeDecodeError as e:
+                                print e
 
 if __name__ == '__main__':
-    test('C:\Users\hfu\Documents\ctu42\\0')
+    test('C:\Users\hfu\Documents\\flows\CTU-13\CTU-13-5\\0')
