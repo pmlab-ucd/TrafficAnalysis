@@ -1,11 +1,14 @@
 import csv
-'''
+
 from scapy.layers.inet import IP, TCP
 from scapy.all import *
 
-def filter_pcap(dirname, pcap, time, port, ip):
+
+def filter_pcap(dirname, pcap, ip, port):
+    ip = str(ip)
+    port = str(port)
     try:
-        rdpcap(dirname + '/' + ip + '_' + time + '_filtered_port_num_' + str(port) + '.pcap')
+        rdpcap(dirname + '/' + ip + '_filtered_port_num_' + str(port) + '.pcap')
         return
     except:
         pass
@@ -14,24 +17,32 @@ def filter_pcap(dirname, pcap, time, port, ip):
     except IOError as e:
         print e.args
         return
-    filtered = (pkt for pkt in pkts if
-                TCP in pkt
-                and (pkt[TCP].sport == port or pkt[TCP].dport == port)
-                and (pkt[IP].dst == ip or pkt[IP].src == ip))
-    wrpcap(dirname + '/' + ip + '_' + time + '_filtered_port_num_' + str(port) + '.pcap', filtered)
-    # for pkt in pkts:
-    #     if TCP in pkt:
-    #         if pkt[TCP].sport == port or pkt[TCP].dport == port:
-    #             print 'Found'
+    print port
 
-    #print 'done'
-'''
+
+    filtered = []
+    for pkt in pkts:
+             if TCP in pkt:
+                 print pkt[TCP].sport
+                 if str(pkt[TCP].sport) == str(port) or str(pkt[TCP].dport) == str(port)\
+                         and pkt[IP].dst == ip or pkt[IP].src == ip:
+                     print 'Found: ' + pkt[IP].dst
+                     filtered.append(pkt)
+
+    #filtered = (pkt for pkt in pkts if
+    #            TCP in pkt
+    #            and (str(pkt[TCP].sport) == port or str(pkt[TCP].dport) == port)
+    #            and (pkt[IP].dst == ip or pkt[IP].src == ip))
+    wrpcap(dirname + '/' + ip + '_filtered_port_num_' + str(port) + '.pcap', filtered)
+
+
 
 def csv_filter_http_c2(item=None, items=None):
     if item['Proto'] != 'tcp' or '-TCP-CC' not in item['Label']:
         return
     items.append(item)
     print item
+
 
 def read_csv(csv_path, csv_filter):
     f = open(csv_path)
@@ -47,7 +58,7 @@ def read_csv(csv_path, csv_filter):
             # columns[h].append(v)
         csv_filter(item=item, items=items)
     # print(columns)
-    print(items)
+    print(len(items))
 
 
     columns = {}
@@ -68,5 +79,8 @@ def read_csv(csv_path, csv_filter):
 
     return headers, items
 
+
 if __name__ == '__main__':
-    read_csv('C:\Users\hfu\Documents\\flows\CTU-13\CTU-13-5\\0\\capture20110815-2.binetflow.2format', csv_filter_http_c2)
+    headers, packets = read_csv('/mnt/Documents/flows/CTU-13/CTU-13-1/0/capture20110810.binetflow.2format', csv_filter_http_c2)
+    for packet in packets:
+        filter_pcap('/mnt/Documents/flows/CTU-13/CTU-13-1/0/', 'botnet-capture-20110810-neris.pcap', packet['DstAddr'], packet['Sport'])
