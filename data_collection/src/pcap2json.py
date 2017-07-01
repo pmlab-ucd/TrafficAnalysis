@@ -168,7 +168,10 @@ def pcap2jsons(pcap_dir, filter_func=None, *args):
 
 
 if __name__ == '__main__':
-    dir = '/mnt/Documents/flows/CTU-13/CTU-13-1/0/'
-    headers, csv_packets = read_csv(dir + 'capture20110810.binetflow.2format',
-                                    csv_filter_http_c2)
-    pcap2jsons(dir, filter_pcap, csv_packets)
+    dir = '/mnt/Documents/flows/CTU-13/CTU-13-1/'
+    dir_0 = dir + '0'
+    #headers, csv_packets = read_csv(dir + 'capture20110810.binetflow.2format',
+     #                               csv_filter_http_c2)
+    #pcap2jsons(dir_0, filter_pcap, csv_packets)
+    dir_1 = dir + '1'
+    pcap2jsons(dir_1)
