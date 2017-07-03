@@ -42,7 +42,7 @@ class UIExerciser:
             else:
                 break
 
-    def get_launchable_activity(self, aapt, apk):
+    def get_launchable_activities(self, aapt, apk):
         cmd = aapt + ' dump badging ' + apk
         activities = []
         try:
@@ -137,8 +137,6 @@ class UIExerciser:
             else:
                 time.sleep(2)
                 self.logger.error('Cannot start Activity: ' + activity)
-
-
 
     def __init__(self, series, aapt_loc, trigger_java_dir, apk_dir, monkeyrunner_loc, out_base_dir, logger):
         self.series = series
@@ -276,7 +274,6 @@ class UIExerciser:
 
         self.logger.info(apk_name)
 
-
         apk_name = os.path.basename(apk_name)
 
         if apk_name in examined:
@@ -291,7 +288,6 @@ class UIExerciser:
         par_dir = os.path.basename(os.path.abspath(os.path.join(apk, os.pardir)))  # the parent folder of the apk
 
         package = self.get_package_name(self.aapt_loc, apk)
-
 
         if not package:
             self.logger.error('Not a valid pkg.')
@@ -309,17 +305,18 @@ class UIExerciser:
 
         self.run_adb_cmd('adb -s ' + series + ' shell "su 0 date -s `date +%Y%m%d.%H%M%S`"')
 
-        UIExerciser.uninstall_pkg(package)
-        UIExerciser.install_apk(apk)
+        UIExerciser.uninstall_pkg(series, package)
+        UIExerciser.install_apk(series, apk)
 
-        self.start_activities(package, csvpath, output_dir)
+        for activity in self.get_launchable_activities(series, self.aapt_loc, apk):
+            self.start_activity(package, activity)
 
-        self.uninstall_pkg(package)
+        self.uninstall_pkg(series, package)
 
         filehandler.close()
         self.logger.removeHandler(filehandler)
 
-    def inspired_run(self, apk, examined):
+    def inspired_run(self, series, apk, examined):
         # apk = 'F:\\Apps\\COMMUNICATION\\com.mobanyware.apk'
         self.logger.info('base name: ' + os.path.basename(apk))
         apk_name, apk_extension = os.path.splitext(apk)
@@ -365,14 +362,27 @@ class UIExerciser:
         self.logger.info('pkg:' + package)
         self.logger.info('csv: ' + csvpath)
 
-        UIExerciser.uninstall_pkg(package)
-        UIExerciser.install_apk(apk_modified)
+        UIExerciser.uninstall_pkg(series, package)
+        UIExerciser.install_apk(series, apk_modified)
 
         self.start_activities(package, csvpath, output_dir)
 
-        self.uninstall_pkg(package)
+        self.uninstall_pkg(series, package)
 
         filehandler.close()
         self.logger.removeHandler(filehandler)
 
+if __name__ == '__main__':
+    ISOTIMEFORMAT = '%m%d-%H-%M-%S'
+    logger = Utilities.set_logger('COSMOS_TRIGGER_PY-Console')
 
+
+    device = ''
+    pc = 'desktop'
+
+    if device == 'nexus4':
+        series = '01b7006e13dd12a1'
+    elif device == 'nexus_one':
+        series = '014E233C1300800B'
+    else:
+        series = 'emulator-5554'
