@@ -1,10 +1,7 @@
 #!/usr/bin/env python
 """
-This example expands on the print_packets example. It checks for HTTP request headers and displays their contents.
-NOTE: We are not reconstructing 'flows' so the request (and response if you tried to parse it) will only
-      parse correctly if they fit within a single packet. Requests can often fit in a single packet but
-      Responses almost never will. For proper reconstruction of flows you may want to look at other projects
-      that use DPKT (http://chains.readthedocs.io and others)
+    Convert pcap files into jsons, each trace has a json
+    Filter traces based on the given labels
 """
 import dpkt
 import datetime
@@ -168,10 +165,10 @@ def pcap2jsons(pcap_dir, filter_func=None, *args):
 
 
 if __name__ == '__main__':
-    dir = '/mnt/Documents/flows/CTU-13/CTU-13-1/'
-    dir_0 = dir + '0'
-    #headers, csv_packets = read_csv(dir + 'capture20110810.binetflow.2format',
-     #                               csv_filter_http_c2)
-    #pcap2jsons(dir_0, filter_pcap, csv_packets)
-    dir_1 = dir + '1'
+    dir = '/mnt/Documents/flows/CTU-13/CTU-13-5/'
+    dir_0 = dir + '0/'
+    headers, csv_packets = read_csv(dir_0 + 'capture20110815-2.binetflow.2format',
+                                    csv_filter_http_c2)
+    pcap2jsons(dir_0, filter_pcap, csv_packets)
+    dir_1 = dir + '1/'
     pcap2jsons(dir_1)
