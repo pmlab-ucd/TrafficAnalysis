@@ -1,3 +1,6 @@
+#!/usr/bin/env python2
+#-*-encoding:utf-8-*-
+
 from uiautomator import Device
 from xml.dom.minidom import parseString
 from utils import Utilities
@@ -94,7 +97,19 @@ class UIExerciser:
                     return True
         return False
 
-    def screenshot(self, dir_data, activity):
+    @staticmethod
+    def touch(dev, node_bounds):
+        node_bounds = node_bounds[1: len(node_bounds) - 1]
+        node_bounds = node_bounds.split('][')
+        node_bounds[0] = node_bounds[0].split(',')
+        node_bounds[0] = map(float, node_bounds[0])
+        node_bounds[1] = node_bounds[1].split(',')
+        node_bounds[1] = map(float, node_bounds[1])
+        x = 0.5 * (node_bounds[1][0] - node_bounds[0][0]) + node_bounds[0][0]
+        y = 0.5 * (node_bounds[1][1] - node_bounds[0][1]) + node_bounds[0][1]
+        dev.click(x, y)
+
+    def screenshot(self, dir_data, activity, first_page):
         # current_time = time.strftime(ISOTIMEFORMAT, time.localtime())
         self.logger.info('Try to dump layout XML of ' + activity)
         try:
@@ -103,6 +118,8 @@ class UIExerciser:
             activity = str(activity).replace('\"', '')
             # dev.wait.idle()
             self.logger.info('Dumping...' + activity)
+            if first_page:
+                UIExerciser.pass_first_page(dev)
             xml_data = dev.dump(dir_data + activity + '.xml')
             self.logger.info(xml_data)
             self.is_crashed(dev, xml_data)
@@ -130,7 +147,7 @@ class UIExerciser:
                             UIExerciser.emu_proc = UIExerciser.open_emu(UIExerciser.emu_loc, UIExerciser.emu_name)
                         else:
                             raise Exception('Cannot start Activity ' + activity)
-                    if Utilities.run_method(self.screenshot, 180, args=[output_dir, activity]) :
+                    if Utilities.run_method(self.screenshot, 180, args=[output_dir, activity, False]) :
                         break
                     else:
                         self.logger.warn("Time out while dumping XML for " + activity)
@@ -268,6 +285,62 @@ class UIExerciser:
     def start_taintdroid(series):
         UIExerciser.run_adb_cmd(' shell am start -n fu.hao.uidroid/.TaintDroidNotifyController')
 
+    @staticmethod
+    def pass_first_page(dev):
+        for i in range(8):
+            time.sleep(1)
+            try:
+                xml = dev.dump()
+            except:
+                return
+            scroll = re.findall(r'.*?scrollable=\"true\".*?', xml)
+            all_text = re.findall(r'.*?text=.*?', xml)
+            none_text = re.findall(r'.*?text=\"\".*?', xml)
+            if len(scroll) == 1 and (len(all_text) - len(none_text)) <= 2:
+                # scroll = re.search(r'.*?scrollable=\"true\".*?bounds=\"(.*?)\"', xml)
+                # dev.swipe(400, 0, 0, 0) # for 480 * 800
+                dev.swipe(576, 473, 115, 473, 10)
+            else:
+                break
+        # time.sleep(10)
+        try:
+            xml = dev.dump()
+        except:
+            return
+        clickable = re.findall(r'.*?clickable=\"true\".*?bounds=\"(.*?)\"', xml)
+        if len(clickable) == 1:
+            node_bounds = clickable[0]
+            UIExerciser.touch(dev, node_bounds)
+            print 'click single'
+        # if detect update info, if 取消， 否
+        option_cancle = [u'否', u'取消', u'不升级', u'稍后再说', u'稍后', u'以后'
+                                                              u'稍后更新', u'不更新', u'以后再说',
+                         u'Not now', u'Cancel', u'以后更新']
+        for i in range(5):
+            time.sleep(2)
+            try:
+                xml = dev.dump()
+            except:
+                return
+            clickable = re.findall(r'.*?clickable=\"true\".*?bounds=\"(.*?)\"', xml)
+            if len(clickable) <= 3:
+                print 'found two clickables'
+                # re.findall(r'.*?text=\"(.*?)\".*?[^(text=)].*?clickable=\"true\".*?', xml)
+                nodelist = xml.split('><')
+                for line in nodelist:
+                    if re.search('.*?clickable=\"t.*?', line):
+                        texts = re.findall(r'text="(.*?)"', line)
+                        print texts
+                        for text in texts:
+                            if text in option_cancle:
+                                clickable = re.findall(r'bounds=\"(.*?)\"', line)[0]
+                                node_bounds = clickable
+                                UIExerciser.touch(dev, node_bounds)
+                                print 'click cancle'
+                            else:
+                                break
+
+
     def flowintent_first_page(self, series, apk, examined):
         self.logger.info('base name: ' + os.path.basename(apk))
         apk_name, apk_extension = os.path.splitext(apk)
@@ -303,7 +376,7 @@ class UIExerciser:
         self.logger.info('apk:' + apk)
         self.logger.info('pkg:' + package)
 
-        self.run_adb_cmd('adb -s ' + series + ' shell "su 0 date -s `date +%Y%m%d.%H%M%S`"')
+        self.run_adb_cmd('shell "su 0 date -s `date +%Y%m%d.%H%M%S`"')
 
         UIExerciser.uninstall_pkg(series, package)
         UIExerciser.install_apk(series, apk)
@@ -312,7 +385,23 @@ class UIExerciser:
         print activities
         for activity in activities:
             print activity
-            self.start_activity(package, activity)
+            if self.start_activity(package, activity):
+                time.sleep(2)
+                # self.screenshot(output_dir, activity)
+                for i in range(1, 3):
+                    if not UIExerciser.check_dev_online(UIExerciser.series):
+                        if UIExerciser.emu_proc:
+                            UIExerciser.close_emulator(UIExerciser.emu_proc)
+                            UIExerciser.emu_proc = UIExerciser.open_emu(UIExerciser.emu_loc, UIExerciser.emu_name)
+                        else:
+                            raise Exception('Cannot start Activity ' + activity)
+                    if Utilities.run_method(self.screenshot, 180, args=[output_dir, activity, True]) :
+                        break
+                    else:
+                        self.logger.warn("Time out while dumping XML for " + activity)
+            else:
+                time.sleep(2)
+                self.logger.error('Cannot start Activity: ' + activity)
 
         self.uninstall_pkg(series, package)
 
