@@ -1,40 +1,71 @@
+#!/usr/bin/env python2
+#-*-encoding:utf-8-*-
+
 from ui_exerciser import UIExerciser
 from utils import Utilities
 import re
-import os
+from uiautomator import Device
+import time
+
+def pass_first_page(dev):
+    for i in range(8):
+        time.sleep(1)
+        try:
+            xml = dev.dump()
+        except:
+            return
+        scroll = re.findall(r'.*?scrollable=\"true\".*?', xml)
+        all_text = re.findall(r'.*?text=.*?', xml)
+        none_text = re.findall(r'.*?text=\"\".*?', xml)
+        if len(scroll) == 1 and (len(all_text) - len(none_text)) <= 2:
+            # scroll = re.search(r'.*?scrollable=\"true\".*?bounds=\"(.*?)\"', xml)
+            # dev.swipe(400, 0, 0, 0) # for 480 * 800
+            dev.swipe(576, 473, 115, 473, 10)
+        else:
+            break
+    # time.sleep(10)
+    try:
+        xml = dev.dump()
+    except:
+        return
+    clickable = re.findall(r'.*?clickable=\"true\".*?bounds=\"(.*?)\"', xml)
+    if len(clickable) == 1:
+        node_bounds = clickable[0]
+        UIExerciser.touch(dev, node_bounds)
+        print 'click single'
+    # if detect update info, if 取消， 否
+    option_cancle = [u'否', u'取消', u'不升级', u'稍后再说', u'稍后', u'以后'
+                                                          u'稍后更新', u'不更新', u'以后再说',
+                     u'Not now', u'Cancel', u'以后更新']
+    for i in range(5):
+        time.sleep(2)
+        try:
+            xml = dev.dump()
+        except:
+            return
+        clickable = re.findall(r'.*?clickable=\"true\".*?bounds=\"(.*?)\"', xml)
+        if len(clickable) <= 3:
+            print 'found two clickables'
+            # re.findall(r'.*?text=\"(.*?)\".*?[^(text=)].*?clickable=\"true\".*?', xml)
+            nodelist = xml.split('><')
+            for line in nodelist:
+                if re.search('.*?clickable=\"t.*?', line):
+                    texts = re.findall(r'text="(.*?)"', line)
+                    print texts
+                    for text in texts:
+                        if text in option_cancle:
+                            clickable = re.findall(r'bounds=\"(.*?)\"', line)[0]
+                            node_bounds = clickable
+                            UIExerciser.touch(dev, node_bounds)
+                            print 'click cancle'
+                        else:
+                            break
+
 
 if __name__ == '__main__':
     ISOTIMEFORMAT = '%m%d-%H-%M-%S'
     logger = Utilities.set_logger('COSMOS_TRIGGER_PY-Console')
 
-
-    device = 'nexuss'
-    pc = 'iai'
-
-    if device == 'nexus4':
-        series = '01b7006e13dd12a1'
-    elif device == 'nexus_one':
-        series = '014E233C1300800B'
-    elif device == 'nexuss':
-        series = '39302E8CEA9B00EC'
-    else:
-        series = 'emulator-5554'
-
-    aapt_loc = 'C:\Users\majes\AppData\Local\Android\sdk/build-tools/19.1.0/aapt.exe'
-    apk_dir = 'C:\Users\majes\Documents\FlowIntent\\apks'
-    UIExerciser.emu_loc = 'C:\Users\hfu\AppData\Local\Android\sdk/tools/emulator.exe'
-    UIExerciser.emu_name = 'Qvga'
-
-    out_base_dir = 'output/'
-
-    #UIExerciser.emu_proc = UIExerciser.open_emu(UIExerciser.emu_loc, UIExerciser.emu_name)
-    for root, dirs, files in os.walk(apk_dir, topdown=False):
-        for filename in files:
-            if re.search('apk$', filename):
-                # main_process = multiprocessing.Process(target=handle_apk, args=[os.path.join(root, filename), examined])
-                # main_process.start()
-                # main_process.join()
-                apk = os.path.join(root, filename)
-                exerciser = UIExerciser(series, aapt_loc, apk_dir, out_base_dir, logger)
-                print exerciser.get_launchable_activities(aapt_loc, apk)
-                exerciser.flowintent_first_page(series, os.path.join(root, filename), [])
+    dev = Device('39302E8CEA9B00EC')
+    dev.screen.on()
+    pass_first_page(dev)

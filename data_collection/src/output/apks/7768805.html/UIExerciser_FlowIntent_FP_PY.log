@@ -1,21 +1,21 @@
-2017-07-04 22:26:24,561 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\7768805.html.apk
-2017-07-04 22:26:24,562 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.kuaihuoyun.driver
-2017-07-04 22:26:24,562 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-04 22:26:24,723 - COSMOS_TRIGGER_PY-Console - DEBUG - Wed Jul  5 02:26:06 GMT 2017
-2017-07-04 22:26:24,723 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 39302E8CEA9B00EC uninstall com.kuaihuoyun.driver
-2017-07-04 22:26:25,895 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-04 22:26:25,895 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\7768805.html.apk
-2017-07-04 22:26:38,388 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/7768805.html.apk
-2017-07-04 22:26:38,388 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-04 22:26:38,390 - COSMOS_TRIGGER_PY-Console - DEBUG - rm failed for -f, No such file or directory
-2017-07-04 22:26:38,390 - COSMOS_TRIGGER_PY-Console - DEBUG - 3290 KB/s (6555563 bytes in 1.945s)
-2017-07-04 22:26:38,438 - COSMOS_TRIGGER_PY-Console - INFO - Launchable activity: com.kuaihuoyun.driver.KDLaunch
-2017-07-04 22:26:38,438 - COSMOS_TRIGGER_PY-Console - INFO - Start Activity com.kuaihuoyun.driver.KDLaunch
-2017-07-04 22:26:38,438 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb  shell am start -n com.kuaihuoyun.driver/com.kuaihuoyun.driver.KDLaunch
-2017-07-04 22:26:39,276 - COSMOS_TRIGGER_PY-Console - DEBUG - Starting: Intent { cmp=com.kuaihuoyun.driver/.KDLaunch }
-2017-07-04 22:26:41,348 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of com.kuaihuoyun.driver.KDLaunch
-2017-07-04 22:26:42,533 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...com.kuaihuoyun.driver.KDLaunch
-2017-07-04 22:26:56,453 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?>
+2017-07-04 22:32:55,552 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\7768805.html.apk
+2017-07-04 22:32:55,552 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.kuaihuoyun.driver
+2017-07-04 22:32:55,553 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-04 22:32:55,759 - COSMOS_TRIGGER_PY-Console - DEBUG - Wed Jul  5 02:32:36 GMT 2017
+2017-07-04 22:32:55,759 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 39302E8CEA9B00EC uninstall com.kuaihuoyun.driver
+2017-07-04 22:32:56,936 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-04 22:32:56,937 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\7768805.html.apk
+2017-07-04 22:33:10,555 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/7768805.html.apk
+2017-07-04 22:33:10,556 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-04 22:33:10,556 - COSMOS_TRIGGER_PY-Console - DEBUG - rm failed for -f, No such file or directory
+2017-07-04 22:33:10,556 - COSMOS_TRIGGER_PY-Console - DEBUG - 3710 KB/s (6555563 bytes in 1.725s)
+2017-07-04 22:33:10,644 - COSMOS_TRIGGER_PY-Console - INFO - Launchable activity: com.kuaihuoyun.driver.KDLaunch
+2017-07-04 22:33:10,644 - COSMOS_TRIGGER_PY-Console - INFO - Start Activity com.kuaihuoyun.driver.KDLaunch
+2017-07-04 22:33:10,644 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb  shell am start -n com.kuaihuoyun.driver/com.kuaihuoyun.driver.KDLaunch
+2017-07-04 22:33:11,434 - COSMOS_TRIGGER_PY-Console - DEBUG - Starting: Intent { cmp=com.kuaihuoyun.driver/.KDLaunch }
+2017-07-04 22:33:13,496 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of com.kuaihuoyun.driver.KDLaunch
+2017-07-04 22:33:14,753 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...com.kuaihuoyun.driver.KDLaunch
+2017-07-04 22:33:28,220 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?>
 <hierarchy>
   <node bounds="[25,291][455,547]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.kuaihuoyun.driver" password="false" scrollable="false" selected="false" text="">
     <node bounds="[25,291][455,547]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.kuaihuoyun.driver" password="false" scrollable="false" selected="false" text="">
@@ -38,6 +38,6 @@
   </node>
 </hierarchy>
 
-2017-07-04 22:26:56,730 - COSMOS_TRIGGER_PY-Console - ERROR - Error when screenshot: com.kuaihuoyun.driver.KDLaunch, due to com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-04 22:26:56,752 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 39302E8CEA9B00EC uninstall com.kuaihuoyun.driver
-2017-07-04 22:27:00,312 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-04 22:33:28,507 - COSMOS_TRIGGER_PY-Console - ERROR - Error when screenshot: com.kuaihuoyun.driver.KDLaunch, due to com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-04 22:33:28,513 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 39302E8CEA9B00EC uninstall com.kuaihuoyun.driver
+2017-07-04 22:33:32,101 - COSMOS_TRIGGER_PY-Console - DEBUG - Success

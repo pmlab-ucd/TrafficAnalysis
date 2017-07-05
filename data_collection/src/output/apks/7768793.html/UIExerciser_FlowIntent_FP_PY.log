@@ -1,21 +1,21 @@
-2017-07-04 22:25:43,105 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\7768793.html.apk
-2017-07-04 22:25:43,105 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.lianyun.wenwan
-2017-07-04 22:25:43,105 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-04 22:25:43,295 - COSMOS_TRIGGER_PY-Console - DEBUG - Wed Jul  5 02:25:25 GMT 2017
-2017-07-04 22:25:43,295 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 39302E8CEA9B00EC uninstall com.lianyun.wenwan
-2017-07-04 22:25:44,240 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-04 22:25:44,240 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\7768793.html.apk
-2017-07-04 22:25:50,568 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/7768793.html.apk
-2017-07-04 22:25:50,568 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-04 22:25:50,569 - COSMOS_TRIGGER_PY-Console - DEBUG - rm failed for -f, No such file or directory
-2017-07-04 22:25:50,569 - COSMOS_TRIGGER_PY-Console - DEBUG - 3515 KB/s (5207927 bytes in 1.446s)
-2017-07-04 22:25:50,618 - COSMOS_TRIGGER_PY-Console - INFO - Launchable activity: com.lianyun.wenwan.ui.GuideActivity
-2017-07-04 22:25:50,618 - COSMOS_TRIGGER_PY-Console - INFO - Start Activity com.lianyun.wenwan.ui.GuideActivity
-2017-07-04 22:25:50,618 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb  shell am start -n com.lianyun.wenwan/com.lianyun.wenwan.ui.GuideActivity
-2017-07-04 22:25:51,401 - COSMOS_TRIGGER_PY-Console - DEBUG - Starting: Intent { cmp=com.lianyun.wenwan/.ui.GuideActivity }
-2017-07-04 22:25:53,461 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of com.lianyun.wenwan.ui.GuideActivity
-2017-07-04 22:25:54,730 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...com.lianyun.wenwan.ui.GuideActivity
-2017-07-04 22:26:20,861 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?>
+2017-07-04 22:32:14,476 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\7768793.html.apk
+2017-07-04 22:32:14,477 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.lianyun.wenwan
+2017-07-04 22:32:14,477 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-04 22:32:14,686 - COSMOS_TRIGGER_PY-Console - DEBUG - Wed Jul  5 02:31:55 GMT 2017
+2017-07-04 22:32:14,686 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 39302E8CEA9B00EC uninstall com.lianyun.wenwan
+2017-07-04 22:32:15,650 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-04 22:32:15,650 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\7768793.html.apk
+2017-07-04 22:32:21,362 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/7768793.html.apk
+2017-07-04 22:32:21,362 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-04 22:32:21,362 - COSMOS_TRIGGER_PY-Console - DEBUG - rm failed for -f, No such file or directory
+2017-07-04 22:32:21,362 - COSMOS_TRIGGER_PY-Console - DEBUG - 3317 KB/s (5207927 bytes in 1.532s)
+2017-07-04 22:32:21,413 - COSMOS_TRIGGER_PY-Console - INFO - Launchable activity: com.lianyun.wenwan.ui.GuideActivity
+2017-07-04 22:32:21,413 - COSMOS_TRIGGER_PY-Console - INFO - Start Activity com.lianyun.wenwan.ui.GuideActivity
+2017-07-04 22:32:21,413 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb  shell am start -n com.lianyun.wenwan/com.lianyun.wenwan.ui.GuideActivity
+2017-07-04 22:32:22,200 - COSMOS_TRIGGER_PY-Console - DEBUG - Starting: Intent { cmp=com.lianyun.wenwan/.ui.GuideActivity }
+2017-07-04 22:32:24,263 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of com.lianyun.wenwan.ui.GuideActivity
+2017-07-04 22:32:26,015 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...com.lianyun.wenwan.ui.GuideActivity
+2017-07-04 22:32:51,739 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?>
 <hierarchy>
   <node bounds="[0,0][480,800]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.lianyun.wenwan" password="false" scrollable="false" selected="false" text="">
     <node bounds="[0,0][480,800]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.lianyun.wenwan" password="false" scrollable="false" selected="false" text="">
@@ -30,6 +30,6 @@
   </node>
 </hierarchy>
 
-2017-07-04 22:26:21,125 - COSMOS_TRIGGER_PY-Console - ERROR - Error when screenshot: com.lianyun.wenwan.ui.GuideActivity, due to com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-04 22:26:21,160 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 39302E8CEA9B00EC uninstall com.lianyun.wenwan
-2017-07-04 22:26:23,448 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-04 22:32:51,971 - COSMOS_TRIGGER_PY-Console - ERROR - Error when screenshot: com.lianyun.wenwan.ui.GuideActivity, due to com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-04 22:32:52,005 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 39302E8CEA9B00EC uninstall com.lianyun.wenwan
+2017-07-04 22:32:54,563 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
