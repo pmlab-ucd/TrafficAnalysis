@@ -23,7 +23,7 @@ class UIExerciser:
         # os.popen('adb -s ' + series + ' shell am start -n ' + package + '/.' + activity)
         # cmd = self.monkeyrunner_loc + ' ' + os.getcwd() + '/run_activity_monkeyrunner.py ' + ' ' + \
         # self.series + ' ' + package + '/' + activity
-        cmd = 'adb -s ' + self.series + ' shell am start -n ' + package + '/' + activity
+        cmd = ' shell am start -n ' + package + '/' + activity
         return UIExerciser.run_adb_cmd(cmd)
 
     def get_package_name(self, aapt, apk):
@@ -34,6 +34,7 @@ class UIExerciser:
             print e
             return None
         for line in output.split('\n'):
+            print line
             if 'package: name=' in line:
                 # the real code does filtering here
                 package = re.findall('\'([^\']*)\'', line.rstrip())[0]
@@ -56,8 +57,7 @@ class UIExerciser:
                 activity = re.findall('\'([^\']*)\'', line.rstrip())[0]
                 self.logger.info('Launchable activity: ' + activity)
                 activities.append(activity)
-            else:
-                break
+
         return activities
 
     def is_crashed(self, dev, xml_data):
@@ -138,13 +138,13 @@ class UIExerciser:
                 time.sleep(2)
                 self.logger.error('Cannot start Activity: ' + activity)
 
-    def __init__(self, series, aapt_loc, trigger_java_dir, apk_dir, monkeyrunner_loc, out_base_dir, logger):
+    def __init__(self, series, aapt_loc, apk_dir, out_base_dir, logger):
         self.series = series
         UIExerciser.series = series
         self.aapt_loc = aapt_loc
-        self.trigger_java_dir = trigger_java_dir
+
         self.apk_dir = apk_dir
-        self.monkeyrunner_loc = monkeyrunner_loc
+        #self.monkeyrunner_loc = monkeyrunner_loc
         self.logger = logger
         self.out_base_dir = out_base_dir
 
@@ -266,7 +266,7 @@ class UIExerciser:
 
     @staticmethod
     def start_taintdroid(series):
-        UIExerciser.run_adb_cmd('adb -s ' + series + ' shell am start -n fu.hao.uidroid/.TaintDroidNotifyController')
+        UIExerciser.run_adb_cmd(' shell am start -n fu.hao.uidroid/.TaintDroidNotifyController')
 
     def flowintent_first_page(self, series, apk, examined):
         self.logger.info('base name: ' + os.path.basename(apk))
@@ -308,7 +308,10 @@ class UIExerciser:
         UIExerciser.uninstall_pkg(series, package)
         UIExerciser.install_apk(series, apk)
 
-        for activity in self.get_launchable_activities(series, self.aapt_loc, apk):
+        activities = self.get_launchable_activities(self.aapt_loc, apk)
+        print activities
+        for activity in activities:
+            print activity
             self.start_activity(package, activity)
 
         self.uninstall_pkg(series, package)
@@ -316,7 +319,8 @@ class UIExerciser:
         filehandler.close()
         self.logger.removeHandler(filehandler)
 
-    def inspired_run(self, series, apk, examined):
+    def inspired_run(self, series, apk, examined, trigger_java_dir):
+        self.trigger_java_dir = trigger_java_dir
         # apk = 'F:\\Apps\\COMMUNICATION\\com.mobanyware.apk'
         self.logger.info('base name: ' + os.path.basename(apk))
         apk_name, apk_extension = os.path.splitext(apk)
@@ -378,7 +382,7 @@ if __name__ == '__main__':
 
 
     device = ''
-    pc = 'desktop'
+    pc = 'iai'
 
     if device == 'nexus4':
         series = '01b7006e13dd12a1'
@@ -386,3 +390,22 @@ if __name__ == '__main__':
         series = '014E233C1300800B'
     else:
         series = 'emulator-5554'
+
+    aapt_loc = 'C:\Users\hfu\AppData\Local\Android\sdk/build-tools/19.1.0/aapt.exe'
+    apk_dir = 'C:\Users\hfu\Documents\\apks'
+    UIExerciser.emu_loc = 'C:\Users\hfu\AppData\Local\Android\sdk/tools/emulator.exe'
+    UIExerciser.emu_name = 'Qvga'
+
+    out_base_dir = 'output/'
+
+    #UIExerciser.emu_proc = UIExerciser.open_emu(UIExerciser.emu_loc, UIExerciser.emu_name)
+    for root, dirs, files in os.walk(apk_dir, topdown=False):
+        for filename in files:
+            if re.search('apk$', filename):
+                # main_process = multiprocessing.Process(target=handle_apk, args=[os.path.join(root, filename), examined])
+                # main_process.start()
+                # main_process.join()
+                exerciser = UIExerciser(series, aapt_loc, apk_dir, out_base_dir, logger)
+                exerciser.flowintent_first_page(series, os.path.join(root, filename), [])
+
+    #UIExerciser.close_emulator(UIExerciser.emu_proc)
