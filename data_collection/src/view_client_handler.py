@@ -3,6 +3,9 @@ from com.dtmilano.android.viewclient import ViewClient, View, ViewClientOptions
 import types
 import xml.etree.cElementTree as ET
 import sys
+from xml.dom.minidom import parseString
+from uiautomator import Device
+from utils import Utilities
 
 HELP = 'help'
 VERBOSE = 'verbose'
@@ -43,8 +46,10 @@ MAP = {
 
 
 class ViewClientHandler:
+    logger = Utilities.set_logger('ViewClientHandler')
+
     @staticmethod
-    def traverse(vc, root="ROOT", indent="", transform=None, stream=sys.stdout, pkg=''):
+    def traverse(vc, root="ROOT", indent="", transform=None, stream=sys.stdout, bounds2id={}):
         '''
         Traverses the C{View} tree and prints its nodes.
 
@@ -70,9 +75,8 @@ class ViewClientHandler:
 
         print vc.list()
         xml_root = ET.Element('hierarchy')
-        ViewClientHandler.__traverse(root, indent, transform, stream, xml_node=xml_root, pkg=pkg)
-        tree = ET.ElementTree(xml_root)
-        tree.write("filename.xml")
+        ViewClientHandler.__traverse(root, indent, transform, stream, bounds2id=bounds2id)
+        return bounds2id
 
         #         if not root:
         #             return
@@ -85,7 +89,7 @@ class ViewClientHandler:
         #             self.traverse(ch, indent=indent+"   ", transform=transform, stream=stream)
 
     @staticmethod
-    def __traverse(root, indent="", transform=View.__str__, stream=sys.stdout, xml_node=None, pkg=''):
+    def __traverse(root, indent="", transform=View.__str__, stream=sys.stdout, bounds2id={}):
         if not root:
             return
 
@@ -94,39 +98,18 @@ class ViewClientHandler:
         if stream and s:
             ius = "%s%s" % (indent, s if isinstance(s, unicode) else unicode(s, 'utf-8', 'replace'))
             print >> stream, ius.encode('utf-8', 'replace')
-            # print root.map
-            if 'text:mText' in root.map:
-                text = root.map['text:mText']
-            else:
-                text = ''
-            if 'class' in root.map:
-                node_class = root.map['class']
-            else:
-                node_class = ''
-            if 'accessibility:getContentDescription()' in root.map:
-                content_desc = root.map['accessibility:getContentDescription()']
-                if content_desc == 'null':
-                    content_desc = ''
-            else:
-                content_desc = ''
+
             bounds = str(root.getBounds()).replace('((', '[')
             bounds = bounds.replace('))', ']')
             bounds = bounds.replace('), (', '][')
             bounds = bounds.replace(', ', ',')
 
-            print root.getPositionAndSize(), bounds
-            if xml_node != None:
-                sub_node = ET.SubElement(xml_node, "node", text=text, className=node_class, package=pkg,
-                                         content_desc=content_desc, )
-            else:
-                xml_node = ET.Element('node', text=text)
-
-        if sub_node == None:
-            sub_node = xml_node
+            # print root.getPositionAndSize(), bounds
+            bounds2id[bounds] = root.getId()
 
         for ch in root.children:
-            ViewClientHandler.__traverse(ch, indent=indent + "   ", transform=transform, stream=stream, xml_node=sub_node,
-                                   pkg=pkg)
+            ViewClientHandler.__traverse(ch, indent=indent + "   ", transform=transform,
+                                         stream=stream, bounds2id=bounds2id)
         return sub_node
 
     @staticmethod
@@ -150,8 +133,42 @@ class ViewClientHandler:
                 continue
             print windows[window]
             vc.dump(window=int(window))
-            ViewClient.imageDirectory = options[SAVE_VIEW_SCREENSHOTS]
-            ViewClientHandler.traverse(vc, transform=transform, pkg=windows[window])
+            # ViewClient.imageDirectory = options[SAVE_VIEW_SCREENSHOTS]
+            return ViewClientHandler.traverse(vc, transform=transform)
+
+    @staticmethod
+    def fill_ids(xml_data, package):
+        '''
+        Fill the missing ids caused by uiautomator with low API level (<18)
+        :param xml_data:
+        :param package:
+        :return:
+        '''
+        dom = parseString(xml_data.encode("utf-8"))
+        nodes = dom.getElementsByTagName('node')
+        for node in nodes:
+            if node.hasAttribute('resource-id'):
+                return
+            else:
+                break
+        bounds2ids = ViewClientHandler.dump_view_server(package)
+        if bounds2ids == None:
+            ViewClientHandler.logger.error('Cannot identify the package!')
+            return xml_data
+        ViewClientHandler.logger.info(str(bounds2ids))
+        for node in nodes:
+            if node.getAttribute('bounds') in bounds2ids:
+                node.setAttribute('resource-id', bounds2ids[node.getAttribute('bounds')])
+            else:
+                ViewClientHandler.logger.warn('Cannot find ' + node.getAttribute('bounds'))
+        return dom.toxml()
+
+
+if __name__ == '__main__':
+    dev = Device()
+    print ViewClientHandler.fill_ids(dev.dump(), 'com.kuaihuoyun.driver')
+
+
 
 
 

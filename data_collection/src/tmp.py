@@ -4,7 +4,7 @@
 from ui_exerciser import UIExerciser
 from utils import Utilities
 import re
-from uiautomator import Device
+
 import time
 from xml.dom.minidom import parseString
 from view_client_handler import ViewClientHandler

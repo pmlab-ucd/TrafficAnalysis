@@ -12,6 +12,7 @@ import time
 import psutil
 import sign_apks
 import json
+from view_client_handler import ViewClientHandler
 
 
 class UIExerciser:
@@ -19,8 +20,6 @@ class UIExerciser:
     emu_loc = None
     emu_name = None
     series = None
-
-
 
     def start_activity(self, package, activity):
         self.logger.info("Start Activity " + activity)
@@ -111,27 +110,47 @@ class UIExerciser:
         y = 0.5 * (node_bounds[1][1] - node_bounds[0][1]) + node_bounds[0][1]
         dev.click(x, y)
 
-    def screenshot(self, dir_data, activity, first_page):
+    @staticmethod
+    def tcpdump_begin():
+        UIExerciser.run_adb_cmd(' shell "nohup /data/local/tcpdump -w /sdcard/collect.pcap"')
+
+    @staticmethod
+    def tcpdump_end(dir_data):
+        UIExerciser.run_adb_cmd(
+            'shell ps | grep tcpdump | awk \'{print $2}\' | xargs adb -s ' + UIExerciser.series + ' shell kill')
+        UIExerciser.run_adb_cmd(' pull /sdcard/collect.pcap ' + dir_data)
+
+    def screenshot(self, dir_data, activity, first_page, pkg=''):
         # current_time = time.strftime(ISOTIMEFORMAT, time.localtime())
         self.logger.info('Try to dump layout XML of ' + activity)
+
+        dev = Device(self.series)
+        dev.screen.on()
+        activity = str(activity).replace('\"', '')
+        # dev.wait.idle()
+        self.logger.info('Dumping...' + activity)
+        if first_page:
+            UIExerciser.pass_first_page(dev)
+        xml_data = dev.dump()
+
+        self.is_crashed(dev, xml_data)
+        while self.is_SMS_alarm(dev, xml_data):
+            xml_data = dev.dump()
+
+        xml_data = ViewClientHandler.fill_ids(xml_data, pkg)
+        self.logger.info(xml_data)
+
+        f = open(dir_data + activity + '.xml', "wb", )
+        f.write(xml_data.encode('utf-8'))
+        f.close()
         try:
-            dev = Device(self.series)
-            dev.screen.on()
-            activity = str(activity).replace('\"', '')
-            # dev.wait.idle()
-            self.logger.info('Dumping...' + activity)
-            if first_page:
-                UIExerciser.pass_first_page(dev)
-            xml_data = dev.dump(dir_data + activity + '.xml')
-            self.logger.info(xml_data)
-            self.is_crashed(dev, xml_data)
-            while self.is_SMS_alarm(dev, xml_data):
-                xml_data = dev.dump(dir_data + activity + '.xml')
             self.logger.info(dev.screenshot(dir_data + activity + '.png'))
-            return True
         except Exception as e:
-            self.logger.error("Error when screenshot: " + activity + ', due to ' + e.message)
-            return False
+            self.logger.error(e)
+            UIExerciser.run_adb_cmd('shell /system/bin/screencap -p /sdcard/screenshot.png')
+            UIExerciser.run_adb_cmd('pull /sdcard/screenshot.png ' + dir_data + activity + '.png')
+
+        return True
 
     def start_activities(self, package, csvpath, output_dir):
         self.logger.info("Try to read csv " + csvpath)
@@ -299,9 +318,11 @@ class UIExerciser:
             for node in nodes:
                 print node.getAttribute('scrollable'), node.getAttribute('class')
                 if node.getAttribute('scrollable') == 'true':
-                    dev(className=node.getAttribute('class'), scrollable='true').swipe.left()
-                    stay = True
-                    break
+                    ui_object = dev(className=node.getAttribute('class'), scrollable='true')
+                    if ui_object.exists:
+                        ui_object.swipe.left()
+                        stay = True
+                        break
             if not stay:
                 break
 
@@ -328,6 +349,7 @@ class UIExerciser:
             for clickable in clickables:
                 if clickable.getAttribute('text') in option_cancel:
                     UIExerciser.touch(dev, clickable.getAttribute('bounds'))
+        time.sleep(5)
 
     def flowintent_first_page(self, series, apk, examined):
         self.logger.info('base name: ' + os.path.basename(apk))
@@ -383,7 +405,7 @@ class UIExerciser:
                             UIExerciser.emu_proc = UIExerciser.open_emu(UIExerciser.emu_loc, UIExerciser.emu_name)
                         else:
                             raise Exception('Cannot start Activity ' + activity)
-                    if Utilities.run_method(self.screenshot, 180, args=[output_dir, activity, True]):
+                    if Utilities.run_method(self.screenshot, 180, args=[output_dir, activity, True, package]):
                         break
                     else:
                         self.logger.warn("Time out while dumping XML for " + activity)
@@ -392,6 +414,7 @@ class UIExerciser:
                 self.logger.error('Cannot start Activity: ' + activity)
 
         self.uninstall_pkg(series, package)
+        self.logger.info('End')
 
         filehandler.close()
         self.logger.removeHandler(filehandler)

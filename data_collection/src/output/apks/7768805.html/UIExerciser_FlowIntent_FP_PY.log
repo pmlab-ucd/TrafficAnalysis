@@ -1,144 +1,157 @@
-2017-07-05 17:59:57,483 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\hfu\Documents\FlowIntent\apks\7768805.html.apk
-2017-07-05 17:59:57,483 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.kuaihuoyun.driver
-2017-07-05 17:59:57,483 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-05 17:59:57,602 - COSMOS_TRIGGER_PY-Console - DEBUG - Wed Jul  5 21:59:57 GMT 2017
-2017-07-05 17:59:57,602 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 39302E8CEA9B00EC uninstall com.kuaihuoyun.driver
-2017-07-05 17:59:58,674 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-05 17:59:58,676 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\hfu\Documents\FlowIntent\apks\7768805.html.apk
-2017-07-05 18:00:10,651 - COSMOS_TRIGGER_PY-Console - DEBUG - [  0%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,651 - COSMOS_TRIGGER_PY-Console - DEBUG - [  1%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,651 - COSMOS_TRIGGER_PY-Console - DEBUG - [  2%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,651 - COSMOS_TRIGGER_PY-Console - DEBUG - [  3%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,651 - COSMOS_TRIGGER_PY-Console - DEBUG - [  4%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,651 - COSMOS_TRIGGER_PY-Console - DEBUG - [  5%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,651 - COSMOS_TRIGGER_PY-Console - DEBUG - [  6%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,651 - COSMOS_TRIGGER_PY-Console - DEBUG - [  7%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,651 - COSMOS_TRIGGER_PY-Console - DEBUG - [  8%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,651 - COSMOS_TRIGGER_PY-Console - DEBUG - [  9%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,651 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 10%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,651 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 11%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,651 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 12%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,653 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 13%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,653 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 14%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,653 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 15%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,653 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 16%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,653 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 17%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,653 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 18%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,654 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 19%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,654 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 20%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,654 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 21%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,654 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 22%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,654 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 23%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,654 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 24%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,654 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 25%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,654 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 26%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,654 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 27%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,654 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 28%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,654 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 29%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,654 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 30%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,654 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 31%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,654 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 32%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,655 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 33%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,655 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 34%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,655 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 35%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,655 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 36%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,655 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 37%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,655 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 38%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,657 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 39%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,657 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 40%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,657 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 41%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,657 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 42%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,657 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 43%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,657 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 44%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,657 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 45%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,657 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 46%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,657 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 47%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,657 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 48%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,657 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 49%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,658 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 50%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,658 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 51%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,658 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 52%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,658 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 53%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,658 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 54%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,658 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 55%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,658 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 56%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,660 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 57%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,660 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 58%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,660 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 59%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,660 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 60%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,660 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 61%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,660 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 62%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,660 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 63%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,661 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 64%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,661 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 65%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,661 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 66%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,661 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 67%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,661 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 68%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,661 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 69%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,661 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 70%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,661 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 71%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,661 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 72%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,661 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 73%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,661 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 74%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,663 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 75%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,663 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 76%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,663 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 77%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,663 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 78%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,664 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 79%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,664 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 80%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,664 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 81%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,664 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 82%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,664 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 83%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,664 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 84%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,664 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 85%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,664 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 86%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,664 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 87%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,664 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 88%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,664 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 89%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,664 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 90%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,664 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 91%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,664 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 92%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,665 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 93%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,665 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 94%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,665 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 95%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,665 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 96%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,665 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 97%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,667 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 98%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,667 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 99%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,667 - COSMOS_TRIGGER_PY-Console - DEBUG - [100%] /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,667 - COSMOS_TRIGGER_PY-Console - DEBUG - C:\Users\hfu\Documents\FlowIntent\apks\7768805.html.apk: 1 file pushed. 7.0 MB/s (6555563 bytes in 0.891s)
-2017-07-05 18:00:10,667 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/7768805.html.apk
-2017-07-05 18:00:10,667 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-05 18:00:10,667 - COSMOS_TRIGGER_PY-Console - DEBUG - rm failed for -f, No such file or directory
-2017-07-05 18:00:10,694 - COSMOS_TRIGGER_PY-Console - INFO - Launchable activity: com.kuaihuoyun.driver.KDLaunch
-2017-07-05 18:00:10,696 - COSMOS_TRIGGER_PY-Console - INFO - Start Activity com.kuaihuoyun.driver.KDLaunch
-2017-07-05 18:00:10,696 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb  shell am start -n com.kuaihuoyun.driver/com.kuaihuoyun.driver.KDLaunch
-2017-07-05 18:00:11,667 - COSMOS_TRIGGER_PY-Console - DEBUG - Starting: Intent { cmp=com.kuaihuoyun.driver/.KDLaunch }
-2017-07-05 18:00:13,704 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of com.kuaihuoyun.driver.KDLaunch
-2017-07-05 18:00:14,798 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...com.kuaihuoyun.driver.KDLaunch
-2017-07-05 18:00:23,167 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?>
-<hierarchy>
-  <node bounds="[25,291][455,547]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.kuaihuoyun.driver" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[25,291][455,547]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.kuaihuoyun.driver" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[25,291][455,547]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.kuaihuoyun.driver" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[25,291][455,547]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.kuaihuoyun.driver" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[33,291][447,473]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.kuaihuoyun.driver" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[65,323][415,360]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.kuaihuoyun.driver" password="false" scrollable="false" selected="false" text="新版本4.47可更新啦"/>
-            <node bounds="[65,380][415,441]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.kuaihuoyun.driver" password="false" scrollable="false" selected="false" text="1、司机端推送机制全面更新；
-2、司机认证功能优化；"/>
+2017-07-06 13:06:01,611 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\hfu\Documents\FlowIntent\apks\7768805.html.apk
+2017-07-06 13:06:01,611 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.kuaihuoyun.driver
+2017-07-06 13:06:01,611 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-06 13:06:01,727 - COSMOS_TRIGGER_PY-Console - DEBUG - Thu Jul  6 17:05:58 GMT 2017
+2017-07-06 13:06:01,727 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 39302E8CEA9B00EC uninstall com.kuaihuoyun.driver
+2017-07-06 13:06:02,747 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-06 13:06:02,747 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\hfu\Documents\FlowIntent\apks\7768805.html.apk
+2017-07-06 13:06:16,983 - COSMOS_TRIGGER_PY-Console - DEBUG - [  0%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,983 - COSMOS_TRIGGER_PY-Console - DEBUG - [  1%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,983 - COSMOS_TRIGGER_PY-Console - DEBUG - [  2%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,983 - COSMOS_TRIGGER_PY-Console - DEBUG - [  3%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,984 - COSMOS_TRIGGER_PY-Console - DEBUG - [  4%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,984 - COSMOS_TRIGGER_PY-Console - DEBUG - [  5%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,984 - COSMOS_TRIGGER_PY-Console - DEBUG - [  6%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,984 - COSMOS_TRIGGER_PY-Console - DEBUG - [  7%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,984 - COSMOS_TRIGGER_PY-Console - DEBUG - [  8%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,984 - COSMOS_TRIGGER_PY-Console - DEBUG - [  9%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,984 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 10%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,984 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 11%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,986 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 12%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,986 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 13%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,986 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 14%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,986 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 15%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,986 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 16%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,986 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 17%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,986 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 18%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,986 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 19%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,986 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 20%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,986 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 21%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,986 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 22%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,986 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 23%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,986 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 24%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,986 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 25%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,987 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 26%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,987 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 27%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,987 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 28%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,987 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 29%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,987 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 30%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,987 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 31%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,987 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 32%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,989 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 33%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,989 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 34%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,989 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 35%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,989 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 36%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,990 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 37%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,990 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 38%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,990 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 39%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,990 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 40%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,990 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 41%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,990 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 42%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,990 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 43%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,990 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 44%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,990 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 45%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,990 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 46%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,990 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 47%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,990 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 48%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,992 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 49%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,992 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 50%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,992 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 51%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,992 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 52%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,992 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 53%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,992 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 54%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,992 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 55%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,993 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 56%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,993 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 57%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,993 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 58%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,993 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 59%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,993 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 60%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,993 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 61%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,993 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 62%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,993 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 63%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,993 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 64%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,993 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 65%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,993 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 66%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,993 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 67%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,993 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 68%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,994 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 69%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,994 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 70%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,994 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 71%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,994 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 72%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,994 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 73%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,994 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 74%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,996 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 75%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,996 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 76%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,996 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 77%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,996 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 78%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,996 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 79%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,996 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 80%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,996 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 81%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,996 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 82%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,996 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 83%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,996 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 84%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,996 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 85%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,996 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 86%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,996 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 87%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,996 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 88%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,997 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 89%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,997 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 90%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,997 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 91%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,997 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 92%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,997 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 93%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,997 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 94%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,999 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 95%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,999 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 96%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,999 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 97%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,999 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 98%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,999 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 99%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,999 - COSMOS_TRIGGER_PY-Console - DEBUG - [100%] /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:16,999 - COSMOS_TRIGGER_PY-Console - DEBUG - C:\Users\hfu\Documents\FlowIntent\apks\7768805.html.apk: 1 file pushed. 7.3 MB/s (6555563 bytes in 0.857s)
+2017-07-06 13:06:17,000 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/7768805.html.apk
+2017-07-06 13:06:17,000 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-06 13:06:17,000 - COSMOS_TRIGGER_PY-Console - DEBUG - rm failed for -f, No such file or directory
+2017-07-06 13:06:17,026 - COSMOS_TRIGGER_PY-Console - INFO - Launchable activity: com.kuaihuoyun.driver.KDLaunch
+2017-07-06 13:06:17,026 - COSMOS_TRIGGER_PY-Console - INFO - Start Activity com.kuaihuoyun.driver.KDLaunch
+2017-07-06 13:06:17,026 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb  shell am start -n com.kuaihuoyun.driver/com.kuaihuoyun.driver.KDLaunch
+2017-07-06 13:06:18,051 - COSMOS_TRIGGER_PY-Console - DEBUG - Starting: Intent { cmp=com.kuaihuoyun.driver/.KDLaunch }
+2017-07-06 13:06:20,088 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of com.kuaihuoyun.driver.KDLaunch
+2017-07-06 13:06:21,217 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...com.kuaihuoyun.driver.KDLaunch
+2017-07-06 13:06:53,306 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][480,800]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.kuaihuoyun.driver" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][480,800]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.kuaihuoyun.driver" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,38][480,122]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.kuaihuoyun.driver" password="false" resource-id="id/screen" scrollable="false" selected="false" text="">
+        <node bounds="[0,38][480,122]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.kuaihuoyun.driver" password="false" resource-id="id/screen" scrollable="false" selected="false" text="">
+          <node bounds="[24,59][144,100]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.kuaihuoyun.driver" password="false" resource-id="id/head_center_text" scrollable="false" selected="false" text="一键登录"/>
+          <node bounds="[306,38][480,122]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.kuaihuoyun.driver" password="false" resource-id="id/head_right_button" scrollable="false" selected="false" text="">
+            <node bounds="[306,38][480,122]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.kuaihuoyun.driver" password="false" resource-id="id/head_right_button" scrollable="false" selected="false" text="使用密码登录"/>
           </node>
-          <node bounds="[25,473][455,474]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.kuaihuoyun.driver" password="false" scrollable="false" selected="false" text=""/>
-          <node bounds="[25,474][455,547]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.kuaihuoyun.driver" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[25,474][239,547]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.kuaihuoyun.driver" password="false" scrollable="false" selected="false" text="取 消"/>
-            <node bounds="[239,474][240,547]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.kuaihuoyun.driver" password="false" scrollable="false" selected="false" text=""/>
-            <node bounds="[240,474][455,547]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.kuaihuoyun.driver" password="false" scrollable="false" selected="false" text="升级"/>
+        </node>
+      </node>
+      <node bounds="[0,122][480,800]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.kuaihuoyun.driver" password="false" resource-id="id/root_layout" scrollable="false" selected="false" text="">
+        <node bounds="[0,122][480,800]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="false" package="com.kuaihuoyun.driver" password="false" resource-id="id/root_layout" scrollable="false" selected="false" text="">
+          <node bounds="[0,122][480,194]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.kuaihuoyun.driver" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+            <node bounds="[24,122][60,194]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.kuaihuoyun.driver" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            <node bounds="[84,122][456,194]" checkable="false" checked="false" class="android.widget.EditText" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="true" package="com.kuaihuoyun.driver" password="false" resource-id="id/login_userid" scrollable="false" selected="false" text="请输入手机号码"/>
           </node>
+          <node bounds="[29,194][480,196]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.kuaihuoyun.driver" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+          <node bounds="[0,196][480,268]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.kuaihuoyun.driver" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+            <node bounds="[24,196][60,268]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.kuaihuoyun.driver" password="false" resource-id="id/pass_iv" scrollable="false" selected="false" text=""/>
+            <node bounds="[84,196][283,268]" checkable="false" checked="false" class="android.widget.EditText" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="true" package="com.kuaihuoyun.driver" password="false" resource-id="id/login_password" scrollable="false" selected="false" text="请输入验证码"/>
+            <node bounds="[301,206][303,257]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.kuaihuoyun.driver" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            <node bounds="[303,208][456,256]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="false" focusable="false" focused="false" index="3" long-clickable="false" package="com.kuaihuoyun.driver" password="false" resource-id="id/login_get_authcode" scrollable="false" selected="false" text="获取验证码"/>
+          </node>
+          <node bounds="[0,268][129,321]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.kuaihuoyun.driver" password="false" resource-id="id/login_find_pwd" scrollable="false" selected="false" text="新用户注册"/>
+          <node bounds="[12,345][468,417]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="false" focusable="true" focused="false" index="4" long-clickable="false" package="com.kuaihuoyun.driver" password="false" resource-id="id/login_btn" scrollable="false" selected="false" text="登   录"/>
         </node>
       </node>
     </node>
   </node>
 </hierarchy>
-
-2017-07-05 18:00:23,282 - COSMOS_TRIGGER_PY-Console - ERROR - Error when screenshot: com.kuaihuoyun.driver.KDLaunch, due to com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-05 18:00:23,312 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 39302E8CEA9B00EC uninstall com.kuaihuoyun.driver
-2017-07-05 18:00:26,894 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-06 13:06:54,535 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-06 13:06:54,536 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-06 13:06:54,907 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png output/apks/7768805.html/com.kuaihuoyun.driver.KDLaunch.png
+2017-07-06 13:06:54,976 - COSMOS_TRIGGER_PY-Console - DEBUG - [100%] /sdcard/screenshot.png
+2017-07-06 13:06:54,976 - COSMOS_TRIGGER_PY-Console - DEBUG - /sdcard/screenshot.png: 1 file pulled. 4.0 MB/s (58523 bytes in 0.014s)
+2017-07-06 13:06:55,000 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 39302E8CEA9B00EC uninstall com.kuaihuoyun.driver
+2017-07-06 13:06:57,979 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-06 13:06:57,980 - COSMOS_TRIGGER_PY-Console - INFO - End
