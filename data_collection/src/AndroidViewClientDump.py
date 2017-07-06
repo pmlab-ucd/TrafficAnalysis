@@ -13,8 +13,6 @@ import getopt
 import os
 import re
 import sys
-import types
-import xml.etree.cElementTree as ET
 
 try:
     sys.path.insert(0, os.path.join(os.environ['ANDROID_VIEW_CLIENT_HOME'], 'src'))
@@ -71,8 +69,7 @@ LONG_OPTS = [HELP, VERBOSE, VERSION, IGNORE_SECURE_DEVICE, IGNORE_VERSION_CHECK,
              USE_UIAUTOMATOR_HELPER,
              DEBUG + '='
              ]
-LONG_OPTS_ARG = {WINDOW: 'WINDOW', SAVE_SCREENSHOT: 'FILE', SAVE_VIEW_SCREENSHOTS: 'DIR', DEVICE_ART: 'MODEL',
-                 DEBUG: 'LIST'}
+LONG_OPTS_ARG = {WINDOW: 'WINDOW', SAVE_SCREENSHOT: 'FILE', SAVE_VIEW_SCREENSHOTS: 'DIR', DEVICE_ART: 'MODEL', DEBUG: 'LIST'}
 OPTS_HELP = {
     'H': 'prints this help',
     'V': 'verbose comments',
@@ -97,8 +94,7 @@ OPTS_HELP = {
     'B': 'screen glare over screenshot',
     'h': 'use UiAutomatorHelper Android app',
     'X': 'debug options',
-}
-
+    }
 
 def shortAndLongOptions():
     '''
@@ -109,18 +105,16 @@ def shortAndLongOptions():
     if len(short_opts) != len(LONG_OPTS):
         raise Exception('There is a mismatch between short and long options')
     t = tuple(short_opts) + tuple(LONG_OPTS)
-    l2 = len(t) / 2
+    l2 = len(t)/2
     sl = []
     for i in range(l2):
-        sl.append((t[i], t[i + l2]))
+        sl.append((t[i], t[i+l2]))
     return sl
-
 
 def usage(exitVal=1):
     print >> sys.stderr, USAGE % progname
     print >> sys.stderr, "Try '%s --help' for more information." % progname
     sys.exit(exitVal)
-
 
 def help():
     print >> sys.stderr, USAGE % progname
@@ -137,11 +131,9 @@ def help():
         print >> sys.stderr, o
     sys.exit(0)
 
-
 def version():
     print progname, __version__
     sys.exit(0)
-
 
 def debugArgsToDict(a):
     '''
@@ -155,96 +147,13 @@ def debugArgsToDict(a):
     s = re.sub(r'([A-Z][A-Z_]+)', r"'\1'", s)
     return ast.literal_eval('{ ' + s + ' }')
 
-
-def traverse(vc, root="ROOT", indent="", transform=None, stream=sys.stdout):
-    '''
-    Traverses the C{View} tree and prints its nodes.
-
-    The nodes are printed converting them to string but other transformations can be specified
-    by providing a method name as the C{transform} parameter.
-
-    @type root: L{View}
-    @param root: the root node from where the traverse starts
-    @type indent: str
-    @param indent: the indentation string to use to print the nodes
-    @type transform: method
-    @param transform: a method to use to transform the node before is printed
-    '''
-
-    if transform is None:
-        # this cannot be a default value, otherwise
-        # TypeError: 'staticmethod' object is not callable
-        # is raised
-        transform = ViewClient.TRAVERSE_CIT
-
-    if type(root) == types.StringType and root == "ROOT":
-        root = vc.root
-
-    print vc.list()
-    xml_root = ET.Element('hierarchy')
-    __traverse(root, indent, transform, stream, xml_node=xml_root)
-    tree = ET.ElementTree(xml_root)
-    tree.write("filename.xml")
-
-    #         if not root:
-    #             return
-    #
-    #         s = transform(root)
-    #         if s:
-    #             print >>stream, "%s%s" % (indent, s)
-    #
-    #         for ch in root.children:
-    #             self.traverse(ch, indent=indent+"   ", transform=transform, stream=stream)
-
-
-def __traverse(root, indent="", transform=View.__str__, stream=sys.stdout, xml_node=None):
-    if not root:
-        return
-
-    s = transform(root)
-    sub_node = None
-    if stream and s:
-        ius = "%s%s" % (indent, s if isinstance(s, unicode) else unicode(s, 'utf-8', 'replace'))
-        print >> stream, ius.encode('utf-8', 'replace')
-        #print root.map
-        if 'text:mText' in root.map:
-            text = root.map['text:mText']
-        else:
-            text = ''
-
-        if 'class' in root.map:
-            node_class = root.map['class']
-        else:
-            node_class = ''
-        if xml_node != None:
-            sub_node = ET.SubElement(xml_node, "node", text=text, nclass=node_class)
-        else:
-            xml_node = ET.Element('node', text=text)
-
-    if sub_node == None:
-        sub_node = xml_node
-
-    for ch in root.children:
-        __traverse(ch, indent=indent + "   ", transform=transform, stream=stream, xml_node=sub_node)
-    return sub_node
-
-def dump_view_server(package):
-    windows = vc.list()
-    for window in windows:
-        if 'package' not in windows[window]:
-            continue
-        vc.dump(window=int(window))
-        ViewClient.imageDirectory = options[SAVE_VIEW_SCREENSHOTS]
-        traverse(vc, transform=transform)
-
-
 # __main__
 progname = os.path.basename(sys.argv[0])
 try:
     opts, args = getopt.getopt(sys.argv[1:], SHORT_OPTS, LONG_OPTS)
     sys.argv[1:] = args
 except getopt.GetoptError, e:
-    print >> sys.stderr, 'ERROR:', str(e)
+    print >>sys.stderr, 'ERROR:', str(e)
     usage()
 
 kwargs1 = {VERBOSE: False, 'ignoresecuredevice': False, 'ignoreversioncheck': False}
@@ -303,16 +212,16 @@ if options[DO_NOT_DUMP_VIEWS]:
 
 vc = ViewClient(*ViewClient.connectToDeviceOrExit(**kwargs1), **kwargs2)
 if options[SAVE_SCREENSHOT]:
-    vc.device.reconnect = True  # (not options[DO_NOT_DUMP_VIEWS])
+    vc.device.reconnect = True #(not options[DO_NOT_DUMP_VIEWS])
     ext = os.path.splitext(options[SAVE_SCREENSHOT])[1][1:].upper()
     _format = ext
     if ext == 'JPG':
         _format = 'JPEG'
-    vc.writeImageToFile(options[SAVE_SCREENSHOT], _format=_format, deviceart=options[DEVICE_ART],
-                        dropshadow=options[DROP_SHADOW], screenglare=options[SCREEN_GLARE])
+    vc.writeImageToFile(options[SAVE_SCREENSHOT], _format=_format, deviceart=options[DEVICE_ART], dropshadow=options[DROP_SHADOW], screenglare=options[SCREEN_GLARE])
 if not options[DO_NOT_DUMP_VIEWS] or options[SAVE_VIEW_SCREENSHOTS]:
     vc.dump(window=options[WINDOW])
-
+    ViewClient.imageDirectory = options[SAVE_VIEW_SCREENSHOTS]
+    vc.traverse(transform=transform)
 if kwargs2[ViewClientOptions.USE_UIAUTOMATOR_HELPER]:
     try:
         vc.uiAutomatorHelper.quit()

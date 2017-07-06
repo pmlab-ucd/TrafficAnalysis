@@ -1,5 +1,5 @@
 #!/usr/bin/env python2
-#-*-encoding:utf-8-*-
+# -*-encoding:utf-8-*-
 
 from uiautomator import Device
 from xml.dom.minidom import parseString
@@ -13,12 +13,14 @@ import psutil
 import sign_apks
 import json
 
-class UIExerciser:
 
+class UIExerciser:
     emu_proc = None
     emu_loc = None
     emu_name = None
     series = None
+
+
 
     def start_activity(self, package, activity):
         self.logger.info("Start Activity " + activity)
@@ -147,7 +149,7 @@ class UIExerciser:
                             UIExerciser.emu_proc = UIExerciser.open_emu(UIExerciser.emu_loc, UIExerciser.emu_name)
                         else:
                             raise Exception('Cannot start Activity ' + activity)
-                    if Utilities.run_method(self.screenshot, 180, args=[output_dir, activity, False]) :
+                    if Utilities.run_method(self.screenshot, 180, args=[output_dir, activity, False]):
                         break
                     else:
                         self.logger.warn("Time out while dumping XML for " + activity)
@@ -161,7 +163,7 @@ class UIExerciser:
         self.aapt_loc = aapt_loc
 
         self.apk_dir = apk_dir
-        #self.monkeyrunner_loc = monkeyrunner_loc
+        # self.monkeyrunner_loc = monkeyrunner_loc
         self.logger = logger
         self.out_base_dir = out_base_dir
 
@@ -287,6 +289,7 @@ class UIExerciser:
 
     @staticmethod
     def pass_first_page(dev):
+        time.sleep(5)
         for i in range(8):
             xml_data = dev.dump()
             dom = parseString(xml_data.encode("utf-8"))
@@ -325,7 +328,6 @@ class UIExerciser:
             for clickable in clickables:
                 if clickable.getAttribute('text') in option_cancel:
                     UIExerciser.touch(dev, clickable.getAttribute('bounds'))
-
 
     def flowintent_first_page(self, series, apk, examined):
         self.logger.info('base name: ' + os.path.basename(apk))
@@ -381,7 +383,7 @@ class UIExerciser:
                             UIExerciser.emu_proc = UIExerciser.open_emu(UIExerciser.emu_loc, UIExerciser.emu_name)
                         else:
                             raise Exception('Cannot start Activity ' + activity)
-                    if Utilities.run_method(self.screenshot, 180, args=[output_dir, activity, True]) :
+                    if Utilities.run_method(self.screenshot, 180, args=[output_dir, activity, True]):
                         break
                     else:
                         self.logger.warn("Time out while dumping XML for " + activity)
@@ -451,10 +453,10 @@ class UIExerciser:
         filehandler.close()
         self.logger.removeHandler(filehandler)
 
+
 if __name__ == '__main__':
     ISOTIMEFORMAT = '%m%d-%H-%M-%S'
     logger = Utilities.set_logger('COSMOS_TRIGGER_PY-Console')
-
 
     device = ''
     pc = 'iai'
@@ -473,7 +475,7 @@ if __name__ == '__main__':
 
     out_base_dir = 'output/'
 
-    #UIExerciser.emu_proc = UIExerciser.open_emu(UIExerciser.emu_loc, UIExerciser.emu_name)
+    # UIExerciser.emu_proc = UIExerciser.open_emu(UIExerciser.emu_loc, UIExerciser.emu_name)
     for root, dirs, files in os.walk(apk_dir, topdown=False):
         for filename in files:
             if re.search('apk$', filename):
@@ -483,4 +485,4 @@ if __name__ == '__main__':
                 exerciser = UIExerciser(series, aapt_loc, apk_dir, out_base_dir, logger)
                 exerciser.flowintent_first_page(series, os.path.join(root, filename), [])
 
-    #UIExerciser.close_emulator(UIExerciser.emu_proc)
+                # UIExerciser.close_emulator(UIExerciser.emu_proc)

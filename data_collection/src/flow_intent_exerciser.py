@@ -19,8 +19,8 @@ if __name__ == '__main__':
     else:
         series = 'emulator-5554'
 
-    aapt_loc = 'C:\Users\majes\AppData\Local\Android\sdk/build-tools/19.1.0/aapt.exe'
-    apk_dir = 'C:\Users\majes\Documents\FlowIntent\\apks'
+    aapt_loc = 'C:\Users\hfu\AppData\Local\Android\sdk/build-tools/19.1.0/aapt.exe'
+    apk_dir = 'C:\Users\hfu\Documents\FlowIntent\\apks'
     UIExerciser.emu_loc = 'C:\Users\hfu\AppData\Local\Android\sdk/tools/emulator.exe'
     UIExerciser.emu_name = 'Qvga'
 
