@@ -7,7 +7,7 @@ if __name__ == '__main__':
     ISOTIMEFORMAT = '%m%d-%H-%M-%S'
     logger = Utilities.set_logger('COSMOS_TRIGGER_PY-Console')
 
-    device = 'nexuss'
+    device = 'nexus4'
     pc = 'iai'
 
     if device == 'nexus4':
@@ -24,7 +24,7 @@ if __name__ == '__main__':
     UIExerciser.emu_loc = 'C:\Users\hfu\AppData\Local\Android\sdk/tools/emulator.exe'
     UIExerciser.emu_name = 'Qvga'
 
-    out_base_dir = 'output/'
+    out_base_dir = os.pardir + '/output/'
 
     #UIExerciser.emu_proc = UIExerciser.open_emu(UIExerciser.emu_loc, UIExerciser.emu_name)
     for root, dirs, files in os.walk(apk_dir, topdown=False):

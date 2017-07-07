@@ -148,7 +148,7 @@ class ViewClientHandler:
         nodes = dom.getElementsByTagName('node')
         for node in nodes:
             if node.hasAttribute('resource-id'):
-                return
+                return xml_data
             else:
                 break
         bounds2ids = ViewClientHandler.dump_view_server(package)

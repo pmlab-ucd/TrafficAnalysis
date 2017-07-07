@@ -2,6 +2,7 @@ from subprocess32 import STDOUT, check_output
 import logging
 import psutil
 import threading
+import os
 
 
 class Utilities:
@@ -79,7 +80,7 @@ class Utilities:
             parent.wait(5)
 
     @staticmethod
-    def run_method(target, timeout, args):
+    def run_method(target, timeout, args=[]):
         p = threading.Thread(target=target, args=args)
         p.start()
         # Wait for 120 seconds or until process finishes
@@ -97,3 +98,42 @@ class Utilities:
             return False
         else:
             return True
+
+    @staticmethod
+    def adb_process2ids(name):
+        seconds = 60
+        output = check_output('adb shell ps', stderr=STDOUT, timeout=seconds)
+        targets = []
+        for line in output.split('\n'):
+            # print line
+            tmp = line.replace(' ', '')
+            tmp = tmp.replace('\n', '')
+            if tmp != '':
+                # print line
+                items = str(line).split(' ')
+                items = filter(None, items)
+                if name in items[len(items) - 1]:
+                    targets.append(items[1])
+        return targets
+
+    @staticmethod
+    def adb_id2process(id):
+        seconds = 60
+        output = check_output('adb shell ps', stderr=STDOUT, timeout=seconds)
+        for line in output.split('\n'):
+            # print line
+            tmp = line.replace(' ', '')
+            tmp = tmp.replace('\n', '')
+            if tmp != '':
+                # print line
+                items = str(line).split(' ')
+                items = filter(None, items)
+                if id == items[1]:
+                    return items[len(items) - 1]
+        else:
+            return 'Unknown'
+
+    @staticmethod
+    def adb_kill(name):
+        for target in Utilities.adb_process2ids(name):
+            os.popen('adb shell kill ' + target)

@@ -13,6 +13,7 @@ import psutil
 import sign_apks
 import json
 from view_client_handler import ViewClientHandler
+from TaintDroidLogHandler import TaintDroidLogHandler
 
 ISOTIMEFORMAT = '%m%d-%H-%M-%S'
 
@@ -98,26 +99,6 @@ class UIExerciser:
                         print('Send SMS alarm')
                     return True
         return False
-
-    @staticmethod
-    def adb_kill(name):
-        seconds = 60
-        Utilities.logger.debug('Kill: ' + name)
-        output = check_output('adb shell ps', stderr=STDOUT, timeout=seconds)
-        targets = []
-        for line in output.split('\n'):
-            # print line
-            tmp = line.replace(' ', '')
-            tmp = tmp.replace('\n', '')
-            if tmp != '':
-                # print line
-                items = str(line).split(' ')
-                items = filter(None, items)
-                if name in items[len(items) - 1]:
-                    targets.append(items[1])
-                    # Utilities.logger.debug(line)
-        for target in targets:
-            os.popen('adb shell kill ' + target)
 
     @staticmethod
     def touch(dev, node_bounds):
@@ -327,7 +308,7 @@ class UIExerciser:
 
     @staticmethod
     def start_taintdroid(series):
-        UIExerciser.run_adb_cmd(' shell am start -n fu.hao.uidroid/.TaintDroidNotifyController')
+        UIExerciser.run_adb_cmd('shell am start -n fu.hao.uidroid/.TaintDroidNotifyController')
 
     @staticmethod
     def pass_first_page(dev):
@@ -413,16 +394,20 @@ class UIExerciser:
         UIExerciser.uninstall_pkg(series, package)
         UIExerciser.install_apk(series, apk)
 
-        self.run_adb_cmd('shell am start -n fu.hao.uidroid/.TaintDroidNotifyController')
+        #self.run_adb_cmd('shell am start -n fu.hao.uidroid/.TaintDroidNotifyController')
         self.run_adb_cmd('shell "su 0 date -s `date +%Y%m%d.%H%M%S`"')
         UIExerciser.run_adb_cmd('shell monkey -p com.lexa.fakegps --ignore-crashes 1')
-
-        self.logger.info('tcpdump begins')
         UIExerciser.run_adb_cmd('logcat -c')
         self.logger.info('clear logcat')  # self.screenshot(output_dir, activity)
 
-        UIExerciser.run_adb_cmd('shell "nohup /data/local/tcpdump -w /sdcard/' + package + current_time  + '.pcap &"')
-        UIExerciser.run_adb_cmd('shell "nohup logcat -v threadtime -s "UiDroid_Taint" > /sdcard/' + package + current_time +'.log &"')
+        #UIExerciser.run_adb_cmd('shell "nohup /data/local/tcpdump -w /sdcard/' + package + current_time  + '.pcap &"')
+        #UIExerciser.run_adb_cmd('shell "nohup logcat -v threadtime -s "UiDroid_Taint" > /sdcard/' + package + current_time +'.log &"')
+
+        #cmd = 'adb -s ' + series + ' shell "nohup /data/local/tcpdump -w /sdcard/' + package + current_time + '.pcap &"'
+        self.logger.info('tcpdump begins')
+        cmd = 'adb -s ' + series + ' shell /data/local/tcpdump -w /sdcard/' + package + current_time + '.pcap'
+        # os.system(cmd)
+        process = Popen(cmd, stdout=PIPE, stderr=STDOUT, shell=True)
 
         UIExerciser.run_adb_cmd('shell monkey -p ' + package + ' --ignore-crashes 1')
         for i in range(1, 3):
@@ -437,15 +422,21 @@ class UIExerciser:
             else:
                 self.logger.warn("Time out while dumping XML for the default activity")
 
-        UIExerciser.adb_kill('logcat')
-        UIExerciser.adb_kill('tcpdump')
-        UIExerciser.run_adb_cmd('shell am force-stop fu.hao.uidroid')
+        #UIExerciser.adb_kill('logcat')
+        #Utilities.adb_kill('tcpdump')
+        #UIExerciser.run_adb_cmd('shell am force-stop fu.hao.uidroid')
+        process.kill()
 
-        UIExerciser.run_adb_cmd('pull /sdcard/' + package + current_time  + '.pcap ' + output_dir)
+        UIExerciser.run_adb_cmd('pull /sdcard/' + package + current_time  + '.pcap '
+                                + output_dir + package + current_time  + '.pcap')
         UIExerciser.run_adb_cmd('shell rm /sdcard/' + package + current_time + '.pcap')
 
-        UIExerciser.run_adb_cmd('pull /sdcard/' + package + current_time + '.log ' + output_dir)
-        UIExerciser.run_adb_cmd('shell rm /sdcard/' + package + current_time + '.log')
+        #UIExerciser.run_adb_cmd('pull /sdcard/' + package + current_time + '.log ' + output_dir)
+        #UIExerciser.run_adb_cmd('shell rm /sdcard/' + package + current_time + '.log')
+        taint_logs = []
+        Utilities.run_method(TaintDroidLogHandler.collect_taint_log, 15, args=[taint_logs])
+        with open(output_dir + package + current_time + '.json', 'w') as outfile:
+            json.dump(taint_logs, outfile)
 
         self.uninstall_pkg(series, package)
         self.logger.info('End')

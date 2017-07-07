@@ -1,0 +1,129 @@
+2017-07-07 17:21:03,023 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\hfu\Documents\FlowIntent\apks\7768793.html.apk
+2017-07-07 17:21:03,023 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.lianyun.wenwan
+2017-07-07 17:21:03,023 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 01b7006e13dd12a1 uninstall com.lianyun.wenwan
+2017-07-07 17:21:03,993 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-07 17:21:03,993 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\hfu\Documents\FlowIntent\apks\7768793.html.apk
+2017-07-07 17:21:08,476 - COSMOS_TRIGGER_PY-Console - DEBUG - [  1%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,476 - COSMOS_TRIGGER_PY-Console - DEBUG - [  2%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,476 - COSMOS_TRIGGER_PY-Console - DEBUG - [  3%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,476 - COSMOS_TRIGGER_PY-Console - DEBUG - [  5%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,477 - COSMOS_TRIGGER_PY-Console - DEBUG - [  6%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,477 - COSMOS_TRIGGER_PY-Console - DEBUG - [  7%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,477 - COSMOS_TRIGGER_PY-Console - DEBUG - [  8%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,477 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 10%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,477 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 11%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,477 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 12%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,479 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 13%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,479 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 15%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,479 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 16%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,479 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 17%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,479 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 18%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,479 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 20%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,480 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 21%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,480 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 22%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,480 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 23%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,480 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 25%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,480 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 26%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,480 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 27%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,480 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 28%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,480 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 30%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,480 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 31%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,480 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 32%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,480 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 33%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,480 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 35%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,480 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 36%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,482 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 37%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,482 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 39%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,482 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 40%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,482 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 41%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,482 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 42%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,482 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 44%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,483 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 45%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,483 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 46%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,483 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 47%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,483 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 49%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,483 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 50%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,483 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 51%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,483 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 52%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,483 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 54%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,483 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 55%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,483 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 56%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,483 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 57%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,484 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 59%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,484 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 60%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,484 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 61%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,484 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 62%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,484 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 64%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,486 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 65%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,486 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 66%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,486 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 67%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,486 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 69%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,486 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 70%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,486 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 71%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,486 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 72%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,486 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 74%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,486 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 75%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,487 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 76%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,487 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 78%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,487 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 79%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,487 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 80%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,487 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 81%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,489 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 83%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,489 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 84%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,489 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 85%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,489 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 86%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,489 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 88%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,489 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 89%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,489 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 90%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,490 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 91%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,490 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 93%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,490 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 94%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,490 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 95%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,490 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 96%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,490 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 98%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,490 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 99%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,490 - COSMOS_TRIGGER_PY-Console - DEBUG - [100%] /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,490 - COSMOS_TRIGGER_PY-Console - DEBUG - C:\Users\hfu\Documents\FlowIntent\apks\7768793.html.apk: 1 file pushed. 3.5 MB/s (5207927 bytes in 1.428s)
+2017-07-07 17:21:08,490 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/7768793.html.apk
+2017-07-07 17:21:08,490 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-07 17:21:08,490 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-07 17:21:08,609 - COSMOS_TRIGGER_PY-Console - DEBUG - Fri Jul  7 17:20:59 EDT 2017
+2017-07-07 17:21:08,609 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-07 17:21:09,430 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-07 17:21:09,430 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=63ms (0ms mobile, 63ms wifi, 0ms not connected)
+2017-07-07 17:21:09,430 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-07 17:21:09,499 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-07 17:21:09,500 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-07 17:21:09,503 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lianyun.wenwan --ignore-crashes 1
+2017-07-07 17:21:10,323 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-07 17:21:10,323 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=69ms (0ms mobile, 69ms wifi, 0ms not connected)
+2017-07-07 17:21:10,341 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-07 17:21:11,913 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-07 17:21:25,306 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<hierarchy rotation="0">
+  <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.lianyun.wenwan" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][768,1184]">
+    <node index="0" text="" resource-id="com.lianyun.wenwan:id/guide_pages" class="android.support.v4.view.ViewPager" package="com.lianyun.wenwan" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" scrollable="true" long-clickable="false" password="false" selected="false" bounds="[0,50][768,1184]" />
+  </node>
+</hierarchy>
+2017-07-07 17:21:27,230 - COSMOS_TRIGGER_PY-Console - INFO - ../output/apks/7768793.html/first_page.png
+2017-07-07 17:21:27,265 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.lianyun.wenwan0707-17-21-02.pcap ../output/apks/7768793.html/com.lianyun.wenwan0707-17-21-02.pcap
+2017-07-07 17:21:27,734 - COSMOS_TRIGGER_PY-Console - DEBUG - [  7%] /sdcard/com.lianyun.wenwan0707-17-21-02.pcap
+2017-07-07 17:21:27,734 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 15%] /sdcard/com.lianyun.wenwan0707-17-21-02.pcap
+2017-07-07 17:21:27,734 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 22%] /sdcard/com.lianyun.wenwan0707-17-21-02.pcap
+2017-07-07 17:21:27,734 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 30%] /sdcard/com.lianyun.wenwan0707-17-21-02.pcap
+2017-07-07 17:21:27,734 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 38%] /sdcard/com.lianyun.wenwan0707-17-21-02.pcap
+2017-07-07 17:21:27,734 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 45%] /sdcard/com.lianyun.wenwan0707-17-21-02.pcap
+2017-07-07 17:21:27,734 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 53%] /sdcard/com.lianyun.wenwan0707-17-21-02.pcap
+2017-07-07 17:21:27,734 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 61%] /sdcard/com.lianyun.wenwan0707-17-21-02.pcap
+2017-07-07 17:21:27,736 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 68%] /sdcard/com.lianyun.wenwan0707-17-21-02.pcap
+2017-07-07 17:21:27,736 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 76%] /sdcard/com.lianyun.wenwan0707-17-21-02.pcap
+2017-07-07 17:21:27,736 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 84%] /sdcard/com.lianyun.wenwan0707-17-21-02.pcap
+2017-07-07 17:21:27,736 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 91%] /sdcard/com.lianyun.wenwan0707-17-21-02.pcap
+2017-07-07 17:21:27,736 - COSMOS_TRIGGER_PY-Console - DEBUG - [ 99%] /sdcard/com.lianyun.wenwan0707-17-21-02.pcap
+2017-07-07 17:21:27,736 - COSMOS_TRIGGER_PY-Console - DEBUG - [   ?] /sdcard/com.lianyun.wenwan0707-17-21-02.pcap: 917504/?
+2017-07-07 17:21:27,736 - COSMOS_TRIGGER_PY-Console - DEBUG - [   ?] /sdcard/com.lianyun.wenwan0707-17-21-02.pcap: 958464/?
+2017-07-07 17:21:27,736 - COSMOS_TRIGGER_PY-Console - DEBUG - /sdcard/com.lianyun.wenwan0707-17-21-02.pcap: 1 file pulled. 2.3 MB/s (958464 bytes in 0.403s)
+2017-07-07 17:21:27,736 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.lianyun.wenwan0707-17-21-02.pcap
+2017-07-07 17:21:32,493 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 01b7006e13dd12a1 uninstall com.lianyun.wenwan
+2017-07-07 17:21:34,016 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-07 17:21:34,016 - COSMOS_TRIGGER_PY-Console - INFO - End
