@@ -1,0 +1,14 @@
+<?xml version="1.0" ?><hierarchy>
+  <node bounds="[120,380][360,458]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.lianyun.wenwan" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[120,380][360,458]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.lianyun.wenwan" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[120,380][360,458]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.lianyun.wenwan" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[120,380][360,458]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.lianyun.wenwan" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <node bounds="[120,380][360,458]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.lianyun.wenwan" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+            <node bounds="[161,406][187,432]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.lianyun.wenwan" password="false" resource-id="id/my_progress" scrollable="false" selected="false" text=""/>
+            <node bounds="[187,406][318,431]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.lianyun.wenwan" password="false" resource-id="id/progress_title" scrollable="false" selected="false" text="正在加载数据"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
