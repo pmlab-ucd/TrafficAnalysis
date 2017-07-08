@@ -1,0 +1,48 @@
+2017-07-08 05:00:30,095 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\ef658ddcaa20cf3ea196e9b1148988e64d8aa75e.apk
+2017-07-08 05:00:30,096 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.livegame.wallpaperhaidibz
+2017-07-08 05:00:30,096 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.livegame.wallpaperhaidibz
+2017-07-08 05:00:30,930 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-08 05:00:30,930 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\ef658ddcaa20cf3ea196e9b1148988e64d8aa75e.apk
+2017-07-08 05:00:33,887 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/ef658ddcaa20cf3ea196e9b1148988e64d8aa75e.apk
+2017-07-08 05:00:33,888 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 05:00:33,888 - COSMOS_TRIGGER_PY-Console - DEBUG - 1396 KB/s (1096122 bytes in 0.766s)
+2017-07-08 05:00:33,888 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-08 05:00:34,683 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-08 05:00:34,683 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-08 05:00:35,578 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 05:00:35,578 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=96ms (0ms mobile, 96ms wifi, 0ms not connected)
+2017-07-08 05:00:36,941 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-08 05:00:37,069 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-08 05:00:37,069 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-08 05:00:37,121 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.livegame.wallpaperhaidibz --ignore-crashes 1
+2017-07-08 05:00:38,061 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 05:00:38,061 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=95ms (0ms mobile, 95ms wifi, 0ms not connected)
+2017-07-08 05:00:38,131 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-08 05:00:38,233 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-08 05:00:59,417 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.wallpaperhaidibz" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.wallpaperhaidibz" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.wallpaperhaidibz" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.wallpaperhaidibz" password="false" resource-id="id/title" scrollable="false" selected="false" text="海底动态壁纸"/>
+      </node>
+      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.livegame.wallpaperhaidibz" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.wallpaperhaidibz" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.livegame.wallpaperhaidibz" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <node bounds="[0,1028][720,1124]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.livegame.wallpaperhaidibz" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+            <node bounds="[0,1028][354,1124]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.livegame.wallpaperhaidibz" password="false" resource-id="id/set_wallpaper" scrollable="false" selected="false" text="设置为壁纸"/>
+            <node bounds="[366,1028][720,1124]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.livegame.wallpaperhaidibz" password="false" resource-id="id/configure" scrollable="false" selected="false" text="设置"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-08 05:01:00,556 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-08 05:01:00,556 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-08 05:01:04,118 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/ef658ddcaa20cf3ea196e9b1148988e64d8aa75e/first_page.png
+2017-07-08 05:01:04,595 - COSMOS_TRIGGER_PY-Console - DEBUG - 3935 KB/s (1571146 bytes in 0.389s)
+2017-07-08 05:01:09,719 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.livegame.wallpaperhaidibz0708-05-00-30.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/ef658ddcaa20cf3ea196e9b1148988e64d8aa75e/com.livegame.wallpaperhaidibz0708-05-00-30.pcap
+2017-07-08 05:01:09,822 - COSMOS_TRIGGER_PY-Console - DEBUG - 1004 KB/s (10813 bytes in 0.010s)
+2017-07-08 05:01:10,571 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.livegame.wallpaperhaidibz
+2017-07-08 05:01:12,098 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 05:01:12,098 - COSMOS_TRIGGER_PY-Console - INFO - End

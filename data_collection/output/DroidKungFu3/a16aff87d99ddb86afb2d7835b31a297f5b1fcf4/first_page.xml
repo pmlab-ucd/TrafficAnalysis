@@ -1,0 +1,19 @@
+<?xml version="1.0" ?><hierarchy>
+  <node bounds="[40,207][680,976]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[65,227][655,946]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[65,227][655,333]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="License Agreement"/>
+      <node bounds="[65,333][655,946]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[65,333][655,946]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[65,333][655,946]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[71,339][649,838]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[71,339][649,838]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="true" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="Scrambled Net is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License at http://www.gnu.org/licenses/gpl-2.0.html for more details.  This program is open-source software. The source code can be obtained on the project home page; see the About screen."/>
+            </node>
+            <node bounds="[71,838][649,940]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[77,841][646,937]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="Close"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>

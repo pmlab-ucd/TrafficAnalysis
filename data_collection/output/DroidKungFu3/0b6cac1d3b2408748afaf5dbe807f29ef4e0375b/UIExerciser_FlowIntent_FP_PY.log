@@ -1,0 +1,54 @@
+2017-07-07 21:06:53,769 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\0b6cac1d3b2408748afaf5dbe807f29ef4e0375b.apk
+2017-07-07 21:06:53,769 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.ps.wordsearch.view
+2017-07-07 21:06:53,769 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.wordsearch.view
+2017-07-07 21:06:54,647 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-07 21:06:54,648 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\0b6cac1d3b2408748afaf5dbe807f29ef4e0375b.apk
+2017-07-07 21:06:57,750 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/0b6cac1d3b2408748afaf5dbe807f29ef4e0375b.apk
+2017-07-07 21:06:57,750 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-07 21:06:57,750 - COSMOS_TRIGGER_PY-Console - DEBUG - 1858 KB/s (748849 bytes in 0.393s)
+2017-07-07 21:06:57,752 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-07 21:06:58,592 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-07 21:06:58,592 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-07 21:06:59,415 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-07 21:06:59,417 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=48ms (0ms mobile, 48ms wifi, 0ms not connected)
+2017-07-07 21:06:59,417 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-07 21:06:59,545 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-07 21:06:59,546 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-07 21:06:59,585 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.ps.wordsearch.view --ignore-crashes 1
+2017-07-07 21:07:01,276 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-07 21:07:01,276 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=259ms (0ms mobile, 259ms wifi, 0ms not connected)
+2017-07-07 21:07:01,355 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-07 21:07:02,506 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-07 21:07:27,624 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,241][720,942]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.wordsearch.view" password="false" resource-id="id/parentPanel" scrollable="false" selected="false" text="">
+    <node bounds="[0,241][720,942]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.wordsearch.view" password="false" resource-id="id/parentPanel" scrollable="false" selected="false" text="">
+      <node bounds="[0,241][720,942]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.wordsearch.view" password="false" resource-id="id/parentPanel" scrollable="false" selected="false" text="">
+        <node bounds="[0,241][720,942]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.wordsearch.view" password="false" resource-id="id/parentPanel" scrollable="false" selected="false" text="">
+          <node bounds="[6,259][718,796]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.wordsearch.view" password="false" resource-id="id/contentPanel" scrollable="false" selected="false" text="">
+            <node bounds="[31,279][693,796]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.wordsearch.view" password="false" resource-id="id/scrollView" scrollable="false" selected="false" text="">
+              <node bounds="[59,283][673,772]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.wordsearch.view" password="false" resource-id="id/message" scrollable="false" selected="false" text="You can change the grid size, word bank, and how you highlight words by pushing the &quot;menu&quot; button and selecting &quot;preferences.&quot; Or, you can pick how you highlight words now. - &quot;Tap&quot; means you tap on the first and last letters but nothing in between. - &quot;Drag&quot; means you highlight the entire word without lifting your finger."/>
+            </node>
+          </node>
+          <node bounds="[6,796][718,936]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.wordsearch.view" password="false" resource-id="id/buttonPanel" scrollable="false" selected="false" text="">
+            <node bounds="[31,796][693,905]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.wordsearch.view" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <node bounds="[35,804][253,900]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.ps.wordsearch.view" password="false" resource-id="id/button1" scrollable="false" selected="false" text="Tap"/>
+              <node bounds="[253,804][471,900]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.ps.wordsearch.view" password="false" resource-id="id/button3" scrollable="false" selected="false" text="Cancel"/>
+              <node bounds="[471,804][689,900]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.ps.wordsearch.view" password="false" resource-id="id/button2" scrollable="false" selected="false" text="Drag"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-07 21:07:28,811 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-07 21:07:28,811 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-07 21:07:29,494 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/0b6cac1d3b2408748afaf5dbe807f29ef4e0375b/first_page.png
+2017-07-07 21:07:29,628 - COSMOS_TRIGGER_PY-Console - DEBUG - 2583 KB/s (141944 bytes in 0.053s)
+2017-07-07 21:07:29,631 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.ps.wordsearch.view0707-21-06-53.pcap ../output/DroidKungFu3/0b6cac1d3b2408748afaf5dbe807f29ef4e0375b/com.ps.wordsearch.view0707-21-06-53.pcap
+2017-07-07 21:07:29,703 - COSMOS_TRIGGER_PY-Console - DEBUG - 665 KB/s (4096 bytes in 0.006s)
+2017-07-07 21:07:29,703 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.ps.wordsearch.view0707-21-06-53.pcap
+2017-07-07 21:07:44,831 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-07 21:07:44,832 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.wordsearch.view
+2017-07-07 21:07:46,371 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-07 21:07:46,371 - COSMOS_TRIGGER_PY-Console - INFO - End

@@ -1,0 +1,59 @@
+2017-07-08 04:24:23,568 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\c90a026b8b31ca1e6ab7157b65809fc0c301523a.apk
+2017-07-08 04:24:23,569 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.ps.opensudoku
+2017-07-08 04:24:23,569 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.opensudoku
+2017-07-08 04:24:24,392 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-08 04:24:24,392 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\c90a026b8b31ca1e6ab7157b65809fc0c301523a.apk
+2017-07-08 04:24:26,529 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/c90a026b8b31ca1e6ab7157b65809fc0c301523a.apk
+2017-07-08 04:24:26,529 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 04:24:26,529 - COSMOS_TRIGGER_PY-Console - DEBUG - 1652 KB/s (391758 bytes in 0.231s)
+2017-07-08 04:24:26,529 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-08 04:24:27,352 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-08 04:24:27,354 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-08 04:24:28,335 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 04:24:28,336 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=158ms (0ms mobile, 158ms wifi, 0ms not connected)
+2017-07-08 04:24:29,710 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-08 04:24:29,782 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-08 04:24:29,782 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-08 04:24:29,796 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.ps.opensudoku --ignore-crashes 1
+2017-07-08 04:24:30,770 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 04:24:30,770 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=129ms (0ms mobile, 129ms wifi, 0ms not connected)
+2017-07-08 04:24:30,855 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-08 04:24:30,960 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-08 04:25:04,551 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,56][360,623]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,56][360,623]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,56][360,623]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,56][360,623]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[3,66][359,138]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[29,84][333,127]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[29,84][77,127]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text=""/>
+              <node bounds="[77,89][333,123]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="What's new"/>
+            </node>
+            <node bounds="[18,137][344,138]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text=""/>
+          </node>
+          <node bounds="[3,138][359,540]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[18,138][344,540]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[18,144][344,534]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="com.ps.opensudoku" password="false" scrollable="true" selected="false" text=""/>
+            </node>
+          </node>
+          <node bounds="[3,540][359,620]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[18,540][344,602]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[100,545][261,599]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="Close"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-08 04:25:05,706 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-08 04:25:05,707 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-08 04:25:06,441 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/c90a026b8b31ca1e6ab7157b65809fc0c301523a/first_page.png
+2017-07-08 04:25:06,617 - COSMOS_TRIGGER_PY-Console - DEBUG - 2992 KB/s (232871 bytes in 0.076s)
+2017-07-08 04:25:11,750 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.ps.opensudoku0708-04-24-23.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/c90a026b8b31ca1e6ab7157b65809fc0c301523a/com.ps.opensudoku0708-04-24-23.pcap
+2017-07-08 04:25:11,857 - COSMOS_TRIGGER_PY-Console - DEBUG - 456 KB/s (2573 bytes in 0.005s)
+2017-07-08 04:25:26,858 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-08 04:25:26,859 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.opensudoku
+2017-07-08 04:25:28,756 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 04:25:28,757 - COSMOS_TRIGGER_PY-Console - INFO - End

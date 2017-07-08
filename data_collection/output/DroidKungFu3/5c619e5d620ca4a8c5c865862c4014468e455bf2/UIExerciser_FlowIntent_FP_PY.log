@@ -1,0 +1,44 @@
+2017-07-08 00:03:02,490 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\5c619e5d620ca4a8c5c865862c4014468e455bf2.apk
+2017-07-08 00:03:02,490 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.mogo.media
+2017-07-08 00:03:02,490 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.mogo.media
+2017-07-08 00:03:03,315 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-08 00:03:03,315 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\5c619e5d620ca4a8c5c865862c4014468e455bf2.apk
+2017-07-08 00:03:05,996 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/5c619e5d620ca4a8c5c865862c4014468e455bf2.apk
+2017-07-08 00:03:05,996 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 00:03:05,997 - COSMOS_TRIGGER_PY-Console - DEBUG - 1554 KB/s (618863 bytes in 0.388s)
+2017-07-08 00:03:05,997 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-08 00:03:06,770 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-08 00:03:06,770 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-08 00:03:07,743 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 00:03:07,744 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=187ms (0ms mobile, 187ms wifi, 0ms not connected)
+2017-07-08 00:03:09,102 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-08 00:03:09,171 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-08 00:03:09,171 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-08 00:03:09,187 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.mogo.media --ignore-crashes 1
+2017-07-08 00:03:10,115 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 00:03:10,115 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=98ms (0ms mobile, 98ms wifi, 0ms not connected)
+2017-07-08 00:03:10,186 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-08 00:03:10,301 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-08 00:03:30,414 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.mogo.media" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.mogo.media" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.mogo.media" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.ListView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="1" long-clickable="false" package="com.mogo.media" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <node bounds="[0,50][720,178]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.mogo.media" password="false" resource-id="id/text1" scrollable="false" selected="false" text="全部音乐"/>
+          <node bounds="[0,179][720,307]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.mogo.media" password="false" resource-id="id/text1" scrollable="false" selected="false" text="最近播放列表"/>
+          <node bounds="[0,308][720,436]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.mogo.media" password="false" resource-id="id/text1" scrollable="false" selected="false" text="最经常播放列表"/>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-08 00:03:31,589 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-08 00:03:31,591 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-08 00:03:32,171 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/5c619e5d620ca4a8c5c865862c4014468e455bf2/first_page.png
+2017-07-08 00:03:32,303 - COSMOS_TRIGGER_PY-Console - DEBUG - 2836 KB/s (53773 bytes in 0.018s)
+2017-07-08 00:03:32,334 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.mogo.media0708-00-03-02.pcap ../output/DroidKungFu3/5c619e5d620ca4a8c5c865862c4014468e455bf2/com.mogo.media0708-00-03-02.pcap
+2017-07-08 00:03:32,404 - COSMOS_TRIGGER_PY-Console - DEBUG - 1001 KB/s (8192 bytes in 0.007s)
+2017-07-08 00:03:32,404 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.mogo.media0708-00-03-02.pcap
+2017-07-08 00:03:33,342 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.mogo.media
+2017-07-08 00:03:34,772 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 00:03:34,772 - COSMOS_TRIGGER_PY-Console - INFO - End

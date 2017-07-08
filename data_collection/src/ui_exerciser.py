@@ -279,7 +279,6 @@ class UIExerciser:
     @staticmethod
     def run_cmd(cmd):
         Utilities.logger.debug('Run cmd: ' + cmd)
-
         seconds = 60
         result = True
         for i in range(1, 3):
@@ -293,7 +292,7 @@ class UIExerciser:
                     tmp = tmp.replace('\n', '')
                     if tmp != '':
                         Utilities.logger.debug(line)
-                break
+                return True
             except Exception as exc:
                 Utilities.logger.warn(exc)
                 result = False
@@ -303,8 +302,8 @@ class UIExerciser:
                         UIExerciser.emu_proc = UIExerciser.open_emu(UIExerciser.emu_loc, UIExerciser.emu_name)
                     else:
                         raise Exception(cmd)
-
-        return result
+        raise Exception(cmd)
+        #return result
 
     @staticmethod
     def start_taintdroid(series):
@@ -381,7 +380,7 @@ class UIExerciser:
             self.logger.error('Not a valid pkg.')
             return
 
-        self.start_taintdroid(series)
+        #self.start_taintdroid(series)
 
         output_dir = self.out_base_dir + par_dir + '/' + apk_name + '/'
         if not os.path.exists(output_dir):
@@ -397,6 +396,8 @@ class UIExerciser:
         #self.run_adb_cmd('shell am start -n fu.hao.uidroid/.TaintDroidNotifyController')
         self.run_adb_cmd('shell "su 0 date -s `date +%Y%m%d.%H%M%S`"')
         UIExerciser.run_adb_cmd('shell monkey -p com.lexa.fakegps --ignore-crashes 1')
+        d = Device()
+        d(text='Set location').click()
         UIExerciser.run_adb_cmd('logcat -c')
         self.logger.info('clear logcat')  # self.screenshot(output_dir, activity)
 
@@ -407,6 +408,7 @@ class UIExerciser:
         self.logger.info('tcpdump begins')
         cmd = 'adb -s ' + series + ' shell /data/local/tcpdump -w /sdcard/' + package + current_time + '.pcap'
         # os.system(cmd)
+        print cmd
         process = Popen(cmd, stdout=PIPE, stderr=STDOUT, shell=True)
 
         UIExerciser.run_adb_cmd('shell monkey -p ' + package + ' --ignore-crashes 1')
@@ -425,11 +427,16 @@ class UIExerciser:
         #UIExerciser.adb_kill('logcat')
         #Utilities.adb_kill('tcpdump')
         #UIExerciser.run_adb_cmd('shell am force-stop fu.hao.uidroid')
-        process.kill()
-
-        UIExerciser.run_adb_cmd('pull /sdcard/' + package + current_time  + '.pcap '
-                                + output_dir + package + current_time  + '.pcap')
-        UIExerciser.run_adb_cmd('shell rm /sdcard/' + package + current_time + '.pcap')
+        #os.system("TASKKILL /F /PID {pid} /T".format(pid=process.pid))
+        process.kill() # takes more time
+        out_pcap = output_dir + package + current_time  + '.pcap'
+        while not os.path.exists(out_pcap) or os.stat(out_pcap).st_size < 2:
+            time.sleep(5)
+            cmd = 'pull /sdcard/' + package + current_time  + '.pcap ' + out_pcap
+            UIExerciser.run_adb_cmd(cmd)
+            #if not os.path.exists(out_pcap):
+                #raise Exception('The pcap does not exist.')
+        #UIExerciser.run_adb_cmd('shell rm /sdcard/' + package + current_time + '.pcap')
 
         #UIExerciser.run_adb_cmd('pull /sdcard/' + package + current_time + '.log ' + output_dir)
         #UIExerciser.run_adb_cmd('shell rm /sdcard/' + package + current_time + '.log')

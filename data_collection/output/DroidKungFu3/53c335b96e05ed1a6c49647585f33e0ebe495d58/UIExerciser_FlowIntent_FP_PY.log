@@ -1,0 +1,49 @@
+2017-07-07 23:56:34,736 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\53c335b96e05ed1a6c49647585f33e0ebe495d58.apk
+2017-07-07 23:56:34,736 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.livegame.wallpaperfengjing
+2017-07-07 23:56:34,736 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.livegame.wallpaperfengjing
+2017-07-07 23:56:35,520 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-07 23:56:35,520 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\53c335b96e05ed1a6c49647585f33e0ebe495d58.apk
+2017-07-07 23:56:42,651 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/53c335b96e05ed1a6c49647585f33e0ebe495d58.apk
+2017-07-07 23:56:42,651 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-07 23:56:42,651 - COSMOS_TRIGGER_PY-Console - DEBUG - 128 KB/s (693445 bytes in 5.285s)
+2017-07-07 23:56:42,651 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-07 23:56:43,397 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-07 23:56:43,397 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-07 23:56:44,321 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-07 23:56:44,321 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=168ms (0ms mobile, 168ms wifi, 0ms not connected)
+2017-07-07 23:56:45,664 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-07 23:56:45,736 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-07 23:56:45,736 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-07 23:56:45,750 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.livegame.wallpaperfengjing --ignore-crashes 1
+2017-07-07 23:56:46,825 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-07 23:56:46,825 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=176ms (0ms mobile, 176ms wifi, 0ms not connected)
+2017-07-07 23:56:46,898 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-07 23:56:47,003 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-07 23:57:08,405 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.wallpaperfengjing" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.wallpaperfengjing" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.wallpaperfengjing" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.wallpaperfengjing" password="false" resource-id="id/title" scrollable="false" selected="false" text="高清风景动态壁纸"/>
+      </node>
+      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.livegame.wallpaperfengjing" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.wallpaperfengjing" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.livegame.wallpaperfengjing" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <node bounds="[0,1028][720,1124]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.livegame.wallpaperfengjing" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+            <node bounds="[0,1028][354,1124]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.livegame.wallpaperfengjing" password="false" resource-id="id/set_wallpaper" scrollable="false" selected="false" text="设置为壁纸"/>
+            <node bounds="[366,1028][720,1124]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.livegame.wallpaperfengjing" password="false" resource-id="id/configure" scrollable="false" selected="false" text="设置"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-07 23:57:09,556 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-07 23:57:09,558 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-07 23:57:11,844 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/53c335b96e05ed1a6c49647585f33e0ebe495d58/first_page.png
+2017-07-07 23:57:12,177 - COSMOS_TRIGGER_PY-Console - DEBUG - 3506 KB/s (845952 bytes in 0.235s)
+2017-07-07 23:57:12,178 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.livegame.wallpaperfengjing0707-23-56-34.pcap ../output/DroidKungFu3/53c335b96e05ed1a6c49647585f33e0ebe495d58/com.livegame.wallpaperfengjing0707-23-56-34.pcap
+2017-07-07 23:57:12,260 - COSMOS_TRIGGER_PY-Console - DEBUG - 1984 KB/s (16384 bytes in 0.008s)
+2017-07-07 23:57:12,260 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.livegame.wallpaperfengjing0707-23-56-34.pcap
+2017-07-07 23:57:13,151 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.livegame.wallpaperfengjing
+2017-07-07 23:57:14,684 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-07 23:57:14,684 - COSMOS_TRIGGER_PY-Console - INFO - End

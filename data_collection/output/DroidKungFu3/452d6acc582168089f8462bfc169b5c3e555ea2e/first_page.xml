@@ -1,0 +1,25 @@
+<?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <node bounds="[0,5][720,105]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="id/topLayout" scrollable="false" selected="false" text="">
+            <node bounds="[0,5][526,105]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="id/directory_buttons" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,5][108,105]" checkable="false" checked="false" class="android.widget.ImageButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+              <node bounds="[108,5][248,101]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="storage"/>
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[248,5][356,105]" checkable="false" checked="false" class="android.widget.ImageButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+              <node bounds="[356,5][526,101]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="Download"/>
+            </node>
+          </node>
+          <node bounds="[0,105][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="id/empty_text" scrollable="false" selected="false" text="">
+            <node bounds="[0,105][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="id/empty_text" scrollable="false" selected="false" text="">
+              <node bounds="[0,105][720,1184]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="id/empty_text" scrollable="false" selected="false" text="该文件夹为空"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>

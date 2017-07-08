@@ -1,0 +1,40 @@
+2017-07-08 01:30:10,203 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\a151366f488f890ce47c8ad3e3fd2707626a50da.apk
+2017-07-08 01:30:10,203 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.mogo.animalkeeper
+2017-07-08 01:30:10,203 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.mogo.animalkeeper
+2017-07-08 01:30:11,029 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-08 01:30:11,029 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\a151366f488f890ce47c8ad3e3fd2707626a50da.apk
+2017-07-08 01:30:13,733 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/a151366f488f890ce47c8ad3e3fd2707626a50da.apk
+2017-07-08 01:30:13,733 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 01:30:13,733 - COSMOS_TRIGGER_PY-Console - DEBUG - 2578 KB/s (1549029 bytes in 0.586s)
+2017-07-08 01:30:13,734 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-08 01:30:14,618 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-08 01:30:14,618 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-08 01:30:15,619 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 01:30:15,619 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=135ms (0ms mobile, 135ms wifi, 0ms not connected)
+2017-07-08 01:30:16,970 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-08 01:30:17,098 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-08 01:30:17,099 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-08 01:30:17,144 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.mogo.animalkeeper --ignore-crashes 1
+2017-07-08 01:30:18,134 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 01:30:18,134 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=143ms (0ms mobile, 143ms wifi, 0ms not connected)
+2017-07-08 01:30:18,226 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-08 01:30:18,338 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-08 01:30:37,499 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.mogo.animalkeeper" password="false" resource-id="id/content" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.mogo.animalkeeper" password="false" resource-id="id/content" scrollable="false" selected="false" text="">
+      <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.mogo.animalkeeper" password="false" resource-id="id/content" scrollable="false" selected="false" text="">
+        <node bounds="[6,0][714,1184]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.mogo.animalkeeper" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-08 01:30:38,655 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-08 01:30:38,657 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-08 01:30:39,436 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/a151366f488f890ce47c8ad3e3fd2707626a50da/first_page.png
+2017-07-08 01:30:39,566 - COSMOS_TRIGGER_PY-Console - DEBUG - 2926 KB/s (142614 bytes in 0.047s)
+2017-07-08 01:30:39,575 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.mogo.animalkeeper0708-01-30-10.pcap ../output/DroidKungFu3/a151366f488f890ce47c8ad3e3fd2707626a50da/com.mogo.animalkeeper0708-01-30-10.pcap
+2017-07-08 01:30:39,645 - COSMOS_TRIGGER_PY-Console - DEBUG - 570 KB/s (4096 bytes in 0.007s)
+2017-07-08 01:30:39,645 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.mogo.animalkeeper0708-01-30-10.pcap
+2017-07-08 01:30:39,983 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.mogo.animalkeeper
+2017-07-08 01:30:41,490 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 01:30:41,492 - COSMOS_TRIGGER_PY-Console - INFO - End

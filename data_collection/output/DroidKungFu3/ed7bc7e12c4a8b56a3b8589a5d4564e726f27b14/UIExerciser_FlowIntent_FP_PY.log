@@ -1,0 +1,42 @@
+2017-07-08 04:57:21,410 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\ed7bc7e12c4a8b56a3b8589a5d4564e726f27b14.apk
+2017-07-08 04:57:21,411 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.ps.pushbox
+2017-07-08 04:57:21,411 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.pushbox
+2017-07-08 04:57:22,184 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-08 04:57:22,184 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\ed7bc7e12c4a8b56a3b8589a5d4564e726f27b14.apk
+2017-07-08 04:57:24,436 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/ed7bc7e12c4a8b56a3b8589a5d4564e726f27b14.apk
+2017-07-08 04:57:24,436 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 04:57:24,436 - COSMOS_TRIGGER_PY-Console - DEBUG - 1879 KB/s (806787 bytes in 0.419s)
+2017-07-08 04:57:24,436 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-08 04:57:25,118 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-08 04:57:25,119 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-08 04:57:26,125 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 04:57:26,125 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=189ms (0ms mobile, 189ms wifi, 0ms not connected)
+2017-07-08 04:57:27,473 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-08 04:57:27,552 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-08 04:57:27,552 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-08 04:57:27,566 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.ps.pushbox --ignore-crashes 1
+2017-07-08 04:57:28,446 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 04:57:28,446 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=88ms (0ms mobile, 88ms wifi, 0ms not connected)
+2017-07-08 04:57:28,517 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-08 04:57:28,615 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-08 04:57:48,328 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pushbox" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pushbox" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pushbox" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pushbox" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.pushbox" password="false" scrollable="false" selected="false" text=""/>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-08 04:57:49,483 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-08 04:57:49,483 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-08 04:57:50,227 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/ed7bc7e12c4a8b56a3b8589a5d4564e726f27b14/first_page.png
+2017-07-08 04:57:50,351 - COSMOS_TRIGGER_PY-Console - DEBUG - 3060 KB/s (127437 bytes in 0.040s)
+2017-07-08 04:57:55,536 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.ps.pushbox0708-04-57-21.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/ed7bc7e12c4a8b56a3b8589a5d4564e726f27b14/com.ps.pushbox0708-04-57-21.pcap
+2017-07-08 04:57:55,631 - COSMOS_TRIGGER_PY-Console - DEBUG - 81 KB/s (752 bytes in 0.009s)
+2017-07-08 04:58:10,631 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-08 04:58:10,634 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.pushbox
+2017-07-08 04:58:12,341 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 04:58:12,342 - COSMOS_TRIGGER_PY-Console - INFO - End

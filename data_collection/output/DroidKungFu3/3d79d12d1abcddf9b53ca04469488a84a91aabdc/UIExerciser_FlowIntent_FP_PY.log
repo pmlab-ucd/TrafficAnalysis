@@ -1,0 +1,45 @@
+2017-07-07 23:16:10,836 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\3d79d12d1abcddf9b53ca04469488a84a91aabdc.apk
+2017-07-07 23:16:10,838 - COSMOS_TRIGGER_PY-Console - INFO - pkg:sunkay.AndroidApp5
+2017-07-07 23:16:10,838 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall sunkay.AndroidApp5
+2017-07-07 23:16:11,660 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-07 23:16:11,660 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\3d79d12d1abcddf9b53ca04469488a84a91aabdc.apk
+2017-07-07 23:16:13,448 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/3d79d12d1abcddf9b53ca04469488a84a91aabdc.apk
+2017-07-07 23:16:13,448 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-07 23:16:13,450 - COSMOS_TRIGGER_PY-Console - DEBUG - 966 KB/s (157779 bytes in 0.159s)
+2017-07-07 23:16:13,450 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-07 23:16:14,236 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-07 23:16:14,236 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-07 23:16:15,072 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-07 23:16:15,072 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=24ms (0ms mobile, 24ms wifi, 0ms not connected)
+2017-07-07 23:16:15,073 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-07 23:16:15,144 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-07 23:16:15,144 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-07 23:16:15,180 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p sunkay.AndroidApp5 --ignore-crashes 1
+2017-07-07 23:16:16,105 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-07 23:16:16,105 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=167ms (0ms mobile, 167ms wifi, 0ms not connected)
+2017-07-07 23:16:16,183 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-07 23:16:17,336 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-07 23:16:49,155 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.AndroidApp5" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.AndroidApp5" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.AndroidApp5" password="false" resource-id="id/offersWebView" scrollable="false" selected="false" text="">
+        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.AndroidApp5" password="false" resource-id="id/offersWebView" scrollable="false" selected="false" text="">
+          <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.AndroidApp5" password="false" resource-id="id/offersWebView" scrollable="false" selected="false" text="">
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="sunkay.AndroidApp5" password="false" resource-id="id/offersWebView" scrollable="true" selected="false" text=""/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-07 23:16:50,312 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-07 23:16:50,312 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-07 23:16:51,349 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/3d79d12d1abcddf9b53ca04469488a84a91aabdc/first_page.png
+2017-07-07 23:16:51,530 - COSMOS_TRIGGER_PY-Console - DEBUG - 3456 KB/s (362653 bytes in 0.102s)
+2017-07-07 23:16:51,572 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/sunkay.AndroidApp50707-23-16-10.pcap ../output/DroidKungFu3/3d79d12d1abcddf9b53ca04469488a84a91aabdc/sunkay.AndroidApp50707-23-16-10.pcap
+2017-07-07 23:16:51,901 - COSMOS_TRIGGER_PY-Console - DEBUG - 3450 KB/s (770048 bytes in 0.217s)
+2017-07-07 23:16:51,901 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/sunkay.AndroidApp50707-23-16-10.pcap
+2017-07-07 23:16:57,934 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall sunkay.AndroidApp5
+2017-07-07 23:16:59,473 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-07 23:16:59,473 - COSMOS_TRIGGER_PY-Console - INFO - End

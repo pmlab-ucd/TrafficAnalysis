@@ -1,0 +1,13 @@
+<?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.adwo.android.games.mine" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.adwo.android.games.mine" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.adwo.android.games.mine" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.adwo.android.games.mine" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <node bounds="[10,60][710,98]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.adwo.android.games.mine" password="false" resource-id="id/label" scrollable="false" selected="false" text=""/>
+          <node bounds="[110,248][610,344]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.adwo.android.games.mine" password="false" resource-id="id/begin" scrollable="false" selected="false" text="开始游戏"/>
+          <node bounds="[110,394][610,490]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.adwo.android.games.mine" password="false" resource-id="id/exit" scrollable="false" selected="false" text="退出游戏"/>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>

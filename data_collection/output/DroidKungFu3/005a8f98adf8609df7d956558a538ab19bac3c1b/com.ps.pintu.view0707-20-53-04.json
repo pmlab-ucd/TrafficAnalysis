@@ -1,0 +1,1 @@
+[{"src": ["IMEI"], "dst": "42.62.76.8", "process_name": "com.ps.pintu.view", "process_id": "4402", "log_time": "07-08 00:53:21.036", "message": "libcore.os.send(42.62.76.8) received data with tag 0x400 data=[POST /ad HTTP/1.1..Content-Type", "channel": "HTTP"}]

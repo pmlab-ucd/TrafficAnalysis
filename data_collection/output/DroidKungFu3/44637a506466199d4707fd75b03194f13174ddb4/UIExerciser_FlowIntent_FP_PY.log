@@ -1,0 +1,55 @@
+2017-07-07 23:19:49,140 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\44637a506466199d4707fd75b03194f13174ddb4.apk
+2017-07-07 23:19:49,140 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.replica.replicaisland
+2017-07-07 23:19:49,140 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.replica.replicaisland
+2017-07-07 23:19:49,963 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-07 23:19:49,964 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\44637a506466199d4707fd75b03194f13174ddb4.apk
+2017-07-07 23:19:55,736 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/44637a506466199d4707fd75b03194f13174ddb4.apk
+2017-07-07 23:19:55,736 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-07 23:19:55,736 - COSMOS_TRIGGER_PY-Console - DEBUG - 3073 KB/s (5663895 bytes in 1.799s)
+2017-07-07 23:19:55,736 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-07 23:19:56,483 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-07 23:19:56,483 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-07 23:19:57,313 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-07 23:19:57,313 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=35ms (0ms mobile, 35ms wifi, 0ms not connected)
+2017-07-07 23:19:57,313 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-07 23:19:57,384 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-07 23:19:57,384 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-07 23:19:57,398 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.replica.replicaisland --ignore-crashes 1
+2017-07-07 23:19:58,273 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-07 23:19:58,275 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=145ms (0ms mobile, 145ms wifi, 0ms not connected)
+2017-07-07 23:19:58,329 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-07 23:19:59,474 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-07 23:20:22,821 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.replica.replicaisland" password="false" resource-id="id/mainSectionMenu" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.replica.replicaisland" password="false" resource-id="id/mainSectionMenu" scrollable="false" selected="false" text="">
+      <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.replica.replicaisland" password="false" resource-id="id/mainSectionMenu" scrollable="false" selected="false" text="">
+        <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.replica.replicaisland" password="false" resource-id="id/mainSectionMenu" scrollable="false" selected="false" text="">
+          <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.replica.replicaisland" password="false" resource-id="id/mainSectionMenu" scrollable="false" selected="false" text="">
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[448,326][748,410]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.replica.replicaisland" password="false" resource-id="id/startButton" scrollable="false" selected="false" text=""/>
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[464,410][732,506]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.replica.replicaisland" password="false" resource-id="id/extrasButton" scrollable="false" selected="false" text=""/>
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[456,506][740,602]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.replica.replicaisland" password="false" resource-id="id/optionButton" scrollable="false" selected="false" text=""/>
+            <node bounds="[0,602][1196,640]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.replica.replicaisland" password="false" resource-id="id/ticker" scrollable="false" selected="true" text="New in this version: On-screen controls, app-to-sd card support, unlockable extra modes, game statistics after winning, lots of minor (and not so minor) bugs fixed."/>
+            <node bounds="[0,640][1196,720]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.replica.replicaisland" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <node bounds="[278,640][918,720]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.replica.replicaisland" password="false" resource-id="id/admogo_layout" scrollable="false" selected="false" text=""/>
+            </node>
+          </node>
+          <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.replica.replicaisland" password="false" resource-id="id/mainSectionMenu" scrollable="false" selected="false" text=""/>
+          <node bounds="[262,40][934,346]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.replica.replicaisland" password="false" resource-id="id/mainMenuTitle" scrollable="false" selected="false" text=""/>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-07 23:20:23,984 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-07 23:20:23,984 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-07 23:20:26,427 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/44637a506466199d4707fd75b03194f13174ddb4/first_page.png
+2017-07-07 23:20:26,811 - COSMOS_TRIGGER_PY-Console - DEBUG - 2908 KB/s (849283 bytes in 0.285s)
+2017-07-07 23:20:26,828 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.replica.replicaisland0707-23-19-49.pcap ../output/DroidKungFu3/44637a506466199d4707fd75b03194f13174ddb4/com.replica.replicaisland0707-23-19-49.pcap
+2017-07-07 23:20:26,959 - COSMOS_TRIGGER_PY-Console - DEBUG - 1676 KB/s (20480 bytes in 0.011s)
+2017-07-07 23:20:26,959 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.replica.replicaisland0707-23-19-49.pcap
+2017-07-07 23:20:38,075 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.replica.replicaisland
+2017-07-07 23:20:40,055 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-07 23:20:40,055 - COSMOS_TRIGGER_PY-Console - INFO - End

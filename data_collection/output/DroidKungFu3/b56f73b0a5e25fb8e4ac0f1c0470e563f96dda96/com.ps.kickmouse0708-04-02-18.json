@@ -1,0 +1,1 @@
+[{"src": ["IMEI"], "dst": "121.14.255.100", "process_name": "com.ps.kickmouse", "process_id": "15929", "log_time": "07-08 08:02:31.110", "message": "libcore.os.send(121.14.255.100) received data with tag 0x400 data=[GET /action/connect/active?app_id=4f4c857e9f33d48fd17b1c35f087319d&udid=351565054929465&app_version=] ", "channel": "HTTP"}]

@@ -1,0 +1,29 @@
+2017-07-08 00:47:29,923 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\7a7b52281a7999f3d3fd2ae3ec8d3d2926722402.apk
+2017-07-08 00:47:29,924 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.tiger.activity
+2017-07-08 00:47:29,924 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.tiger.activity
+2017-07-08 00:47:33,966 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-08 00:47:33,967 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\7a7b52281a7999f3d3fd2ae3ec8d3d2926722402.apk
+2017-07-08 00:47:40,466 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/7a7b52281a7999f3d3fd2ae3ec8d3d2926722402.apk
+2017-07-08 00:47:40,466 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 00:47:40,467 - COSMOS_TRIGGER_PY-Console - DEBUG - 1537 KB/s (374748 bytes in 0.237s)
+2017-07-08 00:47:40,467 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-08 00:47:58,700 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-08 00:47:58,701 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-08 00:48:00,043 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 00:48:00,043 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=225ms (0ms mobile, 225ms wifi, 0ms not connected)
+2017-07-08 00:48:02,663 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-08 00:48:03,286 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-08 00:48:03,286 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-08 00:48:03,306 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.tiger.activity --ignore-crashes 1
+2017-07-08 00:48:05,387 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 00:48:05,388 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=387ms (0ms mobile, 387ms wifi, 0ms not connected)
+2017-07-08 00:48:05,466 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-08 00:48:05,609 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-08 00:48:29,325 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.tiger.activity0708-00-47-29.pcap ../output/DroidKungFu3/7a7b52281a7999f3d3fd2ae3ec8d3d2926722402/com.tiger.activity0708-00-47-29.pcap
+2017-07-08 00:49:29,344 - COSMOS_TRIGGER_PY-Console - WARNING - __init__() takes at least 3 arguments (2 given)
+2017-07-08 00:50:29,431 - COSMOS_TRIGGER_PY-Console - WARNING - __init__() takes at least 3 arguments (2 given)
+2017-07-08 00:50:29,516 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.tiger.activity0708-00-47-29.pcap
+2017-07-08 00:50:44,887 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-08 00:50:44,888 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.tiger.activity
+2017-07-08 00:50:46,532 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 00:50:46,532 - COSMOS_TRIGGER_PY-Console - INFO - End

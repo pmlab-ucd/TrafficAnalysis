@@ -1,0 +1,48 @@
+2017-07-08 00:27:56,627 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\6cecf0ea838d37a57952b14ca63f6eef01bdbdf7.apk
+2017-07-08 00:27:56,628 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.ps.square
+2017-07-08 00:27:56,628 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.square
+2017-07-08 00:27:57,358 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-08 00:27:57,359 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\6cecf0ea838d37a57952b14ca63f6eef01bdbdf7.apk
+2017-07-08 00:27:59,835 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/6cecf0ea838d37a57952b14ca63f6eef01bdbdf7.apk
+2017-07-08 00:27:59,836 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 00:27:59,836 - COSMOS_TRIGGER_PY-Console - DEBUG - 2827 KB/s (2145914 bytes in 0.741s)
+2017-07-08 00:27:59,838 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-08 00:28:00,509 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-08 00:28:00,509 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-08 00:28:01,385 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 00:28:01,387 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=181ms (0ms mobile, 181ms wifi, 0ms not connected)
+2017-07-08 00:28:02,753 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-08 00:28:02,823 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-08 00:28:02,823 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-08 00:28:02,842 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.ps.square --ignore-crashes 1
+2017-07-08 00:28:03,721 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 00:28:03,723 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=129ms (0ms mobile, 129ms wifi, 0ms not connected)
+2017-07-08 00:28:03,792 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-08 00:28:03,897 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-08 00:28:24,562 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.square" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.square" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,25][360,53]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.square" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[5,26][356,51]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.square" password="false" scrollable="false" selected="false" text="2"/>
+      </node>
+      <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.square" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.square" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[0,53][360,198]" checkable="false" checked="false" class="android.widget.ListView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="1" long-clickable="false" package="com.ps.square" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[0,53][360,125]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.square" password="false" scrollable="false" selected="false" text="俄罗斯方块-简单版"/>
+            <node bounds="[0,126][360,198]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.square" password="false" scrollable="false" selected="false" text="俄罗斯方块-复杂版"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-08 00:28:25,732 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-08 00:28:25,732 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-08 00:28:27,273 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/6cecf0ea838d37a57952b14ca63f6eef01bdbdf7/first_page.png
+2017-07-08 00:28:27,513 - COSMOS_TRIGGER_PY-Console - DEBUG - 3453 KB/s (591585 bytes in 0.167s)
+2017-07-08 00:28:27,549 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.ps.square0708-00-27-56.pcap ../output/DroidKungFu3/6cecf0ea838d37a57952b14ca63f6eef01bdbdf7/com.ps.square0708-00-27-56.pcap
+2017-07-08 00:28:27,619 - COSMOS_TRIGGER_PY-Console - DEBUG - 1435 KB/s (12288 bytes in 0.008s)
+2017-07-08 00:28:27,619 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.ps.square0708-00-27-56.pcap
+2017-07-08 00:28:27,940 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.square
+2017-07-08 00:28:29,226 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 00:28:29,226 - COSMOS_TRIGGER_PY-Console - INFO - End

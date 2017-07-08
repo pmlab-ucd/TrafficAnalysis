@@ -1,0 +1,58 @@
+2017-07-08 01:28:25,497 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\9e10b4283096b5e0355eb6656d57cb5f785687ab.apk
+2017-07-08 01:28:25,499 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.alan.weather
+2017-07-08 01:28:25,499 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.alan.weather
+2017-07-08 01:28:26,270 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-08 01:28:26,272 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\9e10b4283096b5e0355eb6656d57cb5f785687ab.apk
+2017-07-08 01:28:28,779 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/9e10b4283096b5e0355eb6656d57cb5f785687ab.apk
+2017-07-08 01:28:28,779 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 01:28:28,779 - COSMOS_TRIGGER_PY-Console - DEBUG - 1294 KB/s (445002 bytes in 0.335s)
+2017-07-08 01:28:28,779 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-08 01:28:29,513 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-08 01:28:29,513 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-08 01:28:30,516 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 01:28:30,516 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=141ms (0ms mobile, 141ms wifi, 0ms not connected)
+2017-07-08 01:28:31,882 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-08 01:28:31,960 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-08 01:28:31,960 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-08 01:28:31,976 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.alan.weather --ignore-crashes 1
+2017-07-08 01:28:32,951 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 01:28:32,951 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=137ms (0ms mobile, 137ms wifi, 0ms not connected)
+2017-07-08 01:28:33,023 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-08 01:28:33,131 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-08 01:28:57,805 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[103,447][617,786]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[103,447][617,786]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[103,447][617,786]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[103,447][617,786]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[109,465][615,593]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[154,497][570,573]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[154,497][238,573]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text=""/>
+              <node bounds="[238,505][570,564]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="提示"/>
+            </node>
+            <node bounds="[134,591][590,593]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text=""/>
+          </node>
+          <node bounds="[109,593][615,780]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[134,593][590,749]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[134,603][590,739]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+                <node bounds="[134,603][590,739]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+                  <node bounds="[150,623][246,719]" checkable="false" checked="false" class="android.widget.ProgressBar" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text=""/>
+                  <node bounds="[270,652][574,690]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="正在获取数据，请稍候..."/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-08 01:28:58,947 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-08 01:28:58,947 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-08 01:28:59,576 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/9e10b4283096b5e0355eb6656d57cb5f785687ab/first_page.png
+2017-07-08 01:28:59,709 - COSMOS_TRIGGER_PY-Console - DEBUG - 2817 KB/s (62753 bytes in 0.021s)
+2017-07-08 01:28:59,756 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.alan.weather0708-01-28-25.pcap ../output/DroidKungFu3/9e10b4283096b5e0355eb6656d57cb5f785687ab/com.alan.weather0708-01-28-25.pcap
+2017-07-08 01:28:59,836 - COSMOS_TRIGGER_PY-Console - DEBUG - 2430 KB/s (28672 bytes in 0.011s)
+2017-07-08 01:28:59,836 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.alan.weather0708-01-28-25.pcap
+2017-07-08 01:29:01,181 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.alan.weather
+2017-07-08 01:29:02,615 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 01:29:02,617 - COSMOS_TRIGGER_PY-Console - INFO - End

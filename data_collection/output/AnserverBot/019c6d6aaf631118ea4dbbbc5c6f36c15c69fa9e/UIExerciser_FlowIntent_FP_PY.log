@@ -1,0 +1,56 @@
+2017-07-08 11:05:13,474 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\019c6d6aaf631118ea4dbbbc5c6f36c15c69fa9e.apk
+2017-07-08 11:05:13,476 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.lang.template
+2017-07-08 11:05:13,476 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.lang.template
+2017-07-08 11:05:14,450 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-08 11:05:14,450 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\019c6d6aaf631118ea4dbbbc5c6f36c15c69fa9e.apk
+2017-07-08 11:05:16,433 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/019c6d6aaf631118ea4dbbbc5c6f36c15c69fa9e.apk
+2017-07-08 11:05:16,434 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 11:05:16,434 - COSMOS_TRIGGER_PY-Console - DEBUG - 2977 KB/s (1181178 bytes in 0.387s)
+2017-07-08 11:05:16,434 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-08 11:05:17,157 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-08 11:05:17,157 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-08 11:05:18,079 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 11:05:18,081 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=167ms (0ms mobile, 167ms wifi, 0ms not connected)
+2017-07-08 11:05:19,441 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-08 11:05:19,512 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-08 11:05:19,512 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-08 11:05:19,528 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lang.template --ignore-crashes 1
+2017-07-08 11:05:20,503 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 11:05:20,503 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=173ms (0ms mobile, 173ms wifi, 0ms not connected)
+2017-07-08 11:05:20,572 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-08 11:05:20,717 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-08 11:05:57,121 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.lang.template" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.lang.template" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.lang.template" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.lang.template" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.lang.template" password="false" scrollable="true" selected="false" text="">
+            <node bounds="[0,0][360,855]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.lang.template" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[68,23][293,77]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.lang.template" password="false" scrollable="false" selected="false" text="第1章"/>
+              <node bounds="[68,77][293,131]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.lang.template" password="false" scrollable="false" selected="false" text="第2章"/>
+              <node bounds="[68,131][293,185]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.lang.template" password="false" scrollable="false" selected="false" text="第3章"/>
+              <node bounds="[68,185][293,239]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.lang.template" password="false" scrollable="false" selected="false" text="第4章"/>
+              <node bounds="[68,239][293,293]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="4" long-clickable="false" package="com.lang.template" password="false" scrollable="false" selected="false" text="第5章"/>
+              <node bounds="[68,293][293,347]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="5" long-clickable="false" package="com.lang.template" password="false" scrollable="false" selected="false" text="第6章"/>
+              <node bounds="[68,347][293,401]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="6" long-clickable="false" package="com.lang.template" password="false" scrollable="false" selected="false" text="第7章"/>
+              <node bounds="[68,401][293,455]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="7" long-clickable="false" package="com.lang.template" password="false" scrollable="false" selected="false" text="第8章"/>
+              <node bounds="[68,455][293,509]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="8" long-clickable="false" package="com.lang.template" password="false" scrollable="false" selected="false" text="第9章"/>
+              <node bounds="[68,509][293,563]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="9" long-clickable="false" package="com.lang.template" password="false" scrollable="false" selected="false" text="第10章"/>
+              <node bounds="[68,563][293,617]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="10" long-clickable="false" package="com.lang.template" password="false" scrollable="false" selected="false" text="第11章"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-08 11:05:58,276 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-08 11:05:58,276 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-08 11:06:00,358 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/019c6d6aaf631118ea4dbbbc5c6f36c15c69fa9e/first_page.png
+2017-07-08 11:06:00,641 - COSMOS_TRIGGER_PY-Console - DEBUG - 3840 KB/s (806303 bytes in 0.205s)
+2017-07-08 11:06:05,645 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.lang.template0708-11-05-13.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/019c6d6aaf631118ea4dbbbc5c6f36c15c69fa9e/com.lang.template0708-11-05-13.pcap
+2017-07-08 11:06:05,727 - COSMOS_TRIGGER_PY-Console - DEBUG - 1140 KB/s (12288 bytes in 0.010s)
+2017-07-08 11:06:20,729 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-08 11:06:20,730 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.lang.template
+2017-07-08 11:06:22,118 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 11:06:22,119 - COSMOS_TRIGGER_PY-Console - INFO - End

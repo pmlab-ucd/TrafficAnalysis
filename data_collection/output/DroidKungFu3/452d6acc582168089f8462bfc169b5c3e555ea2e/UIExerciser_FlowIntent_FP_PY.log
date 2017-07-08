@@ -1,0 +1,57 @@
+2017-07-07 23:21:26,522 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\452d6acc582168089f8462bfc169b5c3e555ea2e.apk
+2017-07-07 23:21:26,522 - COSMOS_TRIGGER_PY-Console - INFO - pkg:org.openintents.filemanager
+2017-07-07 23:21:26,522 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall org.openintents.filemanager
+2017-07-07 23:21:27,295 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-07 23:21:27,296 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\452d6acc582168089f8462bfc169b5c3e555ea2e.apk
+2017-07-07 23:21:34,769 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/452d6acc582168089f8462bfc169b5c3e555ea2e.apk
+2017-07-07 23:21:34,769 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-07 23:21:34,769 - COSMOS_TRIGGER_PY-Console - DEBUG - 104 KB/s (564379 bytes in 5.251s)
+2017-07-07 23:21:34,769 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-07 23:21:35,520 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-07 23:21:35,520 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-07 23:21:36,555 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-07 23:21:36,555 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=195ms (0ms mobile, 195ms wifi, 0ms not connected)
+2017-07-07 23:21:36,555 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-07 23:21:36,681 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-07 23:21:36,681 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-07 23:21:36,720 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p org.openintents.filemanager --ignore-crashes 1
+2017-07-07 23:21:37,709 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-07 23:21:37,709 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=192ms (0ms mobile, 192ms wifi, 0ms not connected)
+2017-07-07 23:21:37,786 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-07 23:21:38,913 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-07 23:22:05,788 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <node bounds="[0,5][720,105]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="id/topLayout" scrollable="false" selected="false" text="">
+            <node bounds="[0,5][526,105]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="id/directory_buttons" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,5][108,105]" checkable="false" checked="false" class="android.widget.ImageButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+              <node bounds="[108,5][248,101]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="storage"/>
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[248,5][356,105]" checkable="false" checked="false" class="android.widget.ImageButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+              <node bounds="[356,5][526,101]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="Download"/>
+            </node>
+          </node>
+          <node bounds="[0,105][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="id/empty_text" scrollable="false" selected="false" text="">
+            <node bounds="[0,105][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="id/empty_text" scrollable="false" selected="false" text="">
+              <node bounds="[0,105][720,1184]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="org.openintents.filemanager" password="false" resource-id="id/empty_text" scrollable="false" selected="false" text="该文件夹为空"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-07 23:22:06,950 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-07 23:22:06,950 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-07 23:22:07,538 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/452d6acc582168089f8462bfc169b5c3e555ea2e/first_page.png
+2017-07-07 23:22:07,667 - COSMOS_TRIGGER_PY-Console - DEBUG - 2716 KB/s (40208 bytes in 0.014s)
+2017-07-07 23:22:07,707 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/org.openintents.filemanager0707-23-21-26.pcap ../output/DroidKungFu3/452d6acc582168089f8462bfc169b5c3e555ea2e/org.openintents.filemanager0707-23-21-26.pcap
+2017-07-07 23:22:07,788 - COSMOS_TRIGGER_PY-Console - DEBUG - 934 KB/s (12288 bytes in 0.012s)
+2017-07-07 23:22:07,788 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/org.openintents.filemanager0707-23-21-26.pcap
+2017-07-07 23:22:22,858 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-07 23:22:22,862 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall org.openintents.filemanager
+2017-07-07 23:22:24,494 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-07 23:22:24,494 - COSMOS_TRIGGER_PY-Console - INFO - End

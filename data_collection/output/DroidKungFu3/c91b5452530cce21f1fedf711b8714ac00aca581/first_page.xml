@@ -1,0 +1,28 @@
+<?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,56][360,623]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,56][360,623]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,56][360,623]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,56][360,623]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[3,66][359,138]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[29,84][333,127]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[29,84][77,127]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text=""/>
+              <node bounds="[77,89][333,123]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="What's new"/>
+            </node>
+            <node bounds="[18,137][344,138]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text=""/>
+          </node>
+          <node bounds="[3,138][359,540]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[18,138][344,540]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[18,144][344,534]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="com.ps.opensudoku" password="false" scrollable="true" selected="false" text=""/>
+            </node>
+          </node>
+          <node bounds="[3,540][359,620]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[18,540][344,602]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[100,545][261,599]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.ps.opensudoku" password="false" scrollable="false" selected="false" text="Close"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>

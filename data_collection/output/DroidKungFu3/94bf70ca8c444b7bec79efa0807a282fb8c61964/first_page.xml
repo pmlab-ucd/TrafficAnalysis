@@ -1,0 +1,109 @@
+<?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="5" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="6" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="7" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="8" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="9" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="10" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="11" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="12" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="13" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="14" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="15" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="16" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="17" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="18" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="19" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="20" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="21" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+            <node bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="22" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,704][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+          </node>
+        </node>
+        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <node bounds="[0,0][720,1064]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="id/empty" scrollable="false" selected="false" text="">
+            <node bounds="[0,0][720,1064]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.openintents.notepad" password="false" resource-id="id/empty" scrollable="false" selected="false" text="点击菜单增加新记事"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>

@@ -1,0 +1,39 @@
+2017-07-08 05:08:46,747 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\fd785b8d6f2415950339241e9bd97f58881b8bb7.apk
+2017-07-08 05:08:46,747 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.gp.jewels
+2017-07-08 05:08:46,749 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.jewels
+2017-07-08 05:08:47,479 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-08 05:08:47,479 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\fd785b8d6f2415950339241e9bd97f58881b8bb7.apk
+2017-07-08 05:08:50,457 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/fd785b8d6f2415950339241e9bd97f58881b8bb7.apk
+2017-07-08 05:08:50,459 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 05:08:50,459 - COSMOS_TRIGGER_PY-Console - DEBUG - 2875 KB/s (1861234 bytes in 0.632s)
+2017-07-08 05:08:50,459 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-08 05:08:51,180 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-08 05:08:51,180 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-08 05:08:52,111 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 05:08:52,111 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=105ms (0ms mobile, 105ms wifi, 0ms not connected)
+2017-07-08 05:08:53,490 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-08 05:08:53,562 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-08 05:08:53,562 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-08 05:08:53,581 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.gp.jewels --ignore-crashes 1
+2017-07-08 05:08:54,559 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 05:08:54,559 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=143ms (0ms mobile, 143ms wifi, 0ms not connected)
+2017-07-08 05:08:54,631 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-08 05:08:54,740 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-08 05:09:13,914 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.jewels" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.jewels" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.jewels" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[2,0][357,592]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.jewels" password="false" scrollable="false" selected="false" text=""/>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-08 05:09:15,056 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-08 05:09:15,058 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-08 05:09:16,700 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/fd785b8d6f2415950339241e9bd97f58881b8bb7/first_page.png
+2017-07-08 05:09:16,924 - COSMOS_TRIGGER_PY-Console - DEBUG - 3775 KB/s (621488 bytes in 0.160s)
+2017-07-08 05:09:22,190 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.gp.jewels0708-05-08-46.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/fd785b8d6f2415950339241e9bd97f58881b8bb7/com.gp.jewels0708-05-08-46.pcap
+2017-07-08 05:09:22,295 - COSMOS_TRIGGER_PY-Console - DEBUG - 560 KB/s (3416 bytes in 0.005s)
+2017-07-08 05:09:22,513 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.jewels
+2017-07-08 05:09:23,957 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 05:09:23,957 - COSMOS_TRIGGER_PY-Console - INFO - End

@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><hierarchy>
+  <node bounds="[103,447][617,786]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[103,447][617,786]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[103,447][617,786]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[103,447][617,786]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[109,465][615,593]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[154,497][570,573]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[154,497][238,573]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text=""/>
+              <node bounds="[238,505][570,564]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="提示"/>
+            </node>
+            <node bounds="[134,591][590,593]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text=""/>
+          </node>
+          <node bounds="[109,593][615,780]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[134,593][590,749]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[134,603][590,739]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+                <node bounds="[134,603][590,739]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="">
+                  <node bounds="[150,623][246,719]" checkable="false" checked="false" class="android.widget.ProgressBar" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text=""/>
+                  <node bounds="[270,652][574,690]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.alan.weather" password="false" scrollable="false" selected="false" text="正在获取数据，请稍候..."/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>

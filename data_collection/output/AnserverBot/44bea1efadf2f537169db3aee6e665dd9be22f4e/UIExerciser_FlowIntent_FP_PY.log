@@ -1,0 +1,39 @@
+2017-07-08 12:00:15,930 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\44bea1efadf2f537169db3aee6e665dd9be22f4e.apk
+2017-07-08 12:00:15,931 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.tian.wmaryp
+2017-07-08 12:00:15,931 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.tian.wmaryp
+2017-07-08 12:00:16,805 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-08 12:00:16,805 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\44bea1efadf2f537169db3aee6e665dd9be22f4e.apk
+2017-07-08 12:00:20,108 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/44bea1efadf2f537169db3aee6e665dd9be22f4e.apk
+2017-07-08 12:00:20,108 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 12:00:20,108 - COSMOS_TRIGGER_PY-Console - DEBUG - 1293 KB/s (1493478 bytes in 1.127s)
+2017-07-08 12:00:20,108 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-08 12:00:20,848 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-08 12:00:20,848 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-08 12:00:21,773 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 12:00:21,773 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=139ms (0ms mobile, 139ms wifi, 0ms not connected)
+2017-07-08 12:00:23,230 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-08 12:00:23,358 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-08 12:00:23,358 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-08 12:00:23,372 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.tian.wmaryp --ignore-crashes 1
+2017-07-08 12:00:24,500 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 12:00:24,500 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=187ms (0ms mobile, 187ms wifi, 0ms not connected)
+2017-07-08 12:00:24,572 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-08 12:00:24,720 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-08 12:00:43,871 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tian.wmaryp" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tian.wmaryp" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tian.wmaryp" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tian.wmaryp" password="false" scrollable="false" selected="false" text=""/>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-08 12:00:45,019 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-08 12:00:45,020 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-08 12:00:46,914 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/44bea1efadf2f537169db3aee6e665dd9be22f4e/first_page.png
+2017-07-08 12:00:47,137 - COSMOS_TRIGGER_PY-Console - DEBUG - 4314 KB/s (682989 bytes in 0.154s)
+2017-07-08 12:00:52,144 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.tian.wmaryp0708-12-00-15.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/44bea1efadf2f537169db3aee6e665dd9be22f4e/com.tian.wmaryp0708-12-00-15.pcap
+2017-07-08 12:00:52,286 - COSMOS_TRIGGER_PY-Console - DEBUG - 3279 KB/s (118784 bytes in 0.035s)
+2017-07-08 12:00:57,657 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.tian.wmaryp
+2017-07-08 12:00:59,454 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 12:00:59,454 - COSMOS_TRIGGER_PY-Console - INFO - End

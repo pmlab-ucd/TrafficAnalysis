@@ -1,0 +1,59 @@
+2017-07-07 23:54:32,411 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\532a93bfc6b850b5ef04f06bf1a1334ed8c18a0b.apk
+2017-07-07 23:54:32,413 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.gp.monolith
+2017-07-07 23:54:32,413 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.monolith
+2017-07-07 23:54:33,585 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-07 23:54:33,585 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\532a93bfc6b850b5ef04f06bf1a1334ed8c18a0b.apk
+2017-07-07 23:54:35,618 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/532a93bfc6b850b5ef04f06bf1a1334ed8c18a0b.apk
+2017-07-07 23:54:35,618 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-07 23:54:35,618 - COSMOS_TRIGGER_PY-Console - DEBUG - 2722 KB/s (614311 bytes in 0.220s)
+2017-07-07 23:54:35,618 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-07 23:54:36,391 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-07 23:54:36,391 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-07 23:54:37,263 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-07 23:54:37,263 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=141ms (0ms mobile, 141ms wifi, 0ms not connected)
+2017-07-07 23:54:38,655 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-07 23:54:38,724 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-07 23:54:38,726 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-07 23:54:38,740 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.gp.monolith --ignore-crashes 1
+2017-07-07 23:54:39,667 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-07 23:54:39,668 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=171ms (0ms mobile, 171ms wifi, 0ms not connected)
+2017-07-07 23:54:39,706 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-07 23:54:39,813 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-07 23:55:07,253 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.monolith" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.monolith" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.monolith" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.monolith" password="false" resource-id="id/title" scrollable="false" selected="false" text="Robotic Space Rock"/>
+      </node>
+      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.gp.monolith" password="false" resource-id="id/LinearLayout01" scrollable="false" selected="false" text="">
+        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="true" focused="true" index="1" long-clickable="false" package="com.gp.monolith" password="false" resource-id="id/LinearLayout01" scrollable="false" selected="false" text=""/>
+        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.gp.monolith" password="false" resource-id="id/LinearLayout01" scrollable="false" selected="false" text=""/>
+        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.gp.monolith" password="false" resource-id="id/LinearLayout01" scrollable="false" selected="false" text="">
+          <node bounds="[0,980][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.monolith" password="false" resource-id="id/RelativeLayout01" scrollable="false" selected="false" text="">
+            <node bounds="[0,980][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.monolith" password="false" resource-id="id/RelativeLayout01" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,980][130,1082]" checkable="false" checked="false" class="android.widget.ImageButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.gp.monolith" password="false" resource-id="id/ImageButton01" scrollable="false" selected="false" text=""/>
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[295,980][425,1082]" checkable="false" checked="false" class="android.widget.ImageButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.gp.monolith" password="false" resource-id="id/ImageButton03" scrollable="false" selected="false" text=""/>
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[590,980][720,1082]" checkable="false" checked="false" class="android.widget.ImageButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.gp.monolith" password="false" resource-id="id/ImageButton02" scrollable="false" selected="false" text=""/>
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[295,1082][425,1184]" checkable="false" checked="false" class="android.widget.ImageButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.gp.monolith" password="false" resource-id="id/ImageButton04" scrollable="false" selected="false" text=""/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-07 23:55:08,459 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-07 23:55:08,459 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-07 23:55:09,234 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/532a93bfc6b850b5ef04f06bf1a1334ed8c18a0b/first_page.png
+2017-07-07 23:55:09,364 - COSMOS_TRIGGER_PY-Console - DEBUG - 2761 KB/s (162848 bytes in 0.057s)
+2017-07-07 23:55:09,404 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.gp.monolith0707-23-54-32.pcap ../output/DroidKungFu3/532a93bfc6b850b5ef04f06bf1a1334ed8c18a0b/com.gp.monolith0707-23-54-32.pcap
+2017-07-07 23:55:09,476 - COSMOS_TRIGGER_PY-Console - DEBUG - 499 KB/s (4096 bytes in 0.008s)
+2017-07-07 23:55:09,477 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.gp.monolith0707-23-54-32.pcap
+2017-07-07 23:55:24,549 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-07 23:55:24,551 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.monolith
+2017-07-07 23:55:26,039 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-07 23:55:26,040 - COSMOS_TRIGGER_PY-Console - INFO - End

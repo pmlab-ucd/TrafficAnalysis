@@ -1,0 +1,49 @@
+2017-07-08 01:08:02,293 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\8c841b25102569be4a1a5f407108482473fad43e.apk
+2017-07-08 01:08:02,293 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.ps.blackwhite
+2017-07-08 01:08:02,295 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.blackwhite
+2017-07-08 01:08:03,119 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-08 01:08:03,119 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\8c841b25102569be4a1a5f407108482473fad43e.apk
+2017-07-08 01:08:05,299 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/8c841b25102569be4a1a5f407108482473fad43e.apk
+2017-07-08 01:08:05,299 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 01:08:05,301 - COSMOS_TRIGGER_PY-Console - DEBUG - 1065 KB/s (177834 bytes in 0.162s)
+2017-07-08 01:08:05,301 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-08 01:08:06,176 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-08 01:08:06,176 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-08 01:08:07,154 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 01:08:07,154 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=164ms (0ms mobile, 164ms wifi, 0ms not connected)
+2017-07-08 01:08:08,573 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-08 01:08:08,644 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-08 01:08:08,644 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-08 01:08:08,664 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.ps.blackwhite --ignore-crashes 1
+2017-07-08 01:08:09,763 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 01:08:09,763 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=158ms (0ms mobile, 158ms wifi, 0ms not connected)
+2017-07-08 01:08:09,834 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-08 01:08:09,957 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-08 01:08:32,187 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.blackwhite" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.blackwhite" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.blackwhite" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.blackwhite" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[0,25][360,56]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.blackwhite" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[0,33][44,54]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.blackwhite" password="false" scrollable="false" selected="false" text="player"/>
+            <node bounds="[44,25][71,52]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.blackwhite" password="false" scrollable="false" selected="false" text=""/>
+            <node bounds="[71,33][140,54]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.ps.blackwhite" password="false" scrollable="false" selected="false" text="computer"/>
+            <node bounds="[140,25][167,52]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.ps.blackwhite" password="false" scrollable="false" selected="false" text=""/>
+            <node bounds="[167,25][360,56]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.ps.blackwhite" password="false" scrollable="false" selected="false" text="your turn"/>
+          </node>
+          <node bounds="[0,56][360,592]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.ps.blackwhite" password="false" scrollable="false" selected="false" text=""/>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-08 01:08:33,355 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-08 01:08:33,357 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-08 01:08:34,045 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/8c841b25102569be4a1a5f407108482473fad43e/first_page.png
+2017-07-08 01:08:34,178 - COSMOS_TRIGGER_PY-Console - DEBUG - 2999 KB/s (110745 bytes in 0.036s)
+2017-07-08 01:08:34,211 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.ps.blackwhite0708-01-08-02.pcap ../output/DroidKungFu3/8c841b25102569be4a1a5f407108482473fad43e/com.ps.blackwhite0708-01-08-02.pcap
+2017-07-08 01:08:34,296 - COSMOS_TRIGGER_PY-Console - DEBUG - 515 KB/s (4096 bytes in 0.007s)
+2017-07-08 01:08:34,296 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.ps.blackwhite0708-01-08-02.pcap
+2017-07-08 01:08:44,555 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.blackwhite
+2017-07-08 01:08:46,056 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 01:08:46,058 - COSMOS_TRIGGER_PY-Console - INFO - End

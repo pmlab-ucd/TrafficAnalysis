@@ -1,0 +1,40 @@
+2017-07-07 20:59:00,746 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\04f9de3ab72f836cb528256eaa8047217ec94876.apk
+2017-07-07 20:59:00,746 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.ps.kickfly
+2017-07-07 20:59:00,746 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.kickfly
+2017-07-07 20:59:01,568 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-07 20:59:01,569 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\04f9de3ab72f836cb528256eaa8047217ec94876.apk
+2017-07-07 20:59:03,660 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/04f9de3ab72f836cb528256eaa8047217ec94876.apk
+2017-07-07 20:59:03,660 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-07 20:59:03,661 - COSMOS_TRIGGER_PY-Console - DEBUG - 2203 KB/s (764528 bytes in 0.338s)
+2017-07-07 20:59:03,661 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-07 20:59:04,392 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-07 20:59:04,394 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-07 20:59:05,346 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-07 20:59:05,346 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=112ms (0ms mobile, 112ms wifi, 0ms not connected)
+2017-07-07 20:59:05,348 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-07 20:59:05,430 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-07 20:59:05,430 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-07 20:59:05,447 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.ps.kickfly --ignore-crashes 1
+2017-07-07 20:59:06,323 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-07 20:59:06,323 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=103ms (0ms mobile, 103ms wifi, 0ms not connected)
+2017-07-07 20:59:06,401 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-07 20:59:07,532 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-07 20:59:26,433 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.kickfly" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.kickfly" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.kickfly" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.kickfly" password="false" scrollable="false" selected="false" text=""/>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-07 20:59:27,578 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-07 20:59:27,578 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-07 20:59:29,516 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/04f9de3ab72f836cb528256eaa8047217ec94876/first_page.png
+2017-07-07 20:59:29,851 - COSMOS_TRIGGER_PY-Console - DEBUG - 3436 KB/s (837875 bytes in 0.238s)
+2017-07-07 20:59:29,871 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.ps.kickfly0707-20-59-00.pcap ../output/DroidKungFu3/04f9de3ab72f836cb528256eaa8047217ec94876/com.ps.kickfly0707-20-59-00.pcap
+2017-07-07 20:59:29,947 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.ps.kickfly0707-20-59-00.pcap
+2017-07-07 20:59:45,016 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-07 20:59:45,019 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.kickfly
+2017-07-07 20:59:46,513 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-07 20:59:46,513 - COSMOS_TRIGGER_PY-Console - INFO - End
