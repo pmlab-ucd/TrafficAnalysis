@@ -450,6 +450,7 @@ class UIExerciser:
 
         filehandler.close()
         self.logger.removeHandler(filehandler)
+        Utilities.kill_by_name('adb.exe')
 
 
 def inspired_run(self, series, apk, examined, trigger_java_dir):

@@ -137,3 +137,10 @@ class Utilities:
     def adb_kill(name):
         for target in Utilities.adb_process2ids(name):
             os.popen('adb shell kill ' + target)
+
+    @staticmethod
+    def kill_by_name(name):
+        for proc in psutil.process_iter():
+            # check whether the process name matches
+            if proc.name() == name:
+                proc.kill()

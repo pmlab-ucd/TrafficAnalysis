@@ -8,7 +8,7 @@ if __name__ == '__main__':
     ISOTIMEFORMAT = '%m%d-%H-%M-%S'
     logger = Utilities.set_logger('COSMOS_TRIGGER_PY-Console')
 
-    device = 'galaxy'
+    device = 'nexus4'
     pc = 'iai'
 
     if device == 'nexus4':
@@ -21,9 +21,9 @@ if __name__ == '__main__':
         series = 'emulator-5554'
 
 
-    user = 'majes'
+    user = 'hfu'
     aapt_loc = 'C:\Users\\' + user + '\AppData\Local\Android\sdk/build-tools/19.1.0/aapt.exe'
-    apk_dir = 'C:\Users\\' + user + '\Documents\FlowIntent\\apks\\drebin\\DroidKungFu\\'
+    apk_dir = 'C:\Users\\' + user + '\Documents\FlowIntent\\apks\\drebin\\FakeInstaller\\'
     UIExerciser.emu_loc = 'C:\Users\hfu\AppData\Local\Android\sdk/tools/emulator.exe'
     UIExerciser.emu_name = 'Qvga'
 
@@ -41,7 +41,6 @@ if __name__ == '__main__':
                     try:
                         apk = os.path.join(root, filename)
                         exerciser = UIExerciser(series, aapt_loc, apk_dir, out_base_dir, logger)
-                        print exerciser.get_launchable_activities(aapt_loc, apk)
                         exerciser.flowintent_first_page(series, os.path.join(root, filename), examined)
                         break
                     except Exception as e:
