@@ -1,0 +1,58 @@
+2017-07-09 20:44:17,161 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\df9345eca0e67a582a2a44f40b3e394166fa191506dbb96cf09fdea49e45108c.apk
+2017-07-09 20:44:17,163 - COSMOS_TRIGGER_PY-Console - INFO - pkg:astyu.nbhjt
+2017-07-09 20:44:17,164 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall astyu.nbhjt
+2017-07-09 20:44:17,911 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-09 20:44:17,914 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\df9345eca0e67a582a2a44f40b3e394166fa191506dbb96cf09fdea49e45108c.apk
+2017-07-09 20:44:19,993 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/df9345eca0e67a582a2a44f40b3e394166fa191506dbb96cf09fdea49e45108c.apk
+2017-07-09 20:44:19,996 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 20:44:19,999 - COSMOS_TRIGGER_PY-Console - DEBUG - 697 KB/s (250351 bytes in 0.350s)
+2017-07-09 20:44:20,000 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-09 20:44:20,673 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-09 20:44:20,674 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-09 20:44:21,552 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 20:44:21,553 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=115ms (0ms mobile, 115ms wifi, 0ms not connected)
+2017-07-09 20:44:22,936 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-09 20:44:23,006 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-09 20:44:23,009 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-09 20:44:23,026 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p astyu.nbhjt --ignore-crashes 1
+2017-07-09 20:44:23,913 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 20:44:23,915 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=126ms (0ms mobile, 126ms wifi, 0ms not connected)
+2017-07-09 20:44:23,956 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-09 20:44:24,088 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-09 20:44:47,512 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="astyu.nbhjt" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="astyu.nbhjt" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="astyu.nbhjt" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="astyu.nbhjt" password="false" resource-id="id/title" scrollable="false" selected="false" text="Установка"/>
+      </node>
+      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="astyu.nbhjt" password="false" resource-id="id/LinearLayout2" scrollable="false" selected="false" text="">
+        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="astyu.nbhjt" password="false" resource-id="id/LinearLayout2" scrollable="false" selected="false" text="">
+          <node bounds="[0,97][720,1133]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="astyu.nbhjt" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+            <node bounds="[0,412][720,818]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="astyu.nbhjt" password="false" resource-id="id/LinearLayout12" scrollable="false" selected="false" text="">
+              <node bounds="[14,426][706,475]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="astyu.nbhjt" password="false" resource-id="id/textView1" scrollable="false" selected="false" text="Успешно установлено!"/>
+              <node bounds="[16,475][704,535]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="astyu.nbhjt" password="false" resource-id="id/LL_Seperator2" scrollable="false" selected="false" text=""/>
+              <node bounds="[24,535][696,639]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="astyu.nbhjt" password="false" resource-id="id/text" scrollable="false" selected="false" text="Подтвердите согласие с п. соглашением minecraft_android. Для продолжения нажмите Далее."/>
+              <node bounds="[16,639][704,699]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="astyu.nbhjt" password="false" resource-id="id/LL_Seperator4" scrollable="false" selected="false" text=""/>
+              <node bounds="[14,699][706,804]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="astyu.nbhjt" password="false" resource-id="id/LinearLayout7" scrollable="false" selected="false" text="">
+                <node bounds="[230,709][489,796]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="astyu.nbhjt" password="false" resource-id="id/Button1" scrollable="false" selected="false" text="Далее"/>
+              </node>
+            </node>
+          </node>
+          <node bounds="[242,1133][477,1187]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="astyu.nbhjt" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+            <node bounds="[242,1133][477,1193]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="astyu.nbhjt" password="false" resource-id="id/Button2" scrollable="false" selected="false" text="Пользовательское соглашение"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-09 20:44:48,697 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-09 20:44:48,697 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-09 20:44:49,325 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/df9345eca0e67a582a2a44f40b3e394166fa191506dbb96cf09fdea49e45108c/first_page.png
+2017-07-09 20:44:49,400 - COSMOS_TRIGGER_PY-Console - DEBUG - 2912 KB/s (61239 bytes in 0.020s)
+2017-07-09 20:44:54,434 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/astyu.nbhjt0709-20-44-17.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/df9345eca0e67a582a2a44f40b3e394166fa191506dbb96cf09fdea49e45108c/astyu.nbhjt0709-20-44-17.pcap
+2017-07-09 20:44:54,519 - COSMOS_TRIGGER_PY-Console - DEBUG - 887 KB/s (8192 bytes in 0.009s)
+2017-07-09 20:45:09,520 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-09 20:45:09,523 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall astyu.nbhjt
+2017-07-09 20:45:11,572 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 20:45:11,572 - COSMOS_TRIGGER_PY-Console - INFO - End

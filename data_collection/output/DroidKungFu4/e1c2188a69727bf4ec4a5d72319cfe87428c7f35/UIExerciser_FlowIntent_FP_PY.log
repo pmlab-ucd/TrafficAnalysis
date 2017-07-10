@@ -1,0 +1,92 @@
+2017-07-09 02:46:09,124 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\e1c2188a69727bf4ec4a5d72319cfe87428c7f35.apk
+2017-07-09 02:46:09,125 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.safesys.remover
+2017-07-09 02:46:09,127 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.safesys.remover
+2017-07-09 02:46:09,947 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-09 02:46:09,947 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\e1c2188a69727bf4ec4a5d72319cfe87428c7f35.apk
+2017-07-09 02:46:13,571 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/e1c2188a69727bf4ec4a5d72319cfe87428c7f35.apk
+2017-07-09 02:46:13,572 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 02:46:13,572 - COSMOS_TRIGGER_PY-Console - DEBUG - 169 KB/s (160288 bytes in 0.922s)
+2017-07-09 02:46:13,573 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-09 02:46:18,651 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-09 02:46:18,653 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-09 02:46:19,786 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 02:46:19,788 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=156ms (0ms mobile, 156ms wifi, 0ms not connected)
+2017-07-09 02:46:21,230 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-09 02:46:21,299 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-09 02:46:21,301 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-09 02:46:21,318 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.safesys.remover --ignore-crashes 1
+2017-07-09 02:46:23,247 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 02:46:23,249 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=209ms (0ms mobile, 209ms wifi, 0ms not connected)
+2017-07-09 02:46:23,288 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-09 02:46:23,411 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-09 02:46:55,601 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/title" scrollable="false" selected="false" text="Root App Remover Expert"/>
+      </node>
+      <node bounds="[0,100][720,660]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safesys.remover" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[0,100][720,660]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <node bounds="[0,100][720,564]" checkable="false" checked="false" class="android.widget.ListView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/entryList" scrollable="false" selected="false" text="">
+            <node bounds="[0,100][720,209]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <node bounds="[10,116][86,192]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/icon" scrollable="false" selected="false" text=""/>
+              <node bounds="[106,110][710,199]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safesys.remover" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                <node bounds="[106,110][710,164]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/labelname" scrollable="false" selected="false" text="Fake GPS"/>
+                <node bounds="[106,161][710,199]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safesys.remover" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                  <node bounds="[106,161][191,199]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/versionName" scrollable="false" selected="false" text="v 1.5.1"/>
+                  <node bounds="[191,161][710,199]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/size" scrollable="false" selected="false" text="73KB"/>
+                </node>
+              </node>
+            </node>
+            <node bounds="[0,210][720,319]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safesys.remover" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <node bounds="[10,226][86,302]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/icon" scrollable="false" selected="false" text=""/>
+              <node bounds="[106,220][710,309]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safesys.remover" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                <node bounds="[106,220][710,274]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/labelname" scrollable="false" selected="false" text="Google Play services"/>
+                <node bounds="[106,271][710,309]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safesys.remover" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                  <node bounds="[106,271][453,309]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/versionName" scrollable="false" selected="false" text="v 11.0.55 (036-156917137)"/>
+                  <node bounds="[453,271][710,309]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/size" scrollable="false" selected="false" text="33141KB"/>
+                </node>
+              </node>
+            </node>
+            <node bounds="[0,320][720,429]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.safesys.remover" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <node bounds="[10,336][86,412]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/icon" scrollable="false" selected="false" text=""/>
+              <node bounds="[106,330][710,419]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safesys.remover" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                <node bounds="[106,330][710,384]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/labelname" scrollable="false" selected="false" text="Google Play Store"/>
+                <node bounds="[106,381][710,419]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safesys.remover" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                  <node bounds="[106,381][526,419]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/versionName" scrollable="false" selected="false" text="v 7.9.80.Q-all [0] [PR] 159305549"/>
+                  <node bounds="[526,381][710,419]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/size" scrollable="false" selected="false" text="18104KB"/>
+                </node>
+              </node>
+            </node>
+            <node bounds="[0,430][720,539]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.safesys.remover" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <node bounds="[10,446][86,522]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/icon" scrollable="false" selected="false" text=""/>
+              <node bounds="[106,440][710,529]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safesys.remover" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                <node bounds="[106,440][710,494]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/labelname" scrollable="false" selected="false" text="Root App Remover Expert"/>
+                <node bounds="[106,491][710,529]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safesys.remover" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                  <node bounds="[106,491][191,529]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/versionName" scrollable="false" selected="false" text="v 1.5.6"/>
+                  <node bounds="[191,491][710,529]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/size" scrollable="false" selected="false" text="156KB"/>
+                </node>
+              </node>
+            </node>
+            <node bounds="[0,540][720,649]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.safesys.remover" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <node bounds="[10,556][86,632]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/icon" scrollable="false" selected="false" text=""/>
+              <node bounds="[106,550][710,639]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safesys.remover" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                <node bounds="[106,550][710,604]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safesys.remover" password="false" resource-id="id/labelname" scrollable="false" selected="false" text="The Weather Channel"/>
+              </node>
+            </node>
+          </node>
+          <node bounds="[0,564][720,660]" checkable="false" checked="false" class="android.widget.EditText" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="1" long-clickable="true" package="com.safesys.remover" password="false" resource-id="id/searchText" scrollable="false" selected="false" text="search"/>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-09 02:46:56,743 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-09 02:46:56,744 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-09 02:46:57,380 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/e1c2188a69727bf4ec4a5d72319cfe87428c7f35/first_page.png
+2017-07-09 02:46:57,505 - COSMOS_TRIGGER_PY-Console - DEBUG - 3031 KB/s (149461 bytes in 0.048s)
+2017-07-09 02:47:02,530 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.safesys.remover0709-02-46-09.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/e1c2188a69727bf4ec4a5d72319cfe87428c7f35/com.safesys.remover0709-02-46-09.pcap
+2017-07-09 02:47:02,618 - COSMOS_TRIGGER_PY-Console - DEBUG - 1599 KB/s (16384 bytes in 0.010s)
+2017-07-09 02:47:03,082 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.safesys.remover
+2017-07-09 02:47:04,855 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 02:47:04,855 - COSMOS_TRIGGER_PY-Console - INFO - End

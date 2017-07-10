@@ -1,0 +1,94 @@
+2017-07-08 19:59:33,017 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\03168dbe4239cb242c5217d4052995278077623e.apk
+2017-07-08 19:59:33,017 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.ps.yams
+2017-07-08 19:59:33,019 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.yams
+2017-07-08 19:59:33,844 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-08 19:59:33,844 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\03168dbe4239cb242c5217d4052995278077623e.apk
+2017-07-08 19:59:35,872 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/03168dbe4239cb242c5217d4052995278077623e.apk
+2017-07-08 19:59:35,874 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 19:59:35,874 - COSMOS_TRIGGER_PY-Console - DEBUG - 1361 KB/s (360972 bytes in 0.258s)
+2017-07-08 19:59:35,874 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-08 19:59:36,947 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-08 19:59:36,947 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-08 19:59:37,969 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 19:59:37,970 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=180ms (0ms mobile, 180ms wifi, 0ms not connected)
+2017-07-08 19:59:39,436 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-08 19:59:39,513 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-08 19:59:39,513 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-08 19:59:39,535 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.ps.yams --ignore-crashes 1
+2017-07-08 19:59:41,417 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 19:59:41,417 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=688ms (0ms mobile, 688ms wifi, 0ms not connected)
+2017-07-08 19:59:41,494 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-08 19:59:41,625 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-08 20:00:15,479 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,25][360,53]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[5,26][356,51]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="Yams"/>
+      </node>
+      <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,53][360,479]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[0,53][360,114]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="">
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[0,53][61,114]" checkable="true" checked="false" class="android.widget.ToggleButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text=""/>
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[61,53][122,114]" checkable="true" checked="false" class="android.widget.ToggleButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text=""/>
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[122,53][182,114]" checkable="true" checked="false" class="android.widget.ToggleButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text=""/>
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[182,53][243,114]" checkable="true" checked="false" class="android.widget.ToggleButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text=""/>
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[243,53][304,114]" checkable="true" checked="false" class="android.widget.ToggleButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="4" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text=""/>
+          </node>
+          <node bounds="[0,114][359,425]" checkable="false" checked="false" class="android.widget.TableLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[0,125][359,164]" checkable="false" checked="false" class="android.widget.TableRow" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[0,125][135,164]" checkable="true" checked="false" class="android.widget.ToggleButton" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="ONES"/>
+              <node bounds="[151,135][159,154]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="2"/>
+              <node bounds="[224,125][359,164]" checkable="true" checked="false" class="android.widget.ToggleButton" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="THREE-of-a-kind"/>
+            </node>
+            <node bounds="[0,164][359,204]" checkable="false" checked="false" class="android.widget.TableRow" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[0,164][135,204]" checkable="true" checked="false" class="android.widget.ToggleButton" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="TWOS"/>
+              <node bounds="[151,174][159,194]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="4"/>
+              <node bounds="[224,164][359,204]" checkable="true" checked="false" class="android.widget.ToggleButton" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="FOUR-of-a-kind"/>
+            </node>
+            <node bounds="[0,204][359,243]" checkable="false" checked="false" class="android.widget.TableRow" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[0,204][135,243]" checkable="true" checked="false" class="android.widget.ToggleButton" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="THREES"/>
+              <node bounds="[224,204][359,243]" checkable="true" checked="false" class="android.widget.ToggleButton" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="Full House"/>
+            </node>
+            <node bounds="[0,243][359,282]" checkable="false" checked="false" class="android.widget.TableRow" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[0,243][135,282]" checkable="true" checked="false" class="android.widget.ToggleButton" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="FOURS"/>
+              <node bounds="[224,243][359,282]" checkable="true" checked="false" class="android.widget.ToggleButton" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="Small Straight"/>
+            </node>
+            <node bounds="[0,282][359,322]" checkable="false" checked="false" class="android.widget.TableRow" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[0,282][135,322]" checkable="true" checked="false" class="android.widget.ToggleButton" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="FIVES"/>
+              <node bounds="[224,282][359,322]" checkable="true" checked="false" class="android.widget.ToggleButton" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="Large Straight"/>
+            </node>
+            <node bounds="[0,322][359,361]" checkable="false" checked="false" class="android.widget.TableRow" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="5" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[0,322][135,361]" checkable="true" checked="false" class="android.widget.ToggleButton" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="SIXES"/>
+              <node bounds="[151,332][159,351]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="6"/>
+              <node bounds="[224,322][359,361]" checkable="true" checked="false" class="android.widget.ToggleButton" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="YAMS"/>
+            </node>
+            <node bounds="[0,361][359,401]" checkable="false" checked="false" class="android.widget.TableRow" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="6" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[0,361][135,401]" checkable="true" checked="true" class="android.widget.ToggleButton" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="BONUS"/>
+              <node bounds="[191,371][207,390]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="12"/>
+              <node bounds="[224,361][359,401]" checkable="true" checked="false" class="android.widget.ToggleButton" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="CHANCE"/>
+            </node>
+            <node bounds="[0,401][359,425]" checkable="false" checked="false" class="android.widget.TableRow" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="7" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[41,401][95,425]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="TOTAL"/>
+              <node bounds="[174,401][185,425]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="0"/>
+            </node>
+          </node>
+          <node bounds="[0,425][360,479]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.ps.yams" password="false" scrollable="false" selected="false" text="Roll the dice"/>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-08 20:00:16,619 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-08 20:00:16,619 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-08 20:00:17,262 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/03168dbe4239cb242c5217d4052995278077623e/first_page.png
+2017-07-08 20:00:17,388 - COSMOS_TRIGGER_PY-Console - DEBUG - 3224 KB/s (109748 bytes in 0.033s)
+2017-07-08 20:00:22,408 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.ps.yams0708-19-59-32.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/03168dbe4239cb242c5217d4052995278077623e/com.ps.yams0708-19-59-32.pcap
+2017-07-08 20:00:22,604 - COSMOS_TRIGGER_PY-Console - DEBUG - 2644 KB/s (184320 bytes in 0.068s)
+2017-07-08 20:00:29,266 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.yams
+2017-07-08 20:00:30,951 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 20:00:30,951 - COSMOS_TRIGGER_PY-Console - INFO - End

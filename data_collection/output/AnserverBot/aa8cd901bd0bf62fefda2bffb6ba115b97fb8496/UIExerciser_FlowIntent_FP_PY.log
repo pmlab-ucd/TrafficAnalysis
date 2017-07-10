@@ -1,0 +1,66 @@
+2017-07-08 17:30:51,023 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\aa8cd901bd0bf62fefda2bffb6ba115b97fb8496.apk
+2017-07-08 17:30:51,023 - COSMOS_TRIGGER_PY-Console - INFO - pkg:jojo.widget.mood
+2017-07-08 17:30:51,025 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall jojo.widget.mood
+2017-07-08 17:30:51,953 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-08 17:30:51,953 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\aa8cd901bd0bf62fefda2bffb6ba115b97fb8496.apk
+2017-07-08 17:30:54,108 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/aa8cd901bd0bf62fefda2bffb6ba115b97fb8496.apk
+2017-07-08 17:30:54,108 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 17:30:54,108 - COSMOS_TRIGGER_PY-Console - DEBUG - 1091 KB/s (376807 bytes in 0.337s)
+2017-07-08 17:30:54,109 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-08 17:30:54,782 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-08 17:30:54,782 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-08 17:30:55,704 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 17:30:55,704 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=137ms (0ms mobile, 137ms wifi, 0ms not connected)
+2017-07-08 17:30:57,048 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-08 17:30:57,118 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-08 17:30:57,118 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-08 17:30:57,135 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p jojo.widget.mood --ignore-crashes 1
+2017-07-08 17:30:58,062 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 17:30:58,062 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=124ms (0ms mobile, 124ms wifi, 0ms not connected)
+2017-07-08 17:30:58,102 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-08 17:30:58,210 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-08 17:31:32,342 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="jojo.widget.mood" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="jojo.widget.mood" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="jojo.widget.mood" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="jojo.widget.mood" password="false" resource-id="id/title" scrollable="false" selected="false" text="Mood"/>
+      </node>
+      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="jojo.widget.mood" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="jojo.widget.mood" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <node bounds="[10,110][710,1174]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="jojo.widget.mood" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+            <node bounds="[10,110][341,148]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="jojo.widget.mood" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="Please change you mood :"/>
+            <node bounds="[10,148][710,244]" checkable="false" checked="false" class="android.widget.EditText" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="1" long-clickable="true" package="jojo.widget.mood" password="false" resource-id="id/EditText_Mood" scrollable="false" selected="false" text="I am very happy ..."/>
+            <node bounds="[10,244][140,282]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="jojo.widget.mood" password="false" resource-id="id/TextView_FontSize" scrollable="false" selected="false" text="Font Size :"/>
+            <node bounds="[10,282][92,378]" checkable="false" checked="false" class="android.widget.EditText" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="true" package="jojo.widget.mood" password="false" resource-id="id/EditText_FontSize" scrollable="false" selected="false" text="20"/>
+            <node bounds="[10,378][154,416]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="jojo.widget.mood" password="false" resource-id="id/TextView_Color" scrollable="false" selected="false" text="Font Color :"/>
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[10,416][710,513]" checkable="false" checked="false" class="android.widget.Spinner" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="5" long-clickable="false" package="jojo.widget.mood" password="false" resource-id="id/Spinner_FontColor" scrollable="true" selected="false" text="">
+              <node bounds="[31,438][607,481]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="jojo.widget.mood" password="false" resource-id="id/text1" scrollable="false" selected="false" text="MAGENTA"/>
+            </node>
+          </node>
+          <node bounds="[10,1078][710,1174]" checkable="false" checked="false" class="android.widget.TableLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="jojo.widget.mood" password="false" resource-id="id/TableRow" scrollable="false" selected="false" text="">
+            <node bounds="[10,1078][710,1174]" checkable="false" checked="false" class="android.widget.TableRow" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="jojo.widget.mood" password="false" resource-id="id/TableRow" scrollable="false" selected="false" text="">
+              <node bounds="[10,1078][374,1174]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="jojo.widget.mood" password="false" resource-id="id/Btn_Update" scrollable="false" selected="false" text="Update"/>
+              <node bounds="[374,1078][710,1174]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="jojo.widget.mood" password="false" resource-id="id/Btn_Return" scrollable="false" selected="false" text="Back"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-08 17:31:33,513 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-08 17:31:33,513 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-08 17:31:34,188 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/aa8cd901bd0bf62fefda2bffb6ba115b97fb8496/first_page.png
+2017-07-08 17:31:34,362 - COSMOS_TRIGGER_PY-Console - DEBUG - 1503 KB/s (64008 bytes in 0.041s)
+2017-07-08 17:31:39,368 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/jojo.widget.mood0708-17-30-50.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/aa8cd901bd0bf62fefda2bffb6ba115b97fb8496/jojo.widget.mood0708-17-30-50.pcap
+2017-07-08 17:31:44,453 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/jojo.widget.mood0708-17-30-50.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/aa8cd901bd0bf62fefda2bffb6ba115b97fb8496/jojo.widget.mood0708-17-30-50.pcap
+2017-07-08 17:31:49,532 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/jojo.widget.mood0708-17-30-50.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/aa8cd901bd0bf62fefda2bffb6ba115b97fb8496/jojo.widget.mood0708-17-30-50.pcap
+2017-07-08 17:31:54,612 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/jojo.widget.mood0708-17-30-50.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/aa8cd901bd0bf62fefda2bffb6ba115b97fb8496/jojo.widget.mood0708-17-30-50.pcap
+2017-07-08 17:31:59,694 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/jojo.widget.mood0708-17-30-50.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/aa8cd901bd0bf62fefda2bffb6ba115b97fb8496/jojo.widget.mood0708-17-30-50.pcap
+2017-07-08 17:32:04,776 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/jojo.widget.mood0708-17-30-50.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/aa8cd901bd0bf62fefda2bffb6ba115b97fb8496/jojo.widget.mood0708-17-30-50.pcap
+2017-07-08 17:32:04,858 - COSMOS_TRIGGER_PY-Console - DEBUG - 614 KB/s (4096 bytes in 0.006s)
+2017-07-08 17:32:19,858 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-08 17:32:19,861 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall jojo.widget.mood
+2017-07-08 17:32:21,401 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 17:32:21,401 - COSMOS_TRIGGER_PY-Console - INFO - End

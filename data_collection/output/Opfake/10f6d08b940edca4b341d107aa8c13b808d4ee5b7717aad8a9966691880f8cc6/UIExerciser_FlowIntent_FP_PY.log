@@ -1,0 +1,43 @@
+2017-07-09 04:49:27,323 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\10f6d08b940edca4b341d107aa8c13b808d4ee5b7717aad8a9966691880f8cc6.apk
+2017-07-09 04:49:27,323 - COSMOS_TRIGGER_PY-Console - INFO - pkg:tpmcpil.ytsgijs
+2017-07-09 04:49:27,325 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall tpmcpil.ytsgijs
+2017-07-09 04:49:28,098 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-09 04:49:28,098 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\10f6d08b940edca4b341d107aa8c13b808d4ee5b7717aad8a9966691880f8cc6.apk
+2017-07-09 04:49:30,033 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/10f6d08b940edca4b341d107aa8c13b808d4ee5b7717aad8a9966691880f8cc6.apk
+2017-07-09 04:49:30,033 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 04:49:30,035 - COSMOS_TRIGGER_PY-Console - DEBUG - 1576 KB/s (379884 bytes in 0.235s)
+2017-07-09 04:49:30,035 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-09 04:49:30,765 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-09 04:49:30,765 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-09 04:49:31,697 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 04:49:31,697 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=186ms (0ms mobile, 186ms wifi, 0ms not connected)
+2017-07-09 04:49:33,072 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-09 04:49:33,161 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-09 04:49:33,161 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-09 04:49:33,174 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p tpmcpil.ytsgijs --ignore-crashes 1
+2017-07-09 04:49:34,701 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 04:49:34,701 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=712ms (0ms mobile, 712ms wifi, 0ms not connected)
+2017-07-09 04:49:34,782 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-09 04:49:34,891 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-09 04:49:54,447 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="tpmcpil.ytsgijs" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="tpmcpil.ytsgijs" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="tpmcpil.ytsgijs" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="tpmcpil.ytsgijs" password="false" resource-id="id/title" scrollable="false" selected="false" text="vk-client"/>
+      </node>
+      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="tpmcpil.ytsgijs" password="false" resource-id="id/webView1" scrollable="false" selected="false" text="">
+        <!--NAF: The following control may not be accessibility friendly-->
+        <node NAF="true" bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="tpmcpil.ytsgijs" password="false" resource-id="id/webView1" scrollable="false" selected="false" text=""/>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-09 04:49:55,608 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-09 04:49:55,608 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-09 04:49:56,398 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/10f6d08b940edca4b341d107aa8c13b808d4ee5b7717aad8a9966691880f8cc6/first_page.png
+2017-07-09 04:49:56,535 - COSMOS_TRIGGER_PY-Console - DEBUG - 2476 KB/s (149726 bytes in 0.059s)
+2017-07-09 04:50:01,569 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/tpmcpil.ytsgijs0709-04-49-27.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/10f6d08b940edca4b341d107aa8c13b808d4ee5b7717aad8a9966691880f8cc6/tpmcpil.ytsgijs0709-04-49-27.pcap
+2017-07-09 04:50:01,667 - COSMOS_TRIGGER_PY-Console - DEBUG - 3604 KB/s (110592 bytes in 0.029s)
+2017-07-09 04:50:01,782 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall tpmcpil.ytsgijs
+2017-07-09 04:50:03,413 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 04:50:03,413 - COSMOS_TRIGGER_PY-Console - INFO - End

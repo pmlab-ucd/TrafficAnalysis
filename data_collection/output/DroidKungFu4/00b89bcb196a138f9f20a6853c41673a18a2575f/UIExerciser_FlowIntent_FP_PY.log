@@ -1,0 +1,46 @@
+2017-07-09 01:02:47,509 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\00b89bcb196a138f9f20a6853c41673a18a2575f.apk
+2017-07-09 01:02:47,510 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.glu.android.dinercn
+2017-07-09 01:02:47,510 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.glu.android.dinercn
+2017-07-09 01:02:48,288 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-09 01:02:48,288 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\00b89bcb196a138f9f20a6853c41673a18a2575f.apk
+2017-07-09 01:02:52,194 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/00b89bcb196a138f9f20a6853c41673a18a2575f.apk
+2017-07-09 01:02:52,194 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 01:02:52,196 - COSMOS_TRIGGER_PY-Console - DEBUG - 2220 KB/s (3501481 bytes in 1.539s)
+2017-07-09 01:02:52,196 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-09 01:02:52,976 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-09 01:02:52,976 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-09 01:02:53,805 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 01:02:53,805 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=47ms (0ms mobile, 47ms wifi, 0ms not connected)
+2017-07-09 01:02:57,315 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-09 01:02:57,392 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-09 01:02:57,392 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-09 01:02:57,405 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.glu.android.dinercn --ignore-crashes 1
+2017-07-09 01:02:58,388 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 01:02:58,390 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=194ms (0ms mobile, 194ms wifi, 0ms not connected)
+2017-07-09 01:02:58,438 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-09 01:02:58,529 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-09 01:03:21,109 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.glu.android.dinercn" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.glu.android.dinercn" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.glu.android.dinercn" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="false" package="com.glu.android.dinercn" password="false" scrollable="false" selected="false" text=""/>
+        <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="false" focusable="false" focused="false" index="1" long-clickable="false" package="com.glu.android.dinercn" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[239,306][599,360]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.glu.android.dinercn" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[239,306][599,360]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.glu.android.dinercn" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[410,324][428,342]" checkable="false" checked="false" class="android.widget.ProgressBar" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.glu.android.dinercn" password="false" scrollable="false" selected="false" text=""/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-09 01:03:22,250 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-09 01:03:22,252 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-09 01:03:23,936 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/00b89bcb196a138f9f20a6853c41673a18a2575f/first_page.png
+2017-07-09 01:03:24,290 - COSMOS_TRIGGER_PY-Console - DEBUG - 3113 KB/s (790083 bytes in 0.247s)
+2017-07-09 01:03:29,302 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.glu.android.dinercn0709-01-02-47.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/00b89bcb196a138f9f20a6853c41673a18a2575f/com.glu.android.dinercn0709-01-02-47.pcap
+2017-07-09 01:03:29,368 - COSMOS_TRIGGER_PY-Console - DEBUG - 2395 KB/s (12288 bytes in 0.005s)
+2017-07-09 01:03:29,589 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.glu.android.dinercn
+2017-07-09 01:03:31,267 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 01:03:31,269 - COSMOS_TRIGGER_PY-Console - INFO - End

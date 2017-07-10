@@ -1,0 +1,46 @@
+2017-07-10 02:31:56,657 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\064c788acbf22b2bf141639f8612caf011078469e254c71d176007352589fc16.apk
+2017-07-10 02:31:56,657 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.gp.solitaire
+2017-07-10 02:31:56,657 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.solitaire
+2017-07-10 02:31:57,532 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-10 02:31:57,532 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\064c788acbf22b2bf141639f8612caf011078469e254c71d176007352589fc16.apk
+2017-07-10 02:32:00,644 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/064c788acbf22b2bf141639f8612caf011078469e254c71d176007352589fc16.apk
+2017-07-10 02:32:00,644 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-10 02:32:00,644 - COSMOS_TRIGGER_PY-Console - DEBUG - 1519 KB/s (416797 bytes in 0.267s)
+2017-07-10 02:32:00,644 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-10 02:32:01,377 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-10 02:32:01,378 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-10 02:32:02,371 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-10 02:32:02,372 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=136ms (0ms mobile, 136ms wifi, 0ms not connected)
+2017-07-10 02:32:03,790 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-10 02:32:03,918 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-10 02:32:03,918 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-10 02:32:03,947 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.gp.solitaire --ignore-crashes 1
+2017-07-10 02:32:04,984 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-10 02:32:04,984 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=144ms (0ms mobile, 144ms wifi, 0ms not connected)
+2017-07-10 02:32:05,065 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-10 02:32:05,191 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-10 02:32:25,996 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.solitaire" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.solitaire" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,25][599,360]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.solitaire" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,25][599,360]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.solitaire" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[0,25][599,360]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.gp.solitaire" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[0,25][599,360]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.solitaire" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[41,28][558,356]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.solitaire" password="false" scrollable="false" selected="false" text="Moving:  Single Card: Drag the card.  Whole Stack: Drag the stack starting above the bottom card.  Partial Stack: Tap the stack, scroll to adjust, then drag the top card.   Auto Move:  Fling a card to start a chain of moving cards to their home.   Dealing:  Tap the deck or click the trackball or search key.   Undo:  Push the back button.   Menu:  Change the gametype, save, options, and view this help."/>
+            </node>
+            <node bounds="[0,25][599,360]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="true" focused="true" index="1" long-clickable="false" package="com.gp.solitaire" password="false" scrollable="false" selected="false" text=""/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-10 02:32:27,209 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-10 02:32:27,209 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-10 02:32:28,086 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/064c788acbf22b2bf141639f8612caf011078469e254c71d176007352589fc16/first_page.png
+2017-07-10 02:32:28,270 - COSMOS_TRIGGER_PY-Console - DEBUG - 2726 KB/s (206578 bytes in 0.073s)
+2017-07-10 02:32:33,276 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.gp.solitaire0710-02-31-56.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/064c788acbf22b2bf141639f8612caf011078469e254c71d176007352589fc16/com.gp.solitaire0710-02-31-56.pcap
+2017-07-10 02:32:33,362 - COSMOS_TRIGGER_PY-Console - DEBUG - 971 KB/s (4096 bytes in 0.004s)
+2017-07-10 02:32:34,392 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.solitaire
+2017-07-10 02:32:36,482 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-10 02:32:36,483 - COSMOS_TRIGGER_PY-Console - INFO - End

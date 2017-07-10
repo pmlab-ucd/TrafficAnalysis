@@ -1,0 +1,44 @@
+2017-07-09 17:56:52,517 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\bd84bb590bfe70489d509ac5d3da041f613759ce5fa90721193b01536b5ef1dc.apk
+2017-07-09 17:56:52,517 - COSMOS_TRIGGER_PY-Console - INFO - pkg:fllpusub.nwovthu
+2017-07-09 17:56:52,519 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall fllpusub.nwovthu
+2017-07-09 17:56:53,598 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-09 17:56:53,598 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\bd84bb590bfe70489d509ac5d3da041f613759ce5fa90721193b01536b5ef1dc.apk
+2017-07-09 17:57:02,928 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/bd84bb590bfe70489d509ac5d3da041f613759ce5fa90721193b01536b5ef1dc.apk
+2017-07-09 17:57:02,928 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 17:57:02,930 - COSMOS_TRIGGER_PY-Console - DEBUG - 668 KB/s (222613 bytes in 0.325s)
+2017-07-09 17:57:02,930 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-09 17:57:09,323 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-09 17:57:09,325 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-09 17:57:10,275 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 17:57:10,276 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=142ms (0ms mobile, 142ms wifi, 0ms not connected)
+2017-07-09 17:57:11,657 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-09 17:57:11,785 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-09 17:57:11,785 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-09 17:57:11,803 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p fllpusub.nwovthu --ignore-crashes 1
+2017-07-09 17:57:13,434 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 17:57:13,434 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=427ms (0ms mobile, 427ms wifi, 0ms not connected)
+2017-07-09 17:57:13,513 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-09 17:57:13,632 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-09 17:57:33,483 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="fllpusub.nwovthu" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="fllpusub.nwovthu" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="fllpusub.nwovthu" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="fllpusub.nwovthu" password="false" resource-id="id/title" scrollable="false" selected="false" text="Танчики-Х"/>
+      </node>
+      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="fllpusub.nwovthu" password="false" resource-id="id/webView1" scrollable="false" selected="false" text="">
+        <!--NAF: The following control may not be accessibility friendly-->
+        <node NAF="true" bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="fllpusub.nwovthu" password="false" resource-id="id/webView1" scrollable="false" selected="false" text=""/>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-09 17:57:34,676 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-09 17:57:34,676 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-09 17:57:35,506 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/bd84bb590bfe70489d509ac5d3da041f613759ce5fa90721193b01536b5ef1dc/first_page.png
+2017-07-09 17:57:35,638 - COSMOS_TRIGGER_PY-Console - DEBUG - 2392 KB/s (73478 bytes in 0.029s)
+2017-07-09 17:57:40,670 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/fllpusub.nwovthu0709-17-56-52.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/bd84bb590bfe70489d509ac5d3da041f613759ce5fa90721193b01536b5ef1dc/fllpusub.nwovthu0709-17-56-52.pcap
+2017-07-09 17:57:40,760 - COSMOS_TRIGGER_PY-Console - DEBUG - 647 KB/s (12288 bytes in 0.018s)
+2017-07-09 17:57:55,762 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-09 17:57:55,763 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall fllpusub.nwovthu
+2017-07-09 17:57:57,154 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 17:57:57,155 - COSMOS_TRIGGER_PY-Console - INFO - End

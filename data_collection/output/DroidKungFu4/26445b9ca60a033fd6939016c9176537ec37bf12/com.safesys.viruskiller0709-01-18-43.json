@@ -1,0 +1,1 @@
+[{"src": ["IMEI"], "dst": "80", "process_name": "com.safesys.viruskiller", "process_id": "17867", "log_time": "07-09 05:22:22.313", "message": "libcore.os.write(80) writing with tag 0x400 data[351565054929465 vk002 Google_Galaxy_Nexus 4.1.2 16]", "channel": "INTERNAL"}]

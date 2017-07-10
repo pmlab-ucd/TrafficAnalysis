@@ -1,0 +1,55 @@
+2017-07-09 01:14:43,612 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\1de9acac9f0e43259c235c3ab08b6da87cda4df9.apk
+2017-07-09 01:14:43,612 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.evilsunflower.picturepuzzle
+2017-07-09 01:14:43,614 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.evilsunflower.picturepuzzle
+2017-07-09 01:14:44,937 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-09 01:14:44,937 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\1de9acac9f0e43259c235c3ab08b6da87cda4df9.apk
+2017-07-09 01:14:50,273 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/1de9acac9f0e43259c235c3ab08b6da87cda4df9.apk
+2017-07-09 01:14:50,273 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 01:14:50,273 - COSMOS_TRIGGER_PY-Console - DEBUG - 2548 KB/s (2830132 bytes in 1.084s)
+2017-07-09 01:14:50,273 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-09 01:14:51,460 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-09 01:14:51,460 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-09 01:14:52,783 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 01:14:52,785 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=242ms (0ms mobile, 242ms wifi, 0ms not connected)
+2017-07-09 01:14:54,161 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-09 01:14:54,230 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-09 01:14:54,230 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-09 01:14:54,255 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.evilsunflower.picturepuzzle --ignore-crashes 1
+2017-07-09 01:14:55,934 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 01:14:55,934 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=126ms (0ms mobile, 126ms wifi, 0ms not connected)
+2017-07-09 01:14:55,976 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-09 01:14:56,092 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-09 01:15:20,423 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.picturepuzzle" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.picturepuzzle" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.picturepuzzle" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="false" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.picturepuzzle" password="false" scrollable="false" selected="false" text=""/>
+        <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.evilsunflower.picturepuzzle" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.picturepuzzle" password="false" scrollable="false" selected="false" text="">
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[0,486][90,542]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.evilsunflower.picturepuzzle" password="false" scrollable="false" selected="false" text=""/>
+            <node bounds="[0,537][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.evilsunflower.picturepuzzle" password="false" scrollable="false" selected="false" text=""/>
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[90,486][180,542]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="4" long-clickable="false" package="com.evilsunflower.picturepuzzle" password="false" scrollable="false" selected="false" text=""/>
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[180,486][270,542]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="5" long-clickable="false" package="com.evilsunflower.picturepuzzle" password="false" scrollable="false" selected="false" text=""/>
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[270,486][360,542]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="6" long-clickable="false" package="com.evilsunflower.picturepuzzle" password="false" scrollable="false" selected="false" text=""/>
+            <node bounds="[0,542][360,592]" checkable="false" checked="false" class="android.widget.ViewFlipper" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="7" long-clickable="false" package="com.evilsunflower.picturepuzzle" password="false" scrollable="false" selected="false" text=""/>
+          </node>
+          <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.evilsunflower.picturepuzzle" password="false" scrollable="false" selected="false" text=""/>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-09 01:15:21,601 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-09 01:15:21,601 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-09 01:15:24,243 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/1de9acac9f0e43259c235c3ab08b6da87cda4df9/first_page.png
+2017-07-09 01:15:24,617 - COSMOS_TRIGGER_PY-Console - DEBUG - 3051 KB/s (950189 bytes in 0.304s)
+2017-07-09 01:15:29,661 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.evilsunflower.picturepuzzle0709-01-14-43.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/1de9acac9f0e43259c235c3ab08b6da87cda4df9/com.evilsunflower.picturepuzzle0709-01-14-43.pcap
+2017-07-09 01:15:29,740 - COSMOS_TRIGGER_PY-Console - DEBUG - 726 KB/s (4096 bytes in 0.005s)
+2017-07-09 01:15:44,742 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-09 01:15:44,743 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.evilsunflower.picturepuzzle
+2017-07-09 01:15:46,490 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 01:15:46,490 - COSMOS_TRIGGER_PY-Console - INFO - End

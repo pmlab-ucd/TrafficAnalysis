@@ -1,0 +1,59 @@
+2017-07-09 01:03:31,532 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\01555033f037f7decc7fbfe968ae8522ea25fb45.apk
+2017-07-09 01:03:31,532 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.safetest.five
+2017-07-09 01:03:31,532 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.safetest.five
+2017-07-09 01:03:32,354 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-09 01:03:32,354 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\01555033f037f7decc7fbfe968ae8522ea25fb45.apk
+2017-07-09 01:03:34,299 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/01555033f037f7decc7fbfe968ae8522ea25fb45.apk
+2017-07-09 01:03:34,299 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 01:03:34,299 - COSMOS_TRIGGER_PY-Console - DEBUG - 1409 KB/s (434363 bytes in 0.300s)
+2017-07-09 01:03:34,299 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-09 01:03:35,029 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-09 01:03:35,029 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-09 01:03:36,017 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 01:03:36,017 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=114ms (0ms mobile, 114ms wifi, 0ms not connected)
+2017-07-09 01:03:37,375 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-09 01:03:37,457 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-09 01:03:37,457 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-09 01:03:37,476 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.safetest.five --ignore-crashes 1
+2017-07-09 01:03:38,404 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 01:03:38,404 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=122ms (0ms mobile, 122ms wifi, 0ms not connected)
+2017-07-09 01:03:38,446 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-09 01:03:38,546 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-09 01:04:09,523 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.five" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.five" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.five" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.five" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[90,187][270,241]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.safetest.five" password="false" scrollable="false" selected="false" text="Computer"/>
+          <node bounds="[90,241][270,295]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.safetest.five" password="false" scrollable="false" selected="false" text="Human"/>
+          <!--NAF: The following control may not be accessibility friendly-->
+          <node NAF="true" bounds="[90,295][270,350]" checkable="false" checked="false" class="android.widget.Spinner" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.safetest.five" password="false" scrollable="true" selected="false" text="">
+            <node bounds="[102,307][212,332]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.five" password="false" scrollable="false" selected="false" text="Normal Chessboard"/>
+          </node>
+          <node bounds="[90,350][270,404]" checkable="false" checked="false" class="android.widget.RadioGroup" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.safetest.five" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[90,350][172,404]" checkable="true" checked="true" class="android.widget.RadioButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.safetest.five" password="false" scrollable="false" selected="false" text="Easy"/>
+            <node bounds="[172,350][254,404]" checkable="true" checked="false" class="android.widget.RadioButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.safetest.five" password="false" scrollable="false" selected="false" text="Hard"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-09 01:04:10,805 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-09 01:04:10,805 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-09 01:04:12,403 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/01555033f037f7decc7fbfe968ae8522ea25fb45/first_page.png
+2017-07-09 01:04:12,638 - COSMOS_TRIGGER_PY-Console - DEBUG - 3031 KB/s (538929 bytes in 0.173s)
+2017-07-09 01:04:17,641 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.safetest.five0709-01-03-31.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/01555033f037f7decc7fbfe968ae8522ea25fb45/com.safetest.five0709-01-03-31.pcap
+2017-07-09 01:04:22,746 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.safetest.five0709-01-03-31.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/01555033f037f7decc7fbfe968ae8522ea25fb45/com.safetest.five0709-01-03-31.pcap
+2017-07-09 01:04:27,845 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.safetest.five0709-01-03-31.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/01555033f037f7decc7fbfe968ae8522ea25fb45/com.safetest.five0709-01-03-31.pcap
+2017-07-09 01:04:33,000 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.safetest.five0709-01-03-31.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/01555033f037f7decc7fbfe968ae8522ea25fb45/com.safetest.five0709-01-03-31.pcap
+2017-07-09 01:04:38,111 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.safetest.five0709-01-03-31.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/01555033f037f7decc7fbfe968ae8522ea25fb45/com.safetest.five0709-01-03-31.pcap
+2017-07-09 01:04:43,200 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.safetest.five0709-01-03-31.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/01555033f037f7decc7fbfe968ae8522ea25fb45/com.safetest.five0709-01-03-31.pcap
+2017-07-09 01:04:48,295 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.safetest.five0709-01-03-31.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/01555033f037f7decc7fbfe968ae8522ea25fb45/com.safetest.five0709-01-03-31.pcap
+2017-07-09 01:04:53,394 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.safetest.five0709-01-03-31.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/01555033f037f7decc7fbfe968ae8522ea25fb45/com.safetest.five0709-01-03-31.pcap
+2017-07-09 01:04:58,500 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.safetest.five0709-01-03-31.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/01555033f037f7decc7fbfe968ae8522ea25fb45/com.safetest.five0709-01-03-31.pcap
+2017-07-09 01:04:58,608 - COSMOS_TRIGGER_PY-Console - DEBUG - 575 KB/s (4096 bytes in 0.006s)
+2017-07-09 01:05:13,608 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-09 01:05:13,611 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.safetest.five
+2017-07-09 01:05:15,148 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 01:05:15,148 - COSMOS_TRIGGER_PY-Console - INFO - End

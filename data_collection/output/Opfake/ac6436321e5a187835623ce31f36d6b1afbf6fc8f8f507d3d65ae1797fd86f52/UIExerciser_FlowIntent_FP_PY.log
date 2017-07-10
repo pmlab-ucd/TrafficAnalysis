@@ -1,0 +1,51 @@
+2017-07-09 17:08:05,967 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\ac6436321e5a187835623ce31f36d6b1afbf6fc8f8f507d3d65ae1797fd86f52.apk
+2017-07-09 17:08:05,969 - COSMOS_TRIGGER_PY-Console - INFO - pkg:dabmhi.nhryionafv
+2017-07-09 17:08:05,969 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall dabmhi.nhryionafv
+2017-07-09 17:08:06,693 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-09 17:08:06,694 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\ac6436321e5a187835623ce31f36d6b1afbf6fc8f8f507d3d65ae1797fd86f52.apk
+2017-07-09 17:08:08,454 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/ac6436321e5a187835623ce31f36d6b1afbf6fc8f8f507d3d65ae1797fd86f52.apk
+2017-07-09 17:08:08,456 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 17:08:08,457 - COSMOS_TRIGGER_PY-Console - DEBUG - 522 KB/s (159586 bytes in 0.298s)
+2017-07-09 17:08:08,457 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-09 17:08:09,138 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-09 17:08:09,138 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-09 17:08:10,012 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 17:08:10,013 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=147ms (0ms mobile, 147ms wifi, 0ms not connected)
+2017-07-09 17:08:11,391 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-09 17:08:11,461 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-09 17:08:11,463 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-09 17:08:11,480 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p dabmhi.nhryionafv --ignore-crashes 1
+2017-07-09 17:08:12,506 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 17:08:12,507 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=193ms (0ms mobile, 193ms wifi, 0ms not connected)
+2017-07-09 17:08:12,548 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-09 17:08:12,674 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-09 17:08:32,193 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="dabmhi.nhryionafv" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="dabmhi.nhryionafv" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="dabmhi.nhryionafv" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="dabmhi.nhryionafv" password="false" resource-id="id/title" scrollable="false" selected="false" text="pirate-carib-101"/>
+      </node>
+      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="dabmhi.nhryionafv" password="false" resource-id="id/webView1" scrollable="false" selected="false" text="">
+        <!--NAF: The following control may not be accessibility friendly-->
+        <node NAF="true" bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="dabmhi.nhryionafv" password="false" resource-id="id/webView1" scrollable="false" selected="false" text=""/>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-09 17:08:33,368 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-09 17:08:33,369 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-09 17:08:33,996 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/ac6436321e5a187835623ce31f36d6b1afbf6fc8f8f507d3d65ae1797fd86f52/first_page.png
+2017-07-09 17:08:34,069 - COSMOS_TRIGGER_PY-Console - DEBUG - 3792 KB/s (77808 bytes in 0.020s)
+2017-07-09 17:08:39,095 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/dabmhi.nhryionafv0709-17-08-05.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/ac6436321e5a187835623ce31f36d6b1afbf6fc8f8f507d3d65ae1797fd86f52/dabmhi.nhryionafv0709-17-08-05.pcap
+2017-07-09 17:08:44,229 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/dabmhi.nhryionafv0709-17-08-05.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/ac6436321e5a187835623ce31f36d6b1afbf6fc8f8f507d3d65ae1797fd86f52/dabmhi.nhryionafv0709-17-08-05.pcap
+2017-07-09 17:08:49,315 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/dabmhi.nhryionafv0709-17-08-05.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/ac6436321e5a187835623ce31f36d6b1afbf6fc8f8f507d3d65ae1797fd86f52/dabmhi.nhryionafv0709-17-08-05.pcap
+2017-07-09 17:08:54,397 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/dabmhi.nhryionafv0709-17-08-05.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/ac6436321e5a187835623ce31f36d6b1afbf6fc8f8f507d3d65ae1797fd86f52/dabmhi.nhryionafv0709-17-08-05.pcap
+2017-07-09 17:08:59,482 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/dabmhi.nhryionafv0709-17-08-05.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/ac6436321e5a187835623ce31f36d6b1afbf6fc8f8f507d3d65ae1797fd86f52/dabmhi.nhryionafv0709-17-08-05.pcap
+2017-07-09 17:09:04,563 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/dabmhi.nhryionafv0709-17-08-05.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/ac6436321e5a187835623ce31f36d6b1afbf6fc8f8f507d3d65ae1797fd86f52/dabmhi.nhryionafv0709-17-08-05.pcap
+2017-07-09 17:09:09,644 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/dabmhi.nhryionafv0709-17-08-05.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/ac6436321e5a187835623ce31f36d6b1afbf6fc8f8f507d3d65ae1797fd86f52/dabmhi.nhryionafv0709-17-08-05.pcap
+2017-07-09 17:09:14,729 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/dabmhi.nhryionafv0709-17-08-05.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/ac6436321e5a187835623ce31f36d6b1afbf6fc8f8f507d3d65ae1797fd86f52/dabmhi.nhryionafv0709-17-08-05.pcap
+2017-07-09 17:09:14,815 - COSMOS_TRIGGER_PY-Console - DEBUG - 469 KB/s (4096 bytes in 0.008s)
+2017-07-09 17:09:29,816 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-09 17:09:29,818 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall dabmhi.nhryionafv
+2017-07-09 17:09:31,207 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 17:09:31,207 - COSMOS_TRIGGER_PY-Console - INFO - End

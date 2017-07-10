@@ -1,0 +1,59 @@
+2017-07-10 03:55:30,763 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\138fbea750c5f4e2bf386c3b360b03a9b30eaf17c97b754aa1ad26412293943d.apk
+2017-07-10 03:55:30,763 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.tutusw.phonespeedup
+2017-07-10 03:55:30,763 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.tutusw.phonespeedup
+2017-07-10 03:55:31,585 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-10 03:55:31,585 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\138fbea750c5f4e2bf386c3b360b03a9b30eaf17c97b754aa1ad26412293943d.apk
+2017-07-10 03:55:33,530 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/138fbea750c5f4e2bf386c3b360b03a9b30eaf17c97b754aa1ad26412293943d.apk
+2017-07-10 03:55:33,530 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-10 03:55:33,530 - COSMOS_TRIGGER_PY-Console - DEBUG - 1133 KB/s (260979 bytes in 0.224s)
+2017-07-10 03:55:33,530 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-10 03:55:34,260 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-10 03:55:34,262 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-10 03:55:35,141 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-10 03:55:35,141 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=119ms (0ms mobile, 119ms wifi, 0ms not connected)
+2017-07-10 03:55:36,477 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-10 03:55:36,558 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-10 03:55:36,558 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-10 03:55:36,575 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.tutusw.phonespeedup --ignore-crashes 1
+2017-07-10 03:55:37,953 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-10 03:55:37,953 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=468ms (0ms mobile, 468ms wifi, 0ms not connected)
+2017-07-10 03:55:38,032 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-10 03:55:38,242 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-10 03:56:02,338 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.phonespeedup" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.phonespeedup" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.phonespeedup" password="false" resource-id="id/content" scrollable="false" selected="false" text="">
+        <node bounds="[0,50][720,801]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.phonespeedup" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <node bounds="[0,50][720,130]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.phonespeedup" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="手机加速器Root权限用户"/>
+          <node bounds="[0,130][720,801]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.tutusw.phonespeedup" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+            <node bounds="[0,130][720,801]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.phonespeedup" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <node bounds="[0,130][720,598]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.phonespeedup" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="1. 本软件需要ROOT权限才能正常工作。出现ROOT权限请求时，请勾选“记住选择”，并点击“允许”或“总是允许”。 2. 本软件可以调整低端硬件的设置，请谨慎使用！ 3. 如果启用了配置或窗口小部件，请不要在任务管理器里终止手机加速器。 4. 您必须了解修改CPU频率的风险，并自行承担使用本软件的所有风险，程序开发人员不承担使用本程序所造成的一切后果！ 5. 如果您的手机CPU使用的是非标准频率，请选择自动检测或使用自定义功能。 6. HTC Sense用户：如果在设置频率时遇到问题，请尝试按Menu键并使用“禁用Perflock”功能。  "/>
+              <node bounds="[60,598][660,705]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.tutusw.phonespeedup" password="false" resource-id="id/autoChoose" scrollable="false" selected="false" text="自动检测频率速度 推荐使用"/>
+              <node bounds="[60,705][660,801]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.tutusw.phonespeedup" password="false" resource-id="id/override" scrollable="false" selected="false" text="显示其它频率速度设置"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-10 03:56:03,502 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-10 03:56:03,502 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-10 03:56:04,290 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/138fbea750c5f4e2bf386c3b360b03a9b30eaf17c97b754aa1ad26412293943d/first_page.png
+2017-07-10 03:56:04,474 - COSMOS_TRIGGER_PY-Console - DEBUG - 2859 KB/s (232282 bytes in 0.079s)
+2017-07-10 03:56:09,509 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.tutusw.phonespeedup0710-03-55-30.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/138fbea750c5f4e2bf386c3b360b03a9b30eaf17c97b754aa1ad26412293943d/com.tutusw.phonespeedup0710-03-55-30.pcap
+2017-07-10 03:56:14,601 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.tutusw.phonespeedup0710-03-55-30.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/138fbea750c5f4e2bf386c3b360b03a9b30eaf17c97b754aa1ad26412293943d/com.tutusw.phonespeedup0710-03-55-30.pcap
+2017-07-10 03:56:19,709 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.tutusw.phonespeedup0710-03-55-30.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/138fbea750c5f4e2bf386c3b360b03a9b30eaf17c97b754aa1ad26412293943d/com.tutusw.phonespeedup0710-03-55-30.pcap
+2017-07-10 03:56:24,812 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.tutusw.phonespeedup0710-03-55-30.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/138fbea750c5f4e2bf386c3b360b03a9b30eaf17c97b754aa1ad26412293943d/com.tutusw.phonespeedup0710-03-55-30.pcap
+2017-07-10 03:56:29,913 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.tutusw.phonespeedup0710-03-55-30.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/138fbea750c5f4e2bf386c3b360b03a9b30eaf17c97b754aa1ad26412293943d/com.tutusw.phonespeedup0710-03-55-30.pcap
+2017-07-10 03:56:34,996 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.tutusw.phonespeedup0710-03-55-30.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/138fbea750c5f4e2bf386c3b360b03a9b30eaf17c97b754aa1ad26412293943d/com.tutusw.phonespeedup0710-03-55-30.pcap
+2017-07-10 03:56:40,101 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.tutusw.phonespeedup0710-03-55-30.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/138fbea750c5f4e2bf386c3b360b03a9b30eaf17c97b754aa1ad26412293943d/com.tutusw.phonespeedup0710-03-55-30.pcap
+2017-07-10 03:56:45,207 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.tutusw.phonespeedup0710-03-55-30.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/138fbea750c5f4e2bf386c3b360b03a9b30eaf17c97b754aa1ad26412293943d/com.tutusw.phonespeedup0710-03-55-30.pcap
+2017-07-10 03:56:50,311 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.tutusw.phonespeedup0710-03-55-30.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/138fbea750c5f4e2bf386c3b360b03a9b30eaf17c97b754aa1ad26412293943d/com.tutusw.phonespeedup0710-03-55-30.pcap
+2017-07-10 03:56:55,414 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.tutusw.phonespeedup0710-03-55-30.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/138fbea750c5f4e2bf386c3b360b03a9b30eaf17c97b754aa1ad26412293943d/com.tutusw.phonespeedup0710-03-55-30.pcap
+2017-07-10 03:57:00,515 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.tutusw.phonespeedup0710-03-55-30.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/138fbea750c5f4e2bf386c3b360b03a9b30eaf17c97b754aa1ad26412293943d/com.tutusw.phonespeedup0710-03-55-30.pcap
+2017-07-10 03:57:00,617 - COSMOS_TRIGGER_PY-Console - DEBUG - 800 KB/s (4096 bytes in 0.005s)
+2017-07-10 03:57:15,618 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-10 03:57:15,619 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.tutusw.phonespeedup
+2017-07-10 03:57:16,954 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-10 03:57:16,954 - COSMOS_TRIGGER_PY-Console - INFO - End

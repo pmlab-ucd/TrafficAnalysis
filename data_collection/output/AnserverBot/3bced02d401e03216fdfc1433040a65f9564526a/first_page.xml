@@ -1,0 +1,38 @@
+<?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.TabHost" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[0,25][360,108]" checkable="false" checked="false" class="android.widget.TabWidget" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[0,25][119,108]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="true" text="">
+                <node bounds="[33,28][87,82]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="true" text=""/>
+                <node bounds="[41,82][79,105]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="true" text="主页"/>
+              </node>
+              <node bounds="[119,25][240,108]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="false" text="">
+                <node bounds="[152,28][206,82]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="false" text=""/>
+                <node bounds="[160,82][198,105]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="false" text="历史"/>
+              </node>
+              <node bounds="[240,25][360,108]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="false" text="">
+                <node bounds="[272,28][326,82]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="false" text=""/>
+                <node bounds="[280,82][318,105]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="false" text="精品"/>
+              </node>
+            </node>
+            <node bounds="[0,108][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[0,108][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="false" text="">
+                <node bounds="[0,108][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="false" text="">
+                  <node bounds="[0,108][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="false" text="">
+                    <node bounds="[0,108][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="false" text="">
+                      <node bounds="[0,270][360,331]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="false" text="《青盲》"/>
+                      <node bounds="[101,336][259,430]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.keji.danti578" password="false" scrollable="false" selected="false" text="开始阅读"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>

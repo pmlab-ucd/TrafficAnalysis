@@ -1,0 +1,105 @@
+2017-07-10 08:20:42,640 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\2215ab5f131dc50b1fb3e10d21f4c8651ded88d9230327ea3020160133951af8.apk
+2017-07-10 08:20:42,641 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.atools.nettraffic
+2017-07-10 08:20:42,641 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.atools.nettraffic
+2017-07-10 08:20:43,414 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-10 08:20:43,415 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\2215ab5f131dc50b1fb3e10d21f4c8651ded88d9230327ea3020160133951af8.apk
+2017-07-10 08:20:45,286 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/2215ab5f131dc50b1fb3e10d21f4c8651ded88d9230327ea3020160133951af8.apk
+2017-07-10 08:20:45,286 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-10 08:20:45,286 - COSMOS_TRIGGER_PY-Console - DEBUG - 1975 KB/s (463352 bytes in 0.229s)
+2017-07-10 08:20:45,286 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-10 08:20:45,957 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-10 08:20:45,957 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-10 08:20:46,926 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-10 08:20:46,927 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=146ms (0ms mobile, 146ms wifi, 0ms not connected)
+2017-07-10 08:20:48,275 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-10 08:20:48,345 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-10 08:20:48,345 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-10 08:20:48,361 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.atools.nettraffic --ignore-crashes 1
+2017-07-10 08:20:49,335 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-10 08:20:49,336 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=106ms (0ms mobile, 106ms wifi, 0ms not connected)
+2017-07-10 08:20:49,374 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-10 08:20:49,480 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-10 08:21:25,717 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,25][360,50]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[4,26][356,48]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="id/title" scrollable="false" selected="false" text="流量安全锁"/>
+      </node>
+      <node bounds="[0,50][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[0,50][360,592]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="false" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <node bounds="[0,544][360,592]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+            <node bounds="[0,544][360,592]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <node bounds="[172,560][188,576]" checkable="false" checked="false" class="android.widget.ProgressBar" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            </node>
+          </node>
+        </node>
+        <node bounds="[0,50][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <node bounds="[0,50][360,86]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="流量安全锁"/>
+          <node bounds="[0,86][360,494]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+            <node bounds="[0,86][360,452]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <node bounds="[30,96][330,290]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                <node bounds="[30,96][330,287]" checkable="false" checked="false" class="android.widget.TableLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                  <node bounds="[40,246][325,264]" checkable="false" checked="false" class="android.widget.TableRow" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                    <node bounds="[40,246][175,264]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="id/MainActivity.TodayTraffic" scrollable="false" selected="false" text="今天已经使用了0B"/>
+                    <node bounds="[175,246][325,264]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="id/MainActivity.MonthTraffic" scrollable="false" selected="false" text="本月已经使用了0B"/>
+                  </node>
+                  <node bounds="[40,264][325,282]" checkable="false" checked="false" class="android.widget.TableRow" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                    <node bounds="[40,264][175,282]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="id/MainActivity.RemainDayTime" scrollable="false" selected="false" text="结账日期是1号"/>
+                    <node bounds="[175,264][325,282]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="id/MainActivity.RemainTraffic" scrollable="false" selected="false" text="本月剩余流量30MB"/>
+                  </node>
+                </node>
+                <node bounds="[30,96][330,281]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                  <node bounds="[40,111][170,261]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                    <node bounds="[40,131][170,261]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="id/MainActivity.Pointer.Small" scrollable="false" selected="false" text=""/>
+                  </node>
+                  <node bounds="[170,111][330,281]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="id/MainActivity.Pointer.Big" scrollable="false" selected="false" text=""/>
+                </node>
+                <node bounds="[30,96][330,225]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                  <node bounds="[30,206][130,225]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="id/MainActivity.TodayTraffic.Text" scrollable="false" selected="false" text="0B"/>
+                  <node bounds="[130,206][242,225]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="id/MainActivity.MonthTraffic.Text" scrollable="false" selected="false" text="0B/30.0MB"/>
+                </node>
+              </node>
+              <node bounds="[10,290][350,295]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+              <node bounds="[10,295][350,319]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                <node bounds="[10,295][34,319]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="id/MainActivity.Prompt.Image" scrollable="false" selected="false" text=""/>
+                <node bounds="[34,295][350,314]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="true" focused="true" index="1" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="id/MainActivity.Prompt.Text" scrollable="false" selected="false" text="本月剩余流量充足，请放心使用"/>
+              </node>
+              <node bounds="[10,319][350,324]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+              <node bounds="[10,324][350,442]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                <node bounds="[10,324][350,407]" checkable="false" checked="false" class="android.widget.TableLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                  <node bounds="[20,364][340,383]" checkable="false" checked="false" class="android.widget.TableRow" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                    <node bounds="[20,364][313,383]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="本月已使用："/>
+                    <node bounds="[313,364][340,383]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="id/MainActivity.MonthWifiTraffic" scrollable="false" selected="false" text="0B"/>
+                  </node>
+                  <node bounds="[20,383][340,407]" checkable="false" checked="false" class="android.widget.TableRow" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                    <node bounds="[20,383][313,407]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="今天已使用："/>
+                    <node bounds="[313,383][340,407]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="id/MainActivity.TodayWifiTraffic" scrollable="false" selected="false" text="0B"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node bounds="[0,494][360,544]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[0,494][90,544]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="id/MainActivity.Help" scrollable="false" selected="false" text=""/>
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[90,494][180,544]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="id/MainActivity.TrafficControl" scrollable="false" selected="false" text=""/>
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[180,494][270,544]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="id/MainActivity.Setting" scrollable="false" selected="false" text=""/>
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[270,494][360,544]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.atools.nettraffic" password="false" resource-id="id/MainActivity.Exit" scrollable="false" selected="false" text=""/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-10 08:21:26,884 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-10 08:21:26,884 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-10 08:21:27,676 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2215ab5f131dc50b1fb3e10d21f4c8651ded88d9230327ea3020160133951af8/first_page.png
+2017-07-10 08:21:27,859 - COSMOS_TRIGGER_PY-Console - DEBUG - 2522 KB/s (188857 bytes in 0.073s)
+2017-07-10 08:21:32,907 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.atools.nettraffic0710-08-20-42.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2215ab5f131dc50b1fb3e10d21f4c8651ded88d9230327ea3020160133951af8/com.atools.nettraffic0710-08-20-42.pcap
+2017-07-10 08:21:33,010 - COSMOS_TRIGGER_PY-Console - DEBUG - 1599 KB/s (24576 bytes in 0.015s)
+2017-07-10 08:21:33,279 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.atools.nettraffic
+2017-07-10 08:21:34,908 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-10 08:21:34,908 - COSMOS_TRIGGER_PY-Console - INFO - End

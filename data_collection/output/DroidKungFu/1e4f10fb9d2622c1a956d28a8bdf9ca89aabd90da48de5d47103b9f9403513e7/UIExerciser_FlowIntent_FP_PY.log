@@ -1,0 +1,48 @@
+2017-07-10 08:14:39,744 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\1e4f10fb9d2622c1a956d28a8bdf9ca89aabd90da48de5d47103b9f9403513e7.apk
+2017-07-10 08:14:39,746 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.livegame.wallpaperhali
+2017-07-10 08:14:39,746 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.livegame.wallpaperhali
+2017-07-10 08:14:40,519 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-10 08:14:40,519 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\1e4f10fb9d2622c1a956d28a8bdf9ca89aabd90da48de5d47103b9f9403513e7.apk
+2017-07-10 08:14:42,993 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/1e4f10fb9d2622c1a956d28a8bdf9ca89aabd90da48de5d47103b9f9403513e7.apk
+2017-07-10 08:14:42,993 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-10 08:14:42,994 - COSMOS_TRIGGER_PY-Console - DEBUG - 2559 KB/s (1196845 bytes in 0.456s)
+2017-07-10 08:14:42,994 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-10 08:14:43,717 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-10 08:14:43,717 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-10 08:14:44,592 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-10 08:14:44,592 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=147ms (0ms mobile, 147ms wifi, 0ms not connected)
+2017-07-10 08:14:45,927 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-10 08:14:45,996 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-10 08:14:45,996 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-10 08:14:46,012 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.livegame.wallpaperhali --ignore-crashes 1
+2017-07-10 08:14:46,936 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-10 08:14:46,936 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=163ms (0ms mobile, 163ms wifi, 0ms not connected)
+2017-07-10 08:14:46,973 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-10 08:14:47,079 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-10 08:15:08,046 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.wallpaperhali" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.wallpaperhali" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.wallpaperhali" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.wallpaperhali" password="false" resource-id="id/title" scrollable="false" selected="false" text="哈利波特动态壁纸"/>
+      </node>
+      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.livegame.wallpaperhali" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.wallpaperhali" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.livegame.wallpaperhali" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <node bounds="[0,1028][720,1124]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.livegame.wallpaperhali" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+            <node bounds="[0,1028][354,1124]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.livegame.wallpaperhali" password="false" resource-id="id/set_wallpaper" scrollable="false" selected="false" text="设置为壁纸"/>
+            <node bounds="[366,1028][720,1124]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.livegame.wallpaperhali" password="false" resource-id="id/configure" scrollable="false" selected="false" text="设置"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-10 08:15:09,203 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-10 08:15:09,203 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-10 08:15:12,170 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/1e4f10fb9d2622c1a956d28a8bdf9ca89aabd90da48de5d47103b9f9403513e7/first_page.png
+2017-07-10 08:15:12,710 - COSMOS_TRIGGER_PY-Console - DEBUG - 3123 KB/s (1291697 bytes in 0.403s)
+2017-07-10 08:15:17,711 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.livegame.wallpaperhali0710-08-14-39.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/1e4f10fb9d2622c1a956d28a8bdf9ca89aabd90da48de5d47103b9f9403513e7/com.livegame.wallpaperhali0710-08-14-39.pcap
+2017-07-10 08:15:17,815 - COSMOS_TRIGGER_PY-Console - DEBUG - 1199 KB/s (12288 bytes in 0.010s)
+2017-07-10 08:15:18,739 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.livegame.wallpaperhali
+2017-07-10 08:15:20,075 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-10 08:15:20,075 - COSMOS_TRIGGER_PY-Console - INFO - End

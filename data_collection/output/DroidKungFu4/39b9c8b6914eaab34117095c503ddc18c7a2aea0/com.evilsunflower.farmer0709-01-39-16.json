@@ -1,0 +1,1 @@
+[{"src": ["Location", "NET-based Location"], "dst": "58", "process_name": "com.evilsunflower.farmer", "process_id": "6886", "log_time": "07-09 05:39:24.716", "message": "libcore.os.write(58) writing with tag 0x21 data[<?xml version='1.0' encoding='utf-8' standalone='yes' ?>.<map>.<int name=\"icon\" value=\"17301620\" />.]", "channel": "INTERNAL"}]

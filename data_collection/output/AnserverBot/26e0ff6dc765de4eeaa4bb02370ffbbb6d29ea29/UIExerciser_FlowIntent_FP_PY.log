@@ -1,0 +1,74 @@
+2017-07-08 12:47:39,270 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\26e0ff6dc765de4eeaa4bb02370ffbbb6d29ea29.apk
+2017-07-08 12:47:39,270 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.keji.danti574
+2017-07-08 12:47:39,270 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.keji.danti574
+2017-07-08 12:47:40,078 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-08 12:47:40,078 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\26e0ff6dc765de4eeaa4bb02370ffbbb6d29ea29.apk
+2017-07-08 12:47:42,460 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/26e0ff6dc765de4eeaa4bb02370ffbbb6d29ea29.apk
+2017-07-08 12:47:42,460 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 12:47:42,460 - COSMOS_TRIGGER_PY-Console - DEBUG - 2073 KB/s (739916 bytes in 0.348s)
+2017-07-08 12:47:42,460 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-08 12:47:43,134 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-08 12:47:43,134 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-08 12:47:44,006 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 12:47:44,006 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=196ms (0ms mobile, 196ms wifi, 0ms not connected)
+2017-07-08 12:47:49,519 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-08 12:47:49,594 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-08 12:47:49,594 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-08 12:47:49,611 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.keji.danti574 --ignore-crashes 1
+2017-07-08 12:47:50,644 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 12:47:50,644 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=157ms (0ms mobile, 157ms wifi, 0ms not connected)
+2017-07-08 12:47:50,723 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-08 12:47:50,832 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-08 12:48:17,091 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.TabHost" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[0,25][360,108]" checkable="false" checked="false" class="android.widget.TabWidget" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[0,25][119,108]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="true" text="">
+                <node bounds="[33,28][87,82]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="true" text=""/>
+                <node bounds="[41,82][79,105]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="true" text="主页"/>
+              </node>
+              <node bounds="[119,25][240,108]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="false" text="">
+                <node bounds="[152,28][206,82]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="false" text=""/>
+                <node bounds="[160,82][198,105]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="false" text="历史"/>
+              </node>
+              <node bounds="[240,25][360,108]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="false" text="">
+                <node bounds="[272,28][326,82]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="false" text=""/>
+                <node bounds="[280,82][318,105]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="false" text="精品"/>
+              </node>
+            </node>
+            <node bounds="[0,108][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[0,108][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="false" text="">
+                <node bounds="[0,108][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="false" text="">
+                  <node bounds="[0,108][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="false" text="">
+                    <node bounds="[0,108][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="false" text="">
+                      <node bounds="[0,217][360,384]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="false" text="《市委书记的爱恨挣扎：情迷女记者》"/>
+                      <node bounds="[101,389][259,483]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.keji.danti574" password="false" scrollable="false" selected="false" text="开始阅读"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-08 12:48:18,262 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-08 12:48:18,262 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-08 12:48:19,187 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/26e0ff6dc765de4eeaa4bb02370ffbbb6d29ea29/first_page.png
+2017-07-08 12:48:19,365 - COSMOS_TRIGGER_PY-Console - DEBUG - 2418 KB/s (248078 bytes in 0.100s)
+2017-07-08 12:48:24,398 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.keji.danti5740708-12-47-38.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/26e0ff6dc765de4eeaa4bb02370ffbbb6d29ea29/com.keji.danti5740708-12-47-38.pcap
+2017-07-08 12:48:29,500 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.keji.danti5740708-12-47-38.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/26e0ff6dc765de4eeaa4bb02370ffbbb6d29ea29/com.keji.danti5740708-12-47-38.pcap
+2017-07-08 12:48:34,609 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.keji.danti5740708-12-47-38.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/26e0ff6dc765de4eeaa4bb02370ffbbb6d29ea29/com.keji.danti5740708-12-47-38.pcap
+2017-07-08 12:48:39,706 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.keji.danti5740708-12-47-38.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/26e0ff6dc765de4eeaa4bb02370ffbbb6d29ea29/com.keji.danti5740708-12-47-38.pcap
+2017-07-08 12:48:44,789 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.keji.danti5740708-12-47-38.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/26e0ff6dc765de4eeaa4bb02370ffbbb6d29ea29/com.keji.danti5740708-12-47-38.pcap
+2017-07-08 12:48:49,888 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.keji.danti5740708-12-47-38.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/26e0ff6dc765de4eeaa4bb02370ffbbb6d29ea29/com.keji.danti5740708-12-47-38.pcap
+2017-07-08 12:48:50,000 - COSMOS_TRIGGER_PY-Console - DEBUG - 1452 KB/s (8192 bytes in 0.005s)
+2017-07-08 12:49:05,002 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-08 12:49:05,009 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.keji.danti574
+2017-07-08 12:49:06,674 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 12:49:06,674 - COSMOS_TRIGGER_PY-Console - INFO - End

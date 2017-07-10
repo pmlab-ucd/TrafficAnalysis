@@ -1,0 +1,1 @@
+[{"src": ["Location", "GPS Location"], "dst": "88", "process_name": "com.weather.Weather", "process_id": "804", "log_time": "07-08 17:48:06.167", "message": "libcore.os.write(88) writing with tag 0x11 data[<?xml version='1.0' encoding='utf-8' standalone='yes' ?>.<map>.<string name=\"SMART_RATINGS_STATUS\">{]", "channel": "INTERNAL"}]

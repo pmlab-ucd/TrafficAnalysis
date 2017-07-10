@@ -1,0 +1,58 @@
+2017-07-10 08:09:37,880 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\1b265038ce4fd82a20971fc1ec6d5cd442eeba021c86bc58837ae95da0d02a91.apk
+2017-07-10 08:09:37,881 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.allen.mp
+2017-07-10 08:09:37,881 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.allen.mp
+2017-07-10 08:09:38,709 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-10 08:09:38,709 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\1b265038ce4fd82a20971fc1ec6d5cd442eeba021c86bc58837ae95da0d02a91.apk
+2017-07-10 08:09:40,446 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/1b265038ce4fd82a20971fc1ec6d5cd442eeba021c86bc58837ae95da0d02a91.apk
+2017-07-10 08:09:40,446 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-10 08:09:40,447 - COSMOS_TRIGGER_PY-Console - DEBUG - 849 KB/s (144788 bytes in 0.166s)
+2017-07-10 08:09:40,447 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-10 08:09:41,180 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-10 08:09:41,180 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-10 08:09:42,263 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-10 08:09:42,263 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=248ms (0ms mobile, 248ms wifi, 0ms not connected)
+2017-07-10 08:09:43,664 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-10 08:09:43,743 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-10 08:09:43,743 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-10 08:09:43,757 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.allen.mp --ignore-crashes 1
+2017-07-10 08:09:44,684 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-10 08:09:44,684 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=97ms (0ms mobile, 97ms wifi, 0ms not connected)
+2017-07-10 08:09:44,760 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-10 08:09:44,867 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-10 08:10:13,845 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,56][360,623]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.mp" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,56][360,623]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.mp" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,56][360,623]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.mp" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,56][360,623]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.mp" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[3,66][359,136]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.mp" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[29,84][333,125]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.mp" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[29,84][333,125]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.mp" password="false" scrollable="false" selected="false" text="声明"/>
+            </node>
+            <node bounds="[18,135][344,136]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.allen.mp" password="false" scrollable="false" selected="false" text=""/>
+          </node>
+          <node bounds="[3,136][359,540]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.allen.mp" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[18,136][344,540]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.mp" password="false" scrollable="true" selected="false" text="">
+              <node bounds="[34,138][333,604]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.mp" password="false" scrollable="false" selected="false" text="1:本程序仅限于娱乐所用， 禁止用于非法行为，凡违法操作， 所带来的法律责任由使用者承担， 本开发者不承担任何责任 2:首次启动，请长按照相机屏幕，进入主界面，了解使用方法 3:在使用的本程序的时候，主屏幕是不能拖动的，请从手势区向左滑动退出程序 4:本程序会因为机器设备的不同，导致预览镜头出现旋转90度的情况，但拍照效果不会出现旋转，请放心使用 5:点击屏幕，拍照成功，本程序会自动退出，需继续拍请重新启动 "/>
+            </node>
+          </node>
+          <node bounds="[3,540][359,620]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.allen.mp" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[18,540][344,602]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.mp" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[20,545][181,599]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.allen.mp" password="false" scrollable="false" selected="false" text="同意"/>
+              <node bounds="[181,545][342,599]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.allen.mp" password="false" scrollable="false" selected="false" text="拒绝"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-10 08:10:15,012 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-10 08:10:15,012 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-10 08:10:16,006 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/1b265038ce4fd82a20971fc1ec6d5cd442eeba021c86bc58837ae95da0d02a91/first_page.png
+2017-07-10 08:10:16,240 - COSMOS_TRIGGER_PY-Console - DEBUG - 3100 KB/s (423622 bytes in 0.133s)
+2017-07-10 08:10:21,255 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.allen.mp0710-08-09-37.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/1b265038ce4fd82a20971fc1ec6d5cd442eeba021c86bc58837ae95da0d02a91/com.allen.mp0710-08-09-37.pcap
+2017-07-10 08:10:21,348 - COSMOS_TRIGGER_PY-Console - DEBUG - 666 KB/s (4096 bytes in 0.006s)
+2017-07-10 08:10:36,349 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-10 08:10:36,351 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.allen.mp
+2017-07-10 08:10:37,934 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-10 08:10:37,936 - COSMOS_TRIGGER_PY-Console - INFO - End

@@ -1,0 +1,44 @@
+2017-07-09 17:41:27,127 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\b79a3cdeab99437b00857aab8a00a26420fc284a0910bad6b3184635d669abf1.apk
+2017-07-09 17:41:27,128 - COSMOS_TRIGGER_PY-Console - INFO - pkg:ewqjula.vderhjmfxb
+2017-07-09 17:41:27,128 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall ewqjula.vderhjmfxb
+2017-07-09 17:41:27,901 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-09 17:41:27,903 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\b79a3cdeab99437b00857aab8a00a26420fc284a0910bad6b3184635d669abf1.apk
+2017-07-09 17:41:29,888 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/b79a3cdeab99437b00857aab8a00a26420fc284a0910bad6b3184635d669abf1.apk
+2017-07-09 17:41:29,890 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 17:41:29,891 - COSMOS_TRIGGER_PY-Console - DEBUG - 774 KB/s (285175 bytes in 0.359s)
+2017-07-09 17:41:29,891 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-09 17:41:30,614 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-09 17:41:30,615 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-09 17:41:31,437 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 17:41:31,437 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=105ms (0ms mobile, 105ms wifi, 0ms not connected)
+2017-07-09 17:41:32,808 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-09 17:41:32,878 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-09 17:41:32,880 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-09 17:41:32,898 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p ewqjula.vderhjmfxb --ignore-crashes 1
+2017-07-09 17:41:34,174 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 17:41:34,176 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=490ms (0ms mobile, 490ms wifi, 0ms not connected)
+2017-07-09 17:41:34,213 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-09 17:41:34,323 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-09 17:41:53,578 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ewqjula.vderhjmfxb" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ewqjula.vderhjmfxb" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ewqjula.vderhjmfxb" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ewqjula.vderhjmfxb" password="false" resource-id="id/title" scrollable="false" selected="false" text="Word"/>
+      </node>
+      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="ewqjula.vderhjmfxb" password="false" resource-id="id/webView1" scrollable="false" selected="false" text="">
+        <!--NAF: The following control may not be accessibility friendly-->
+        <node NAF="true" bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="ewqjula.vderhjmfxb" password="false" resource-id="id/webView1" scrollable="false" selected="false" text=""/>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-09 17:41:54,703 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-09 17:41:54,703 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-09 17:41:55,391 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/b79a3cdeab99437b00857aab8a00a26420fc284a0910bad6b3184635d669abf1/first_page.png
+2017-07-09 17:41:55,523 - COSMOS_TRIGGER_PY-Console - DEBUG - 2985 KB/s (120847 bytes in 0.039s)
+2017-07-09 17:42:00,569 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/ewqjula.vderhjmfxb0709-17-41-27.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/b79a3cdeab99437b00857aab8a00a26420fc284a0910bad6b3184635d669abf1/ewqjula.vderhjmfxb0709-17-41-27.pcap
+2017-07-09 17:42:05,658 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/ewqjula.vderhjmfxb0709-17-41-27.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/b79a3cdeab99437b00857aab8a00a26420fc284a0910bad6b3184635d669abf1/ewqjula.vderhjmfxb0709-17-41-27.pcap
+2017-07-09 17:42:05,743 - COSMOS_TRIGGER_PY-Console - DEBUG - 399 KB/s (4096 bytes in 0.010s)
+2017-07-09 17:42:05,959 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall ewqjula.vderhjmfxb
+2017-07-09 17:42:07,296 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 17:42:07,296 - COSMOS_TRIGGER_PY-Console - INFO - End

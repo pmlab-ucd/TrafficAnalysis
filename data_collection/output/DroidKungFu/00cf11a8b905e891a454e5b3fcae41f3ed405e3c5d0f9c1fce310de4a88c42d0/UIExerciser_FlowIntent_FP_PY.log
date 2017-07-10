@@ -1,0 +1,53 @@
+2017-07-10 08:08:25,720 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\00cf11a8b905e891a454e5b3fcae41f3ed405e3c5d0f9c1fce310de4a88c42d0.apk
+2017-07-10 08:08:25,720 - COSMOS_TRIGGER_PY-Console - INFO - pkg:ru.atools.sytrant
+2017-07-10 08:08:25,720 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall ru.atools.sytrant
+2017-07-10 08:08:26,696 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-10 08:08:26,696 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\00cf11a8b905e891a454e5b3fcae41f3ed405e3c5d0f9c1fce310de4a88c42d0.apk
+2017-07-10 08:08:28,789 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/00cf11a8b905e891a454e5b3fcae41f3ed405e3c5d0f9c1fce310de4a88c42d0.apk
+2017-07-10 08:08:28,789 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-10 08:08:28,790 - COSMOS_TRIGGER_PY-Console - DEBUG - 611 KB/s (93568 bytes in 0.149s)
+2017-07-10 08:08:28,790 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-10 08:08:30,984 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-10 08:08:30,984 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-10 08:08:32,221 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-10 08:08:32,221 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=367ms (0ms mobile, 367ms wifi, 0ms not connected)
+2017-07-10 08:08:44,322 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-10 08:08:44,450 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-10 08:08:44,450 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-10 08:08:44,473 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p ru.atools.sytrant --ignore-crashes 1
+2017-07-10 08:08:45,566 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-10 08:08:45,566 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=207ms (0ms mobile, 207ms wifi, 0ms not connected)
+2017-07-10 08:08:45,645 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-10 08:08:45,786 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-10 08:09:14,105 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <node bounds="[312,339][408,435]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="Superuser Request" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text=""/>
+          <node bounds="[223,435][496,478]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Superuser Request"/>
+          <node bounds="[40,488][680,492]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text=""/>
+          <!--NAF: The following control may not be accessibility friendly-->
+          <node NAF="true" bounds="[40,502][680,684]" checkable="false" checked="false" class="android.widget.ViewFlipper" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[40,502][680,672]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Sytrant is requesting Superuser access.  Warning: If you did not initiate this action, or if you do not understand this request, it's generally a good idea to deny it."/>
+          </node>
+          <node bounds="[40,684][680,722]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Tap for more info"/>
+          <node bounds="[40,722][680,818]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="5" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[40,722][360,818]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Deny"/>
+            <node bounds="[360,722][680,818]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Allow"/>
+          </node>
+          <node bounds="[40,818][680,895]" checkable="true" checked="true" class="android.widget.CheckBox" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="6" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Remember"/>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-10 08:09:15,299 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-10 08:09:15,301 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-10 08:09:16,144 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/00cf11a8b905e891a454e5b3fcae41f3ed405e3c5d0f9c1fce310de4a88c42d0/first_page.png
+2017-07-10 08:09:16,278 - COSMOS_TRIGGER_PY-Console - DEBUG - 3192 KB/s (133432 bytes in 0.040s)
+2017-07-10 08:09:21,328 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/ru.atools.sytrant0710-08-08-25.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/00cf11a8b905e891a454e5b3fcae41f3ed405e3c5d0f9c1fce310de4a88c42d0/ru.atools.sytrant0710-08-08-25.pcap
+2017-07-10 08:09:21,490 - COSMOS_TRIGGER_PY-Console - DEBUG - 3016 KB/s (172032 bytes in 0.055s)
+2017-07-10 08:09:34,917 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall ru.atools.sytrant
+2017-07-10 08:09:36,506 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-10 08:09:36,506 - COSMOS_TRIGGER_PY-Console - INFO - End

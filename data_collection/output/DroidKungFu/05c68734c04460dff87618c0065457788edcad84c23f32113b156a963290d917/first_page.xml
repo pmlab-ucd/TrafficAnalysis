@@ -1,0 +1,20 @@
+<?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.test.www" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.test.www" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.test.www" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.test.www" password="false" scrollable="false" selected="false" text="">
+          <!--NAF: The following control may not be accessibility friendly-->
+          <node NAF="true" bounds="[113,259][236,306]" checkable="false" checked="false" class="android.widget.ImageButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.test.www" password="false" scrollable="false" selected="false" text=""/>
+          <!--NAF: The following control may not be accessibility friendly-->
+          <node NAF="true" bounds="[113,315][236,362]" checkable="false" checked="false" class="android.widget.ImageButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.test.www" password="false" scrollable="false" selected="false" text=""/>
+          <!--NAF: The following control may not be accessibility friendly-->
+          <node NAF="true" bounds="[113,371][236,419]" checkable="false" checked="false" class="android.widget.ImageButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.test.www" password="false" scrollable="false" selected="false" text=""/>
+          <!--NAF: The following control may not be accessibility friendly-->
+          <node NAF="true" bounds="[113,428][236,475]" checkable="false" checked="false" class="android.widget.ImageButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.test.www" password="false" scrollable="false" selected="false" text=""/>
+          <!--NAF: The following control may not be accessibility friendly-->
+          <node NAF="true" bounds="[113,484][236,531]" checkable="false" checked="false" class="android.widget.ImageButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="4" long-clickable="false" package="com.test.www" password="false" scrollable="false" selected="false" text=""/>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>

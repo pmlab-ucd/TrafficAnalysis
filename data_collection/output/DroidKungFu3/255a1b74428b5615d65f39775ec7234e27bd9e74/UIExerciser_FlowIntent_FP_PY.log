@@ -1,0 +1,50 @@
+2017-07-08 20:34:49,808 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\255a1b74428b5615d65f39775ec7234e27bd9e74.apk
+2017-07-08 20:34:49,808 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.eguan.update
+2017-07-08 20:34:49,808 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.eguan.update
+2017-07-08 20:34:50,585 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-08 20:34:50,586 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\255a1b74428b5615d65f39775ec7234e27bd9e74.apk
+2017-07-08 20:34:52,176 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/255a1b74428b5615d65f39775ec7234e27bd9e74.apk
+2017-07-08 20:34:52,176 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 20:34:52,176 - COSMOS_TRIGGER_PY-Console - DEBUG - 1051 KB/s (167056 bytes in 0.155s)
+2017-07-08 20:34:52,176 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-08 20:34:52,900 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-08 20:34:52,901 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-08 20:34:53,838 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 20:34:53,838 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=181ms (0ms mobile, 181ms wifi, 0ms not connected)
+2017-07-08 20:34:55,221 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-08 20:34:55,296 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-08 20:34:55,296 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-08 20:34:55,309 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.eguan.update --ignore-crashes 1
+2017-07-08 20:34:56,285 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 20:34:56,285 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=170ms (0ms mobile, 170ms wifi, 0ms not connected)
+2017-07-08 20:34:56,365 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-08 20:34:56,476 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-08 20:35:15,601 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.llk" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.llk" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,25][360,53]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.llk" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[5,26][356,51]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.llk" password="false" scrollable="false" selected="false" text="可爱连连看"/>
+      </node>
+      <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.llk" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.llk" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.ps.llk" password="false" scrollable="false" selected="false" text=""/>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-08 20:35:16,746 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-08 20:35:16,746 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-08 20:35:17,325 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/255a1b74428b5615d65f39775ec7234e27bd9e74/first_page.png
+2017-07-08 20:35:17,463 - COSMOS_TRIGGER_PY-Console - DEBUG - 3182 KB/s (34277 bytes in 0.010s)
+2017-07-08 20:35:22,496 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.eguan.update0708-20-34-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/255a1b74428b5615d65f39775ec7234e27bd9e74/com.eguan.update0708-20-34-49.pcap
+2017-07-08 20:35:27,585 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.eguan.update0708-20-34-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/255a1b74428b5615d65f39775ec7234e27bd9e74/com.eguan.update0708-20-34-49.pcap
+2017-07-08 20:35:32,694 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.eguan.update0708-20-34-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/255a1b74428b5615d65f39775ec7234e27bd9e74/com.eguan.update0708-20-34-49.pcap
+2017-07-08 20:35:37,803 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.eguan.update0708-20-34-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/255a1b74428b5615d65f39775ec7234e27bd9e74/com.eguan.update0708-20-34-49.pcap
+2017-07-08 20:35:42,907 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.eguan.update0708-20-34-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/255a1b74428b5615d65f39775ec7234e27bd9e74/com.eguan.update0708-20-34-49.pcap
+2017-07-08 20:35:48,016 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.eguan.update0708-20-34-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/255a1b74428b5615d65f39775ec7234e27bd9e74/com.eguan.update0708-20-34-49.pcap
+2017-07-08 20:35:48,101 - COSMOS_TRIGGER_PY-Console - DEBUG - 615 KB/s (4096 bytes in 0.006s)
+2017-07-08 20:36:03,102 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-08 20:36:03,105 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.eguan.update
+2017-07-08 20:36:04,404 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 20:36:04,405 - COSMOS_TRIGGER_PY-Console - INFO - End

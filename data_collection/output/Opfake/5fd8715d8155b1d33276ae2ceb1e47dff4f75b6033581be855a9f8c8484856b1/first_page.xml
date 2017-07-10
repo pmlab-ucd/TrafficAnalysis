@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="true" selected="false" text="">
+            <node bounds="[0,147][720,1023]" checkable="false" checked="false" class="android.view.View" clickable="true" content-desc="Home screen 3" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[16,163][704,1007]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+                <node bounds="[16,163][188,374]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="The Weather Channel"/>
+                <node bounds="[532,163][704,374]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="Поиск"/>
+                <node bounds="[16,374][188,585]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="–Я–Њ–Є—Б–Ї"/>
+                <node bounds="[188,163][532,585]" checkable="false" checked="false" class="android.appwidget.AppWidgetHostView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+                  <node bounds="[204,179][516,569]" checkable="false" checked="false" class="android.view.View" clickable="true" content-desc="15:52" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.deskclock" password="false" scrollable="false" selected="false" text=""/>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node bounds="[0,50][720,158]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[12,62][708,158]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[20,70][604,150]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="Search" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+                <node bounds="[36,70][198,150]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
+              </node>
+              <node bounds="[604,70][700,150]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="Voice Search" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+                <node bounds="[620,70][684,150]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
+              </node>
+            </node>
+          </node>
+          <node bounds="[560,50][720,158]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
+          <node bounds="[0,1012][720,1024]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
+          <node bounds="[0,1024][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="5" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[1,1024][718,1184]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[17,1040][702,1168]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+                <!--NAF: The following control may not be accessibility friendly-->
+                <node NAF="true" bounds="[17,1040][154,1168]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
+                <!--NAF: The following control may not be accessibility friendly-->
+                <node NAF="true" bounds="[154,1040][291,1168]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
+                <node bounds="[291,1040][428,1168]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="Apps" enabled="true" focusable="true" focused="false" index="2" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
+                <!--NAF: The following control may not be accessibility friendly-->
+                <node NAF="true" bounds="[428,1040][565,1168]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
+                <!--NAF: The following control may not be accessibility friendly-->
+                <node NAF="true" bounds="[565,1040][702,1168]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="4" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>

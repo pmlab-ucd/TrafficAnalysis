@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     user = 'majes'
     aapt_loc = 'C:\Users\\' + user + '\AppData\Local\Android\sdk/build-tools/19.1.0/aapt.exe'
-    apk_dir = 'C:\Users\\' + user + '\Documents\FlowIntent\\apks\\ncsumalware\\AnserverBot\\'
+    apk_dir = 'C:\Users\\' + user + '\Documents\FlowIntent\\apks\\drebin\\DroidKungFu\\'
     UIExerciser.emu_loc = 'C:\Users\hfu\AppData\Local\Android\sdk/tools/emulator.exe'
     UIExerciser.emu_name = 'Qvga'
 

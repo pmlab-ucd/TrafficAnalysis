@@ -1,0 +1,26 @@
+<?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,448][360,666]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,448][360,666]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,448][360,666]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,448][360,666]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[3,458][359,528]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[29,476][333,516]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[29,476][333,516]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="通知"/>
+            </node>
+            <node bounds="[18,527][344,528]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text=""/>
+          </node>
+          <node bounds="[3,528][359,583]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[18,528][344,583]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[34,530][333,569]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="1秒闪电更新！"/>
+            </node>
+          </node>
+          <node bounds="[3,583][359,663]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[18,583][344,645]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[100,587][261,641]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="确定"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>

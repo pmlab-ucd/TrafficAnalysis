@@ -1,0 +1,63 @@
+2017-07-09 02:25:33,977 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\b765b9a9ad84c69857c42c206e775bae695cde9a.apk
+2017-07-09 02:25:33,979 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.safetest.myapn
+2017-07-09 02:25:33,980 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.safetest.myapn
+2017-07-09 02:25:34,903 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-09 02:25:34,903 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\b765b9a9ad84c69857c42c206e775bae695cde9a.apk
+2017-07-09 02:26:34,911 - COSMOS_TRIGGER_PY-Console - WARNING - __init__() takes at least 3 arguments (2 given)
+2017-07-09 02:26:41,289 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/b765b9a9ad84c69857c42c206e775bae695cde9a.apk
+2017-07-09 02:26:41,289 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 02:26:41,289 - COSMOS_TRIGGER_PY-Console - DEBUG - 1262 KB/s (241895 bytes in 0.187s)
+2017-07-09 02:26:41,290 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-09 02:26:55,986 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-09 02:26:55,986 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-09 02:26:58,219 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 02:26:58,219 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=370ms (0ms mobile, 370ms wifi, 0ms not connected)
+2017-07-09 02:27:04,161 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-09 02:27:04,232 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-09 02:27:04,232 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-09 02:27:04,249 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.safetest.myapn --ignore-crashes 1
+2017-07-09 02:27:05,826 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 02:27:05,826 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=447ms (0ms mobile, 447ms wifi, 0ms not connected)
+2017-07-09 02:27:05,865 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-09 02:27:06,045 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-09 02:27:48,400 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.myapn" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.myapn" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,25][360,53]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[5,26][356,51]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="超级APN"/>
+      </node>
+      <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[0,53][360,560]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[0,64][320,89]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="3G、EDGE、GPRS开关和NET-WAP切换"/>
+            <node bounds="[115,89][245,176]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[115,100][180,152]" checkable="true" checked="true" class="android.widget.ToggleButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="开"/>
+              <node bounds="[180,100][245,152]" checkable="true" checked="true" class="android.widget.ToggleButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="Other"/>
+            </node>
+            <node bounds="[0,176][360,195]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="提示：请在桌面添加超级APN小部件（Widget）以方便使用"/>
+            <node bounds="[0,212][360,236]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="APN实用工具箱"/>
+            <node bounds="[104,236][255,290]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="5" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="一键设置APN信息"/>
+            <node bounds="[104,290][255,344]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="6" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="一键清除APN设置"/>
+            <node bounds="[104,344][255,398]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="7" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="一键备份APN设置"/>
+            <node bounds="[104,398][255,452]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="8" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="一键恢复APN设置"/>
+            <node bounds="[104,452][255,506]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="9" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="手动设置APN信息"/>
+            <node bounds="[0,506][360,560]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="10" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[0,506][360,560]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="">
+                <node bounds="[171,524][189,542]" checkable="false" checked="false" class="android.widget.ProgressBar" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text=""/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-09 02:27:49,663 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-09 02:27:49,663 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-09 02:27:52,131 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/b765b9a9ad84c69857c42c206e775bae695cde9a/first_page.png
+2017-07-09 02:27:52,309 - COSMOS_TRIGGER_PY-Console - DEBUG - 2152 KB/s (213832 bytes in 0.097s)
+2017-07-09 02:27:57,313 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.safetest.myapn0709-02-25-33.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/b765b9a9ad84c69857c42c206e775bae695cde9a/com.safetest.myapn0709-02-25-33.pcap
+2017-07-09 02:28:11,201 - COSMOS_TRIGGER_PY-Console - DEBUG - 2768 KB/s (39120896 bytes in 13.798s)
+2017-07-09 02:28:13,474 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.safetest.myapn
+2017-07-09 02:28:15,697 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 02:28:15,698 - COSMOS_TRIGGER_PY-Console - INFO - End

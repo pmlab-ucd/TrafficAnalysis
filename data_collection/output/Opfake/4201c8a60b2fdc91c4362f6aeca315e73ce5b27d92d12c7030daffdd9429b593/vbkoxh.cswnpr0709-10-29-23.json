@@ -1,0 +1,1 @@
+[{"src": ["IMEI"], "dst": "69.172.201.153", "process_name": "vbkoxh.cswnpr", "process_id": "9163", "log_time": "07-09 14:29:33.547", "message": "libcore.os.send(69.172.201.153) received data with tag 0x400 data=[name=JtGkfhAPclOswvxIXK4tLCUE04DeSO6pIDUD8HiMPAwXHWqQwHQTNKFbqA5YGYhDJnHQWM0jX0gvwwuAEqrI3i6AnzAQ1Wu] ", "channel": "HTTP"}]

@@ -1,0 +1,54 @@
+2017-07-10 08:40:33,757 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\27b02028221b1ae647bd749ef916ac4d0ad39ba3c961ecd1ae37df7988488225.apk
+2017-07-10 08:40:33,757 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.safetest.tractor
+2017-07-10 08:40:33,757 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.safetest.tractor
+2017-07-10 08:40:35,436 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-10 08:40:35,437 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\27b02028221b1ae647bd749ef916ac4d0ad39ba3c961ecd1ae37df7988488225.apk
+2017-07-10 08:40:38,934 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/27b02028221b1ae647bd749ef916ac4d0ad39ba3c961ecd1ae37df7988488225.apk
+2017-07-10 08:40:38,934 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-10 08:40:38,936 - COSMOS_TRIGGER_PY-Console - DEBUG - 1231 KB/s (853923 bytes in 0.677s)
+2017-07-10 08:40:38,936 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-10 08:40:39,970 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-10 08:40:39,970 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-10 08:40:40,855 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-10 08:40:40,855 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=155ms (0ms mobile, 155ms wifi, 0ms not connected)
+2017-07-10 08:40:42,253 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-10 08:40:42,382 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-10 08:40:42,382 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-10 08:40:42,401 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.safetest.tractor --ignore-crashes 1
+2017-07-10 08:40:43,430 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-10 08:40:43,430 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=225ms (0ms mobile, 225ms wifi, 0ms not connected)
+2017-07-10 08:40:43,507 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-10 08:40:43,609 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-10 08:40:57,253 - COSMOS_TRIGGER_PY-Console - WARNING - Crashed!
+2017-07-10 08:40:59,170 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?>
+<hierarchy>
+  <node bounds="[40,490][680,743]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.systemui" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[40,490][680,743]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.systemui" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[40,490][680,743]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.systemui" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[56,490][664,743]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.systemui" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[56,490][664,629]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.systemui" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[72,506][648,629]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.systemui" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[72,506][648,629]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.systemui" password="false" scrollable="false" selected="false" text="Unfortunately, Classic Tractor for Android has stopped."/>
+            </node>
+          </node>
+          <node bounds="[56,629][664,743]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.android.systemui" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[72,631][648,727]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.systemui" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[72,631][648,727]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.android.systemui" password="false" scrollable="false" selected="false" text="OK"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+
+2017-07-10 08:40:59,328 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-10 08:40:59,328 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-10 08:41:00,512 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/27b02028221b1ae647bd749ef916ac4d0ad39ba3c961ecd1ae37df7988488225/first_page.png
+2017-07-10 08:41:00,696 - COSMOS_TRIGGER_PY-Console - DEBUG - 3150 KB/s (338505 bytes in 0.104s)
+2017-07-10 08:41:05,746 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.safetest.tractor0710-08-40-33.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/27b02028221b1ae647bd749ef916ac4d0ad39ba3c961ecd1ae37df7988488225/com.safetest.tractor0710-08-40-33.pcap
+2017-07-10 08:41:05,851 - COSMOS_TRIGGER_PY-Console - DEBUG - 800 KB/s (8192 bytes in 0.009s)
+2017-07-10 08:41:20,851 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-10 08:41:20,852 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.safetest.tractor
+2017-07-10 08:41:22,240 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-10 08:41:22,242 - COSMOS_TRIGGER_PY-Console - INFO - End

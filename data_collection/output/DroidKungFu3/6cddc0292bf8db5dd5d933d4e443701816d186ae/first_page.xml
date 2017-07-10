@@ -1,0 +1,16 @@
+<?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.peter.wuzilianzhu" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.peter.wuzilianzhu" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][1196,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.peter.wuzilianzhu" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[8,51][1188,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.peter.wuzilianzhu" password="false" resource-id="id/title" scrollable="false" selected="false" text="五子连珠棋"/>
+      </node>
+      <node bounds="[0,100][1196,720]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.peter.wuzilianzhu" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[0,100][1196,720]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.peter.wuzilianzhu" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <!--NAF: The following control may not be accessibility friendly-->
+          <node NAF="true" bounds="[0,100][804,720]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="com.peter.wuzilianzhu" password="false" resource-id="id/webView1" scrollable="false" selected="false" text=""/>
+          <node bounds="[804,100][1196,720]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.peter.wuzilianzhu" password="false" resource-id="id/textView1" scrollable="false" selected="false" text="您需要注意：  1、这是一款flash游戏，系统要求在2.2以上；  2、要求安装flash player，如果 没有显示，可能是您没有安装，推荐使用Adobe Flash Player 10.3； 3、需要有T卡支持。"/>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>

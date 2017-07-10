@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><hierarchy>
+  <node bounds="[11,50][709,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[11,50][709,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[11,50][709,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[11,50][709,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[17,68][707,191]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[62,100][662,171]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[62,100][662,171]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="版本信息1.3"/>
+            </node>
+            <node bounds="[42,189][682,191]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text=""/>
+          </node>
+          <node bounds="[17,191][707,1038]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[42,191][682,1038]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[42,201][682,1028]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
+                <node bounds="[62,201][638,460]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
+                  <node bounds="[62,201][638,460]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="1.增加了设置的功能。 2.增加了新的模块“拓展知识”。 3.增强了安装应用的兼容性。   每点一次广告都是对开发者的支持！"/>
+                </node>
+                <node bounds="[62,932][266,1028]" checkable="true" checked="false" class="android.widget.CheckBox" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="不再提示"/>
+              </node>
+            </node>
+          </node>
+          <node bounds="[17,1038][707,1178]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[42,1038][682,1147]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[204,1046][520,1142]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="确定"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>

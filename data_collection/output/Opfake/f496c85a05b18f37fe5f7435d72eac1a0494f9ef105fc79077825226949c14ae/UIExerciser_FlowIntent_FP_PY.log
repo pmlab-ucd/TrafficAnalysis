@@ -1,0 +1,43 @@
+2017-07-09 22:02:18,187 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\f496c85a05b18f37fe5f7435d72eac1a0494f9ef105fc79077825226949c14ae.apk
+2017-07-09 22:02:18,187 - COSMOS_TRIGGER_PY-Console - INFO - pkg:ngjvnpslnp.iplhmk
+2017-07-09 22:02:18,187 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall ngjvnpslnp.iplhmk
+2017-07-09 22:02:22,236 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 22:02:22,236 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\f496c85a05b18f37fe5f7435d72eac1a0494f9ef105fc79077825226949c14ae.apk
+2017-07-09 22:02:29,062 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/f496c85a05b18f37fe5f7435d72eac1a0494f9ef105fc79077825226949c14ae.apk
+2017-07-09 22:02:29,062 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 22:02:29,062 - COSMOS_TRIGGER_PY-Console - DEBUG - 605 KB/s (203857 bytes in 0.328s)
+2017-07-09 22:02:29,062 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-09 22:02:36,904 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-09 22:02:36,904 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-09 22:02:38,664 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 22:02:38,664 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=432ms (0ms mobile, 432ms wifi, 0ms not connected)
+2017-07-09 22:02:55,381 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-09 22:02:55,450 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-09 22:02:55,450 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-09 22:02:55,464 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p ngjvnpslnp.iplhmk --ignore-crashes 1
+2017-07-09 22:02:56,792 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 22:02:56,792 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=337ms (0ms mobile, 337ms wifi, 0ms not connected)
+2017-07-09 22:02:56,874 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-09 22:02:57,023 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-09 22:03:16,585 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ngjvnpslnp.iplhmk" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ngjvnpslnp.iplhmk" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ngjvnpslnp.iplhmk" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ngjvnpslnp.iplhmk" password="false" resource-id="id/title" scrollable="false" selected="false" text="EroBox"/>
+      </node>
+      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="ngjvnpslnp.iplhmk" password="false" resource-id="id/webView1" scrollable="false" selected="false" text="">
+        <!--NAF: The following control may not be accessibility friendly-->
+        <node NAF="true" bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="ngjvnpslnp.iplhmk" password="false" resource-id="id/webView1" scrollable="false" selected="false" text=""/>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-09 22:03:17,821 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-09 22:03:17,821 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-09 22:03:18,463 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/f496c85a05b18f37fe5f7435d72eac1a0494f9ef105fc79077825226949c14ae/first_page.png
+2017-07-09 22:03:18,595 - COSMOS_TRIGGER_PY-Console - DEBUG - 3140 KB/s (85174 bytes in 0.026s)
+2017-07-09 22:03:23,617 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/ngjvnpslnp.iplhmk0709-22-02-18.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/f496c85a05b18f37fe5f7435d72eac1a0494f9ef105fc79077825226949c14ae/ngjvnpslnp.iplhmk0709-22-02-18.pcap
+2017-07-09 22:03:23,769 - COSMOS_TRIGGER_PY-Console - DEBUG - 1950 KB/s (49152 bytes in 0.024s)
+2017-07-09 22:03:24,647 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall ngjvnpslnp.iplhmk
+2017-07-09 22:03:26,178 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 22:03:26,180 - COSMOS_TRIGGER_PY-Console - INFO - End

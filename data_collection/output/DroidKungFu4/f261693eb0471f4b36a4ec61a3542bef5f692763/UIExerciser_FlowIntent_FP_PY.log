@@ -1,0 +1,52 @@
+2017-07-09 02:52:32,204 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\f261693eb0471f4b36a4ec61a3542bef5f692763.apk
+2017-07-09 02:52:32,206 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.evilsunflower.jump
+2017-07-09 02:52:32,206 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.evilsunflower.jump
+2017-07-09 02:52:33,178 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-09 02:52:33,180 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\f261693eb0471f4b36a4ec61a3542bef5f692763.apk
+2017-07-09 02:52:39,819 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/f261693eb0471f4b36a4ec61a3542bef5f692763.apk
+2017-07-09 02:52:39,819 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 02:52:39,821 - COSMOS_TRIGGER_PY-Console - DEBUG - 1791 KB/s (1168756 bytes in 0.637s)
+2017-07-09 02:52:39,821 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-09 02:52:51,819 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-09 02:52:51,819 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-09 02:52:53,301 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 02:52:53,302 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=247ms (0ms mobile, 247ms wifi, 0ms not connected)
+2017-07-09 02:52:55,213 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-09 02:52:55,335 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-09 02:52:55,335 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-09 02:52:55,355 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.evilsunflower.jump --ignore-crashes 1
+2017-07-09 02:53:01,131 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 02:53:01,131 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=222ms (0ms mobile, 222ms wifi, 0ms not connected)
+2017-07-09 02:53:01,180 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-09 02:53:02,332 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-09 02:53:26,197 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.jump" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.jump" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.jump" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.jump" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <node bounds="[0,6][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.jump" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[0,6][360,174]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.jump" password="false" scrollable="false" selected="false" text=""/>
+            <node bounds="[0,195][360,468]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.evilsunflower.jump" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[92,195][267,240]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.evilsunflower.jump" password="false" scrollable="false" selected="false" text="New Game"/>
+              <node bounds="[92,251][267,296]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.evilsunflower.jump" password="false" scrollable="false" selected="false" text="Setting"/>
+              <node bounds="[92,307][267,352]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.evilsunflower.jump" password="false" scrollable="false" selected="false" text="Score &amp; Ranking"/>
+              <node bounds="[92,363][267,408]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.evilsunflower.jump" password="false" scrollable="false" selected="false" text="More"/>
+              <node bounds="[92,420][267,465]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="4" long-clickable="false" package="com.evilsunflower.jump" password="false" scrollable="false" selected="false" text="Exit"/>
+            </node>
+            <node bounds="[0,468][360,524]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.evilsunflower.jump" password="false" scrollable="false" selected="false" text=""/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-09 02:53:27,354 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-09 02:53:27,355 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-09 02:53:29,466 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/f261693eb0471f4b36a4ec61a3542bef5f692763/first_page.png
+2017-07-09 02:53:29,951 - COSMOS_TRIGGER_PY-Console - DEBUG - 1518 KB/s (659690 bytes in 0.424s)
+2017-07-09 02:53:34,963 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.evilsunflower.jump0709-02-52-32.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/f261693eb0471f4b36a4ec61a3542bef5f692763/com.evilsunflower.jump0709-02-52-32.pcap
+2017-07-09 02:53:35,098 - COSMOS_TRIGGER_PY-Console - DEBUG - 1332 KB/s (102400 bytes in 0.075s)
+2017-07-09 02:53:50,099 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-09 02:53:50,101 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.evilsunflower.jump
+2017-07-09 02:53:51,437 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 02:53:51,437 - COSMOS_TRIGGER_PY-Console - INFO - End

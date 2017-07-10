@@ -1,0 +1,45 @@
+2017-07-09 11:46:04,552 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\5e37aae12b3767b78ed5426f6b616409d5539ebb080e8793928a139ef959d894.apk
+2017-07-09 11:46:04,552 - COSMOS_TRIGGER_PY-Console - INFO - pkg:ru.install.opera
+2017-07-09 11:46:04,552 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall ru.install.opera
+2017-07-09 11:46:05,378 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-09 11:46:05,380 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\5e37aae12b3767b78ed5426f6b616409d5539ebb080e8793928a139ef959d894.apk
+2017-07-09 11:46:08,992 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/5e37aae12b3767b78ed5426f6b616409d5539ebb080e8793928a139ef959d894.apk
+2017-07-09 11:46:08,993 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 11:46:08,993 - COSMOS_TRIGGER_PY-Console - DEBUG - 353 KB/s (53929 bytes in 0.149s)
+2017-07-09 11:46:08,993 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-09 11:46:14,213 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-09 11:46:14,213 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-09 11:46:15,835 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 11:46:15,836 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=220ms (0ms mobile, 220ms wifi, 0ms not connected)
+2017-07-09 11:46:17,232 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-09 11:46:17,312 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-09 11:46:17,312 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-09 11:46:17,331 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p ru.install.opera --ignore-crashes 1
+2017-07-09 11:46:19,414 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 11:46:19,415 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=198ms (0ms mobile, 198ms wifi, 0ms not connected)
+2017-07-09 11:46:19,461 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-09 11:46:19,573 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-09 11:46:40,615 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ru.install.opera" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ru.install.opera" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ru.install.opera" password="false" resource-id="id/widget32" scrollable="false" selected="false" text="">
+        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ru.install.opera" password="false" resource-id="id/widget32" scrollable="false" selected="false" text="">
+          <node bounds="[0,50][720,75]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ru.install.opera" password="false" resource-id="id/textView2" scrollable="false" selected="false" text="Downloader"/>
+          <node bounds="[188,75][532,617]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="ru.install.opera" password="false" resource-id="id/widget34" scrollable="false" selected="false" text=""/>
+          <node bounds="[10,617][710,1078]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="ru.install.opera" password="false" resource-id="id/textView1" scrollable="false" selected="false" text="Do you agree with the rules of downloading?   To continue, click OK"/>
+          <node bounds="[0,1088][360,1184]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="4" long-clickable="false" package="ru.install.opera" password="false" resource-id="id/widget31" scrollable="false" selected="false" text="OK"/>
+          <node bounds="[360,1088][720,1184]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="5" long-clickable="false" package="ru.install.opera" password="false" resource-id="id/widget33" scrollable="false" selected="false" text="Rules"/>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-09 11:46:41,802 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-09 11:46:41,802 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-09 11:46:42,536 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/5e37aae12b3767b78ed5426f6b616409d5539ebb080e8793928a139ef959d894/first_page.png
+2017-07-09 11:46:42,671 - COSMOS_TRIGGER_PY-Console - DEBUG - 2316 KB/s (111647 bytes in 0.047s)
+2017-07-09 11:46:47,677 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/ru.install.opera0709-11-46-04.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/5e37aae12b3767b78ed5426f6b616409d5539ebb080e8793928a139ef959d894/ru.install.opera0709-11-46-04.pcap
+2017-07-09 11:46:47,778 - COSMOS_TRIGGER_PY-Console - DEBUG - 571 KB/s (4096 bytes in 0.007s)
+2017-07-09 11:46:48,142 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall ru.install.opera
+2017-07-09 11:46:49,529 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 11:46:49,530 - COSMOS_TRIGGER_PY-Console - INFO - End

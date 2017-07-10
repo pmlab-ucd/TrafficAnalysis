@@ -1,0 +1,52 @@
+2017-07-08 19:16:01,871 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\ef140ab1ad04bd9e52c8c5f2fb6440f3a9ebe8ea.apk
+2017-07-08 19:16:01,872 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.camelgames.mxmotor
+2017-07-08 19:16:01,874 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.camelgames.mxmotor
+2017-07-08 19:16:02,653 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-08 19:16:02,654 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\ef140ab1ad04bd9e52c8c5f2fb6440f3a9ebe8ea.apk
+2017-07-08 19:16:06,473 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/ef140ab1ad04bd9e52c8c5f2fb6440f3a9ebe8ea.apk
+2017-07-08 19:16:06,474 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 19:16:06,476 - COSMOS_TRIGGER_PY-Console - DEBUG - 2418 KB/s (3022995 bytes in 1.220s)
+2017-07-08 19:16:06,476 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-08 19:16:07,201 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-08 19:16:07,203 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-08 19:16:08,029 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 19:16:08,029 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=110ms (0ms mobile, 110ms wifi, 0ms not connected)
+2017-07-08 19:16:09,479 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-08 19:16:09,555 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-08 19:16:09,558 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-08 19:16:09,582 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.camelgames.mxmotor --ignore-crashes 1
+2017-07-08 19:16:11,121 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 19:16:11,122 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=580ms (0ms mobile, 580ms wifi, 0ms not connected)
+2017-07-08 19:16:11,197 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-08 19:16:11,361 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-08 19:16:31,196 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.camelgames.mxmotor" password="false" resource-id="id/gl_screen_view" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.camelgames.mxmotor" password="false" resource-id="id/gl_screen_view" scrollable="false" selected="false" text="">
+      <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.camelgames.mxmotor" password="false" resource-id="id/gl_screen_view" scrollable="false" selected="false" text="">
+        <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.camelgames.mxmotor" password="false" resource-id="id/gl_screen_view" scrollable="false" selected="false" text="">
+          <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="false" package="com.camelgames.mxmotor" password="false" resource-id="id/gl_screen_view" scrollable="false" selected="false" text=""/>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-08 19:16:32,397 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-08 19:16:32,398 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-08 19:16:34,003 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/ef140ab1ad04bd9e52c8c5f2fb6440f3a9ebe8ea/first_page.png
+2017-07-08 19:16:34,286 - COSMOS_TRIGGER_PY-Console - DEBUG - 2690 KB/s (527180 bytes in 0.191s)
+2017-07-08 19:16:39,303 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.camelgames.mxmotor0708-19-16-01.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/ef140ab1ad04bd9e52c8c5f2fb6440f3a9ebe8ea/com.camelgames.mxmotor0708-19-16-01.pcap
+2017-07-08 19:16:44,444 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.camelgames.mxmotor0708-19-16-01.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/ef140ab1ad04bd9e52c8c5f2fb6440f3a9ebe8ea/com.camelgames.mxmotor0708-19-16-01.pcap
+2017-07-08 19:16:49,542 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.camelgames.mxmotor0708-19-16-01.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/ef140ab1ad04bd9e52c8c5f2fb6440f3a9ebe8ea/com.camelgames.mxmotor0708-19-16-01.pcap
+2017-07-08 19:16:54,628 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.camelgames.mxmotor0708-19-16-01.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/ef140ab1ad04bd9e52c8c5f2fb6440f3a9ebe8ea/com.camelgames.mxmotor0708-19-16-01.pcap
+2017-07-08 19:16:59,717 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.camelgames.mxmotor0708-19-16-01.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/ef140ab1ad04bd9e52c8c5f2fb6440f3a9ebe8ea/com.camelgames.mxmotor0708-19-16-01.pcap
+2017-07-08 19:17:04,865 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.camelgames.mxmotor0708-19-16-01.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/ef140ab1ad04bd9e52c8c5f2fb6440f3a9ebe8ea/com.camelgames.mxmotor0708-19-16-01.pcap
+2017-07-08 19:17:09,947 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.camelgames.mxmotor0708-19-16-01.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/ef140ab1ad04bd9e52c8c5f2fb6440f3a9ebe8ea/com.camelgames.mxmotor0708-19-16-01.pcap
+2017-07-08 19:17:15,046 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.camelgames.mxmotor0708-19-16-01.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/ef140ab1ad04bd9e52c8c5f2fb6440f3a9ebe8ea/com.camelgames.mxmotor0708-19-16-01.pcap
+2017-07-08 19:17:20,132 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.camelgames.mxmotor0708-19-16-01.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/ef140ab1ad04bd9e52c8c5f2fb6440f3a9ebe8ea/com.camelgames.mxmotor0708-19-16-01.pcap
+2017-07-08 19:17:25,219 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.camelgames.mxmotor0708-19-16-01.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/ef140ab1ad04bd9e52c8c5f2fb6440f3a9ebe8ea/com.camelgames.mxmotor0708-19-16-01.pcap
+2017-07-08 19:17:30,309 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.camelgames.mxmotor0708-19-16-01.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/ef140ab1ad04bd9e52c8c5f2fb6440f3a9ebe8ea/com.camelgames.mxmotor0708-19-16-01.pcap
+2017-07-08 19:17:30,405 - COSMOS_TRIGGER_PY-Console - DEBUG - 665 KB/s (4096 bytes in 0.006s)
+2017-07-08 19:17:45,408 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-08 19:17:45,411 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.camelgames.mxmotor
+2017-07-08 19:17:46,911 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 19:17:46,913 - COSMOS_TRIGGER_PY-Console - INFO - End

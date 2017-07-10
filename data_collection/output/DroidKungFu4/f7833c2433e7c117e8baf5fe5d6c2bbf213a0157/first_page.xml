@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<hierarchy>
+  <node bounds="[73,477][646,707]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.reader.evilJinping2" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[73,477][646,707]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.reader.evilJinping2" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[73,477][646,707]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.reader.evilJinping2" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[73,477][646,707]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.reader.evilJinping2" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[79,495][644,701]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.reader.evilJinping2" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[104,515][619,671]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.reader.evilJinping2" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[104,525][619,661]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.reader.evilJinping2" password="false" scrollable="false" selected="false" text="">
+                <node bounds="[104,525][619,661]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.reader.evilJinping2" password="false" scrollable="false" selected="false" text="">
+                  <node bounds="[120,545][216,641]" checkable="false" checked="false" class="android.widget.ProgressBar" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.reader.evilJinping2" password="false" scrollable="false" selected="false" text=""/>
+                  <node bounds="[240,574][603,612]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.evilsunflower.reader.evilJinping2" password="false" scrollable="false" selected="false" text="Opening book. Please, wait..."/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>

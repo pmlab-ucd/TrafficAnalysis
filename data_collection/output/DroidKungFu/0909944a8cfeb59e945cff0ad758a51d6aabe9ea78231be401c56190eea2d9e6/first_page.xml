@@ -1,0 +1,14 @@
+<?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.txthej" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.txthej" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.txthej" password="false" resource-id="id/mainActLayout" scrollable="false" selected="false" text="">
+        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.txthej" password="false" resource-id="id/mainActLayout" scrollable="false" selected="false" text="">
+          <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.allen.txthej" password="false" resource-id="id/mainActLayout" scrollable="false" selected="false" text="">
+            <node bounds="[0,50][720,1079]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.txthej" password="false" scrollable="false" selected="false" text="华尔街 作者：纪录片《华尔..      《华尔街》相关资料 内容简介     一条新旧夹杂的长街，掌控着世界金融的命脉，经历过战火洗礼，恐怖袭击，却仍然站在世界金融的最高峰不断地缔造神话。中国人第一次深入探索世界金融心脏，第一次与华尔街的力量进行面对面的交流。在《华尔街》中，你会与“股神”巴菲特聊聊独特的投资之道，探探查诺斯做空中国的口风，跟罗杰斯讨论时下金融危机的局势，跨越时空近距离守望华尔街辉煌的历史。央视纪录片《华尔街》仅仅只是个开始，本书深入华尔街，在历史坐标中，对资本市场做一次庄重地表达！                    目录     目录     序：华尔街是个极为复杂的机体           吴敬琏     序二：中央电视台台长序     上篇：华尔街     第一章资本无眠     第二章墙在哪里     第三章两条道路     第四章镀金时代     第五章硅谷方程     第六章投资之道     第七章阳光交易     第八章明暗创新     第九章拯救危机     第十章资本之河     下篇：与华尔街力量面对面     沃伦·巴菲特——最好的事情就是投资"/>
+          </node>
+        </node>
+        <node bounds="[0,1124][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.allen.txthej" password="false" scrollable="false" selected="false" text=""/>
+      </node>
+    </node>
+  </node>
+</hierarchy>

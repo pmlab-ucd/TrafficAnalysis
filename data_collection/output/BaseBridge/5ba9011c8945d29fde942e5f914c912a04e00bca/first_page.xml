@@ -1,0 +1,26 @@
+<?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.japanese" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.japanese" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.japanese" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.japanese" password="false" resource-id="id/title" scrollable="false" selected="false" text="日本女优"/>
+      </node>
+      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.japanese" password="false" resource-id="id/myLayoutIMG" scrollable="false" selected="false" text="">
+        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.japanese" password="false" resource-id="id/myLayoutIMG" scrollable="false" selected="false" text="">
+          <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.japanese" password="false" resource-id="id/myLayoutIMG" scrollable="false" selected="false" text="">
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[0,100][720,1264]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.japanese" password="false" resource-id="id/myImageView" scrollable="false" selected="false" text=""/>
+          </node>
+          <node bounds="[0,1084][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.japanese" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+            <node bounds="[0,1084][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.japanese" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[0,1084][100,1184]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.japanese" password="false" resource-id="id/previous" scrollable="false" selected="false" text=""/>
+              <node bounds="[100,1115][620,1153]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.japanese" password="false" resource-id="id/myTextView" scrollable="false" selected="false" text="柏木由紀"/>
+              <!--NAF: The following control may not be accessibility friendly-->
+              <node NAF="true" bounds="[620,1084][720,1184]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.japanese" password="false" resource-id="id/next" scrollable="false" selected="false" text=""/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>

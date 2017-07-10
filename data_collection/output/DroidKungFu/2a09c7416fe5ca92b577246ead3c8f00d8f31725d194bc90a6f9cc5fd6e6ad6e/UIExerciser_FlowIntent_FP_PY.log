@@ -1,0 +1,46 @@
+2017-07-10 08:46:40,398 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\2a09c7416fe5ca92b577246ead3c8f00d8f31725d194bc90a6f9cc5fd6e6ad6e.apk
+2017-07-10 08:46:40,398 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.mogo.guoshullk
+2017-07-10 08:46:40,400 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.mogo.guoshullk
+2017-07-10 08:46:41,223 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-10 08:46:41,224 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\2a09c7416fe5ca92b577246ead3c8f00d8f31725d194bc90a6f9cc5fd6e6ad6e.apk
+2017-07-10 08:46:44,450 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/2a09c7416fe5ca92b577246ead3c8f00d8f31725d194bc90a6f9cc5fd6e6ad6e.apk
+2017-07-10 08:46:44,450 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-10 08:46:44,451 - COSMOS_TRIGGER_PY-Console - DEBUG - 2939 KB/s (2626977 bytes in 0.872s)
+2017-07-10 08:46:44,453 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-10 08:46:45,174 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-10 08:46:45,174 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-10 08:46:46,147 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-10 08:46:46,147 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=199ms (0ms mobile, 199ms wifi, 0ms not connected)
+2017-07-10 08:46:47,505 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-10 08:46:47,575 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-10 08:46:47,575 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-10 08:46:47,589 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.mogo.guoshullk --ignore-crashes 1
+2017-07-10 08:46:48,815 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-10 08:46:48,815 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=232ms (0ms mobile, 232ms wifi, 0ms not connected)
+2017-07-10 08:46:48,855 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-10 08:46:48,957 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-10 08:47:09,871 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.mogo.guoshullk" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.mogo.guoshullk" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,25][360,53]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.mogo.guoshullk" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[5,26][356,51]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.mogo.guoshullk" password="false" scrollable="false" selected="false" text="果蔬连连看"/>
+      </node>
+      <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.mogo.guoshullk" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.mogo.guoshullk" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[11,64][349,86]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.mogo.guoshullk" password="false" scrollable="false" selected="false" text=""/>
+          <node bounds="[124,198][236,252]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.mogo.guoshullk" password="false" scrollable="false" selected="false" text="开始游戏"/>
+          <node bounds="[124,308][236,362]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.mogo.guoshullk" password="false" scrollable="false" selected="false" text="退出游戏"/>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-10 08:47:11,036 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-10 08:47:11,038 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-10 08:47:14,658 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2a09c7416fe5ca92b577246ead3c8f00d8f31725d194bc90a6f9cc5fd6e6ad6e/first_page.png
+2017-07-10 08:47:15,292 - COSMOS_TRIGGER_PY-Console - DEBUG - 2623 KB/s (1438201 bytes in 0.535s)
+2017-07-10 08:47:20,303 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.mogo.guoshullk0710-08-46-40.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2a09c7416fe5ca92b577246ead3c8f00d8f31725d194bc90a6f9cc5fd6e6ad6e/com.mogo.guoshullk0710-08-46-40.pcap
+2017-07-10 08:47:20,411 - COSMOS_TRIGGER_PY-Console - DEBUG - 1230 KB/s (16384 bytes in 0.013s)
+2017-07-10 08:47:21,184 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.mogo.guoshullk
+2017-07-10 08:47:22,673 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-10 08:47:22,673 - COSMOS_TRIGGER_PY-Console - INFO - End

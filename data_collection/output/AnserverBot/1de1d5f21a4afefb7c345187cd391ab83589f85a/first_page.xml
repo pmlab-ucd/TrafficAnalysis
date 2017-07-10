@@ -1,0 +1,38 @@
+<?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.apkbook.fengchen" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.apkbook.fengchen" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.apkbook.fengchen" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.apkbook.fengchen" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <!--NAF: The following control may not be accessibility friendly-->
+          <node NAF="true" bounds="[52,170][720,359]" checkable="false" checked="false" class="android.widget.GridView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="false" package="com.apkbook.fengchen" password="false" resource-id="id/gridView01" scrollable="false" selected="false" text="">
+            <node bounds="[63,181][191,349]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.apkbook.fengchen" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[229,181][357,349]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.apkbook.fengchen" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[395,181][523,349]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.apkbook.fengchen" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+          </node>
+          <!--NAF: The following control may not be accessibility friendly-->
+          <node NAF="true" bounds="[52,495][720,684]" checkable="false" checked="false" class="android.widget.GridView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.apkbook.fengchen" password="false" resource-id="id/gridView02" scrollable="false" selected="false" text="">
+            <node bounds="[63,506][191,674]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.apkbook.fengchen" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[229,506][357,674]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.apkbook.fengchen" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[395,506][523,674]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.apkbook.fengchen" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+          </node>
+          <!--NAF: The following control may not be accessibility friendly-->
+          <node NAF="true" bounds="[52,816][720,1005]" checkable="false" checked="false" class="android.widget.GridView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.apkbook.fengchen" password="false" resource-id="id/gridView03" scrollable="false" selected="false" text="">
+            <node bounds="[63,827][191,995]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.apkbook.fengchen" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[229,827][357,995]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.apkbook.fengchen" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[395,827][523,995]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.apkbook.fengchen" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+          </node>
+          <node bounds="[0,1005][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.apkbook.fengchen" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+            <!--NAF: The following control may not be accessibility friendly-->
+            <node NAF="true" bounds="[0,1094][720,1184]" checkable="false" checked="false" class="android.widget.ImageSwitcher" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.apkbook.fengchen" password="false" resource-id="id/sw" scrollable="false" selected="false" text=""/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>

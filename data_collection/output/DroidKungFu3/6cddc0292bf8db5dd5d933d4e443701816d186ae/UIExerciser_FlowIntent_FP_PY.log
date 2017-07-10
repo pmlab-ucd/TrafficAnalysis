@@ -1,0 +1,55 @@
+2017-07-08 20:41:35,565 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\6cddc0292bf8db5dd5d933d4e443701816d186ae.apk
+2017-07-08 20:41:35,565 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.peter.wuzilianzhu
+2017-07-08 20:41:35,565 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.peter.wuzilianzhu
+2017-07-08 20:41:36,391 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-08 20:41:36,391 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\6cddc0292bf8db5dd5d933d4e443701816d186ae.apk
+2017-07-08 20:41:38,124 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/6cddc0292bf8db5dd5d933d4e443701816d186ae.apk
+2017-07-08 20:41:38,124 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 20:41:38,125 - COSMOS_TRIGGER_PY-Console - DEBUG - 810 KB/s (191992 bytes in 0.231s)
+2017-07-08 20:41:38,125 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-08 20:41:38,848 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-08 20:41:38,848 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-08 20:41:39,720 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 20:41:39,721 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=125ms (0ms mobile, 125ms wifi, 0ms not connected)
+2017-07-08 20:41:41,127 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-08 20:41:41,197 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-08 20:41:41,197 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-08 20:41:41,213 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.peter.wuzilianzhu --ignore-crashes 1
+2017-07-08 20:41:42,148 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 20:41:42,150 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=131ms (0ms mobile, 131ms wifi, 0ms not connected)
+2017-07-08 20:41:42,221 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-08 20:41:42,355 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-08 20:42:02,490 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.peter.wuzilianzhu" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.peter.wuzilianzhu" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][1196,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.peter.wuzilianzhu" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[8,51][1188,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.peter.wuzilianzhu" password="false" resource-id="id/title" scrollable="false" selected="false" text="五子连珠棋"/>
+      </node>
+      <node bounds="[0,100][1196,720]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.peter.wuzilianzhu" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[0,100][1196,720]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.peter.wuzilianzhu" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <!--NAF: The following control may not be accessibility friendly-->
+          <node NAF="true" bounds="[0,100][804,720]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="com.peter.wuzilianzhu" password="false" resource-id="id/webView1" scrollable="false" selected="false" text=""/>
+          <node bounds="[804,100][1196,720]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.peter.wuzilianzhu" password="false" resource-id="id/textView1" scrollable="false" selected="false" text="您需要注意：  1、这是一款flash游戏，系统要求在2.2以上；  2、要求安装flash player，如果 没有显示，可能是您没有安装，推荐使用Adobe Flash Player 10.3； 3、需要有T卡支持。"/>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-08 20:42:03,664 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-08 20:42:03,664 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-08 20:42:04,345 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/6cddc0292bf8db5dd5d933d4e443701816d186ae/first_page.png
+2017-07-08 20:42:04,469 - COSMOS_TRIGGER_PY-Console - DEBUG - 3483 KB/s (107190 bytes in 0.030s)
+2017-07-08 20:42:09,486 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.peter.wuzilianzhu0708-20-41-35.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/6cddc0292bf8db5dd5d933d4e443701816d186ae/com.peter.wuzilianzhu0708-20-41-35.pcap
+2017-07-08 20:42:14,572 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.peter.wuzilianzhu0708-20-41-35.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/6cddc0292bf8db5dd5d933d4e443701816d186ae/com.peter.wuzilianzhu0708-20-41-35.pcap
+2017-07-08 20:42:19,654 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.peter.wuzilianzhu0708-20-41-35.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/6cddc0292bf8db5dd5d933d4e443701816d186ae/com.peter.wuzilianzhu0708-20-41-35.pcap
+2017-07-08 20:42:24,737 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.peter.wuzilianzhu0708-20-41-35.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/6cddc0292bf8db5dd5d933d4e443701816d186ae/com.peter.wuzilianzhu0708-20-41-35.pcap
+2017-07-08 20:42:29,822 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.peter.wuzilianzhu0708-20-41-35.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/6cddc0292bf8db5dd5d933d4e443701816d186ae/com.peter.wuzilianzhu0708-20-41-35.pcap
+2017-07-08 20:42:34,904 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.peter.wuzilianzhu0708-20-41-35.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/6cddc0292bf8db5dd5d933d4e443701816d186ae/com.peter.wuzilianzhu0708-20-41-35.pcap
+2017-07-08 20:42:39,984 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.peter.wuzilianzhu0708-20-41-35.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/6cddc0292bf8db5dd5d933d4e443701816d186ae/com.peter.wuzilianzhu0708-20-41-35.pcap
+2017-07-08 20:42:45,073 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.peter.wuzilianzhu0708-20-41-35.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/6cddc0292bf8db5dd5d933d4e443701816d186ae/com.peter.wuzilianzhu0708-20-41-35.pcap
+2017-07-08 20:42:50,163 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.peter.wuzilianzhu0708-20-41-35.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/6cddc0292bf8db5dd5d933d4e443701816d186ae/com.peter.wuzilianzhu0708-20-41-35.pcap
+2017-07-08 20:42:50,246 - COSMOS_TRIGGER_PY-Console - DEBUG - 1277 KB/s (16384 bytes in 0.012s)
+2017-07-08 20:43:05,247 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-08 20:43:05,250 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.peter.wuzilianzhu
+2017-07-08 20:43:06,799 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 20:43:06,801 - COSMOS_TRIGGER_PY-Console - INFO - End

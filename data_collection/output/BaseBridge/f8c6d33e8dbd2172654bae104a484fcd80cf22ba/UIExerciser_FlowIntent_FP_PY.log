@@ -1,0 +1,59 @@
+2017-07-09 00:40:12,782 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\BaseBridge\f8c6d33e8dbd2172654bae104a484fcd80cf22ba.apk
+2017-07-09 00:40:12,782 - COSMOS_TRIGGER_PY-Console - INFO - pkg:net.lucky.star.mrtm
+2017-07-09 00:40:12,782 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall net.lucky.star.mrtm
+2017-07-09 00:40:13,565 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-09 00:40:13,565 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\BaseBridge\f8c6d33e8dbd2172654bae104a484fcd80cf22ba.apk
+2017-07-09 00:40:16,301 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/f8c6d33e8dbd2172654bae104a484fcd80cf22ba.apk
+2017-07-09 00:40:16,302 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 00:40:16,302 - COSMOS_TRIGGER_PY-Console - DEBUG - 2512 KB/s (1151272 bytes in 0.447s)
+2017-07-09 00:40:16,302 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-09 00:40:17,029 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-09 00:40:17,030 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-09 00:40:18,010 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 00:40:18,012 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=202ms (0ms mobile, 202ms wifi, 0ms not connected)
+2017-07-09 00:40:19,380 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-09 00:40:19,453 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-09 00:40:19,453 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-09 00:40:19,473 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p net.lucky.star.mrtm --ignore-crashes 1
+2017-07-09 00:40:20,456 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 00:40:20,457 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=115ms (0ms mobile, 115ms wifi, 0ms not connected)
+2017-07-09 00:40:20,496 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-09 00:40:20,605 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-09 00:40:44,506 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[18,403][702,830]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.packageinstaller" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[18,403][702,830]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.packageinstaller" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[18,403][702,830]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.packageinstaller" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[34,403][686,830]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.packageinstaller" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[34,403][686,551]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.packageinstaller" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[82,419][638,547]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.packageinstaller" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[82,453][638,512]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.packageinstaller" password="false" scrollable="false" selected="false" text="Install blocked"/>
+            </node>
+            <node bounds="[50,547][670,551]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.android.packageinstaller" password="false" scrollable="false" selected="false" text=""/>
+          </node>
+          <node bounds="[34,551][686,716]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.android.packageinstaller" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[50,551][670,716]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.packageinstaller" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[50,551][670,716]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.packageinstaller" password="false" scrollable="false" selected="false" text="For security, your phone is set to block installation of apps obtained from unknown sources."/>
+            </node>
+          </node>
+          <node bounds="[34,716][686,830]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.android.packageinstaller" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[50,718][670,814]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.packageinstaller" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[50,718][359,814]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.android.packageinstaller" password="false" scrollable="false" selected="false" text="Cancel"/>
+              <node bounds="[361,718][670,814]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.android.packageinstaller" password="false" scrollable="false" selected="false" text="Settings"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-09 00:40:45,654 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-09 00:40:45,657 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-09 00:40:46,436 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/f8c6d33e8dbd2172654bae104a484fcd80cf22ba/first_page.png
+2017-07-09 00:40:46,559 - COSMOS_TRIGGER_PY-Console - DEBUG - 3178 KB/s (146716 bytes in 0.045s)
+2017-07-09 00:40:51,578 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/net.lucky.star.mrtm0709-00-40-12.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/f8c6d33e8dbd2172654bae104a484fcd80cf22ba/net.lucky.star.mrtm0709-00-40-12.pcap
+2017-07-09 00:40:56,661 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/net.lucky.star.mrtm0709-00-40-12.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/f8c6d33e8dbd2172654bae104a484fcd80cf22ba/net.lucky.star.mrtm0709-00-40-12.pcap
+2017-07-09 00:40:56,740 - COSMOS_TRIGGER_PY-Console - DEBUG - 499 KB/s (4096 bytes in 0.008s)
+2017-07-09 00:41:11,746 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-09 00:41:11,747 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall net.lucky.star.mrtm
+2017-07-09 00:41:13,341 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 00:41:13,342 - COSMOS_TRIGGER_PY-Console - INFO - End

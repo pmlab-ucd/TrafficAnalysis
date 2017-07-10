@@ -1,0 +1,82 @@
+2017-07-08 14:29:55,523 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\753073a72bc14ee1590e8addd6cb6eeb0a0602f1.apk
+2017-07-08 14:29:55,526 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.sec.android.touchScreen.server
+2017-07-08 14:29:55,526 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.sec.android.touchScreen.server
+2017-07-08 14:29:56,361 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-08 14:29:56,361 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\753073a72bc14ee1590e8addd6cb6eeb0a0602f1.apk
+2017-07-08 14:29:57,941 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/753073a72bc14ee1590e8addd6cb6eeb0a0602f1.apk
+2017-07-08 14:29:57,943 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 14:29:57,944 - COSMOS_TRIGGER_PY-Console - DEBUG - 191 KB/s (27757 bytes in 0.141s)
+2017-07-08 14:29:57,944 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-08 14:29:58,719 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-08 14:29:58,720 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-08 14:29:59,747 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-08 14:29:59,750 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=221ms (0ms mobile, 221ms wifi, 0ms not connected)
+2017-07-08 14:30:01,177 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-08 14:30:01,250 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-08 14:30:01,252 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-08 14:30:01,273 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.sec.android.touchScreen.server --ignore-crashes 1
+2017-07-08 14:30:01,901 - COSMOS_TRIGGER_PY-Console - DEBUG - ** No activities found to run, monkey aborted.
+2017-07-08 14:30:01,974 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-08 14:30:02,131 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-08 14:30:28,250 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?>
+<hierarchy>
+  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="true" selected="false" text="">
+            <node bounds="[0,147][720,1023]" checkable="false" checked="false" class="android.view.View" clickable="true" content-desc="Home screen 5" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[16,163][704,1007]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
+            </node>
+          </node>
+          <node bounds="[0,50][720,158]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[12,62][708,158]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[20,70][604,150]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="Search" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+                <node bounds="[36,70][198,150]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
+              </node>
+              <node bounds="[604,70][700,150]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="Voice Search" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+                <node bounds="[620,70][684,150]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
+              </node>
+            </node>
+          </node>
+          <node bounds="[560,50][720,158]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
+          <node bounds="[0,1012][720,1024]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
+          <node bounds="[0,1024][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[1,1024][718,1184]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[17,1040][702,1168]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
+                <!--NAF: The following control may not be accessibility friendly-->
+                <node NAF="true" bounds="[17,1040][154,1168]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
+                <!--NAF: The following control may not be accessibility friendly-->
+                <node NAF="true" bounds="[154,1040][291,1168]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
+                <node bounds="[291,1040][428,1168]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="Apps" enabled="true" focusable="true" focused="false" index="2" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
+                <!--NAF: The following control may not be accessibility friendly-->
+                <node NAF="true" bounds="[428,1040][565,1168]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
+                <!--NAF: The following control may not be accessibility friendly-->
+                <node NAF="true" bounds="[565,1040][702,1168]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="4" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+
+2017-07-08 14:30:28,394 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-08 14:30:28,394 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-08 14:30:29,635 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/753073a72bc14ee1590e8addd6cb6eeb0a0602f1/first_page.png
+2017-07-08 14:30:29,861 - COSMOS_TRIGGER_PY-Console - DEBUG - 3165 KB/s (350606 bytes in 0.108s)
+2017-07-08 14:30:34,895 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.sec.android.touchScreen.server0708-14-29-55.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/753073a72bc14ee1590e8addd6cb6eeb0a0602f1/com.sec.android.touchScreen.server0708-14-29-55.pcap
+2017-07-08 14:30:39,989 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.sec.android.touchScreen.server0708-14-29-55.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/753073a72bc14ee1590e8addd6cb6eeb0a0602f1/com.sec.android.touchScreen.server0708-14-29-55.pcap
+2017-07-08 14:30:45,076 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.sec.android.touchScreen.server0708-14-29-55.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/753073a72bc14ee1590e8addd6cb6eeb0a0602f1/com.sec.android.touchScreen.server0708-14-29-55.pcap
+2017-07-08 14:30:50,211 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.sec.android.touchScreen.server0708-14-29-55.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/753073a72bc14ee1590e8addd6cb6eeb0a0602f1/com.sec.android.touchScreen.server0708-14-29-55.pcap
+2017-07-08 14:30:55,298 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.sec.android.touchScreen.server0708-14-29-55.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/753073a72bc14ee1590e8addd6cb6eeb0a0602f1/com.sec.android.touchScreen.server0708-14-29-55.pcap
+2017-07-08 14:31:00,387 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.sec.android.touchScreen.server0708-14-29-55.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/753073a72bc14ee1590e8addd6cb6eeb0a0602f1/com.sec.android.touchScreen.server0708-14-29-55.pcap
+2017-07-08 14:31:05,471 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.sec.android.touchScreen.server0708-14-29-55.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/753073a72bc14ee1590e8addd6cb6eeb0a0602f1/com.sec.android.touchScreen.server0708-14-29-55.pcap
+2017-07-08 14:31:10,556 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.sec.android.touchScreen.server0708-14-29-55.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/753073a72bc14ee1590e8addd6cb6eeb0a0602f1/com.sec.android.touchScreen.server0708-14-29-55.pcap
+2017-07-08 14:31:15,691 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.sec.android.touchScreen.server0708-14-29-55.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/753073a72bc14ee1590e8addd6cb6eeb0a0602f1/com.sec.android.touchScreen.server0708-14-29-55.pcap
+2017-07-08 14:31:15,776 - COSMOS_TRIGGER_PY-Console - DEBUG - 380 KB/s (4096 bytes in 0.010s)
+2017-07-08 14:31:30,778 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-08 14:31:30,780 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.sec.android.touchScreen.server
+2017-07-08 14:31:32,020 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-08 14:31:32,023 - COSMOS_TRIGGER_PY-Console - INFO - End

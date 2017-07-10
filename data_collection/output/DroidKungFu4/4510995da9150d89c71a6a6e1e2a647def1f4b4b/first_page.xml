@@ -1,0 +1,18 @@
+<?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[187,0][412,68]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="细胞大战"/>
+          <node bounds="[0,68][599,360]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[239,87][359,137]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="开始游戏"/>
+            <node bounds="[239,137][359,188]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="控制方式"/>
+            <node bounds="[239,188][359,239]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="打开声音"/>
+            <node bounds="[239,239][359,289]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="游戏背景"/>
+            <node bounds="[262,289][335,340]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="4" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="关于"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>

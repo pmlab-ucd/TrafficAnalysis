@@ -1,0 +1,26 @@
+<?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,420][360,638]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,420][360,638]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,420][360,638]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,420][360,638]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[3,430][359,500]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[29,448][333,488]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[29,448][333,488]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="通知"/>
+            </node>
+            <node bounds="[18,498][344,500]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text=""/>
+          </node>
+          <node bounds="[3,500][359,555]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[18,500][344,555]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[34,502][333,541]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="已发现有更新版本哦！"/>
+            </node>
+          </node>
+          <node bounds="[3,555][359,635]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[18,555][344,617]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[100,559][261,613]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="闪电更新"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>

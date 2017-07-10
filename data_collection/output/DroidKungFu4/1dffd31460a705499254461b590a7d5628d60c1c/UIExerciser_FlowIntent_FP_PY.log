@@ -1,0 +1,50 @@
+2017-07-09 01:15:46,651 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\1dffd31460a705499254461b590a7d5628d60c1c.apk
+2017-07-09 01:15:46,651 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.safetest.Star
+2017-07-09 01:15:46,651 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.safetest.Star
+2017-07-09 01:15:47,786 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-09 01:15:47,788 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\1dffd31460a705499254461b590a7d5628d60c1c.apk
+2017-07-09 01:15:51,789 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/1dffd31460a705499254461b590a7d5628d60c1c.apk
+2017-07-09 01:15:51,789 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 01:15:51,790 - COSMOS_TRIGGER_PY-Console - DEBUG - 2233 KB/s (850445 bytes in 0.371s)
+2017-07-09 01:15:51,792 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-09 01:15:56,548 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-09 01:15:56,548 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-09 01:15:58,186 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 01:15:58,186 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=280ms (0ms mobile, 280ms wifi, 0ms not connected)
+2017-07-09 01:15:59,548 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-09 01:15:59,618 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-09 01:15:59,618 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-09 01:15:59,637 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.safetest.Star --ignore-crashes 1
+2017-07-09 01:16:01,769 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-09 01:16:01,770 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=128ms (0ms mobile, 128ms wifi, 0ms not connected)
+2017-07-09 01:16:01,811 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-09 01:16:01,926 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-09 01:16:26,316 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.Star" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.Star" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+      <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.Star" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+        <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.Star" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+          <node bounds="[0,0][1196,48]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.Star" password="false" resource-id="id/myad" scrollable="false" selected="false" text="">
+            <node bounds="[0,0][1196,48]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.Star" password="false" resource-id="id/myad" scrollable="false" selected="false" text="">
+              <node bounds="[0,0][480,48]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safetest.Star" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                <node bounds="[0,0][480,48]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.Star" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
+                  <node bounds="[224,8][256,40]" checkable="false" checked="false" class="android.widget.ProgressBar" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.Star" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node bounds="[0,48][1196,720]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safetest.Star" password="false" resource-id="id/myMain" scrollable="false" selected="false" text=""/>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-09 01:16:27,480 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-09 01:16:27,482 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-09 01:16:30,648 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/1dffd31460a705499254461b590a7d5628d60c1c/first_page.png
+2017-07-09 01:16:31,036 - COSMOS_TRIGGER_PY-Console - DEBUG - 2658 KB/s (746008 bytes in 0.274s)
+2017-07-09 01:16:36,069 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.safetest.Star0709-01-15-46.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/1dffd31460a705499254461b590a7d5628d60c1c/com.safetest.Star0709-01-15-46.pcap
+2017-07-09 01:16:36,180 - COSMOS_TRIGGER_PY-Console - DEBUG - 1711 KB/s (12288 bytes in 0.007s)
+2017-07-09 01:16:36,713 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.safetest.Star
+2017-07-09 01:16:38,400 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-09 01:16:38,401 - COSMOS_TRIGGER_PY-Console - INFO - End

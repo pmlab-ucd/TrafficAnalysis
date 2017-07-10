@@ -1,0 +1,105 @@
+2017-07-10 08:16:15,382 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\2006bb59e8a2c6df352df1b4ccac94ad11edf1e525fc58d2b0acd6b71dd912a6.apk
+2017-07-10 08:16:15,382 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.tutusw.fingerscanner
+2017-07-10 08:16:15,382 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.tutusw.fingerscanner
+2017-07-10 08:16:16,101 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
+2017-07-10 08:16:16,102 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\2006bb59e8a2c6df352df1b4ccac94ad11edf1e525fc58d2b0acd6b71dd912a6.apk
+2017-07-10 08:16:17,822 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/2006bb59e8a2c6df352df1b4ccac94ad11edf1e525fc58d2b0acd6b71dd912a6.apk
+2017-07-10 08:16:17,823 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-10 08:16:17,823 - COSMOS_TRIGGER_PY-Console - DEBUG - 1998 KB/s (737015 bytes in 0.360s)
+2017-07-10 08:16:17,823 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
+2017-07-10 08:16:18,543 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
+2017-07-10 08:16:18,543 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
+2017-07-10 08:16:19,466 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-10 08:16:19,466 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=154ms (0ms mobile, 154ms wifi, 0ms not connected)
+2017-07-10 08:16:20,802 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
+2017-07-10 08:16:20,871 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
+2017-07-10 08:16:20,871 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
+2017-07-10 08:16:20,891 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.tutusw.fingerscanner --ignore-crashes 1
+2017-07-10 08:16:21,914 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
+2017-07-10 08:16:21,914 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=162ms (0ms mobile, 162ms wifi, 0ms not connected)
+2017-07-10 08:16:21,950 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
+2017-07-10 08:16:22,049 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
+2017-07-10 08:16:57,509 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
+  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+      <node bounds="[0,25][360,53]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[5,26][356,51]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="指纹锁屏尝鲜版"/>
+      </node>
+      <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+        <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+          <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+            <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+              <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.ListView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+                <node bounds="[0,53][360,81]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="常规设置"/>
+                <node bounds="[0,82][360,154]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+                  <node bounds="[17,90][342,145]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+                    <node bounds="[17,90][187,124]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="解锁条件（次）"/>
+                    <node bounds="[17,124][190,145]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="设定手机解锁的扫描次数"/>
+                  </node>
+                </node>
+                <node bounds="[0,155][360,227]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+                  <node bounds="[17,163][342,218]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+                    <node bounds="[17,163][138,197]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="提示音音量"/>
+                    <node bounds="[17,197][174,218]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="在这里设置提示音音量"/>
+                  </node>
+                </node>
+                <node bounds="[0,228][360,300]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+                  <node bounds="[17,236][298,291]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+                    <node bounds="[17,236][162,270]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="显示锁定提示"/>
+                    <node bounds="[17,270][159,291]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="显示锁定提示已启用"/>
+                  </node>
+                  <node bounds="[305,228][349,300]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+                    <node bounds="[305,237][349,291]" checkable="true" checked="true" class="android.widget.CheckBox" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text=""/>
+                  </node>
+                </node>
+                <node bounds="[0,302][360,374]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+                  <node bounds="[17,309][298,365]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+                    <node bounds="[17,309][114,343]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="振动效果"/>
+                    <node bounds="[17,343][80,365]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="震动：开"/>
+                  </node>
+                  <node bounds="[305,302][349,374]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+                    <node bounds="[305,311][349,365]" checkable="true" checked="true" class="android.widget.CheckBox" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text=""/>
+                  </node>
+                </node>
+                <node bounds="[0,375][360,447]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="5" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+                  <node bounds="[17,383][298,438]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+                    <node bounds="[17,383][162,416]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="启用指纹扫描"/>
+                    <node bounds="[17,416][159,438]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="指纹扫描锁屏已禁用"/>
+                  </node>
+                  <node bounds="[305,375][349,447]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+                    <node bounds="[305,384][349,438]" checkable="true" checked="false" class="android.widget.CheckBox" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text=""/>
+                  </node>
+                </node>
+                <node bounds="[0,448][360,476]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="6" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="其他设置"/>
+                <node bounds="[0,477][360,549]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="7" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+                  <node bounds="[17,485][298,540]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+                    <node bounds="[17,485][114,519]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="自动运行"/>
+                    <node bounds="[17,519][174,540]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="开机后自动运行已禁用"/>
+                  </node>
+                  <node bounds="[305,477][349,549]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+                    <node bounds="[305,486][349,540]" checkable="true" checked="false" class="android.widget.CheckBox" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text=""/>
+                  </node>
+                </node>
+                <node bounds="[0,550][360,622]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="8" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+                  <node bounds="[17,558][342,613]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="">
+                    <node bounds="[17,558][114,592]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.tutusw.fingerscanner" password="false" scrollable="false" selected="false" text="文本显示"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
+2017-07-10 08:16:58,661 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
+2017-07-10 08:16:58,663 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
+2017-07-10 08:16:59,398 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2006bb59e8a2c6df352df1b4ccac94ad11edf1e525fc58d2b0acd6b71dd912a6/first_page.png
+2017-07-10 08:16:59,526 - COSMOS_TRIGGER_PY-Console - DEBUG - 3123 KB/s (195167 bytes in 0.061s)
+2017-07-10 08:17:04,568 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.tutusw.fingerscanner0710-08-16-15.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2006bb59e8a2c6df352df1b4ccac94ad11edf1e525fc58d2b0acd6b71dd912a6/com.tutusw.fingerscanner0710-08-16-15.pcap
+2017-07-10 08:17:04,698 - COSMOS_TRIGGER_PY-Console - DEBUG - 90 KB/s (4096 bytes in 0.044s)
+2017-07-10 08:17:19,700 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
+2017-07-10 08:17:19,700 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.tutusw.fingerscanner
+2017-07-10 08:17:21,339 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
+2017-07-10 08:17:21,339 - COSMOS_TRIGGER_PY-Console - INFO - End
