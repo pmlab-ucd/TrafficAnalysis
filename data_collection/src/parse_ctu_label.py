@@ -4,6 +4,7 @@ from scapy.layers.inet import IP, TCP
 from scapy.all import *
 
 
+
 def get_packets(dirname, pcap):
     try:
         pkts = rdpcap(dirname + '/' + pcap)

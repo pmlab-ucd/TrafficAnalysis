@@ -428,6 +428,7 @@ class UIExerciser:
         #Utilities.adb_kill('tcpdump')
         #UIExerciser.run_adb_cmd('shell am force-stop fu.hao.uidroid')
         #os.system("TASKKILL /F /PID {pid} /T".format(pid=process.pid))
+        time.sleep(60)
         process.kill() # takes more time
         out_pcap = output_dir + package + current_time  + '.pcap'
         while not os.path.exists(out_pcap) or os.stat(out_pcap).st_size < 2:

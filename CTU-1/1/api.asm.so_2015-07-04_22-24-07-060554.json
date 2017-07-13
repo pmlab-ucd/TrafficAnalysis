@@ -1,1 +1,0 @@
-{"domain": "api.asm.so", "post_body": "specialid=82", "platform": "unknown", "referrer": "unknown", "uri": "/api/task/GetSpecials", "label": 1, "headers": {"charset": "UTF-8", "cookie": "", "content-length": "12", "content-type": "application/x-www-form-urlencoded", "host": "api.asm.so", "connection": "Keep-Alive"}, "timestamp": "2015-07-04_22-24-07-060554"}
