@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     user = 'hfu'
     aapt_loc = 'C:\Users\\' + user + '\AppData\Local\Android\sdk/build-tools/19.1.0/aapt.exe'
-    apk_dir = 'C:\Users\\' + user + '\Documents\FlowIntent\\apks\\VirusShare_Android_20130506_3\\'
+    apk_dir = 'C:\Users\\' + user + '\Documents\FlowIntent\\apks\\Music_Audio\\'
     UIExerciser.emu_loc = 'C:\Users\hfu\AppData\Local\Android\sdk/tools/emulator.exe'
     UIExerciser.emu_name = 'Qvga'
 
@@ -41,7 +41,7 @@ if __name__ == '__main__':
                     try:
                         apk = os.path.join(root, filename)
                         exerciser = UIExerciser(series, aapt_loc, apk_dir, out_base_dir, logger)
-                        exerciser.flowintent_first_page(series, os.path.join(root, filename), examined)
+                        exerciser.inspired_run(series, os.path.join(root, filename), examined, 'C:\\Users\\hfu\\Documents\\COSMOS\\output\\java\\')
                         break
                     except Exception as e:
                         print e
