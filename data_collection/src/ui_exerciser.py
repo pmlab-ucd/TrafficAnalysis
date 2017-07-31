@@ -316,7 +316,7 @@ class UIExerciser:
                 result = True
                 output = check_output(cmd, stderr=STDOUT, timeout=seconds)
                 for line in output.split('\n'):
-                    if 'Failure' in line or 'Error' or 'unable' in line:
+                    if 'Failure' in line or 'Error' in line or 'unable' in line:
                         result = False
                     tmp = line.replace(' ', '')
                     tmp = tmp.replace('\n', '')
