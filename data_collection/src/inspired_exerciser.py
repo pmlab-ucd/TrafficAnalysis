@@ -55,7 +55,8 @@ if __name__ == '__main__':
                     except Exception as e:
                         print e
                         if device == 'xiaoyao':
-                            UIExerciser.run_adb_cmd('connect 127.0.0.1:21503')
+                            if not UIExerciser.run_adb_cmd('connect 127.0.0.1:21503'):
+                                exit(1)
                         else:
                             UIExerciser.run_adb_cmd('reboot')
                         time.sleep(90)
