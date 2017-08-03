@@ -5,10 +5,23 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import KFold
+from sklearn import tree
+import pydotplus
+import codecs
+import cPickle
+from sklearn.metrics import accuracy_score
 
 import simplejson
 from utils import Utilities
 from itertools import takewhile, izip
+
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf8')
+
+import os
+os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz2.38/bin/'
 
 class Learner:
     global logger
@@ -78,7 +91,7 @@ class Learner:
         return train_data, labels
 
     @staticmethod
-    def gen_instances(pos_json_dir, neg_json_dir):
+    def gen_instances(pos_json_dir, neg_json_dir, output_dir=os.curdir, to_vec=True):
         pos_jsons = Learner.dir2jsons(pos_json_dir)
         neg_jsons = Learner.dir2jsons(neg_json_dir)
         logger.info(len(pos_jsons))
@@ -90,6 +103,8 @@ class Learner:
         for doc in docs:
             instances.append(doc.doc)
             labels.append(doc.label)
+        if not to_vec:
+            return  instances, labels
         # Initialize the "CountVectorizer" object, which is scikit-learn's
         # bag of words tool.
         vectorizer = CountVectorizer(analyzer="word", \
@@ -112,21 +127,35 @@ class Learner:
         vocab = vectorizer.get_feature_names()
         # logger.info(vocab)
         #train_data, labels = Learner.feature_filter_by_prefix(vocab, docs)
+        # Save vectorizer.vocabulary_
+        cPickle.dump(vectorizer.vocabulary_, open(output_dir + '/' + "vocabulary.pkl", "wb"))
 
-        return train_data, labels
+        return train_data, labels, vocab
 
     @staticmethod
-    def train(train_data, labels):
+    def train(train_data, labels, feature_names=None, output_dir=os.curdir, tree_name='tree'):
         # Initialize a Random Forest classifier with 100 trees
         cv = KFold(n_splits=10, random_state=33, shuffle=True)
         clf = DecisionTreeClassifier(class_weight='balanced')
-        logger.info(cross_val_score(clf, train_data, labels, cv=cv))
+        results = cross_val_score(clf, train_data, labels, cv=cv, scoring='f1')
+        logger.info(results)
 
         # Fit the forest to the training set, using the bag of words as
         # features and the sentiment labels as the response variable
         #
         # This may take a few minutes to run
-        #forest = clf.fit(train_data, labels)
+        clf = clf.fit(train_data, labels)
+        dot_data = tree.export_graphviz(clf, out_file=output_dir + '/' + tree_name +'.dot', feature_names=feature_names,
+                                        label='root', impurity=False, special_characters=True, max_depth=5)
+        dotfile = open(output_dir + '/' + tree_name +'.dot', 'r')
+        graph = pydotplus.graph_from_dot_data(dotfile.read())
+        graph.write_pdf(output_dir + '/' + tree_name +'.pdf')
+        dotfile.close()
+        simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'), separators=(',', ':'), sort_keys=True, indent=4)
+        # save the classifier
+        with open(output_dir + '/' + 'classifier.pkl', 'wb') as fid:
+            cPickle.dump(clf, fid)
+
 
 
     @staticmethod
@@ -140,11 +169,30 @@ class Learner:
             docs.append(Learner.LabelledDocs(line, label))
         return docs
 
+    @staticmethod
+    def predict(model, voc, instances, labels=None):
+        loaded_vec = CountVectorizer(decode_error="replace", vocabulary=voc)
+        data = loaded_vec.fit_transform(instances)
+        y_1 = model.predict(data)
+        if labels:
+            logger.info(accuracy_score(labels, y_1))
 
 if __name__ == '__main__':
     logger = Utilities.set_logger('Learner')
-    data, labels = Learner.gen_instances("C:\\Users\\hfu\\Documents\\flows\\CTU-13\\CTU-13-1\\1",
-                "C:\\Users\\hfu\\Documents\\flows\\CTU-13\\CTU-13-1\\0")
+    base_dir = 'C:\\Users\\hfu\\Documents\\flows\\CTU-13\\'
+    dataset_num = '10'
+    dataset = 'CTU-13-' + dataset_num + '\\'
+
+    train = False
+    if train:
+        data, labels, feature_names = Learner.gen_instances(base_dir + 'CTU-13-1\\' + '\\1',
+                                                            base_dir + dataset + '\\0',
+                                                            output_dir=base_dir + dataset)
         #"C:\Users\hfu\IdeaProjects\\recon\\test\\1",
          #                 "C:\Users\hfu\IdeaProjects\\recon\\test\\0")
-    Learner.train(data, labels)
+        Learner.train(data, labels, feature_names=feature_names, output_dir=base_dir + dataset, tree_name='Fig_tree_' + dataset_num)
+    else:
+        data, labels = Learner.gen_instances('', base_dir + dataset + '\\0', to_vec=False)
+        Learner.predict(cPickle.load(open(base_dir + 'CTU-13-13\\'  + 'classifier.pkl', 'rb')),
+                            cPickle.load(open(base_dir + 'CTU-13-13\\' + 'vocabulary.pkl', "rb")), data, labels=labels)
+

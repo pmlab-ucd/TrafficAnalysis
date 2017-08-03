@@ -310,19 +310,19 @@ class UIExerciser:
     def run_cmd(cmd):
         Utilities.logger.debug('Run cmd: ' + cmd)
         seconds = 60
-        result = True
         for i in range(1, 3):
+            time.sleep(5)
             try:
                 result = True
                 output = check_output(cmd, stderr=STDOUT, timeout=seconds)
                 for line in output.split('\n'):
-                    if 'Failure' in line or 'Error' in line:
+                    if 'Failure' in line or 'Error' in line or 'unable' in line:
                         result = False
                     tmp = line.replace(' ', '')
                     tmp = tmp.replace('\n', '')
                     if tmp != '':
                         Utilities.logger.debug(line)
-                return True
+                return result
             except Exception as exc:
                 Utilities.logger.warn(exc)
                 result = False
@@ -570,14 +570,17 @@ class UIExerciser:
         # Utilities.adb_kill('tcpdump')
         # UIExerciser.run_adb_cmd('shell am force-stop fu.hao.uidroid')
         # os.system("TASKKILL /F /PID {pid} /T".format(pid=process.pid))
-        time.sleep(60)
+        time.sleep(10)
         process.kill()  # takes more time
         out_pcap = output_dir + package + '_' + current_time + '.pcap'
-        while not os.path.exists(out_pcap) or os.stat(out_pcap).st_size < 2:
-            time.sleep(5)
-            cmd = 'pull /sdcard/' + package + '_' + current_time + '.pcap ' + out_pcap
-            UIExerciser.run_adb_cmd(cmd)
-            process.kill()  # takes more time
+        try:
+            while not os.path.exists(out_pcap) or os.stat(out_pcap).st_size < 2:
+                time.sleep(5)
+                cmd = 'pull /sdcard/' + package + '_' + current_time + '.pcap ' + out_pcap
+                UIExerciser.run_adb_cmd(cmd)
+                process.kill()  # takes more time
+        except:
+            Utilities.logger.info('wait..')
             # if not os.path.exists(out_pcap):
             # raise Exception('The pcap does not exist.')
         # UIExerciser.run_adb_cmd('shell rm /sdcard/' + package + current_time + '.pcap')
@@ -585,6 +588,7 @@ class UIExerciser:
         # UIExerciser.run_adb_cmd('pull /sdcard/' + package + current_time + '.log ' + output_dir)
         # UIExerciser.run_adb_cmd('shell rm /sdcard/' + package + current_time + '.log')
         taint_logs = []
+        print 'fuck'
         Utilities.run_method(TaintDroidLogHandler.collect_taint_log, 15, args=[taint_logs])
         with open(output_dir + package + '_' + current_time + '.json', 'w') as outfile:
             json.dump(taint_logs, outfile)
