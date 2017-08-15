@@ -1,46 +1,0 @@
-2017-07-09 02:11:31,362 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\96cab8bfe761913852a95b6c0ad9e166d7054cc6.apk
-2017-07-09 02:11:31,364 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.cdjm.reader.evilMeiguo8
-2017-07-09 02:11:31,365 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.cdjm.reader.evilMeiguo8
-2017-07-09 02:11:32,236 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 02:11:32,236 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\96cab8bfe761913852a95b6c0ad9e166d7054cc6.apk
-2017-07-09 02:11:36,460 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/96cab8bfe761913852a95b6c0ad9e166d7054cc6.apk
-2017-07-09 02:11:36,461 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 02:11:36,463 - COSMOS_TRIGGER_PY-Console - DEBUG - 2653 KB/s (1709843 bytes in 0.629s)
-2017-07-09 02:11:36,463 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 02:11:37,234 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 02:11:37,236 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 02:11:38,105 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 02:11:38,105 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=179ms (0ms mobile, 179ms wifi, 0ms not connected)
-2017-07-09 02:11:39,483 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 02:11:39,555 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 02:11:39,555 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 02:11:39,588 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.cdjm.reader.evilMeiguo8 --ignore-crashes 1
-2017-07-09 02:11:41,072 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 02:11:41,072 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=241ms (0ms mobile, 241ms wifi, 0ms not connected)
-2017-07-09 02:11:41,118 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 02:11:41,503 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 02:12:05,289 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cdjm.reader.evilMeiguo8" password="false" resource-id="id/root_view" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cdjm.reader.evilMeiguo8" password="false" resource-id="id/root_view" scrollable="false" selected="false" text="">
-      <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cdjm.reader.evilMeiguo8" password="false" resource-id="id/root_view" scrollable="false" selected="false" text="">
-        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cdjm.reader.evilMeiguo8" password="false" resource-id="id/root_view" scrollable="false" selected="false" text="">
-          <node bounds="[0,0][720,1112]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="com.cdjm.reader.evilMeiguo8" password="false" resource-id="id/main_view" scrollable="false" selected="false" text=""/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 02:12:06,427 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 02:12:06,427 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 02:12:08,232 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/96cab8bfe761913852a95b6c0ad9e166d7054cc6/first_page.png
-2017-07-09 02:12:08,460 - COSMOS_TRIGGER_PY-Console - DEBUG - 3813 KB/s (652406 bytes in 0.167s)
-2017-07-09 02:12:13,505 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.cdjm.reader.evilMeiguo80709-02-11-31.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/96cab8bfe761913852a95b6c0ad9e166d7054cc6/com.cdjm.reader.evilMeiguo80709-02-11-31.pcap
-2017-07-09 02:12:18,588 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.cdjm.reader.evilMeiguo80709-02-11-31.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/96cab8bfe761913852a95b6c0ad9e166d7054cc6/com.cdjm.reader.evilMeiguo80709-02-11-31.pcap
-2017-07-09 02:12:23,641 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.cdjm.reader.evilMeiguo80709-02-11-31.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/96cab8bfe761913852a95b6c0ad9e166d7054cc6/com.cdjm.reader.evilMeiguo80709-02-11-31.pcap
-2017-07-09 02:12:28,729 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.cdjm.reader.evilMeiguo80709-02-11-31.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/96cab8bfe761913852a95b6c0ad9e166d7054cc6/com.cdjm.reader.evilMeiguo80709-02-11-31.pcap
-2017-07-09 02:12:33,812 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.cdjm.reader.evilMeiguo80709-02-11-31.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/96cab8bfe761913852a95b6c0ad9e166d7054cc6/com.cdjm.reader.evilMeiguo80709-02-11-31.pcap
-2017-07-09 02:12:33,930 - COSMOS_TRIGGER_PY-Console - DEBUG - 571 KB/s (4096 bytes in 0.007s)
-2017-07-09 02:12:48,930 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-09 02:12:48,933 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.cdjm.reader.evilMeiguo8
-2017-07-09 02:12:50,417 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 02:12:50,417 - COSMOS_TRIGGER_PY-Console - INFO - End

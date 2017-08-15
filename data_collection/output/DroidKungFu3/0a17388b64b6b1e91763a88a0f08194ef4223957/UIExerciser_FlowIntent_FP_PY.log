@@ -1,62 +1,0 @@
-2017-07-07 21:03:11,627 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\0a17388b64b6b1e91763a88a0f08194ef4223957.apk
-2017-07-07 21:03:11,627 - COSMOS_TRIGGER_PY-Console - INFO - pkg:guessclothes.com.game
-2017-07-07 21:03:11,627 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall guessclothes.com.game
-2017-07-07 21:03:12,401 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-07 21:03:12,401 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\0a17388b64b6b1e91763a88a0f08194ef4223957.apk
-2017-07-07 21:03:14,553 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/0a17388b64b6b1e91763a88a0f08194ef4223957.apk
-2017-07-07 21:03:14,553 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-07 21:03:14,553 - COSMOS_TRIGGER_PY-Console - DEBUG - 1896 KB/s (564295 bytes in 0.290s)
-2017-07-07 21:03:14,553 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-07 21:03:15,232 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-07 21:03:15,232 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-07 21:03:16,005 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-07 21:03:16,005 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=49ms (0ms mobile, 49ms wifi, 0ms not connected)
-2017-07-07 21:03:16,005 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-07 21:03:16,085 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-07 21:03:16,085 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-07 21:03:16,101 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p guessclothes.com.game --ignore-crashes 1
-2017-07-07 21:03:17,226 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-07 21:03:17,226 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=146ms (0ms mobile, 146ms wifi, 0ms not connected)
-2017-07-07 21:03:17,299 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-07 21:03:18,434 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-07 21:03:42,082 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="guessclothes.com.game" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="guessclothes.com.game" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="guessclothes.com.game" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="guessclothes.com.game" password="false" resource-id="id/title" scrollable="false" selected="false" text="猜扑克脱衣服"/>
-      </node>
-      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="guessclothes.com.game" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="guessclothes.com.game" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-          <node bounds="[0,100][720,1060]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="guessclothes.com.game" password="false" resource-id="id/imageface" scrollable="false" selected="false" text="">
-            <node bounds="[0,100][720,1060]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="guessclothes.com.game" password="false" resource-id="id/imageface" scrollable="false" selected="false" text=""/>
-          </node>
-          <node bounds="[0,100][720,201]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="guessclothes.com.game" password="false" resource-id="id/outPut" scrollable="false" selected="false" text="你能猜到哪张牌是黑桃A吗？我打赌你猜不到哦！"/>
-          <node bounds="[0,816][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="guessclothes.com.game" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-            <node bounds="[0,816][720,1044]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="guessclothes.com.game" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-              <!--NAF: The following control may not be accessibility friendly-->
-              <node NAF="true" bounds="[0,816][173,1044]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="guessclothes.com.game" password="false" resource-id="id/image1" scrollable="false" selected="false" text=""/>
-              <!--NAF: The following control may not be accessibility friendly-->
-              <node NAF="true" bounds="[173,816][346,1044]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="guessclothes.com.game" password="false" resource-id="id/image2" scrollable="false" selected="false" text=""/>
-              <!--NAF: The following control may not be accessibility friendly-->
-              <node NAF="true" bounds="[346,816][519,1044]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="guessclothes.com.game" password="false" resource-id="id/image3" scrollable="false" selected="false" text=""/>
-            </node>
-            <node bounds="[0,1044][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="guessclothes.com.game" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-              <node bounds="[380,1064][540,1164]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="guessclothes.com.game" password="false" resource-id="id/start" scrollable="false" selected="false" text="洗牌"/>
-              <node bounds="[540,1064][700,1164]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="guessclothes.com.game" password="false" resource-id="id/end" scrollable="false" selected="false" text="退出"/>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-07 21:03:43,242 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-07 21:03:43,243 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-07 21:03:45,598 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/0a17388b64b6b1e91763a88a0f08194ef4223957/first_page.png
-2017-07-07 21:03:45,930 - COSMOS_TRIGGER_PY-Console - DEBUG - 3448 KB/s (838221 bytes in 0.237s)
-2017-07-07 21:03:45,963 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/guessclothes.com.game0707-21-03-11.pcap ../output/DroidKungFu3/0a17388b64b6b1e91763a88a0f08194ef4223957/guessclothes.com.game0707-21-03-11.pcap
-2017-07-07 21:03:46,092 - COSMOS_TRIGGER_PY-Console - DEBUG - 380 KB/s (4096 bytes in 0.010s)
-2017-07-07 21:03:46,092 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/guessclothes.com.game0707-21-03-11.pcap
-2017-07-07 21:03:46,476 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall guessclothes.com.game
-2017-07-07 21:03:48,306 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-07 21:03:48,306 - COSMOS_TRIGGER_PY-Console - INFO - End

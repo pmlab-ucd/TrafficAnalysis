@@ -1,52 +1,0 @@
-2017-07-08 22:27:48,891 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\BaseBridge\64bc7f0381ce1793f90f278217f29ff7189d1c35.apk
-2017-07-08 22:27:48,891 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.keji.fixedposition
-2017-07-08 22:27:48,892 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.keji.fixedposition
-2017-07-08 22:27:49,621 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 22:27:49,622 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\BaseBridge\64bc7f0381ce1793f90f278217f29ff7189d1c35.apk
-2017-07-08 22:27:51,960 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/64bc7f0381ce1793f90f278217f29ff7189d1c35.apk
-2017-07-08 22:27:51,960 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 22:27:51,961 - COSMOS_TRIGGER_PY-Console - DEBUG - 2049 KB/s (943672 bytes in 0.449s)
-2017-07-08 22:27:51,963 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 22:27:52,684 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 22:27:52,686 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 22:27:53,507 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 22:27:53,509 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=120ms (0ms mobile, 120ms wifi, 0ms not connected)
-2017-07-08 22:27:54,934 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 22:27:55,005 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 22:27:55,006 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 22:27:55,023 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.keji.fixedposition --ignore-crashes 1
-2017-07-08 22:27:56,319 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 22:27:56,321 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=197ms (0ms mobile, 197ms wifi, 0ms not connected)
-2017-07-08 22:27:56,395 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 22:27:56,561 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 22:28:17,802 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.fixedposition" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.fixedposition" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,25][360,53]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.fixedposition" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[5,26][356,51]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.fixedposition" password="false" scrollable="false" selected="false" text="情侣定位"/>
-      </node>
-      <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.keji.fixedposition" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.fixedposition" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[105,84][273,122]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.fixedposition" password="false" scrollable="false" selected="false" text="情侣定位"/>
-          <node bounds="[12,188][161,214]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.keji.fixedposition" password="false" scrollable="false" selected="false" text="请输入定位号码:"/>
-          <!--NAF: The following control may not be accessibility friendly-->
-          <node NAF="true" bounds="[18,224][266,269]" checkable="false" checked="false" class="android.widget.EditText" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="2" long-clickable="true" package="com.keji.fixedposition" password="false" scrollable="false" selected="false" text=""/>
-          <node bounds="[282,224][361,271]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.keji.fixedposition" password="false" scrollable="false" selected="false" text="确定"/>
-          <node bounds="[122,371][200,419]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="4" long-clickable="false" package="com.keji.fixedposition" password="false" scrollable="false" selected="false" text="联系人"/>
-          <node bounds="[122,431][200,471]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="5" long-clickable="false" package="com.keji.fixedposition" password="false" scrollable="false" selected="false" text="设置"/>
-          <node bounds="[122,487][200,528]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="6" long-clickable="false" package="com.keji.fixedposition" password="false" scrollable="false" selected="false" text="退出"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 22:28:19,002 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 22:28:19,003 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 22:28:19,986 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/64bc7f0381ce1793f90f278217f29ff7189d1c35/first_page.png
-2017-07-08 22:28:20,210 - COSMOS_TRIGGER_PY-Console - DEBUG - 2687 KB/s (326176 bytes in 0.118s)
-2017-07-08 22:28:25,246 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.keji.fixedposition0708-22-27-48.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/64bc7f0381ce1793f90f278217f29ff7189d1c35/com.keji.fixedposition0708-22-27-48.pcap
-2017-07-08 22:28:25,342 - COSMOS_TRIGGER_PY-Console - DEBUG - 798 KB/s (12288 bytes in 0.015s)
-2017-07-08 22:28:40,345 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-08 22:28:40,348 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.keji.fixedposition
-2017-07-08 22:28:41,696 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 22:28:41,697 - COSMOS_TRIGGER_PY-Console - INFO - End

@@ -1,61 +1,0 @@
-2017-07-08 21:59:51,216 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\BaseBridge\396888b036203ee436f860b664aec91f8b40afdc.apk
-2017-07-08 21:59:51,217 - COSMOS_TRIGGER_PY-Console - INFO - pkg:fahrbot.apps.rootcallblocker.pro
-2017-07-08 21:59:51,219 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall fahrbot.apps.rootcallblocker.pro
-2017-07-08 21:59:52,107 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 21:59:52,108 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\BaseBridge\396888b036203ee436f860b664aec91f8b40afdc.apk
-2017-07-08 21:59:54,289 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/396888b036203ee436f860b664aec91f8b40afdc.apk
-2017-07-08 21:59:54,293 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 21:59:54,296 - COSMOS_TRIGGER_PY-Console - DEBUG - 1577 KB/s (719114 bytes in 0.445s)
-2017-07-08 21:59:54,298 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 21:59:55,029 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 21:59:55,029 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 21:59:56,055 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 21:59:56,056 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=177ms (0ms mobile, 177ms wifi, 0ms not connected)
-2017-07-08 21:59:57,654 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 21:59:57,779 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 21:59:57,780 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 21:59:57,802 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p fahrbot.apps.rootcallblocker.pro --ignore-crashes 1
-2017-07-08 21:59:58,826 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 21:59:58,828 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=107ms (0ms mobile, 107ms wifi, 0ms not connected)
-2017-07-08 21:59:58,903 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 21:59:59,073 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 22:00:25,138 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-          <node bounds="[312,339][408,435]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="Superuser Request" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text=""/>
-          <node bounds="[223,435][496,478]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Superuser Request"/>
-          <node bounds="[40,488][680,492]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text=""/>
-          <!--NAF: The following control may not be accessibility friendly-->
-          <node NAF="true" bounds="[40,502][680,684]" checkable="false" checked="false" class="android.widget.ViewFlipper" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[40,502][680,672]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="系统级呼叫拦截​​​​​​​​​​​​​​​​​ is requesting Superuser access.  Warning: If you did not initiate this action, or if you do not understand this request, it's generally a good idea to deny it."/>
-          </node>
-          <node bounds="[40,684][680,722]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Tap for more info"/>
-          <node bounds="[40,722][680,818]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="5" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[40,722][360,818]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Deny"/>
-            <node bounds="[360,722][680,818]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Allow"/>
-          </node>
-          <node bounds="[40,818][680,895]" checkable="true" checked="true" class="android.widget.CheckBox" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="6" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Remember"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 22:00:26,385 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 22:00:26,387 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 22:00:27,148 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/396888b036203ee436f860b664aec91f8b40afdc/first_page.png
-2017-07-08 22:00:27,338 - COSMOS_TRIGGER_PY-Console - DEBUG - 1554 KB/s (122806 bytes in 0.077s)
-2017-07-08 22:00:32,382 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/fahrbot.apps.rootcallblocker.pro0708-21-59-51.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/396888b036203ee436f860b664aec91f8b40afdc/fahrbot.apps.rootcallblocker.pro0708-21-59-51.pcap
-2017-07-08 22:00:37,476 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/fahrbot.apps.rootcallblocker.pro0708-21-59-51.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/396888b036203ee436f860b664aec91f8b40afdc/fahrbot.apps.rootcallblocker.pro0708-21-59-51.pcap
-2017-07-08 22:00:42,561 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/fahrbot.apps.rootcallblocker.pro0708-21-59-51.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/396888b036203ee436f860b664aec91f8b40afdc/fahrbot.apps.rootcallblocker.pro0708-21-59-51.pcap
-2017-07-08 22:00:47,647 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/fahrbot.apps.rootcallblocker.pro0708-21-59-51.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/396888b036203ee436f860b664aec91f8b40afdc/fahrbot.apps.rootcallblocker.pro0708-21-59-51.pcap
-2017-07-08 22:00:52,733 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/fahrbot.apps.rootcallblocker.pro0708-21-59-51.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/396888b036203ee436f860b664aec91f8b40afdc/fahrbot.apps.rootcallblocker.pro0708-21-59-51.pcap
-2017-07-08 22:00:57,869 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/fahrbot.apps.rootcallblocker.pro0708-21-59-51.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/396888b036203ee436f860b664aec91f8b40afdc/fahrbot.apps.rootcallblocker.pro0708-21-59-51.pcap
-2017-07-08 22:01:02,963 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/fahrbot.apps.rootcallblocker.pro0708-21-59-51.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/396888b036203ee436f860b664aec91f8b40afdc/fahrbot.apps.rootcallblocker.pro0708-21-59-51.pcap
-2017-07-08 22:01:08,102 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/fahrbot.apps.rootcallblocker.pro0708-21-59-51.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/396888b036203ee436f860b664aec91f8b40afdc/fahrbot.apps.rootcallblocker.pro0708-21-59-51.pcap
-2017-07-08 22:01:08,240 - COSMOS_TRIGGER_PY-Console - DEBUG - 399 KB/s (4096 bytes in 0.010s)
-2017-07-08 22:01:23,242 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-08 22:01:23,243 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall fahrbot.apps.rootcallblocker.pro
-2017-07-08 22:01:25,198 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 22:01:25,200 - COSMOS_TRIGGER_PY-Console - INFO - End

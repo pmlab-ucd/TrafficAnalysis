@@ -1,40 +1,0 @@
-2017-07-08 01:29:37,818 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\9e9f1ec47158f2c1e6268a338ab921a1effd8960.apk
-2017-07-08 01:29:37,818 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.gp.animalkeeper
-2017-07-08 01:29:37,818 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.animalkeeper
-2017-07-08 01:29:38,641 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 01:29:38,642 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\9e9f1ec47158f2c1e6268a338ab921a1effd8960.apk
-2017-07-08 01:29:41,687 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/9e9f1ec47158f2c1e6268a338ab921a1effd8960.apk
-2017-07-08 01:29:41,688 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 01:29:41,688 - COSMOS_TRIGGER_PY-Console - DEBUG - 2287 KB/s (1493390 bytes in 0.637s)
-2017-07-08 01:29:41,688 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 01:29:42,473 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 01:29:42,474 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 01:29:43,466 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 01:29:43,467 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=174ms (0ms mobile, 174ms wifi, 0ms not connected)
-2017-07-08 01:29:44,862 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 01:29:44,971 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 01:29:44,971 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 01:29:44,986 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.gp.animalkeeper --ignore-crashes 1
-2017-07-08 01:29:46,122 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 01:29:46,124 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=159ms (0ms mobile, 159ms wifi, 0ms not connected)
-2017-07-08 01:29:46,196 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 01:29:46,322 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 01:30:05,371 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.animalkeeper" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.animalkeeper" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.animalkeeper" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[2,0][357,592]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.animalkeeper" password="false" scrollable="false" selected="false" text=""/>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 01:30:06,519 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 01:30:06,519 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 01:30:07,816 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/9e9f1ec47158f2c1e6268a338ab921a1effd8960/first_page.png
-2017-07-08 01:30:08,000 - COSMOS_TRIGGER_PY-Console - DEBUG - 3579 KB/s (403216 bytes in 0.109s)
-2017-07-08 01:30:08,049 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.gp.animalkeeper0708-01-29-37.pcap ../output/DroidKungFu3/9e9f1ec47158f2c1e6268a338ab921a1effd8960/com.gp.animalkeeper0708-01-29-37.pcap
-2017-07-08 01:30:08,119 - COSMOS_TRIGGER_PY-Console - DEBUG - 725 KB/s (4096 bytes in 0.005s)
-2017-07-08 01:30:08,119 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.gp.animalkeeper0708-01-29-37.pcap
-2017-07-08 01:30:08,509 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.animalkeeper
-2017-07-08 01:30:09,947 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 01:30:09,948 - COSMOS_TRIGGER_PY-Console - INFO - End

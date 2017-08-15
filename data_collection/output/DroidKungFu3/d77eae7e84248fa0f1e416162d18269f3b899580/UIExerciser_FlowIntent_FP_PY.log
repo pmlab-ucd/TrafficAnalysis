@@ -1,26 +1,0 @@
-2017-07-08 04:37:17,793 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\d77eae7e84248fa0f1e416162d18269f3b899580.apk
-2017-07-08 04:37:17,793 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.alan.siwameinv7
-2017-07-08 04:37:17,793 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.alan.siwameinv7
-2017-07-08 04:37:18,576 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 04:37:18,576 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\d77eae7e84248fa0f1e416162d18269f3b899580.apk
-2017-07-08 04:37:23,977 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/d77eae7e84248fa0f1e416162d18269f3b899580.apk
-2017-07-08 04:37:23,977 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 04:37:23,977 - COSMOS_TRIGGER_PY-Console - DEBUG - 2951 KB/s (8699049 bytes in 2.878s)
-2017-07-08 04:37:23,979 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 04:37:24,779 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 04:37:24,780 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 04:37:25,665 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 04:37:25,665 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=167ms (0ms mobile, 167ms wifi, 0ms not connected)
-2017-07-08 04:37:26,996 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 04:37:32,023 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 04:37:32,023 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 04:37:32,051 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.alan.siwameinv7 --ignore-crashes 1
-2017-07-08 04:37:32,944 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 04:37:32,944 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=95ms (0ms mobile, 95ms wifi, 0ms not connected)
-2017-07-08 04:37:33,020 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 04:37:34,161 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 04:37:59,232 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.alan.siwameinv70708-04-37-17.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/d77eae7e84248fa0f1e416162d18269f3b899580/com.alan.siwameinv70708-04-37-17.pcap
-2017-07-08 04:37:59,323 - COSMOS_TRIGGER_PY-Console - DEBUG - 934 KB/s (9577 bytes in 0.010s)
-2017-07-08 04:37:59,792 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.alan.siwameinv7
-2017-07-08 04:38:01,325 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 04:38:01,325 - COSMOS_TRIGGER_PY-Console - INFO - End

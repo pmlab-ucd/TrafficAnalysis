@@ -1,48 +1,0 @@
-2017-07-08 22:01:25,414 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\BaseBridge\3a9b4e71df7b2ae05acd29b6e1ab7e68ca697187.apk
-2017-07-08 22:01:25,417 - COSMOS_TRIGGER_PY-Console - INFO - pkg:net.yebaihe.xpzs
-2017-07-08 22:01:25,417 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall net.yebaihe.xpzs
-2017-07-08 22:01:26,194 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 22:01:26,194 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\BaseBridge\3a9b4e71df7b2ae05acd29b6e1ab7e68ca697187.apk
-2017-07-08 22:01:28,423 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/3a9b4e71df7b2ae05acd29b6e1ab7e68ca697187.apk
-2017-07-08 22:01:28,424 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 22:01:28,424 - COSMOS_TRIGGER_PY-Console - DEBUG - 933 KB/s (571407 bytes in 0.597s)
-2017-07-08 22:01:28,426 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 22:01:29,203 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 22:01:29,204 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 22:01:30,191 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 22:01:30,193 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=165ms (0ms mobile, 165ms wifi, 0ms not connected)
-2017-07-08 22:01:31,658 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 22:01:31,779 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 22:01:31,780 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 22:01:31,798 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p net.yebaihe.xpzs --ignore-crashes 1
-2017-07-08 22:01:32,887 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 22:01:32,888 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=150ms (0ms mobile, 150ms wifi, 0ms not connected)
-2017-07-08 22:01:32,959 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 22:01:33,130 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 22:01:59,601 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[40,322][680,911]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="net.yebaihe.xpzs" password="false" resource-id="id/parentPanel" scrollable="false" selected="false" text="">
-    <node bounds="[40,322][680,911]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="net.yebaihe.xpzs" password="false" resource-id="id/parentPanel" scrollable="false" selected="false" text="">
-      <node bounds="[40,322][680,911]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="net.yebaihe.xpzs" password="false" resource-id="id/parentPanel" scrollable="false" selected="false" text="">
-        <node bounds="[40,322][680,911]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="net.yebaihe.xpzs" password="false" resource-id="id/parentPanel" scrollable="false" selected="false" text="">
-          <node bounds="[46,340][678,905]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="net.yebaihe.xpzs" password="false" resource-id="id/contentPanel" scrollable="false" selected="false" text="">
-            <node bounds="[71,360][653,875]" checkable="false" checked="false" class="android.widget.ListView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="false" package="net.yebaihe.xpzs" password="false" resource-id="id/select_dialog_listview" scrollable="false" selected="false" text="">
-              <node bounds="[71,360][653,488]" checkable="true" checked="true" class="android.widget.CheckedTextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="net.yebaihe.xpzs" password="false" resource-id="id/text1" scrollable="false" selected="false" text="A"/>
-              <node bounds="[71,489][653,617]" checkable="true" checked="false" class="android.widget.CheckedTextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="net.yebaihe.xpzs" password="false" resource-id="id/text1" scrollable="false" selected="false" text="B"/>
-              <node bounds="[71,618][653,746]" checkable="true" checked="false" class="android.widget.CheckedTextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="net.yebaihe.xpzs" password="false" resource-id="id/text1" scrollable="false" selected="false" text="AB"/>
-              <node bounds="[71,747][653,875]" checkable="true" checked="false" class="android.widget.CheckedTextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="net.yebaihe.xpzs" password="false" resource-id="id/text1" scrollable="false" selected="false" text="O"/>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 22:02:00,772 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 22:02:00,773 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 22:02:01,750 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/3a9b4e71df7b2ae05acd29b6e1ab7e68ca697187/first_page.png
-2017-07-08 22:02:01,923 - COSMOS_TRIGGER_PY-Console - DEBUG - 2901 KB/s (255728 bytes in 0.086s)
-2017-07-08 22:02:06,950 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/net.yebaihe.xpzs0708-22-01-25.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/3a9b4e71df7b2ae05acd29b6e1ab7e68ca697187/net.yebaihe.xpzs0708-22-01-25.pcap
-2017-07-08 22:02:07,032 - COSMOS_TRIGGER_PY-Console - DEBUG - 798 KB/s (8192 bytes in 0.010s)
-2017-07-08 22:02:07,448 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall net.yebaihe.xpzs
-2017-07-08 22:02:08,878 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 22:02:08,878 - COSMOS_TRIGGER_PY-Console - INFO - End

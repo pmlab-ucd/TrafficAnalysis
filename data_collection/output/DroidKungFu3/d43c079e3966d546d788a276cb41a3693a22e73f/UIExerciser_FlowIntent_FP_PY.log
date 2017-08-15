@@ -1,44 +1,0 @@
-2017-07-08 04:34:26,456 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\d43c079e3966d546d788a276cb41a3693a22e73f.apk
-2017-07-08 04:34:26,456 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.ps.mine
-2017-07-08 04:34:26,456 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.mine
-2017-07-08 04:34:27,227 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 04:34:27,227 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\d43c079e3966d546d788a276cb41a3693a22e73f.apk
-2017-07-08 04:34:29,328 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/d43c079e3966d546d788a276cb41a3693a22e73f.apk
-2017-07-08 04:34:29,328 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 04:34:29,328 - COSMOS_TRIGGER_PY-Console - DEBUG - 2289 KB/s (831471 bytes in 0.354s)
-2017-07-08 04:34:29,328 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 04:34:30,072 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 04:34:30,072 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 04:34:30,915 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 04:34:30,917 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=80ms (0ms mobile, 80ms wifi, 0ms not connected)
-2017-07-08 04:34:32,269 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 04:34:32,346 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 04:34:32,346 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 04:34:32,362 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.ps.mine --ignore-crashes 1
-2017-07-08 04:34:33,290 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 04:34:33,292 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=107ms (0ms mobile, 107ms wifi, 0ms not connected)
-2017-07-08 04:34:33,369 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 04:34:33,469 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 04:34:53,782 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.mine" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.mine" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,25][360,53]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.mine" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[5,26][356,51]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.mine" password="false" scrollable="false" selected="false" text="Mine"/>
-      </node>
-      <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.mine" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.mine" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.ps.mine" password="false" scrollable="false" selected="false" text=""/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 04:34:54,931 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 04:34:54,933 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 04:34:55,572 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/d43c079e3966d546d788a276cb41a3693a22e73f/first_page.png
-2017-07-08 04:34:59,996 - COSMOS_TRIGGER_PY-Console - DEBUG - 1965 KB/s (55289 bytes in 0.027s)
-2017-07-08 04:35:05,157 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.ps.mine0708-04-34-26.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/d43c079e3966d546d788a276cb41a3693a22e73f/com.ps.mine0708-04-34-26.pcap
-2017-07-08 04:35:05,266 - COSMOS_TRIGGER_PY-Console - DEBUG - 541 KB/s (4163 bytes in 0.007s)
-2017-07-08 04:35:05,592 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.mine
-2017-07-08 04:35:07,424 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 04:35:07,424 - COSMOS_TRIGGER_PY-Console - INFO - End

@@ -1,47 +1,0 @@
-2017-07-07 23:59:21,292 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\579016281805dcbb03abb5e70cc40a316ca02540.apk
-2017-07-07 23:59:21,292 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.wanpu.kunchongddp
-2017-07-07 23:59:21,293 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.wanpu.kunchongddp
-2017-07-07 23:59:22,073 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-07 23:59:22,075 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\579016281805dcbb03abb5e70cc40a316ca02540.apk
-2017-07-07 23:59:25,006 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/579016281805dcbb03abb5e70cc40a316ca02540.apk
-2017-07-07 23:59:25,007 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-07 23:59:25,007 - COSMOS_TRIGGER_PY-Console - DEBUG - 1734 KB/s (881306 bytes in 0.496s)
-2017-07-07 23:59:25,007 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-07 23:59:25,729 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-07 23:59:25,729 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-07 23:59:26,601 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-07 23:59:26,601 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=154ms (0ms mobile, 154ms wifi, 0ms not connected)
-2017-07-07 23:59:27,963 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-07 23:59:28,033 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-07 23:59:28,035 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-07 23:59:28,052 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.wanpu.kunchongddp --ignore-crashes 1
-2017-07-07 23:59:29,184 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-07 23:59:29,184 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=229ms (0ms mobile, 229ms wifi, 0ms not connected)
-2017-07-07 23:59:29,255 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-07 23:59:29,378 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-07 23:59:50,256 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.wanpu.kunchongddp" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.wanpu.kunchongddp" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,25][360,53]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.wanpu.kunchongddp" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[5,26][356,51]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.wanpu.kunchongddp" password="false" scrollable="false" selected="false" text="昆虫对对碰"/>
-      </node>
-      <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.wanpu.kunchongddp" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.wanpu.kunchongddp" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[11,64][349,86]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.wanpu.kunchongddp" password="false" scrollable="false" selected="false" text=""/>
-          <node bounds="[124,198][236,252]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.wanpu.kunchongddp" password="false" scrollable="false" selected="false" text="开始游戏"/>
-          <node bounds="[124,308][236,362]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.wanpu.kunchongddp" password="false" scrollable="false" selected="false" text="退出游戏"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-07 23:59:51,417 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-07 23:59:51,417 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-07 23:59:52,549 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/579016281805dcbb03abb5e70cc40a316ca02540/first_page.png
-2017-07-07 23:59:52,776 - COSMOS_TRIGGER_PY-Console - DEBUG - 3426 KB/s (489881 bytes in 0.139s)
-2017-07-07 23:59:52,823 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.wanpu.kunchongddp0707-23-59-21.pcap ../output/DroidKungFu3/579016281805dcbb03abb5e70cc40a316ca02540/com.wanpu.kunchongddp0707-23-59-21.pcap
-2017-07-07 23:59:52,904 - COSMOS_TRIGGER_PY-Console - DEBUG - 1064 KB/s (8192 bytes in 0.007s)
-2017-07-07 23:59:52,904 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.wanpu.kunchongddp0707-23-59-21.pcap
-2017-07-07 23:59:53,467 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.wanpu.kunchongddp
-2017-07-07 23:59:55,365 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-07 23:59:55,365 - COSMOS_TRIGGER_PY-Console - INFO - End

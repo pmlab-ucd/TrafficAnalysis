@@ -1,1 +1,0 @@
-[{"src": ["IMEI"], "dst": "219.234.85.193", "process_name": "com.gp.jewels", "process_id": "14184", "log_time": "07-08 09:08:55.506", "message": "libcore.os.send(219.234.85.193) received data with tag 0x400 data=[GET /action/connect/active?app_id=2c4a1dbc53bccbdc4afe9608bffa2229&udid=351565054929465&imsi=3104104] ", "channel": "HTTP"}]

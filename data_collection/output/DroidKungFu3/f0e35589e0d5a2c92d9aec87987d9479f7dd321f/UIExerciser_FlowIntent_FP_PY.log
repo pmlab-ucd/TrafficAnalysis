@@ -1,45 +1,0 @@
-2017-07-08 05:01:12,338 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\f0e35589e0d5a2c92d9aec87987d9479f7dd321f.apk
-2017-07-08 05:01:12,338 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.ps.kickmouse
-2017-07-08 05:01:12,338 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.kickmouse
-2017-07-08 05:01:13,062 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 05:01:13,062 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\f0e35589e0d5a2c92d9aec87987d9479f7dd321f.apk
-2017-07-08 05:01:15,601 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/f0e35589e0d5a2c92d9aec87987d9479f7dd321f.apk
-2017-07-08 05:01:15,601 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 05:01:15,601 - COSMOS_TRIGGER_PY-Console - DEBUG - 2570 KB/s (1460171 bytes in 0.554s)
-2017-07-08 05:01:15,601 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 05:01:16,482 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 05:01:16,483 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 05:01:17,516 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 05:01:17,516 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=141ms (0ms mobile, 141ms wifi, 0ms not connected)
-2017-07-08 05:01:18,880 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 05:01:18,950 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 05:01:18,950 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 05:01:18,966 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.ps.kickmouse --ignore-crashes 1
-2017-07-08 05:01:19,940 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 05:01:19,940 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=143ms (0ms mobile, 143ms wifi, 0ms not connected)
-2017-07-08 05:01:20,019 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 05:01:20,121 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 05:01:40,099 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.kickmouse" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.kickmouse" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.kickmouse" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.kickmouse" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[98,101][261,146]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.ps.kickmouse" password="false" scrollable="false" selected="false" text="开 始"/>
-          <node bounds="[98,158][261,203]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.ps.kickmouse" password="false" scrollable="false" selected="false" text="继 续"/>
-          <node bounds="[98,214][261,259]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.ps.kickmouse" password="false" scrollable="false" selected="false" text="关 于"/>
-          <node bounds="[98,270][261,315]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.ps.kickmouse" password="false" scrollable="false" selected="false" text="结 束"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 05:01:41,265 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 05:01:41,265 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 05:01:43,334 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/f0e35589e0d5a2c92d9aec87987d9479f7dd321f/first_page.png
-2017-07-08 05:01:43,668 - COSMOS_TRIGGER_PY-Console - DEBUG - 3469 KB/s (771096 bytes in 0.217s)
-2017-07-08 05:01:48,813 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.ps.kickmouse0708-05-01-12.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/f0e35589e0d5a2c92d9aec87987d9479f7dd321f/com.ps.kickmouse0708-05-01-12.pcap
-2017-07-08 05:01:48,927 - COSMOS_TRIGGER_PY-Console - DEBUG - 260 KB/s (1472 bytes in 0.005s)
-2017-07-08 05:02:03,928 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-08 05:02:03,930 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.kickmouse
-2017-07-08 05:02:05,571 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 05:02:05,571 - COSMOS_TRIGGER_PY-Console - INFO - End

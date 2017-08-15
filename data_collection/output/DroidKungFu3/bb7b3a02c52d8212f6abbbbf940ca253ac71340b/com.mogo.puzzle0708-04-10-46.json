@@ -1,1 +1,0 @@
-[{"src": ["Location", "NET-based Location"], "dst": "216.58.217.164", "process_name": "com.google.android.apps.genie.geniewidget", "process_id": "20007", "log_time": "07-08 08:11:26.953", "message": "libcore.os.send(216.58.217.164) received data with tag 0x21 data=[POST /m/appreq HTTP/1.1..Content-Type", "channel": "HTTP"}]

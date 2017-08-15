@@ -1,47 +1,0 @@
-2017-07-07 23:18:24,990 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\411c2363b4847aa1ce073a3a6c3a07d9bdbe03f3.apk
-2017-07-07 23:18:24,990 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.mogo.gongfupuzzle
-2017-07-07 23:18:24,992 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.mogo.gongfupuzzle
-2017-07-07 23:18:25,763 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-07 23:18:25,763 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\411c2363b4847aa1ce073a3a6c3a07d9bdbe03f3.apk
-2017-07-07 23:18:28,704 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/411c2363b4847aa1ce073a3a6c3a07d9bdbe03f3.apk
-2017-07-07 23:18:28,706 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-07 23:18:28,706 - COSMOS_TRIGGER_PY-Console - DEBUG - 1569 KB/s (612212 bytes in 0.381s)
-2017-07-07 23:18:28,706 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-07 23:18:29,447 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-07 23:18:29,447 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-07 23:18:30,246 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-07 23:18:30,246 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=41ms (0ms mobile, 41ms wifi, 0ms not connected)
-2017-07-07 23:18:30,246 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-07 23:18:30,325 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-07 23:18:30,325 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-07 23:18:30,341 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.mogo.gongfupuzzle --ignore-crashes 1
-2017-07-07 23:18:31,667 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-07 23:18:31,667 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=544ms (0ms mobile, 544ms wifi, 0ms not connected)
-2017-07-07 23:18:31,744 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-07 23:18:32,880 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-07 23:18:53,993 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.mogo.gongfupuzzle" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.mogo.gongfupuzzle" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.mogo.gongfupuzzle" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.mogo.gongfupuzzle" password="false" resource-id="id/title" scrollable="false" selected="false" text="功夫熊猫拼图"/>
-      </node>
-      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.mogo.gongfupuzzle" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.mogo.gongfupuzzle" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-          <node bounds="[10,110][710,148]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.mogo.gongfupuzzle" password="false" resource-id="id/label" scrollable="false" selected="false" text=""/>
-          <node bounds="[110,298][610,394]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.mogo.gongfupuzzle" password="false" resource-id="id/begin" scrollable="false" selected="false" text="开始游戏"/>
-          <node bounds="[110,444][610,540]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.mogo.gongfupuzzle" password="false" resource-id="id/exit" scrollable="false" selected="false" text="退出游戏"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-07 23:18:55,145 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-07 23:18:55,147 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-07 23:18:56,598 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/411c2363b4847aa1ce073a3a6c3a07d9bdbe03f3/first_page.png
-2017-07-07 23:18:56,878 - COSMOS_TRIGGER_PY-Console - DEBUG - 3649 KB/s (684189 bytes in 0.183s)
-2017-07-07 23:18:56,924 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.mogo.gongfupuzzle0707-23-18-24.pcap ../output/DroidKungFu3/411c2363b4847aa1ce073a3a6c3a07d9bdbe03f3/com.mogo.gongfupuzzle0707-23-18-24.pcap
-2017-07-07 23:18:56,993 - COSMOS_TRIGGER_PY-Console - DEBUG - 420 KB/s (8192 bytes in 0.019s)
-2017-07-07 23:18:56,993 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.mogo.gongfupuzzle0707-23-18-24.pcap
-2017-07-07 23:19:05,513 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.mogo.gongfupuzzle
-2017-07-07 23:19:06,996 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-07 23:19:06,996 - COSMOS_TRIGGER_PY-Console - INFO - End

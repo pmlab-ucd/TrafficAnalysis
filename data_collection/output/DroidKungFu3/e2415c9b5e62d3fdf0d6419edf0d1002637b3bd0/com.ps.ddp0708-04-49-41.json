@@ -1,1 +1,0 @@
-[{"src": ["IMEI"], "dst": "121.14.255.98", "process_name": "com.ps.ddp", "process_id": "4769", "log_time": "07-08 08:49:50.077", "message": "libcore.os.send(121.14.255.98) received data with tag 0x400 data=[GET /action/connect/active?app_id=650097ad1de2415283b3ee320217468c&udid=351565054929465&app_version=] ", "channel": "HTTP"}]

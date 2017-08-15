@@ -1,44 +1,0 @@
-2017-07-08 00:46:05,924 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\7a3b1f2bd8dca8070617f97e7a7309f768686ece.apk
-2017-07-08 00:46:05,926 - COSMOS_TRIGGER_PY-Console - INFO - pkg:sunkay.QQBook
-2017-07-08 00:46:05,926 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall sunkay.QQBook
-2017-07-08 00:46:07,477 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 00:46:07,477 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\7a3b1f2bd8dca8070617f97e7a7309f768686ece.apk
-2017-07-08 00:46:12,545 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/7a3b1f2bd8dca8070617f97e7a7309f768686ece.apk
-2017-07-08 00:46:12,545 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 00:46:12,546 - COSMOS_TRIGGER_PY-Console - DEBUG - 916 KB/s (208408 bytes in 0.222s)
-2017-07-08 00:46:12,546 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 00:46:27,102 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 00:46:27,102 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 00:46:28,415 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 00:46:28,417 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=207ms (0ms mobile, 207ms wifi, 0ms not connected)
-2017-07-08 00:46:29,806 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 00:46:29,938 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 00:46:29,940 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 00:46:29,973 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p sunkay.QQBook --ignore-crashes 1
-2017-07-08 00:46:32,480 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 00:46:32,480 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=204ms (0ms mobile, 204ms wifi, 0ms not connected)
-2017-07-08 00:46:32,551 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 00:46:32,690 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 00:47:07,500 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.QQBook" password="false" resource-id="id/web" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.QQBook" password="false" resource-id="id/web" scrollable="false" selected="false" text="">
-      <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.QQBook" password="false" resource-id="id/web" scrollable="false" selected="false" text="">
-        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.QQBook" password="false" resource-id="id/web" scrollable="false" selected="false" text="">
-          <!--NAF: The following control may not be accessibility friendly-->
-          <node NAF="true" bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="sunkay.QQBook" password="false" resource-id="id/web" scrollable="true" selected="false" text=""/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 00:47:08,640 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 00:47:08,640 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 00:47:09,315 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/7a3b1f2bd8dca8070617f97e7a7309f768686ece/first_page.png
-2017-07-08 00:47:09,500 - COSMOS_TRIGGER_PY-Console - DEBUG - 3450 KB/s (216783 bytes in 0.061s)
-2017-07-08 00:47:09,532 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/sunkay.QQBook0708-00-46-05.pcap ../output/DroidKungFu3/7a3b1f2bd8dca8070617f97e7a7309f768686ece/sunkay.QQBook0708-00-46-05.pcap
-2017-07-08 00:47:09,756 - COSMOS_TRIGGER_PY-Console - DEBUG - 3385 KB/s (479232 bytes in 0.138s)
-2017-07-08 00:47:09,756 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/sunkay.QQBook0708-00-46-05.pcap
-2017-07-08 00:47:25,076 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-08 00:47:25,078 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall sunkay.QQBook
-2017-07-08 00:47:29,723 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 00:47:29,723 - COSMOS_TRIGGER_PY-Console - INFO - End

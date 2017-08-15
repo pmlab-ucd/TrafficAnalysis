@@ -1,70 +1,0 @@
-2017-07-08 00:59:21,088 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\826ff3d8621468a45d4e1f87873c6b7d4e957608.apk
-2017-07-08 00:59:21,088 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.gp.mahjongg
-2017-07-08 00:59:21,088 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.mahjongg
-2017-07-08 00:59:21,924 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 00:59:21,924 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\826ff3d8621468a45d4e1f87873c6b7d4e957608.apk
-2017-07-08 00:59:24,861 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/826ff3d8621468a45d4e1f87873c6b7d4e957608.apk
-2017-07-08 00:59:24,861 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 00:59:24,862 - COSMOS_TRIGGER_PY-Console - DEBUG - 2302 KB/s (1180530 bytes in 0.500s)
-2017-07-08 00:59:24,862 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 00:59:25,601 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 00:59:25,601 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 00:59:26,638 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 00:59:26,640 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=182ms (0ms mobile, 182ms wifi, 0ms not connected)
-2017-07-08 00:59:28,016 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 00:59:28,095 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 00:59:28,095 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 00:59:28,109 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.gp.mahjongg --ignore-crashes 1
-2017-07-08 00:59:29,134 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 00:59:29,135 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=149ms (0ms mobile, 149ms wifi, 0ms not connected)
-2017-07-08 00:59:29,206 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 00:59:29,408 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 00:59:54,990 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.mahjongg" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.mahjongg" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.mahjongg" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.mahjongg" password="false" resource-id="id/title" scrollable="false" selected="false" text="Mahjongg Builder"/>
-      </node>
-      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.gp.mahjongg" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.TabHost" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.gp.mahjongg" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-          <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.mahjongg" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-            <node bounds="[0,100][720,228]" checkable="false" checked="false" class="android.widget.TabWidget" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.gp.mahjongg" password="false" resource-id="id/tabs" scrollable="false" selected="false" text="">
-              <node bounds="[-4,100][365,228]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.gp.mahjongg" password="false" scrollable="false" selected="true" text="">
-                <node bounds="[164,112][196,144]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.mahjongg" password="false" resource-id="id/icon" scrollable="false" selected="true" text=""/>
-                <node bounds="[122,179][238,217]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.gp.mahjongg" password="false" resource-id="id/title" scrollable="false" selected="true" text="Favorites"/>
-              </node>
-              <node bounds="[355,100][725,228]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.gp.mahjongg" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-                <node bounds="[524,112][556,144]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.mahjongg" password="false" resource-id="id/icon" scrollable="false" selected="false" text=""/>
-                <node bounds="[478,179][602,217]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.gp.mahjongg" password="false" resource-id="id/title" scrollable="false" selected="false" text="All games"/>
-              </node>
-            </node>
-            <node bounds="[0,228][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.gp.mahjongg" password="false" resource-id="id/FavoritesList" scrollable="false" selected="false" text="">
-              <node bounds="[0,228][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.mahjongg" password="false" resource-id="id/FavoritesList" scrollable="false" selected="false" text="">
-                <node bounds="[0,228][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.gp.mahjongg" password="false" resource-id="id/FavoritesList" scrollable="false" selected="false" text="">
-                  <node bounds="[0,228][720,1184]" checkable="false" checked="false" class="android.widget.ListView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="com.gp.mahjongg" password="false" resource-id="id/FavoritesList" scrollable="false" selected="false" text="">
-                    <node bounds="[0,228][720,416]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.gp.mahjongg" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-                      <node bounds="[8,236][296,408]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.mahjongg" password="false" resource-id="id/PreviewImage" scrollable="false" selected="false" text=""/>
-                      <node bounds="[312,297][389,346]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.gp.mahjongg" password="false" resource-id="id/GameName" scrollable="false" selected="false" text="">
-                        <node bounds="[312,297][389,346]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.mahjongg" password="false" resource-id="id/GameName" scrollable="false" selected="false" text="Easy"/>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 00:59:56,160 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 00:59:56,161 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 00:59:56,796 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/826ff3d8621468a45d4e1f87873c6b7d4e957608/first_page.png
-2017-07-08 00:59:56,921 - COSMOS_TRIGGER_PY-Console - DEBUG - 2205 KB/s (49766 bytes in 0.022s)
-2017-07-08 00:59:56,950 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.gp.mahjongg0708-00-59-20.pcap ../output/DroidKungFu3/826ff3d8621468a45d4e1f87873c6b7d4e957608/com.gp.mahjongg0708-00-59-20.pcap
-2017-07-08 00:59:57,019 - COSMOS_TRIGGER_PY-Console - DEBUG - 470 KB/s (4096 bytes in 0.008s)
-2017-07-08 00:59:57,019 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.gp.mahjongg0708-00-59-20.pcap
-2017-07-08 01:00:11,983 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.mahjongg
-2017-07-08 01:00:13,681 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 01:00:13,681 - COSMOS_TRIGGER_PY-Console - INFO - End

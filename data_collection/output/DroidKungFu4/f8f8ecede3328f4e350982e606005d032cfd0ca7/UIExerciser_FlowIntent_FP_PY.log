@@ -1,221 +1,0 @@
-2017-07-09 02:58:11,799 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\f8f8ecede3328f4e350982e606005d032cfd0ca7.apk
-2017-07-09 02:58:11,801 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.safesys.superexplorer
-2017-07-09 02:58:11,801 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.safesys.superexplorer
-2017-07-09 02:58:18,073 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 02:58:18,075 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\f8f8ecede3328f4e350982e606005d032cfd0ca7.apk
-2017-07-09 02:58:27,615 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/f8f8ecede3328f4e350982e606005d032cfd0ca7.apk
-2017-07-09 02:58:27,617 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 02:58:27,617 - COSMOS_TRIGGER_PY-Console - DEBUG - 1743 KB/s (264384 bytes in 0.148s)
-2017-07-09 02:58:27,618 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 02:58:36,107 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 02:58:36,108 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 02:58:37,938 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 02:58:37,940 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=569ms (0ms mobile, 569ms wifi, 0ms not connected)
-2017-07-09 02:58:51,609 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 02:58:51,730 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 02:58:51,730 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 02:58:51,749 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.safesys.superexplorer --ignore-crashes 1
-2017-07-09 02:58:54,023 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 02:58:54,023 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=796ms (0ms mobile, 796ms wifi, 0ms not connected)
-2017-07-09 02:58:54,062 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 02:58:54,434 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 02:59:24,378 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="id/root_view" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="id/root_view" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="id/list" scrollable="false" selected="false" text="">
-        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="id/list" scrollable="false" selected="false" text="">
-          <node bounds="[312,339][408,435]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="Superuser Request" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text=""/>
-          <node bounds="[223,435][496,478]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Superuser Request"/>
-          <node bounds="[40,488][680,492]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text=""/>
-          <!--NAF: The following control may not be accessibility friendly-->
-          <node NAF="true" bounds="[40,502][680,684]" checkable="false" checked="false" class="android.widget.ViewFlipper" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[40,502][680,672]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="超级管理器 is requesting Superuser access.  Warning: If you did not initiate this action, or if you do not understand this request, it's generally a good idea to deny it."/>
-          </node>
-          <node bounds="[40,684][680,722]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Tap for more info"/>
-          <node bounds="[40,722][680,818]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="5" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[40,722][360,818]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Deny"/>
-            <node bounds="[360,722][680,818]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Allow"/>
-          </node>
-          <node bounds="[40,818][680,895]" checkable="true" checked="true" class="android.widget.CheckBox" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="6" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Remember"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 02:59:25,765 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 02:59:25,766 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 02:59:26,401 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/f8f8ecede3328f4e350982e606005d032cfd0ca7/first_page.png
-2017-07-09 02:59:26,476 - COSMOS_TRIGGER_PY-Console - DEBUG - 4108 KB/s (138875 bytes in 0.033s)
-2017-07-09 02:59:31,513 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.safesys.superexplorer0709-02-58-11.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/f8f8ecede3328f4e350982e606005d032cfd0ca7/com.safesys.superexplorer0709-02-58-11.pcap
-2017-07-09 02:59:36,848 - COSMOS_TRIGGER_PY-Console - DEBUG - 3668 KB/s (19709952 bytes in 5.246s)
-2017-07-09 02:59:37,769 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.safesys.superexplorer
-2017-07-09 02:59:39,746 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 02:59:39,746 - COSMOS_TRIGGER_PY-Console - INFO - End
-_PY-Console - DEBUG - Events injected: 1
-2017-07-09 02:58:37,940 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=569ms (0ms mobile, 569ms wifi, 0ms not connected)
-2017-07-09 02:58:51,609 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 02:58:51,730 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 02:58:51,730 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 02:58:51,749 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.safesys.superexplorer --ignore-crashes 1
-2017-07-09 02:58:54,023 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 02:58:54,023 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=796ms (0ms mobile, 796ms wifi, 0ms not connected)
-2017-07-09 02:58:54,062 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 02:58:54,434 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 02:59:24,378 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="id/root_view" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="id/root_view" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="id/list" scrollable="false" selected="false" text="">
-        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="id/list" scrollable="false" selected="false" text="">
-          <node bounds="[312,339][408,435]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="Superuser Request" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text=""/>
-          <node bounds="[223,435][496,478]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Superuser Request"/>
-          <node bounds="[40,488][680,492]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text=""/>
-          <!--NAF: The following control may not be accessibility friendly-->
-          <node NAF="true" bounds="[40,502][680,684]" checkable="false" checked="false" class="android.widget.ViewFlipper" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[40,502][680,672]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="超级管理器 is requesting Superuser access.  Warning: If you did not initiate this action, or if you do not understand this request, it's generally a good idea to deny it."/>
-          </node>
-          <node bounds="[40,684][680,722]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Tap for more info"/>
-          <node bounds="[40,722][680,818]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="5" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[40,722][360,818]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Deny"/>
-            <node bounds="[360,722][680,818]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Allow"/>
-          </node>
-          <node bounds="[40,818][680,895]" checkable="true" checked="true" class="android.widget.CheckBox" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="6" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Remember"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 02:59:25,765 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 02:59:25,766 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 02:59:26,401 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/f8f8ecede3328f4e350982e606005d032cfd0ca7/first_page.png
-2017-07-09 02:59:26,476 - COSMOS_TRIGGER_PY-Console - DEBUG - 4108 KB/s (138875 bytes in 0.033s)
-2017-07-09 02:59:31,513 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.safesys.superexplorer0709-02-58-11.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/f8f8ecede3328f4e350982e606005d032cfd0ca7/com.safesys.superexplorer0709-02-58-11.pcap
-2017-07-09 02:59:36,848 - COSMOS_TRIGGER_PY-Console - DEBUG - 3668 KB/s (19709952 bytes in 5.246s)
-2017-07-09 02:59:37,769 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.safesys.superexplorer
-2017-07-09 02:59:39,746 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 02:59:39,746 - COSMOS_TRIGGER_PY-Console - INFO - End
-2017-07-09 02:59:39,812 - COSMOS_TRIGGER_PY-Console - INFO - Launchable activity: com.safetest.myapn.InitialActivity
-2017-07-09 02:59:39,813 - COSMOS_TRIGGER_PY-Console - INFO - base name: faa6c540f3c7e9ebd5b3dbbcfa248591721a3412.apk
-2017-07-09 02:59:39,813 - COSMOS_TRIGGER_PY-Console - INFO - C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\faa6c540f3c7e9ebd5b3dbbcfa248591721a3412
-2017-07-09 02:59:39,868 - COSMOS_TRIGGER_PY-Console - INFO - C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\faa6c540f3c7e9ebd5b3dbbcfa248591721a3412.apk
-2017-07-09 02:59:39,884 - COSMOS_TRIGGER_PY-Console - INFO - Package: com.safetest.myapn
-2017-07-09 02:59:39,885 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\faa6c540f3c7e9ebd5b3dbbcfa248591721a3412.apk
-2017-07-09 02:59:39,887 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.safetest.myapn
-2017-07-09 02:59:39,887 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.safetest.myapn
-2017-07-09 02:59:40,657 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 02:59:40,657 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\faa6c540f3c7e9ebd5b3dbbcfa248591721a3412.apk
-2017-07-09 02:59:43,328 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/faa6c540f3c7e9ebd5b3dbbcfa248591721a3412.apk
-2017-07-09 02:59:43,329 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 02:59:43,329 - COSMOS_TRIGGER_PY-Console - DEBUG - 952 KB/s (241895 bytes in 0.248s)
-2017-07-09 02:59:43,331 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 02:59:44,101 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 02:59:44,101 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 02:59:45,223 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 02:59:45,223 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=201ms (0ms mobile, 201ms wifi, 0ms not connected)
-2017-07-09 02:59:46,592 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 02:59:46,661 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 02:59:46,663 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 02:59:46,684 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.safetest.myapn --ignore-crashes 1
-2017-07-09 02:59:50,612 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 02:59:50,614 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=524ms (0ms mobile, 524ms wifi, 0ms not connected)
-2017-07-09 02:59:50,651 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 02:59:50,789 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 03:00:32,584 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.myapn" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.myapn" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,25][360,53]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[5,26][356,51]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="超级APN"/>
-      </node>
-      <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[0,53][360,560]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[0,64][320,89]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="3G、EDGE、GPRS开关和NET-WAP切换"/>
-            <node bounds="[115,89][245,176]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[115,100][180,152]" checkable="true" checked="true" class="android.widget.ToggleButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="开"/>
-              <node bounds="[180,100][245,152]" checkable="true" checked="true" class="android.widget.ToggleButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="Other"/>
-            </node>
-            <node bounds="[0,176][360,195]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="提示：请在桌面添加超级APN小部件（Widget）以方便使用"/>
-            <node bounds="[0,212][360,236]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="APN实用工具箱"/>
-            <node bounds="[104,236][255,290]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="5" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="一键设置APN信息"/>
-            <node bounds="[104,290][255,344]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="6" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="一键清除APN设置"/>
-            <node bounds="[104,344][255,398]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="7" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="一键备份APN设置"/>
-            <node bounds="[104,398][255,452]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="8" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="一键恢复APN设置"/>
-            <node bounds="[104,452][255,506]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="9" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="手动设置APN信息"/>
-            <node bounds="[0,506][360,560]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="10" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[0,506][360,560]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text="">
-                <node bounds="[171,524][189,542]" checkable="false" checked="false" class="android.widget.ProgressBar" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.myapn" password="false" scrollable="false" selected="false" text=""/>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 03:00:33,792 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 03:00:33,792 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 03:00:37,176 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/faa6c540f3c7e9ebd5b3dbbcfa248591721a3412/first_page.png
-2017-07-09 03:00:37,354 - COSMOS_TRIGGER_PY-Console - DEBUG - 1782 KB/s (213601 bytes in 0.117s)
-2017-07-09 03:00:42,357 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.safetest.myapn0709-02-59-39.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/faa6c540f3c7e9ebd5b3dbbcfa248591721a3412/com.safetest.myapn0709-02-59-39.pcap
-2017-07-09 03:00:53,296 - COSMOS_TRIGGER_PY-Console - DEBUG - 2800 KB/s (31137792 bytes in 10.856s)
-2017-07-09 03:00:54,165 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.safetest.myapn
-2017-07-09 03:01:00,140 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 03:01:00,141 - COSMOS_TRIGGER_PY-Console - INFO - End
-2017-07-09 03:01:00,203 - COSMOS_TRIGGER_PY-Console - INFO - Launchable activity: com.safesys.viruskiller.MainActivity
-2017-07-09 03:01:00,203 - COSMOS_TRIGGER_PY-Console - INFO - base name: fd53408d01db8af7de83305b3c91726f372d5fd0.apk
-2017-07-09 03:01:00,204 - COSMOS_TRIGGER_PY-Console - INFO - C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\fd53408d01db8af7de83305b3c91726f372d5fd0
-2017-07-09 03:01:00,280 - COSMOS_TRIGGER_PY-Console - INFO - C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\fd53408d01db8af7de83305b3c91726f372d5fd0.apk
-2017-07-09 03:01:00,293 - COSMOS_TRIGGER_PY-Console - INFO - Package: com.safesys.viruskiller
-2017-07-09 03:01:00,296 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\fd53408d01db8af7de83305b3c91726f372d5fd0.apk
-2017-07-09 03:01:00,296 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.safesys.viruskiller
-2017-07-09 03:01:00,296 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.safesys.viruskiller
-2017-07-09 03:01:01,167 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 03:01:01,167 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\fd53408d01db8af7de83305b3c91726f372d5fd0.apk
-2017-07-09 03:01:08,293 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/fd53408d01db8af7de83305b3c91726f372d5fd0.apk
-2017-07-09 03:01:08,295 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 03:01:08,295 - COSMOS_TRIGGER_PY-Console - DEBUG - 1557 KB/s (389390 bytes in 0.244s)
-2017-07-09 03:01:08,296 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 03:01:09,477 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 03:01:09,477 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 03:01:11,950 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 03:01:11,950 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=805ms (0ms mobile, 805ms wifi, 0ms not connected)
-2017-07-09 03:01:14,063 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 03:01:14,186 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 03:01:14,187 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 03:01:14,204 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.safesys.viruskiller --ignore-crashes 1
-2017-07-09 03:01:16,029 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 03:01:16,030 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=331ms (0ms mobile, 331ms wifi, 0ms not connected)
-2017-07-09 03:01:16,066 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 03:01:16,183 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 03:01:56,657 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="id/root_view" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="id/root_view" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="id/list" scrollable="false" selected="false" text="">
-        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="id/list" scrollable="false" selected="false" text="">
-          <node bounds="[312,339][408,435]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="Superuser Request" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text=""/>
-          <node bounds="[223,435][496,478]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Superuser Request"/>
-          <node bounds="[40,488][680,492]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text=""/>
-          <!--NAF: The following control may not be accessibility friendly-->
-          <node NAF="true" bounds="[40,502][680,684]" checkable="false" checked="false" class="android.widget.ViewFlipper" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[40,502][680,672]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Virus Killer is requesting Superuser access.  Warning: If you did not initiate this action, or if you do not understand this request, it's generally a good idea to deny it."/>
-          </node>
-          <node bounds="[40,684][680,722]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Tap for more info"/>
-          <node bounds="[40,722][680,818]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="5" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[40,722][360,818]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Deny"/>
-            <node bounds="[360,722][680,818]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Allow"/>
-          </node>
-          <node bounds="[40,818][680,895]" checkable="true" checked="true" class="android.widget.CheckBox" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="6" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Remember"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 03:01:57,842 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 03:01:57,842 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 03:01:58,733 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/fd53408d01db8af7de83305b3c91726f372d5fd0/first_page.png
-2017-07-09 03:01:58,859 - COSMOS_TRIGGER_PY-Console - DEBUG - 4483 KB/s (270966 bytes in 0.059s)
-2017-07-09 03:02:03,908 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.safesys.viruskiller0709-03-01-00.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/fd53408d01db8af7de83305b3c91726f372d5fd0/com.safesys.viruskiller0709-03-01-00.pcap
-2017-07-09 03:02:06,845 - COSMOS_TRIGGER_PY-Console - DEBUG - 4260 KB/s (12394496 bytes in 2.841s)
-2017-07-09 03:02:21,846 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-09 03:02:21,848 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.safesys.viruskiller
-2017-07-09 03:02:23,484 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 03:02:23,484 - COSMOS_TRIGGER_PY-Console - INFO - End

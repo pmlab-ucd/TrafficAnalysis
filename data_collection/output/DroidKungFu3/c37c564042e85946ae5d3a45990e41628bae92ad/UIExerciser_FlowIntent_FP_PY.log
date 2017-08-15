@@ -1,44 +1,0 @@
-2017-07-08 04:15:05,582 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\c37c564042e85946ae5d3a45990e41628bae92ad.apk
-2017-07-08 04:15:05,582 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.ps.llk
-2017-07-08 04:15:05,582 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.llk
-2017-07-08 04:15:06,404 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 04:15:06,405 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\c37c564042e85946ae5d3a45990e41628bae92ad.apk
-2017-07-08 04:15:08,359 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/c37c564042e85946ae5d3a45990e41628bae92ad.apk
-2017-07-08 04:15:08,359 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 04:15:08,359 - COSMOS_TRIGGER_PY-Console - DEBUG - 1569 KB/s (326562 bytes in 0.203s)
-2017-07-08 04:15:08,361 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 04:15:09,098 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 04:15:09,099 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 04:15:09,986 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 04:15:09,986 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=110ms (0ms mobile, 110ms wifi, 0ms not connected)
-2017-07-08 04:15:11,371 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 04:15:11,440 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 04:15:11,440 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 04:15:11,457 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.ps.llk --ignore-crashes 1
-2017-07-08 04:15:12,448 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 04:15:12,450 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=99ms (0ms mobile, 99ms wifi, 0ms not connected)
-2017-07-08 04:15:12,539 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 04:15:12,641 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 04:15:32,986 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.llk" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.llk" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,25][360,53]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.llk" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[5,26][356,51]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.llk" password="false" scrollable="false" selected="false" text="可爱连连看"/>
-      </node>
-      <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.llk" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.llk" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.ps.llk" password="false" scrollable="false" selected="false" text=""/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 04:15:34,141 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 04:15:34,141 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 04:15:34,882 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/c37c564042e85946ae5d3a45990e41628bae92ad/first_page.png
-2017-07-08 04:15:35,012 - COSMOS_TRIGGER_PY-Console - DEBUG - 3467 KB/s (129799 bytes in 0.036s)
-2017-07-08 04:15:40,180 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.ps.llk0708-04-15-05.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/c37c564042e85946ae5d3a45990e41628bae92ad/com.ps.llk0708-04-15-05.pcap
-2017-07-08 04:15:40,260 - COSMOS_TRIGGER_PY-Console - DEBUG - 980 KB/s (7814 bytes in 0.007s)
-2017-07-08 04:15:40,730 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.llk
-2017-07-08 04:15:42,259 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 04:15:42,259 - COSMOS_TRIGGER_PY-Console - INFO - End

@@ -1,76 +1,0 @@
-2017-07-08 01:01:35,721 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\873be3e41df89cd1441eab588b0f8ea75427f681.apk
-2017-07-08 01:01:35,721 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.allen.cc
-2017-07-08 01:01:35,723 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.allen.cc
-2017-07-08 01:01:36,444 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 01:01:36,444 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\873be3e41df89cd1441eab588b0f8ea75427f681.apk
-2017-07-08 01:01:38,388 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/873be3e41df89cd1441eab588b0f8ea75427f681.apk
-2017-07-08 01:01:38,388 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 01:01:38,388 - COSMOS_TRIGGER_PY-Console - DEBUG - 1619 KB/s (449912 bytes in 0.271s)
-2017-07-08 01:01:38,388 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 01:01:39,134 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 01:01:39,135 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 01:01:40,130 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 01:01:40,131 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=180ms (0ms mobile, 180ms wifi, 0ms not connected)
-2017-07-08 01:01:41,506 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 01:01:41,585 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 01:01:41,585 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 01:01:41,599 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.allen.cc --ignore-crashes 1
-2017-07-08 01:01:42,676 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 01:01:42,676 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=184ms (0ms mobile, 184ms wifi, 0ms not connected)
-2017-07-08 01:01:42,747 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 01:01:42,848 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 01:02:15,134 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.TabHost" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[0,25][360,26]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text=""/>
-              <node bounds="[0,26][360,86]" checkable="false" checked="false" class="android.widget.TabWidget" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="">
-                <node bounds="[0,26][90,86]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="true" text="">
-                  <node bounds="[28,44][62,68]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="true" text="来电"/>
-                </node>
-                <node bounds="[90,26][180,86]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="">
-                  <node bounds="[118,44][152,68]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="去电"/>
-                </node>
-                <node bounds="[180,26][270,86]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="">
-                  <node bounds="[208,44][242,68]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="未接"/>
-                </node>
-                <node bounds="[270,26][360,86]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="">
-                  <node bounds="[298,44][332,68]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="短信"/>
-                </node>
-              </node>
-              <node bounds="[0,86][360,88]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text=""/>
-              <node bounds="[0,88][360,90]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text=""/>
-              <node bounds="[0,90][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="">
-                <node bounds="[0,90][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="">
-                  <node bounds="[0,90][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="">
-                    <node bounds="[0,90][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="">
-                      <node bounds="[0,90][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="">
-                        <node bounds="[0,90][360,592]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="">
-                          <node bounds="[62,330][298,351]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.cc" password="false" scrollable="false" selected="false" text="暂时没有合适该选项卡的通话记录"/>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 01:02:16,289 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 01:02:16,289 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 01:02:16,982 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/873be3e41df89cd1441eab588b0f8ea75427f681/first_page.png
-2017-07-08 01:02:17,117 - COSMOS_TRIGGER_PY-Console - DEBUG - 2087 KB/s (55614 bytes in 0.026s)
-2017-07-08 01:02:17,140 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.allen.cc0708-01-01-35.pcap ../output/DroidKungFu3/873be3e41df89cd1441eab588b0f8ea75427f681/com.allen.cc0708-01-01-35.pcap
-2017-07-08 01:02:17,269 - COSMOS_TRIGGER_PY-Console - DEBUG - 804 KB/s (12288 bytes in 0.014s)
-2017-07-08 01:02:17,269 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.allen.cc0708-01-01-35.pcap
-2017-07-08 01:02:32,339 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-08 01:02:32,380 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.allen.cc
-2017-07-08 01:02:33,967 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 01:02:33,967 - COSMOS_TRIGGER_PY-Console - INFO - End

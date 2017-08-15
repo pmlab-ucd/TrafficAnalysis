@@ -1,51 +1,0 @@
-2017-07-09 17:37:46,875 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\b710ed7871c7c7ab444e78c7686fc15ed119fba07c9507fa2d9128802ccda993.apk
-2017-07-09 17:37:46,875 - COSMOS_TRIGGER_PY-Console - INFO - pkg:Jk7H.PwcD
-2017-07-09 17:37:46,875 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall Jk7H.PwcD
-2017-07-09 17:37:47,701 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 17:37:47,703 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\b710ed7871c7c7ab444e78c7686fc15ed119fba07c9507fa2d9128802ccda993.apk
-2017-07-09 17:37:49,589 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/b710ed7871c7c7ab444e78c7686fc15ed119fba07c9507fa2d9128802ccda993.apk
-2017-07-09 17:37:49,591 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 17:37:49,591 - COSMOS_TRIGGER_PY-Console - DEBUG - 220 KB/s (57463 bytes in 0.254s)
-2017-07-09 17:37:49,591 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 17:37:50,365 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 17:37:50,365 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 17:37:51,394 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 17:37:51,394 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=172ms (0ms mobile, 172ms wifi, 0ms not connected)
-2017-07-09 17:37:52,755 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 17:37:52,828 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 17:37:52,828 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 17:37:52,842 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p Jk7H.PwcD --ignore-crashes 1
-2017-07-09 17:37:53,769 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 17:37:53,769 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=134ms (0ms mobile, 134ms wifi, 0ms not connected)
-2017-07-09 17:37:53,809 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 17:37:53,947 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 17:38:14,407 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="Jk7H.PwcD" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="Jk7H.PwcD" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="Jk7H.PwcD" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="Jk7H.PwcD" password="false" resource-id="id/title" scrollable="false" selected="false" text="Установка"/>
-      </node>
-      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="Jk7H.PwcD" password="false" resource-id="id/LinearLayout2" scrollable="false" selected="false" text="">
-        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="Jk7H.PwcD" password="false" resource-id="id/LinearLayout2" scrollable="false" selected="false" text="">
-          <node bounds="[0,100][720,199]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="Jk7H.PwcD" password="false" resource-id="id/logo" scrollable="false" selected="false" text=""/>
-          <node bounds="[0,199][720,992]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="Jk7H.PwcD" password="false" resource-id="id/ScrollView1" scrollable="false" selected="false" text="">
-            <node bounds="[0,199][720,303]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="Jk7H.PwcD" password="false" resource-id="id/text" scrollable="false" selected="false" text="Вы согласны с условиями  загрузки WhatsApp Messenger. Для продолжения загрузки нажмите кнопку Далее."/>
-          </node>
-          <node bounds="[0,992][720,1088]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="Jk7H.PwcD" password="false" resource-id="id/Button1" scrollable="false" selected="false" text="Далее"/>
-          <node bounds="[0,1088][720,1184]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="Jk7H.PwcD" password="false" resource-id="id/Button2" scrollable="false" selected="false" text="Правила"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 17:38:15,578 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 17:38:15,579 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 17:38:16,214 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/b710ed7871c7c7ab444e78c7686fc15ed119fba07c9507fa2d9128802ccda993/first_page.png
-2017-07-09 17:38:16,338 - COSMOS_TRIGGER_PY-Console - DEBUG - 2262 KB/s (70784 bytes in 0.030s)
-2017-07-09 17:38:21,374 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/Jk7H.PwcD0709-17-37-46.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/b710ed7871c7c7ab444e78c7686fc15ed119fba07c9507fa2d9128802ccda993/Jk7H.PwcD0709-17-37-46.pcap
-2017-07-09 17:38:26,480 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/Jk7H.PwcD0709-17-37-46.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/b710ed7871c7c7ab444e78c7686fc15ed119fba07c9507fa2d9128802ccda993/Jk7H.PwcD0709-17-37-46.pcap
-2017-07-09 17:38:26,569 - COSMOS_TRIGGER_PY-Console - DEBUG - 957 KB/s (8192 bytes in 0.008s)
-2017-07-09 17:38:41,571 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-09 17:38:41,573 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall Jk7H.PwcD
-2017-07-09 17:38:42,911 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 17:38:42,913 - COSMOS_TRIGGER_PY-Console - INFO - End

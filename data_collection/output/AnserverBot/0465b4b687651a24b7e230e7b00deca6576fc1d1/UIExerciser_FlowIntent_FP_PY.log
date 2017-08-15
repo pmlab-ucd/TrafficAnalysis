@@ -1,47 +1,0 @@
-2017-07-08 11:09:15,561 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\0465b4b687651a24b7e230e7b00deca6576fc1d1.apk
-2017-07-08 11:09:15,561 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.catking.jndlj
-2017-07-08 11:09:15,562 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.catking.jndlj
-2017-07-08 11:09:16,387 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 11:09:16,388 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\0465b4b687651a24b7e230e7b00deca6576fc1d1.apk
-2017-07-08 11:09:18,667 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/0465b4b687651a24b7e230e7b00deca6576fc1d1.apk
-2017-07-08 11:09:18,667 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 11:09:18,668 - COSMOS_TRIGGER_PY-Console - DEBUG - 1214 KB/s (736761 bytes in 0.592s)
-2017-07-08 11:09:18,668 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 11:09:19,342 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 11:09:19,344 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 11:09:20,216 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 11:09:20,217 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=100ms (0ms mobile, 100ms wifi, 0ms not connected)
-2017-07-08 11:09:21,763 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 11:09:21,832 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 11:09:21,834 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 11:09:21,852 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.catking.jndlj --ignore-crashes 1
-2017-07-08 11:09:22,792 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 11:09:22,792 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=91ms (0ms mobile, 91ms wifi, 0ms not connected)
-2017-07-08 11:09:22,862 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 11:09:22,979 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 11:09:43,795 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.catking.jndlj" password="false" resource-id="id/mainLayout" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.catking.jndlj" password="false" resource-id="id/mainLayout" scrollable="false" selected="false" text="">
-      <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.catking.jndlj" password="false" resource-id="id/mainLayout" scrollable="false" selected="false" text="">
-        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.catking.jndlj" password="false" resource-id="id/mainLayout" scrollable="false" selected="false" text="">
-          <node bounds="[108,543][612,640]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.catking.jndlj" password="false" resource-id="id/game_name" scrollable="false" selected="false" text="辣妹帮你打领结"/>
-          <node bounds="[0,1034][320,1088]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.catking.jndlj" password="false" resource-id="id/point_text" scrollable="false" selected="false" text="你当前的积分为："/>
-          <node bounds="[320,1034][343,1088]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.catking.jndlj" password="false" resource-id="id/point_count" scrollable="false" selected="false" text="0"/>
-          <node bounds="[0,1088][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.catking.jndlj" password="false" resource-id="id/btnsId" scrollable="false" selected="false" text="">
-            <node bounds="[0,1088][360,1184]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.catking.jndlj" password="false" resource-id="id/point_button" scrollable="false" selected="false" text="免费积分"/>
-            <node bounds="[360,1088][720,1184]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.catking.jndlj" password="false" resource-id="id/begin_button" scrollable="false" selected="false" text="进入学习"/>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 11:09:44,959 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 11:09:44,960 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 11:09:47,312 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/0465b4b687651a24b7e230e7b00deca6576fc1d1/first_page.png
-2017-07-08 11:09:47,644 - COSMOS_TRIGGER_PY-Console - DEBUG - 3756 KB/s (885923 bytes in 0.230s)
-2017-07-08 11:09:52,648 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.catking.jndlj0708-11-09-15.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/0465b4b687651a24b7e230e7b00deca6576fc1d1/com.catking.jndlj0708-11-09-15.pcap
-2017-07-08 11:09:52,750 - COSMOS_TRIGGER_PY-Console - DEBUG - 614 KB/s (4096 bytes in 0.006s)
-2017-07-08 11:09:53,069 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.catking.jndlj
-2017-07-08 11:09:54,398 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 11:09:54,398 - COSMOS_TRIGGER_PY-Console - INFO - End

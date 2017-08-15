@@ -1,47 +1,0 @@
-2017-07-08 00:37:42,911 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\73589ea5a0266ae85dd97c3e1150de5d36f1d459.apk
-2017-07-08 00:37:42,913 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.alan.siwameinv8
-2017-07-08 00:37:42,914 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.alan.siwameinv8
-2017-07-08 00:37:43,740 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 00:37:43,756 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\73589ea5a0266ae85dd97c3e1150de5d36f1d459.apk
-2017-07-08 00:37:50,194 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/73589ea5a0266ae85dd97c3e1150de5d36f1d459.apk
-2017-07-08 00:37:50,194 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 00:37:50,194 - COSMOS_TRIGGER_PY-Console - DEBUG - 2782 KB/s (10000552 bytes in 3.510s)
-2017-07-08 00:37:50,194 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 00:37:50,933 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 00:37:50,933 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 00:37:53,719 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 00:37:53,719 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=1965ms (0ms mobile, 1965ms wifi, 0ms not connected)
-2017-07-08 00:37:55,138 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 00:37:55,209 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 00:37:55,210 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 00:37:55,230 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.alan.siwameinv8 --ignore-crashes 1
-2017-07-08 00:37:56,315 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 00:37:56,316 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=173ms (0ms mobile, 173ms wifi, 0ms not connected)
-2017-07-08 00:37:56,388 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 00:37:56,516 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 00:38:17,147 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.siwameinv8" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.siwameinv8" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.siwameinv8" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.siwameinv8" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
-        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.alan.siwameinv8" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-          <!--NAF: The following control may not be accessibility friendly-->
-          <node NAF="true" bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.alan.siwameinv8" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
-        </node>
-        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.alan.siwameinv8" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
-        <node bounds="[0,0][720,1142]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.alan.siwameinv8" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="长按图片可设置为墙纸."/>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 00:38:18,312 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 00:38:18,312 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 00:38:21,003 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/73589ea5a0266ae85dd97c3e1150de5d36f1d459/first_page.png
-2017-07-08 00:38:21,378 - COSMOS_TRIGGER_PY-Console - DEBUG - 3894 KB/s (1094447 bytes in 0.274s)
-2017-07-08 00:38:21,394 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.alan.siwameinv80708-00-37-42.pcap ../output/DroidKungFu3/73589ea5a0266ae85dd97c3e1150de5d36f1d459/com.alan.siwameinv80708-00-37-42.pcap
-2017-07-08 00:38:21,523 - COSMOS_TRIGGER_PY-Console - DEBUG - 285 KB/s (8192 bytes in 0.028s)
-2017-07-08 00:38:21,523 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.alan.siwameinv80708-00-37-42.pcap
-2017-07-08 00:38:36,644 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-08 00:38:36,647 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.alan.siwameinv8
-2017-07-08 00:38:38,197 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 00:38:38,197 - COSMOS_TRIGGER_PY-Console - INFO - End

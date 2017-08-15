@@ -1,43 +1,0 @@
-2017-07-09 13:21:41,201 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\7e6d8a3b255eac7a96da9379a018944191612825be228f21b28d07e7bd76c5bc.apk
-2017-07-09 13:21:41,201 - COSMOS_TRIGGER_PY-Console - INFO - pkg:grounog.piroirj
-2017-07-09 13:21:41,203 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall grounog.piroirj
-2017-07-09 13:21:42,180 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 13:21:42,181 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\7e6d8a3b255eac7a96da9379a018944191612825be228f21b28d07e7bd76c5bc.apk
-2017-07-09 13:21:46,204 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/7e6d8a3b255eac7a96da9379a018944191612825be228f21b28d07e7bd76c5bc.apk
-2017-07-09 13:21:46,204 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 13:21:46,204 - COSMOS_TRIGGER_PY-Console - DEBUG - 1393 KB/s (313242 bytes in 0.219s)
-2017-07-09 13:21:46,206 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 13:21:46,979 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 13:21:46,980 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 13:21:48,016 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 13:21:48,016 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=308ms (0ms mobile, 308ms wifi, 0ms not connected)
-2017-07-09 13:21:49,361 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 13:21:49,431 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 13:21:49,431 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 13:21:49,456 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p grounog.piroirj --ignore-crashes 1
-2017-07-09 13:21:50,785 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 13:21:50,786 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=522ms (0ms mobile, 522ms wifi, 0ms not connected)
-2017-07-09 13:21:50,864 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 13:21:50,951 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 13:22:10,697 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="grounog.piroirj" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="grounog.piroirj" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="grounog.piroirj" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="grounog.piroirj" password="false" resource-id="id/title" scrollable="false" selected="false" text="X - ART - ОБАЛДЕННЫЕ ДЕВОЧКИ"/>
-      </node>
-      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="grounog.piroirj" password="false" resource-id="id/webView1" scrollable="false" selected="false" text="">
-        <!--NAF: The following control may not be accessibility friendly-->
-        <node NAF="true" bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="grounog.piroirj" password="false" resource-id="id/webView1" scrollable="false" selected="false" text=""/>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 13:22:11,842 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 13:22:11,844 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 13:22:12,890 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/7e6d8a3b255eac7a96da9379a018944191612825be228f21b28d07e7bd76c5bc/first_page.png
-2017-07-09 13:22:13,075 - COSMOS_TRIGGER_PY-Console - DEBUG - 2940 KB/s (268113 bytes in 0.089s)
-2017-07-09 13:22:18,098 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/grounog.piroirj0709-13-21-41.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/7e6d8a3b255eac7a96da9379a018944191612825be228f21b28d07e7bd76c5bc/grounog.piroirj0709-13-21-41.pcap
-2017-07-09 13:22:18,198 - COSMOS_TRIGGER_PY-Console - DEBUG - 666 KB/s (4096 bytes in 0.006s)
-2017-07-09 13:22:18,414 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall grounog.piroirj
-2017-07-09 13:22:20,055 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 13:22:20,055 - COSMOS_TRIGGER_PY-Console - INFO - End

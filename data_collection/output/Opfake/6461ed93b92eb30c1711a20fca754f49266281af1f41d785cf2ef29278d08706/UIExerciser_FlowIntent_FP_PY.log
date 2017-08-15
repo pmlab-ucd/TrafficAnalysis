@@ -1,44 +1,0 @@
-2017-07-09 12:08:47,657 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\6461ed93b92eb30c1711a20fca754f49266281af1f41d785cf2ef29278d08706.apk
-2017-07-09 12:08:47,658 - COSMOS_TRIGGER_PY-Console - INFO - pkg:mejfudpoww.jieggdekc
-2017-07-09 12:08:47,660 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall mejfudpoww.jieggdekc
-2017-07-09 12:08:48,430 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 12:08:48,431 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\6461ed93b92eb30c1711a20fca754f49266281af1f41d785cf2ef29278d08706.apk
-2017-07-09 12:08:50,269 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/6461ed93b92eb30c1711a20fca754f49266281af1f41d785cf2ef29278d08706.apk
-2017-07-09 12:08:50,270 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 12:08:50,272 - COSMOS_TRIGGER_PY-Console - DEBUG - 1421 KB/s (304822 bytes in 0.209s)
-2017-07-09 12:08:50,273 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 12:08:50,996 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 12:08:50,997 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 12:08:51,971 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 12:08:51,971 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=162ms (0ms mobile, 162ms wifi, 0ms not connected)
-2017-07-09 12:08:53,357 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 12:08:53,428 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 12:08:53,430 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 12:08:53,457 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p mejfudpoww.jieggdekc --ignore-crashes 1
-2017-07-09 12:08:54,440 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 12:08:54,440 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=124ms (0ms mobile, 124ms wifi, 0ms not connected)
-2017-07-09 12:08:54,480 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 12:08:54,591 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 12:09:20,671 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="mejfudpoww.jieggdekc" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="mejfudpoww.jieggdekc" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="mejfudpoww.jieggdekc" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="mejfudpoww.jieggdekc" password="false" resource-id="id/title" scrollable="false" selected="false" text="bad_piggies_android_1.6_2.1_2.2_"/>
-      </node>
-      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="mejfudpoww.jieggdekc" password="false" resource-id="id/webView1" scrollable="false" selected="false" text="">
-        <!--NAF: The following control may not be accessibility friendly-->
-        <node NAF="true" bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="mejfudpoww.jieggdekc" password="false" resource-id="id/webView1" scrollable="false" selected="false" text=""/>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 12:09:21,844 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 12:09:21,845 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 12:09:22,479 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/6461ed93b92eb30c1711a20fca754f49266281af1f41d785cf2ef29278d08706/first_page.png
-2017-07-09 12:09:22,552 - COSMOS_TRIGGER_PY-Console - DEBUG - 2215 KB/s (86355 bytes in 0.038s)
-2017-07-09 12:09:27,578 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/mejfudpoww.jieggdekc0709-12-08-47.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/6461ed93b92eb30c1711a20fca754f49266281af1f41d785cf2ef29278d08706/mejfudpoww.jieggdekc0709-12-08-47.pcap
-2017-07-09 12:09:27,661 - COSMOS_TRIGGER_PY-Console - DEBUG - 1183 KB/s (16384 bytes in 0.013s)
-2017-07-09 12:09:42,663 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-09 12:09:42,667 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall mejfudpoww.jieggdekc
-2017-07-09 12:09:44,361 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 12:09:44,362 - COSMOS_TRIGGER_PY-Console - INFO - End

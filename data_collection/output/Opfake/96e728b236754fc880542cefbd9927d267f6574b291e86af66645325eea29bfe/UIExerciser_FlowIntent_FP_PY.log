@@ -1,54 +1,0 @@
-2017-07-09 16:06:56,960 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\96e728b236754fc880542cefbd9927d267f6574b291e86af66645325eea29bfe.apk
-2017-07-09 16:06:56,960 - COSMOS_TRIGGER_PY-Console - INFO - pkg:ad.notify1
-2017-07-09 16:06:56,960 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall ad.notify1
-2017-07-09 16:06:57,990 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 16:06:57,990 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\96e728b236754fc880542cefbd9927d267f6574b291e86af66645325eea29bfe.apk
-2017-07-09 16:07:00,535 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/96e728b236754fc880542cefbd9927d267f6574b291e86af66645325eea29bfe.apk
-2017-07-09 16:07:00,535 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 16:07:00,535 - COSMOS_TRIGGER_PY-Console - DEBUG - 277 KB/s (131910 bytes in 0.463s)
-2017-07-09 16:07:00,536 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 16:07:01,612 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 16:07:01,612 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 16:07:02,892 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 16:07:02,894 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=177ms (0ms mobile, 177ms wifi, 0ms not connected)
-2017-07-09 16:07:04,273 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 16:07:04,401 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 16:07:04,401 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 16:07:04,421 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p ad.notify1 --ignore-crashes 1
-2017-07-09 16:07:06,253 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 16:07:06,253 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=171ms (0ms mobile, 171ms wifi, 0ms not connected)
-2017-07-09 16:07:06,334 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 16:07:06,431 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 16:07:27,638 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ad.notify1" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ad.notify1" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ad.notify1" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ad.notify1" password="false" resource-id="id/title" scrollable="false" selected="false" text="Установка"/>
-      </node>
-      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="ad.notify1" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ad.notify1" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-          <node bounds="[0,100][720,199]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ad.notify1" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
-          <node bounds="[0,199][720,992]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="ad.notify1" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-            <node bounds="[0,199][720,303]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ad.notify1" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="Вы согласны с условиями  загрузки Talking Gina the Giraffe Free. Для продолжения загрузки нажмите кнопку Далее."/>
-          </node>
-          <node bounds="[0,992][720,1088]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="ad.notify1" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="Далее"/>
-          <node bounds="[0,1088][720,1184]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="ad.notify1" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="Правила"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 16:07:28,815 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 16:07:28,815 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 16:07:29,440 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/96e728b236754fc880542cefbd9927d267f6574b291e86af66645325eea29bfe/first_page.png
-2017-07-09 16:07:29,572 - COSMOS_TRIGGER_PY-Console - DEBUG - 2577 KB/s (81860 bytes in 0.031s)
-2017-07-09 16:07:34,595 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/ad.notify10709-16-06-56.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/96e728b236754fc880542cefbd9927d267f6574b291e86af66645325eea29bfe/ad.notify10709-16-06-56.pcap
-2017-07-09 16:07:39,697 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/ad.notify10709-16-06-56.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/96e728b236754fc880542cefbd9927d267f6574b291e86af66645325eea29bfe/ad.notify10709-16-06-56.pcap
-2017-07-09 16:07:44,811 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/ad.notify10709-16-06-56.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/96e728b236754fc880542cefbd9927d267f6574b291e86af66645325eea29bfe/ad.notify10709-16-06-56.pcap
-2017-07-09 16:07:49,897 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/ad.notify10709-16-06-56.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/96e728b236754fc880542cefbd9927d267f6574b291e86af66645325eea29bfe/ad.notify10709-16-06-56.pcap
-2017-07-09 16:07:55,007 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/ad.notify10709-16-06-56.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/96e728b236754fc880542cefbd9927d267f6574b291e86af66645325eea29bfe/ad.notify10709-16-06-56.pcap
-2017-07-09 16:07:55,114 - COSMOS_TRIGGER_PY-Console - DEBUG - 468 KB/s (4096 bytes in 0.008s)
-2017-07-09 16:08:10,115 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-09 16:08:10,115 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall ad.notify1
-2017-07-09 16:08:11,553 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 16:08:11,555 - COSMOS_TRIGGER_PY-Console - INFO - End

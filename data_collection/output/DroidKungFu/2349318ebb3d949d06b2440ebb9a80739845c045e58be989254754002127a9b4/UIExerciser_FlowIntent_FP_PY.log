@@ -1,45 +1,0 @@
-2017-07-10 08:26:09,404 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\2349318ebb3d949d06b2440ebb9a80739845c045e58be989254754002127a9b4.apk
-2017-07-10 08:26:09,404 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.allen.txtwdj
-2017-07-10 08:26:09,404 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.allen.txtwdj
-2017-07-10 08:26:10,180 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-10 08:26:10,180 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\2349318ebb3d949d06b2440ebb9a80739845c045e58be989254754002127a9b4.apk
-2017-07-10 08:26:13,233 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/2349318ebb3d949d06b2440ebb9a80739845c045e58be989254754002127a9b4.apk
-2017-07-10 08:26:13,233 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-10 08:26:13,233 - COSMOS_TRIGGER_PY-Console - DEBUG - 2056 KB/s (1929236 bytes in 0.916s)
-2017-07-10 08:26:13,233 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-10 08:26:14,019 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-10 08:26:14,019 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-10 08:26:15,055 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-10 08:26:15,055 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=246ms (0ms mobile, 246ms wifi, 0ms not connected)
-2017-07-10 08:26:16,447 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-10 08:26:16,575 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-10 08:26:16,575 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-10 08:26:16,596 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.allen.txtwdj --ignore-crashes 1
-2017-07-10 08:26:17,726 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-10 08:26:17,726 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=262ms (0ms mobile, 262ms wifi, 0ms not connected)
-2017-07-10 08:26:17,811 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-10 08:26:17,914 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-10 08:26:38,065 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.txtwdj" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.txtwdj" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.txtwdj" password="false" resource-id="id/mainActLayout" scrollable="false" selected="false" text="">
-        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.txtwdj" password="false" resource-id="id/mainActLayout" scrollable="false" selected="false" text="">
-          <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.allen.txtwdj" password="false" resource-id="id/mainActLayout" scrollable="false" selected="false" text="">
-            <node bounds="[0,50][720,1111]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.allen.txtwdj" password="false" scrollable="false" selected="false" text="小说下载网 www.uutxt.com 书名:问鼎记 作者:沧海明月 欢迎来本网站下载更多小说.  正文 鬼文，坑，非请勿入！1 字数:11543   人小鬼大   第一章惹鬼上身   “哇……哇……”半夜，我照例被一阵凄苦的孩童哭声惊醒，我将头蒙在被子里，可是那哭声却声声惊心，声音不高，却是声嘶力竭……似乎就在我的耳边，不——是发自我自己的心底。那孩童的哭声，好生凄惨，好生痛苦，深深的揪着我的心，一下一下的痛……   我还没有孩子，但从这哭声中，我却感受到骨肉相连中被分剥的痛楚，宛如是谁硬生生的从我身上剜下了一块肉。   我已经睡意全无，无奈的从床上坐了起来，顺手拧亮旁边的床头灯，然后，我的目光直接落在床头柜上，光滑的床头柜子上，一颗类似于水晶、蚕豆大小、形状如同是泪坠一样的玉石，端端正正的放在哪里。   我的目光一眨不眨的盯着这颗玉石泪坠，心中渐渐的爬起一丝无法用语言形容、隐晦无比的惊恐，我的全身都忍不住轻轻的颤抖，昨天，我转了五路汽车，亲手将这玩意丢进了某个道路边的地下阴沟里，可是，如今它再次回到了我的房间，端端正正的，摆在我最最醒目的床头柜子上，提醒着我它的存在，不容忽视的存在。   一如前几天，宁小倩低价的将它处理买给一个美国商人，那个美国商人当天就乘坐飞机回了美国，可是，第二天，这颗玉石泪坠却端正的摆在我的写字台上，当时，我就如同是看到鬼一样的看着它……"/>
-          </node>
-        </node>
-        <node bounds="[0,1124][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.allen.txtwdj" password="false" scrollable="false" selected="false" text=""/>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-10 08:26:39,253 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-10 08:26:39,253 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-10 08:26:40,191 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2349318ebb3d949d06b2440ebb9a80739845c045e58be989254754002127a9b4/first_page.png
-2017-07-10 08:26:40,477 - COSMOS_TRIGGER_PY-Console - DEBUG - 2408 KB/s (436657 bytes in 0.177s)
-2017-07-10 08:26:45,489 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.allen.txtwdj0710-08-26-09.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2349318ebb3d949d06b2440ebb9a80739845c045e58be989254754002127a9b4/com.allen.txtwdj0710-08-26-09.pcap
-2017-07-10 08:26:45,592 - COSMOS_TRIGGER_PY-Console - DEBUG - 888 KB/s (8192 bytes in 0.009s)
-2017-07-10 08:27:00,592 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-10 08:27:00,641 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.allen.txtwdj
-2017-07-10 08:27:02,874 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-10 08:27:02,875 - COSMOS_TRIGGER_PY-Console - INFO - End

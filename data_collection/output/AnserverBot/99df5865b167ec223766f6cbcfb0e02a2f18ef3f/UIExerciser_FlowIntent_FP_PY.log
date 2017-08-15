@@ -1,50 +1,0 @@
-2017-07-08 15:12:36,674 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\99df5865b167ec223766f6cbcfb0e02a2f18ef3f.apk
-2017-07-08 15:12:36,677 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.whereisphone
-2017-07-08 15:12:36,680 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.whereisphone
-2017-07-08 15:12:37,457 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 15:12:37,460 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\99df5865b167ec223766f6cbcfb0e02a2f18ef3f.apk
-2017-07-08 15:12:40,361 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/99df5865b167ec223766f6cbcfb0e02a2f18ef3f.apk
-2017-07-08 15:12:40,364 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 15:12:40,365 - COSMOS_TRIGGER_PY-Console - DEBUG - 1275 KB/s (1088961 bytes in 0.833s)
-2017-07-08 15:12:40,368 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 15:12:41,299 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 15:12:41,302 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 15:12:42,335 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 15:12:42,336 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=97ms (0ms mobile, 97ms wifi, 0ms not connected)
-2017-07-08 15:12:43,796 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 15:12:43,920 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 15:12:43,923 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 15:12:43,944 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.whereisphone --ignore-crashes 1
-2017-07-08 15:12:45,186 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 15:12:45,188 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=338ms (0ms mobile, 338ms wifi, 0ms not connected)
-2017-07-08 15:12:45,269 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 15:12:45,440 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 15:13:13,838 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.whereisphone" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.whereisphone" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,25][360,53]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.whereisphone" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[5,26][356,51]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.whereisphone" password="false" scrollable="false" selected="false" text="手机你在哪"/>
-      </node>
-      <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.whereisphone" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.whereisphone" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[0,53][360,105]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.whereisphone" password="false" scrollable="false" selected="false" text=" 使用提示（默认口令为“手机出来”）"/>
-          <node bounds="[0,105][360,198]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.whereisphone" password="false" scrollable="false" selected="false" text=" 打开软件后，点击“开始监控，并后台运行”，接着按Home返回首页即可，当手机听到口令后，即可报警，使用者就可以根据声音来寻找手机，如需关闭，请直接点击“停止监控”并按Home退出即可！"/>
-          <node bounds="[0,198][360,311]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.whereisphone" password="false" scrollable="false" selected="false" text=" 本应用程序依靠Google特有的强大语音识别功能运行，但是软件使用效果受到诸多环境因素影响(网络，发音，周围环境)，经过测试在安静环境下有效范围大概为3-5m "/>
-          <node bounds="[0,311][360,423]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.whereisphone" password="false" scrollable="false" selected="false" text="本应用为首个测试版本，开发时间仓库，作者还是学生能力有限，你们的使用和反馈是我继续完善软件的最好动力，如有疑问请发邮件到dml93@sohu.com  "/>
-          <node bounds="[0,423][360,477]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="4" long-clickable="false" package="com.whereisphone" password="false" scrollable="false" selected="false" text="开始监控并后台运行"/>
-          <node bounds="[0,477][360,531]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="5" long-clickable="false" package="com.whereisphone" password="false" scrollable="false" selected="false" text="停止监控并退出程序"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 15:13:15,055 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 15:13:15,058 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 15:13:16,503 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/99df5865b167ec223766f6cbcfb0e02a2f18ef3f/first_page.png
-2017-07-08 15:13:16,783 - COSMOS_TRIGGER_PY-Console - DEBUG - 2911 KB/s (583806 bytes in 0.195s)
-2017-07-08 15:13:21,808 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.whereisphone0708-15-12-36.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/99df5865b167ec223766f6cbcfb0e02a2f18ef3f/com.whereisphone0708-15-12-36.pcap
-2017-07-08 15:13:21,950 - COSMOS_TRIGGER_PY-Console - DEBUG - 1815 KB/s (20480 bytes in 0.011s)
-2017-07-08 15:13:36,953 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-08 15:13:36,957 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.whereisphone
-2017-07-08 15:13:38,410 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 15:13:38,413 - COSMOS_TRIGGER_PY-Console - INFO - End

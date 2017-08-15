@@ -1,1 +1,0 @@
-[{"src": ["IMEI"], "dst": "92.242.140.21", "process_name": "com.atools.nettraffic", "process_id": "16505", "log_time": "07-10 12:20:50.609", "message": "libcore.os.send(92.242.140.21) received data with tag 0x400 data=[GET /and/getlastversion.aspx?ver=1.1.2&app=com.atools.nettraffic&model=GalaxyNexus&os=4.1.2&imei=351] ", "channel": "HTTP"}]

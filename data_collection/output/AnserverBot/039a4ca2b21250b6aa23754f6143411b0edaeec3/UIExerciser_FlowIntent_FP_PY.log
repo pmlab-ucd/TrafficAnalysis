@@ -1,47 +1,0 @@
-2017-07-08 11:06:59,410 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\039a4ca2b21250b6aa23754f6143411b0edaeec3.apk
-2017-07-08 11:06:59,411 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.chenjg.txtbrowser.yzya
-2017-07-08 11:06:59,411 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.chenjg.txtbrowser.yzya
-2017-07-08 11:07:00,234 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 11:07:00,236 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\039a4ca2b21250b6aa23754f6143411b0edaeec3.apk
-2017-07-08 11:07:02,447 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/039a4ca2b21250b6aa23754f6143411b0edaeec3.apk
-2017-07-08 11:07:02,447 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 11:07:02,447 - COSMOS_TRIGGER_PY-Console - DEBUG - 2298 KB/s (675278 bytes in 0.286s)
-2017-07-08 11:07:02,448 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 11:07:03,171 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 11:07:03,171 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 11:07:04,153 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 11:07:04,154 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=196ms (0ms mobile, 196ms wifi, 0ms not connected)
-2017-07-08 11:07:05,530 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 11:07:05,657 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 11:07:05,657 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 11:07:05,674 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.chenjg.txtbrowser.yzya --ignore-crashes 1
-2017-07-08 11:07:06,653 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 11:07:06,653 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=124ms (0ms mobile, 124ms wifi, 0ms not connected)
-2017-07-08 11:07:06,723 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 11:07:06,832 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 11:07:54,553 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.chenjg.txtbrowser.yzya" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.chenjg.txtbrowser.yzya" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.chenjg.txtbrowser.yzya" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.chenjg.txtbrowser.yzya" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[0,25][360,140]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.chenjg.txtbrowser.yzya" password="false" scrollable="true" selected="false" text="">
-            <node bounds="[0,25][360,2770]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.chenjg.txtbrowser.yzya" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[68,47][293,101]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.chenjg.txtbrowser.yzya" password="false" scrollable="false" selected="false" text="﻿第1章 "/>
-              <node bounds="[68,101][293,155]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.chenjg.txtbrowser.yzya" password="false" scrollable="false" selected="false" text="第2章 "/>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 11:07:55,711 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 11:07:55,713 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 11:07:57,759 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/039a4ca2b21250b6aa23754f6143411b0edaeec3/first_page.png
-2017-07-08 11:07:57,993 - COSMOS_TRIGGER_PY-Console - DEBUG - 3864 KB/s (631213 bytes in 0.159s)
-2017-07-08 11:08:03,006 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.chenjg.txtbrowser.yzya0708-11-06-59.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/039a4ca2b21250b6aa23754f6143411b0edaeec3/com.chenjg.txtbrowser.yzya0708-11-06-59.pcap
-2017-07-08 11:08:03,170 - COSMOS_TRIGGER_PY-Console - DEBUG - 1036 KB/s (12288 bytes in 0.011s)
-2017-07-08 11:08:18,171 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-08 11:08:18,171 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.chenjg.txtbrowser.yzya
-2017-07-08 11:08:19,459 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 11:08:19,460 - COSMOS_TRIGGER_PY-Console - INFO - End

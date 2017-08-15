@@ -1,56 +1,0 @@
-2017-07-08 23:49:32,963 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\BaseBridge\e42b126a86b57029e11ef3d32ccc0acda98c2baf.apk
-2017-07-08 23:49:32,969 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.ozdroid.kaoshitong
-2017-07-08 23:49:32,973 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ozdroid.kaoshitong
-2017-07-08 23:49:33,753 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 23:49:33,759 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\BaseBridge\e42b126a86b57029e11ef3d32ccc0acda98c2baf.apk
-2017-07-08 23:49:37,398 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/e42b126a86b57029e11ef3d32ccc0acda98c2baf.apk
-2017-07-08 23:49:37,404 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 23:49:37,408 - COSMOS_TRIGGER_PY-Console - DEBUG - 1995 KB/s (3120868 bytes in 1.527s)
-2017-07-08 23:49:37,414 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 23:49:38,799 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 23:49:38,803 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 23:49:39,644 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 23:49:39,650 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=131ms (0ms mobile, 131ms wifi, 0ms not connected)
-2017-07-08 23:49:41,124 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 23:49:41,253 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 23:49:41,259 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 23:49:41,286 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.ozdroid.kaoshitong --ignore-crashes 1
-2017-07-08 23:49:42,322 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 23:49:42,328 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=128ms (0ms mobile, 128ms wifi, 0ms not connected)
-2017-07-08 23:49:42,405 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 23:49:42,578 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 23:50:06,937 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[11,362][709,872]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ozdroid.kaoshitong" password="false" resource-id="id/parentPanel" scrollable="false" selected="false" text="">
-    <node bounds="[11,362][709,872]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ozdroid.kaoshitong" password="false" resource-id="id/parentPanel" scrollable="false" selected="false" text="">
-      <node bounds="[11,362][709,872]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ozdroid.kaoshitong" password="false" resource-id="id/parentPanel" scrollable="false" selected="false" text="">
-        <node bounds="[11,362][709,872]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ozdroid.kaoshitong" password="false" resource-id="id/parentPanel" scrollable="false" selected="false" text="">
-          <node bounds="[17,380][707,503]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ozdroid.kaoshitong" password="false" resource-id="id/topPanel" scrollable="false" selected="false" text="">
-            <node bounds="[62,412][662,483]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ozdroid.kaoshitong" password="false" resource-id="id/alertTitle" scrollable="false" selected="false" text="">
-              <node bounds="[62,412][662,483]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ozdroid.kaoshitong" password="false" resource-id="id/alertTitle" scrollable="false" selected="false" text="请更新数据"/>
-            </node>
-            <node bounds="[42,501][682,503]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ozdroid.kaoshitong" password="false" resource-id="id/titleDivider" scrollable="false" selected="false" text=""/>
-          </node>
-          <node bounds="[17,503][707,726]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ozdroid.kaoshitong" password="false" resource-id="id/contentPanel" scrollable="false" selected="false" text="">
-            <node bounds="[42,503][682,726]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ozdroid.kaoshitong" password="false" resource-id="id/scrollView" scrollable="false" selected="false" text="">
-              <node bounds="[70,507][662,702]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ozdroid.kaoshitong" password="false" resource-id="id/message" scrollable="false" selected="false" text="版本号：1.5  更新内容： 驾照通:1.5.2"/>
-            </node>
-          </node>
-          <node bounds="[17,726][707,866]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.ozdroid.kaoshitong" password="false" resource-id="id/buttonPanel" scrollable="false" selected="false" text="">
-            <node bounds="[42,726][682,835]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ozdroid.kaoshitong" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-              <node bounds="[204,734][520,830]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.ozdroid.kaoshitong" password="false" resource-id="id/button1" scrollable="false" selected="false" text="确定"/>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 23:50:08,114 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 23:50:08,114 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 23:50:09,404 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/e42b126a86b57029e11ef3d32ccc0acda98c2baf/first_page.png
-2017-07-08 23:50:09,645 - COSMOS_TRIGGER_PY-Console - DEBUG - 2856 KB/s (443569 bytes in 0.151s)
-2017-07-08 23:50:14,677 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.ozdroid.kaoshitong0708-23-49-32.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/e42b126a86b57029e11ef3d32ccc0acda98c2baf/com.ozdroid.kaoshitong0708-23-49-32.pcap
-2017-07-08 23:50:14,766 - COSMOS_TRIGGER_PY-Console - DEBUG - 887 KB/s (8192 bytes in 0.009s)
-2017-07-08 23:50:15,137 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ozdroid.kaoshitong
-2017-07-08 23:50:16,884 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 23:50:16,884 - COSMOS_TRIGGER_PY-Console - INFO - End

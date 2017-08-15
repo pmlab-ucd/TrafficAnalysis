@@ -1,61 +1,0 @@
-2017-07-08 21:50:37,161 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\BaseBridge\24bb1ebdb9b5dae6605386032bc7ef4dd86606b7.apk
-2017-07-08 21:50:37,161 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.pursuegirls
-2017-07-08 21:50:37,163 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.pursuegirls
-2017-07-08 21:50:37,944 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 21:50:37,946 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\BaseBridge\24bb1ebdb9b5dae6605386032bc7ef4dd86606b7.apk
-2017-07-08 21:50:40,102 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/24bb1ebdb9b5dae6605386032bc7ef4dd86606b7.apk
-2017-07-08 21:50:40,105 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 21:50:40,105 - COSMOS_TRIGGER_PY-Console - DEBUG - 1559 KB/s (521567 bytes in 0.326s)
-2017-07-08 21:50:40,107 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 21:50:40,904 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 21:50:40,907 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 21:50:42,085 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 21:50:42,086 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=178ms (0ms mobile, 178ms wifi, 0ms not connected)
-2017-07-08 21:50:43,778 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 21:50:43,858 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 21:50:43,859 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 21:50:43,890 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.pursuegirls --ignore-crashes 1
-2017-07-08 21:50:44,973 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 21:50:44,974 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=169ms (0ms mobile, 169ms wifi, 0ms not connected)
-2017-07-08 21:50:45,052 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 21:50:45,246 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 21:51:14,338 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[11,50][709,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[11,50][709,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[11,50][709,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[11,50][709,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[17,68][707,191]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[62,100][662,171]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[62,100][662,171]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="版本信息1.3"/>
-            </node>
-            <node bounds="[42,189][682,191]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text=""/>
-          </node>
-          <node bounds="[17,191][707,1038]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[42,191][682,1038]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[42,201][682,1028]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
-                <node bounds="[62,201][638,460]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
-                  <node bounds="[62,201][638,460]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="1.增加了设置的功能。 2.增加了新的模块“拓展知识”。 3.增强了安装应用的兼容性。   每点一次广告都是对开发者的支持！"/>
-                </node>
-                <node bounds="[62,932][266,1028]" checkable="true" checked="false" class="android.widget.CheckBox" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="不再提示"/>
-              </node>
-            </node>
-          </node>
-          <node bounds="[17,1038][707,1178]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[42,1038][682,1147]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[204,1046][520,1142]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.pursuegirls" password="false" scrollable="false" selected="false" text="确定"/>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 21:51:15,526 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 21:51:15,526 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 21:51:16,329 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/24bb1ebdb9b5dae6605386032bc7ef4dd86606b7/first_page.png
-2017-07-08 21:51:16,456 - COSMOS_TRIGGER_PY-Console - DEBUG - 2561 KB/s (137067 bytes in 0.052s)
-2017-07-08 21:51:21,486 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.pursuegirls0708-21-50-37.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/24bb1ebdb9b5dae6605386032bc7ef4dd86606b7/com.pursuegirls0708-21-50-37.pcap
-2017-07-08 21:51:21,569 - COSMOS_TRIGGER_PY-Console - DEBUG - 900 KB/s (8192 bytes in 0.008s)
-2017-07-08 21:51:21,944 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.pursuegirls
-2017-07-08 21:51:23,473 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 21:51:23,473 - COSMOS_TRIGGER_PY-Console - INFO - End

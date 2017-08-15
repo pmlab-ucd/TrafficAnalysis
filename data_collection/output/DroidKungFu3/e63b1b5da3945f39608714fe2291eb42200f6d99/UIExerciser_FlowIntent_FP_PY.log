@@ -1,59 +1,0 @@
-2017-07-08 04:53:07,483 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\e63b1b5da3945f39608714fe2291eb42200f6d99.apk
-2017-07-08 04:53:07,483 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.dy.ebook.book01
-2017-07-08 04:53:07,483 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.dy.ebook.book01
-2017-07-08 04:53:08,206 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 04:53:08,206 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\e63b1b5da3945f39608714fe2291eb42200f6d99.apk
-2017-07-08 04:53:10,388 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/e63b1b5da3945f39608714fe2291eb42200f6d99.apk
-2017-07-08 04:53:10,388 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 04:53:10,388 - COSMOS_TRIGGER_PY-Console - DEBUG - 1699 KB/s (541581 bytes in 0.311s)
-2017-07-08 04:53:10,388 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 04:53:11,111 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 04:53:11,111 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 04:53:12,069 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 04:53:12,069 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=181ms (0ms mobile, 181ms wifi, 0ms not connected)
-2017-07-08 04:53:13,427 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 04:53:13,561 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 04:53:13,561 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 04:53:13,594 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.dy.ebook.book01 --ignore-crashes 1
-2017-07-08 04:53:14,624 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 04:53:14,624 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=151ms (0ms mobile, 151ms wifi, 0ms not connected)
-2017-07-08 04:53:14,696 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 04:53:14,816 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 04:53:47,882 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.dy.ebook.book01" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.dy.ebook.book01" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.dy.ebook.book01" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.ViewFlipper" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.dy.ebook.book01" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-          <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.dy.ebook.book01" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-            <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.dy.ebook.book01" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-              <node bounds="[0,50][720,148]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.dy.ebook.book01" password="false" scrollable="false" selected="false" text="">
-                <node bounds="[4,57][120,145]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.dy.ebook.book01" password="false" scrollable="false" selected="false" text="返回"/>
-                <node bounds="[124,85][720,113]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.dy.ebook.book01" password="false" scrollable="false" selected="false" text="第五节、对不起，我不会开车"/>
-              </node>
-              <node bounds="[0,148][720,1090]" checkable="false" checked="false" class="android.widget.ViewFlipper" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.dy.ebook.book01" password="false" scrollable="false" selected="false" text="">
-                <node bounds="[0,148][720,1090]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="true" package="com.dy.ebook.book01" password="false" scrollable="true" selected="false" text="">
-                  <node bounds="[0,148][720,1331]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.dy.ebook.book01" password="false" scrollable="false" selected="false" text="                          “哦。”叶秋扯着安全带，好不容易才扣进去。                            “怎么还不开车啊？”沈墨浓等了一会儿，车子还没有启动，转过脸着急地催促。                            “我开车？”叶秋一脸疑惑地问。                            “都让你坐在驾驶位了，你不开车谁开车？”沈墨浓有种想用脑袋撞车门的冲动。                            “可是－－－－－我不会开车啊。”叶秋为难地说道。                        "/>
-                </node>
-              </node>
-              <node bounds="[0,1090][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.dy.ebook.book01" password="false" scrollable="false" selected="false" text="">
-                <node bounds="[4,1096][120,1184]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.dy.ebook.book01" password="false" scrollable="false" selected="false" text="上页"/>
-                <node bounds="[326,1107][394,1166]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.dy.ebook.book01" password="false" scrollable="false" selected="false" text="7/7"/>
-                <node bounds="[600,1096][716,1184]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.dy.ebook.book01" password="false" scrollable="false" selected="false" text="下页"/>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 04:53:49,056 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 04:53:49,058 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 04:53:52,177 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/e63b1b5da3945f39608714fe2291eb42200f6d99/first_page.png
-2017-07-08 04:53:52,450 - COSMOS_TRIGGER_PY-Console - DEBUG - 4050 KB/s (851260 bytes in 0.205s)
-2017-07-08 04:53:57,599 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.dy.ebook.book010708-04-53-07.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/e63b1b5da3945f39608714fe2291eb42200f6d99/com.dy.ebook.book010708-04-53-07.pcap
-2017-07-08 04:53:57,701 - COSMOS_TRIGGER_PY-Console - DEBUG - 304 KB/s (1717 bytes in 0.005s)
-2017-07-08 04:54:12,701 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-08 04:54:12,703 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.dy.ebook.book01
-2017-07-08 04:54:14,092 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 04:54:14,092 - COSMOS_TRIGGER_PY-Console - INFO - End

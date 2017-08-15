@@ -1,52 +1,0 @@
-2017-07-07 20:56:04,700 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\02c235ecf10fdba3afff584f6591a2959c18ec1c.apk
-2017-07-07 20:56:04,700 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.gp.lights
-2017-07-07 20:56:04,700 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.lights
-2017-07-07 20:56:05,522 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-07 20:56:05,523 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\02c235ecf10fdba3afff584f6591a2959c18ec1c.apk
-2017-07-07 20:56:07,598 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/02c235ecf10fdba3afff584f6591a2959c18ec1c.apk
-2017-07-07 20:56:07,599 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-07 20:56:07,599 - COSMOS_TRIGGER_PY-Console - DEBUG - 2483 KB/s (844408 bytes in 0.332s)
-2017-07-07 20:56:07,599 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-07 20:56:08,270 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-07 20:56:08,270 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-07 20:56:09,265 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-07 20:56:09,265 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=185ms (0ms mobile, 185ms wifi, 0ms not connected)
-2017-07-07 20:56:09,265 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-07 20:56:09,380 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-07 20:56:09,381 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-07 20:56:09,427 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.gp.lights --ignore-crashes 1
-2017-07-07 20:56:10,515 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-07 20:56:10,515 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=179ms (0ms mobile, 179ms wifi, 0ms not connected)
-2017-07-07 20:56:10,571 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-07 20:56:11,755 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-07 20:56:33,632 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.lights" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.lights" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.lights" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.lights" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-          <node bounds="[242,0][477,218]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.gp.lights" password="false" resource-id="id/boton_jugar" scrollable="false" selected="false" text="PLAY"/>
-          <node bounds="[242,218][477,436]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.gp.lights" password="false" resource-id="id/boton_puntos" scrollable="false" selected="false" text="SCORES"/>
-          <node bounds="[242,436][477,654]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.gp.lights" password="false" resource-id="id/boton_ayuda" scrollable="false" selected="false" text="HELP"/>
-          <node bounds="[242,654][477,872]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.gp.lights" password="false" resource-id="id/boton_salir" scrollable="false" selected="false" text="QUIT"/>
-          <node bounds="[0,872][720,947]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.gp.lights" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-            <node bounds="[0,872][68,900]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.lights" password="false" resource-id="id/sonido" scrollable="false" selected="false" text="SOUND"/>
-          </node>
-          <node bounds="[0,947][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="5" long-clickable="false" package="com.gp.lights" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-            <node bounds="[0,947][128,1043]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.lights" password="false" resource-id="id/imagen_sonido" scrollable="false" selected="false" text=""/>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-07 20:56:34,844 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-07 20:56:34,844 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-07 20:56:35,618 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/02c235ecf10fdba3afff584f6591a2959c18ec1c/first_page.png
-2017-07-07 20:56:35,740 - COSMOS_TRIGGER_PY-Console - DEBUG - 3123 KB/s (161810 bytes in 0.050s)
-2017-07-07 20:56:35,766 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.gp.lights0707-20-56-04.pcap ../output/DroidKungFu3/02c235ecf10fdba3afff584f6591a2959c18ec1c/com.gp.lights0707-20-56-04.pcap
-2017-07-07 20:56:35,835 - COSMOS_TRIGGER_PY-Console - DEBUG - 499 KB/s (4096 bytes in 0.008s)
-2017-07-07 20:56:35,835 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.gp.lights0707-20-56-04.pcap
-2017-07-07 20:56:51,015 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-07 20:56:51,016 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.lights
-2017-07-07 20:56:52,562 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-07 20:56:52,562 - COSMOS_TRIGGER_PY-Console - INFO - End

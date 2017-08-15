@@ -1,46 +1,0 @@
-2017-07-08 00:38:38,466 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\74f784b7e01c27cd9b6f1d1425a541ca248efeb4.apk
-2017-07-08 00:38:38,467 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.meinv.youhuo
-2017-07-08 00:38:38,467 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.meinv.youhuo
-2017-07-08 00:38:39,342 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 00:38:39,342 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\74f784b7e01c27cd9b6f1d1425a541ca248efeb4.apk
-2017-07-08 00:38:44,585 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/74f784b7e01c27cd9b6f1d1425a541ca248efeb4.apk
-2017-07-08 00:38:44,585 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 00:38:44,585 - COSMOS_TRIGGER_PY-Console - DEBUG - 2661 KB/s (5808811 bytes in 2.131s)
-2017-07-08 00:38:44,586 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 00:38:45,726 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 00:38:45,726 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 00:38:46,657 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 00:38:46,657 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=139ms (0ms mobile, 139ms wifi, 0ms not connected)
-2017-07-08 00:38:48,046 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 00:38:48,118 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 00:38:48,118 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 00:38:48,135 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.meinv.youhuo --ignore-crashes 1
-2017-07-08 00:38:49,325 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 00:38:49,326 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=160ms (0ms mobile, 160ms wifi, 0ms not connected)
-2017-07-08 00:38:49,395 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 00:38:49,529 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 00:39:10,450 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.meinv.youhuo" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.meinv.youhuo" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.meinv.youhuo" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.meinv.youhuo" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
-        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.meinv.youhuo" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-          <!--NAF: The following control may not be accessibility friendly-->
-          <node NAF="true" bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.ImageView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.meinv.youhuo" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
-        </node>
-        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.meinv.youhuo" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
-        <node bounds="[0,0][720,1142]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.meinv.youhuo" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="长按图片可设置为墙纸."/>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 00:39:11,615 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 00:39:11,617 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 00:39:13,609 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/74f784b7e01c27cd9b6f1d1425a541ca248efeb4/first_page.png
-2017-07-08 00:39:13,888 - COSMOS_TRIGGER_PY-Console - DEBUG - 3626 KB/s (744558 bytes in 0.200s)
-2017-07-08 00:39:13,895 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.meinv.youhuo0708-00-38-38.pcap ../output/DroidKungFu3/74f784b7e01c27cd9b6f1d1425a541ca248efeb4/com.meinv.youhuo0708-00-38-38.pcap
-2017-07-08 00:39:14,016 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.meinv.youhuo0708-00-38-38.pcap
-2017-07-08 00:39:29,086 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-08 00:39:29,088 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.meinv.youhuo
-2017-07-08 00:39:30,582 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 00:39:30,582 - COSMOS_TRIGGER_PY-Console - INFO - End

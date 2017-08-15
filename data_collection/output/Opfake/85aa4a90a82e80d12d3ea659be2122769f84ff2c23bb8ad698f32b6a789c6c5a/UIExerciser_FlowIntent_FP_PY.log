@@ -1,53 +1,0 @@
-2017-07-09 13:50:49,273 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\85aa4a90a82e80d12d3ea659be2122769f84ff2c23bb8ad698f32b6a789c6c5a.apk
-2017-07-09 13:50:49,275 - COSMOS_TRIGGER_PY-Console - INFO - pkg:egb45.g4gYY
-2017-07-09 13:50:49,278 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall egb45.g4gYY
-2017-07-09 13:50:50,059 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 13:50:50,061 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\85aa4a90a82e80d12d3ea659be2122769f84ff2c23bb8ad698f32b6a789c6c5a.apk
-2017-07-09 13:50:51,595 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/85aa4a90a82e80d12d3ea659be2122769f84ff2c23bb8ad698f32b6a789c6c5a.apk
-2017-07-09 13:50:51,596 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 13:50:51,598 - COSMOS_TRIGGER_PY-Console - DEBUG - 723 KB/s (111705 bytes in 0.150s)
-2017-07-09 13:50:51,601 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 13:50:52,279 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 13:50:52,282 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 13:50:53,204 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 13:50:53,207 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=181ms (0ms mobile, 181ms wifi, 0ms not connected)
-2017-07-09 13:50:54,578 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 13:50:54,648 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 13:50:54,651 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 13:50:54,671 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p egb45.g4gYY --ignore-crashes 1
-2017-07-09 13:50:55,598 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 13:50:55,601 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=141ms (0ms mobile, 141ms wifi, 0ms not connected)
-2017-07-09 13:50:55,641 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 13:50:55,756 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 13:51:16,857 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="egb45.g4gYY" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="egb45.g4gYY" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="egb45.g4gYY" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="egb45.g4gYY" password="false" resource-id="id/title" scrollable="false" selected="false" text="Установка"/>
-      </node>
-      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="egb45.g4gYY" password="false" resource-id="id/LinearLayout2" scrollable="false" selected="false" text="">
-        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="egb45.g4gYY" password="false" resource-id="id/LinearLayout2" scrollable="false" selected="false" text="">
-          <node bounds="[0,100][720,199]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="egb45.g4gYY" password="false" resource-id="id/logo" scrollable="false" selected="false" text=""/>
-          <node bounds="[0,199][720,992]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="egb45.g4gYY" password="false" resource-id="id/ScrollView1" scrollable="false" selected="false" text="">
-            <node bounds="[0,199][720,303]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="egb45.g4gYY" password="false" resource-id="id/text" scrollable="false" selected="false" text="Вы согласны с условиями  загрузки Green Power Premium. Для продолжения загрузки нажмите кнопку Далее."/>
-          </node>
-          <node bounds="[0,992][720,1088]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="egb45.g4gYY" password="false" resource-id="id/Button1" scrollable="false" selected="false" text="Далее"/>
-          <node bounds="[0,1088][720,1184]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="egb45.g4gYY" password="false" resource-id="id/Button2" scrollable="false" selected="false" text="Правила"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 13:51:18,012 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 13:51:18,013 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 13:51:18,601 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/85aa4a90a82e80d12d3ea659be2122769f84ff2c23bb8ad698f32b6a789c6c5a/first_page.png
-2017-07-09 13:51:18,680 - COSMOS_TRIGGER_PY-Console - DEBUG - 3543 KB/s (68978 bytes in 0.019s)
-2017-07-09 13:51:23,707 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/egb45.g4gYY0709-13-50-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/85aa4a90a82e80d12d3ea659be2122769f84ff2c23bb8ad698f32b6a789c6c5a/egb45.g4gYY0709-13-50-49.pcap
-2017-07-09 13:51:28,789 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/egb45.g4gYY0709-13-50-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/85aa4a90a82e80d12d3ea659be2122769f84ff2c23bb8ad698f32b6a789c6c5a/egb45.g4gYY0709-13-50-49.pcap
-2017-07-09 13:51:33,875 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/egb45.g4gYY0709-13-50-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/85aa4a90a82e80d12d3ea659be2122769f84ff2c23bb8ad698f32b6a789c6c5a/egb45.g4gYY0709-13-50-49.pcap
-2017-07-09 13:51:38,959 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/egb45.g4gYY0709-13-50-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/85aa4a90a82e80d12d3ea659be2122769f84ff2c23bb8ad698f32b6a789c6c5a/egb45.g4gYY0709-13-50-49.pcap
-2017-07-09 13:51:39,042 - COSMOS_TRIGGER_PY-Console - DEBUG - 444 KB/s (4096 bytes in 0.009s)
-2017-07-09 13:51:54,045 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-09 13:51:54,049 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall egb45.g4gYY
-2017-07-09 13:51:55,796 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 13:51:55,799 - COSMOS_TRIGGER_PY-Console - INFO - End

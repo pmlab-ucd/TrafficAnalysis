@@ -1,47 +1,0 @@
-2017-07-09 20:24:51,936 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\d8c651ccbb5d2fc5e66c019832a6a96dca135a1f964a463068514b99e6397976.apk
-2017-07-09 20:24:51,936 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.android.downloader
-2017-07-09 20:24:51,936 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.android.downloader
-2017-07-09 20:24:52,658 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 20:24:52,660 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\d8c651ccbb5d2fc5e66c019832a6a96dca135a1f964a463068514b99e6397976.apk
-2017-07-09 20:24:55,658 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/d8c651ccbb5d2fc5e66c019832a6a96dca135a1f964a463068514b99e6397976.apk
-2017-07-09 20:24:55,660 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 20:24:55,660 - COSMOS_TRIGGER_PY-Console - DEBUG - 198 KB/s (60053 bytes in 0.294s)
-2017-07-09 20:24:55,660 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 20:24:57,950 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 20:24:57,950 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 20:24:58,980 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 20:24:58,982 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=148ms (0ms mobile, 148ms wifi, 0ms not connected)
-2017-07-09 20:25:00,390 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 20:25:00,460 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 20:25:00,460 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 20:25:00,473 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.android.downloader --ignore-crashes 1
-2017-07-09 20:25:01,749 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 20:25:01,750 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=154ms (0ms mobile, 154ms wifi, 0ms not connected)
-2017-07-09 20:25:01,826 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 20:25:01,937 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 20:25:22,759 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.downloader" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.downloader" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.downloader" password="false" resource-id="id/widget32" scrollable="false" selected="false" text="">
-        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.downloader" password="false" resource-id="id/widget32" scrollable="false" selected="false" text="">
-          <node bounds="[0,50][720,75]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.android.downloader" password="false" resource-id="id/textView2" scrollable="false" selected="false" text="Porno Video"/>
-          <node bounds="[188,75][532,617]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.android.downloader" password="false" resource-id="id/widget34" scrollable="false" selected="false" text=""/>
-          <node bounds="[10,617][710,1078]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.android.downloader" password="false" resource-id="id/textView1" scrollable="false" selected="false" text="Подтвердите согласие с правилами загрузки Порно Видео 18+  Для продолжения, нажмите Далее"/>
-          <node bounds="[0,1088][360,1184]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="4" long-clickable="false" package="com.android.downloader" password="false" resource-id="id/widget31" scrollable="false" selected="false" text="Далее"/>
-          <node bounds="[360,1088][720,1184]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="5" long-clickable="false" package="com.android.downloader" password="false" resource-id="id/widget33" scrollable="false" selected="false" text="Условия"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 20:25:23,907 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 20:25:23,907 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 20:25:24,740 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/d8c651ccbb5d2fc5e66c019832a6a96dca135a1f964a463068514b99e6397976/first_page.png
-2017-07-09 20:25:24,871 - COSMOS_TRIGGER_PY-Console - DEBUG - 2483 KB/s (147686 bytes in 0.058s)
-2017-07-09 20:25:29,915 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.android.downloader0709-20-24-51.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/d8c651ccbb5d2fc5e66c019832a6a96dca135a1f964a463068514b99e6397976/com.android.downloader0709-20-24-51.pcap
-2017-07-09 20:25:35,029 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.android.downloader0709-20-24-51.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/d8c651ccbb5d2fc5e66c019832a6a96dca135a1f964a463068514b99e6397976/com.android.downloader0709-20-24-51.pcap
-2017-07-09 20:25:35,131 - COSMOS_TRIGGER_PY-Console - DEBUG - 570 KB/s (4096 bytes in 0.007s)
-2017-07-09 20:25:50,132 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-09 20:25:50,134 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.android.downloader
-2017-07-09 20:25:51,529 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 20:25:51,529 - COSMOS_TRIGGER_PY-Console - INFO - End

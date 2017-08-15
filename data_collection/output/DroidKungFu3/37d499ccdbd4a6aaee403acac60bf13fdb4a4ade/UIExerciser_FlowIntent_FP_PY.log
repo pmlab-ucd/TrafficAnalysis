@@ -1,53 +1,0 @@
-2017-07-07 22:42:28,983 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\37d499ccdbd4a6aaee403acac60bf13fdb4a4ade.apk
-2017-07-07 22:42:28,983 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.gp.netscramblefull
-2017-07-07 22:42:28,983 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.netscramblefull
-2017-07-07 22:42:29,756 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-07 22:42:29,756 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\37d499ccdbd4a6aaee403acac60bf13fdb4a4ade.apk
-2017-07-07 22:42:32,953 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/37d499ccdbd4a6aaee403acac60bf13fdb4a4ade.apk
-2017-07-07 22:42:32,954 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-07 22:42:32,954 - COSMOS_TRIGGER_PY-Console - DEBUG - 2383 KB/s (1278025 bytes in 0.523s)
-2017-07-07 22:42:32,954 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-07 22:42:33,788 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-07 22:42:33,788 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-07 22:42:34,618 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-07 22:42:34,618 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=61ms (0ms mobile, 61ms wifi, 0ms not connected)
-2017-07-07 22:42:34,619 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-07 22:42:34,697 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-07 22:42:34,697 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-07 22:42:34,713 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.gp.netscramblefull --ignore-crashes 1
-2017-07-07 22:42:35,743 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-07 22:42:35,743 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=203ms (0ms mobile, 203ms wifi, 0ms not connected)
-2017-07-07 22:42:35,821 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-07 22:42:36,938 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-07 22:43:03,974 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[40,207][680,976]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[65,227][655,946]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[65,227][655,333]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="License Agreement"/>
-      <node bounds="[65,333][655,946]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[65,333][655,946]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[65,333][655,946]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[71,339][649,838]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[71,339][649,838]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="true" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="Scrambled Net is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License at http://www.gnu.org/licenses/gpl-2.0.html for more details.  This program is open-source software. The source code can be obtained on the project home page; see the About screen."/>
-            </node>
-            <node bounds="[71,838][649,940]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[77,841][646,937]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.gp.netscramblefull" password="false" scrollable="false" selected="false" text="Close"/>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-07 22:43:05,135 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-07 22:43:05,137 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-07 22:43:11,369 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/37d499ccdbd4a6aaee403acac60bf13fdb4a4ade/first_page.png
-2017-07-07 22:44:11,404 - COSMOS_TRIGGER_PY-Console - WARNING - __init__() takes at least 3 arguments (2 given)
-2017-07-07 22:44:11,737 - COSMOS_TRIGGER_PY-Console - DEBUG - 3438 KB/s (456175 bytes in 0.129s)
-2017-07-07 22:44:11,743 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.gp.netscramblefull0707-22-42-28.pcap ../output/DroidKungFu3/37d499ccdbd4a6aaee403acac60bf13fdb4a4ade/com.gp.netscramblefull0707-22-42-28.pcap
-2017-07-07 22:45:11,749 - COSMOS_TRIGGER_PY-Console - WARNING - __init__() takes at least 3 arguments (2 given)
-2017-07-07 22:45:11,930 - COSMOS_TRIGGER_PY-Console - DEBUG - 1197 KB/s (12288 bytes in 0.010s)
-2017-07-07 22:45:11,930 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.gp.netscramblefull0707-22-42-28.pcap
-2017-07-07 22:45:27,000 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-07 22:45:27,003 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.netscramblefull
-2017-07-07 22:45:28,313 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-07 22:45:28,315 - COSMOS_TRIGGER_PY-Console - INFO - End

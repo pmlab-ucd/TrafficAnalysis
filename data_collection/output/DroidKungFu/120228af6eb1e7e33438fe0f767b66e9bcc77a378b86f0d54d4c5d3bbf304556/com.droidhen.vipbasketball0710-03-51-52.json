@@ -1,1 +1,0 @@
-[{"src": ["Location", "GPS Location"], "dst": "122", "process_name": "com.weather.Weather", "process_id": "6268", "log_time": "07-10 07:53:45.352", "message": "libcore.os.write(122) writing with tag 0x11 data[<?xml version='1.0' encoding='utf-8' standalone='yes' ?>.<map>.<string name=\"ZOMBIE_WIDGET_LOCATIONS]", "channel": "INTERNAL"}]

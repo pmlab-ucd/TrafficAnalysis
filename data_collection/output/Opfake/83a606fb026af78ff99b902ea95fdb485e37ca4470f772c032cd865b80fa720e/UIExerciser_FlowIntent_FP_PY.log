@@ -1,53 +1,0 @@
-2017-07-09 13:34:14,519 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\83a606fb026af78ff99b902ea95fdb485e37ca4470f772c032cd865b80fa720e.apk
-2017-07-09 13:34:14,520 - COSMOS_TRIGGER_PY-Console - INFO - pkg:ru.droid.install
-2017-07-09 13:34:14,520 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall ru.droid.install
-2017-07-09 13:34:15,296 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 13:34:15,296 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\83a606fb026af78ff99b902ea95fdb485e37ca4470f772c032cd865b80fa720e.apk
-2017-07-09 13:34:17,997 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/83a606fb026af78ff99b902ea95fdb485e37ca4470f772c032cd865b80fa720e.apk
-2017-07-09 13:34:17,999 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 13:34:17,999 - COSMOS_TRIGGER_PY-Console - DEBUG - 408 KB/s (53618 bytes in 0.128s)
-2017-07-09 13:34:18,000 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 13:34:26,701 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 13:34:26,703 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 13:34:28,017 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 13:34:28,019 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=179ms (0ms mobile, 179ms wifi, 0ms not connected)
-2017-07-09 13:34:29,404 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 13:34:29,483 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 13:34:29,483 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 13:34:29,503 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p ru.droid.install --ignore-crashes 1
-2017-07-09 13:34:31,589 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 13:34:31,591 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=692ms (0ms mobile, 692ms wifi, 0ms not connected)
-2017-07-09 13:34:31,642 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 13:34:31,736 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 13:34:53,094 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ru.droid.install" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ru.droid.install" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ru.droid.install" password="false" resource-id="id/widget32" scrollable="false" selected="false" text="">
-        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ru.droid.install" password="false" resource-id="id/widget32" scrollable="false" selected="false" text="">
-          <node bounds="[0,50][720,75]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ru.droid.install" password="false" resource-id="id/textView2" scrollable="false" selected="false" text="Downloader"/>
-          <node bounds="[188,75][532,617]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="ru.droid.install" password="false" resource-id="id/widget34" scrollable="false" selected="false" text=""/>
-          <node bounds="[10,617][710,1078]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="ru.droid.install" password="false" resource-id="id/textView1" scrollable="false" selected="false" text="Do you agree with the rules of downloading?   To continue, click OK"/>
-          <node bounds="[0,1088][360,1184]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="4" long-clickable="false" package="ru.droid.install" password="false" resource-id="id/widget31" scrollable="false" selected="false" text="OK"/>
-          <node bounds="[360,1088][720,1184]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="5" long-clickable="false" package="ru.droid.install" password="false" resource-id="id/widget33" scrollable="false" selected="false" text="Rules"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 13:34:54,293 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 13:34:54,295 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 13:34:54,976 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/83a606fb026af78ff99b902ea95fdb485e37ca4470f772c032cd865b80fa720e/first_page.png
-2017-07-09 13:34:55,109 - COSMOS_TRIGGER_PY-Console - DEBUG - 2865 KB/s (111528 bytes in 0.038s)
-2017-07-09 13:35:00,137 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/ru.droid.install0709-13-34-14.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/83a606fb026af78ff99b902ea95fdb485e37ca4470f772c032cd865b80fa720e/ru.droid.install0709-13-34-14.pcap
-2017-07-09 13:35:05,229 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/ru.droid.install0709-13-34-14.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/83a606fb026af78ff99b902ea95fdb485e37ca4470f772c032cd865b80fa720e/ru.droid.install0709-13-34-14.pcap
-2017-07-09 13:35:10,339 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/ru.droid.install0709-13-34-14.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/83a606fb026af78ff99b902ea95fdb485e37ca4470f772c032cd865b80fa720e/ru.droid.install0709-13-34-14.pcap
-2017-07-09 13:35:15,433 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/ru.droid.install0709-13-34-14.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/83a606fb026af78ff99b902ea95fdb485e37ca4470f772c032cd865b80fa720e/ru.droid.install0709-13-34-14.pcap
-2017-07-09 13:35:20,539 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/ru.droid.install0709-13-34-14.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/83a606fb026af78ff99b902ea95fdb485e37ca4470f772c032cd865b80fa720e/ru.droid.install0709-13-34-14.pcap
-2017-07-09 13:35:25,647 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/ru.droid.install0709-13-34-14.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/83a606fb026af78ff99b902ea95fdb485e37ca4470f772c032cd865b80fa720e/ru.droid.install0709-13-34-14.pcap
-2017-07-09 13:35:30,755 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/ru.droid.install0709-13-34-14.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/83a606fb026af78ff99b902ea95fdb485e37ca4470f772c032cd865b80fa720e/ru.droid.install0709-13-34-14.pcap
-2017-07-09 13:35:35,852 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/ru.droid.install0709-13-34-14.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/83a606fb026af78ff99b902ea95fdb485e37ca4470f772c032cd865b80fa720e/ru.droid.install0709-13-34-14.pcap
-2017-07-09 13:35:35,953 - COSMOS_TRIGGER_PY-Console - DEBUG - 2000 KB/s (12288 bytes in 0.005s)
-2017-07-09 13:35:50,953 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-09 13:35:50,954 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall ru.droid.install
-2017-07-09 13:35:52,940 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 13:35:52,941 - COSMOS_TRIGGER_PY-Console - INFO - End

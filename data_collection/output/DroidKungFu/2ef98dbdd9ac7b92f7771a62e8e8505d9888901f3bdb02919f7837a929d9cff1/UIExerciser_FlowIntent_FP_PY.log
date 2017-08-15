@@ -1,65 +1,0 @@
-2017-07-10 08:57:43,834 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\2ef98dbdd9ac7b92f7771a62e8e8505d9888901f3bdb02919f7837a929d9cff1.apk
-2017-07-10 08:57:43,834 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.catsw.lockgallery
-2017-07-10 08:57:43,835 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.catsw.lockgallery
-2017-07-10 08:57:44,757 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-10 08:57:44,757 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\2ef98dbdd9ac7b92f7771a62e8e8505d9888901f3bdb02919f7837a929d9cff1.apk
-2017-07-10 08:57:48,230 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/2ef98dbdd9ac7b92f7771a62e8e8505d9888901f3bdb02919f7837a929d9cff1.apk
-2017-07-10 08:57:48,230 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-10 08:57:48,230 - COSMOS_TRIGGER_PY-Console - DEBUG - 1449 KB/s (1119612 bytes in 0.754s)
-2017-07-10 08:57:48,230 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-10 08:57:52,104 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-10 08:57:52,105 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-10 08:57:53,578 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-10 08:57:53,578 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=395ms (0ms mobile, 395ms wifi, 0ms not connected)
-2017-07-10 08:57:55,440 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-10 08:57:55,658 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-10 08:57:55,660 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-10 08:57:55,676 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.catsw.lockgallery --ignore-crashes 1
-2017-07-10 08:57:57,552 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-10 08:57:57,552 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=129ms (0ms mobile, 129ms wifi, 0ms not connected)
-2017-07-10 08:57:57,621 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-10 08:57:57,786 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-10 08:58:24,677 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="id/password_layout" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="id/password_layout" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="id/content" scrollable="false" selected="false" text="">
-        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" resource-id="id/content" scrollable="false" selected="false" text="">
-          <node bounds="[312,339][408,435]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="Superuser Request" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text=""/>
-          <node bounds="[223,435][496,478]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Superuser Request"/>
-          <node bounds="[40,488][680,492]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text=""/>
-          <!--NAF: The following control may not be accessibility friendly-->
-          <node NAF="true" bounds="[40,502][680,684]" checkable="false" checked="false" class="android.widget.ViewFlipper" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[40,502][680,672]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Gallery Lock is requesting Superuser access.  Warning: If you did not initiate this action, or if you do not understand this request, it's generally a good idea to deny it."/>
-          </node>
-          <node bounds="[40,684][680,722]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Tap for more info"/>
-          <node bounds="[40,722][680,818]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="5" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[40,722][360,818]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Deny"/>
-            <node bounds="[360,722][680,818]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Allow"/>
-          </node>
-          <node bounds="[40,818][680,895]" checkable="true" checked="true" class="android.widget.CheckBox" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="6" long-clickable="false" package="com.noshufou.android.su" password="false" scrollable="false" selected="false" text="Remember"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-10 08:58:25,845 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-10 08:58:25,845 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-10 08:58:26,681 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2ef98dbdd9ac7b92f7771a62e8e8505d9888901f3bdb02919f7837a929d9cff1/first_page.png
-2017-07-10 08:58:26,808 - COSMOS_TRIGGER_PY-Console - DEBUG - 3983 KB/s (204016 bytes in 0.050s)
-2017-07-10 08:58:31,828 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.catsw.lockgallery0710-08-57-43.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2ef98dbdd9ac7b92f7771a62e8e8505d9888901f3bdb02919f7837a929d9cff1/com.catsw.lockgallery0710-08-57-43.pcap
-2017-07-10 08:58:36,910 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.catsw.lockgallery0710-08-57-43.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2ef98dbdd9ac7b92f7771a62e8e8505d9888901f3bdb02919f7837a929d9cff1/com.catsw.lockgallery0710-08-57-43.pcap
-2017-07-10 08:58:41,993 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.catsw.lockgallery0710-08-57-43.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2ef98dbdd9ac7b92f7771a62e8e8505d9888901f3bdb02919f7837a929d9cff1/com.catsw.lockgallery0710-08-57-43.pcap
-2017-07-10 08:58:47,079 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.catsw.lockgallery0710-08-57-43.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2ef98dbdd9ac7b92f7771a62e8e8505d9888901f3bdb02919f7837a929d9cff1/com.catsw.lockgallery0710-08-57-43.pcap
-2017-07-10 08:58:52,160 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.catsw.lockgallery0710-08-57-43.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2ef98dbdd9ac7b92f7771a62e8e8505d9888901f3bdb02919f7837a929d9cff1/com.catsw.lockgallery0710-08-57-43.pcap
-2017-07-10 08:58:57,242 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.catsw.lockgallery0710-08-57-43.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2ef98dbdd9ac7b92f7771a62e8e8505d9888901f3bdb02919f7837a929d9cff1/com.catsw.lockgallery0710-08-57-43.pcap
-2017-07-10 08:59:02,325 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.catsw.lockgallery0710-08-57-43.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2ef98dbdd9ac7b92f7771a62e8e8505d9888901f3bdb02919f7837a929d9cff1/com.catsw.lockgallery0710-08-57-43.pcap
-2017-07-10 08:59:07,407 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.catsw.lockgallery0710-08-57-43.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2ef98dbdd9ac7b92f7771a62e8e8505d9888901f3bdb02919f7837a929d9cff1/com.catsw.lockgallery0710-08-57-43.pcap
-2017-07-10 08:59:12,489 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.catsw.lockgallery0710-08-57-43.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2ef98dbdd9ac7b92f7771a62e8e8505d9888901f3bdb02919f7837a929d9cff1/com.catsw.lockgallery0710-08-57-43.pcap
-2017-07-10 08:59:17,569 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.catsw.lockgallery0710-08-57-43.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2ef98dbdd9ac7b92f7771a62e8e8505d9888901f3bdb02919f7837a929d9cff1/com.catsw.lockgallery0710-08-57-43.pcap
-2017-07-10 08:59:22,651 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.catsw.lockgallery0710-08-57-43.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2ef98dbdd9ac7b92f7771a62e8e8505d9888901f3bdb02919f7837a929d9cff1/com.catsw.lockgallery0710-08-57-43.pcap
-2017-07-10 08:59:27,736 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.catsw.lockgallery0710-08-57-43.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2ef98dbdd9ac7b92f7771a62e8e8505d9888901f3bdb02919f7837a929d9cff1/com.catsw.lockgallery0710-08-57-43.pcap
-2017-07-10 08:59:27,816 - COSMOS_TRIGGER_PY-Console - DEBUG - 499 KB/s (4096 bytes in 0.008s)
-2017-07-10 08:59:42,818 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-10 08:59:42,819 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.catsw.lockgallery
-2017-07-10 08:59:44,105 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-10 08:59:44,105 - COSMOS_TRIGGER_PY-Console - INFO - End

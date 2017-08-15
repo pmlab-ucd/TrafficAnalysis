@@ -1,1 +1,0 @@
-[{"src": ["IMEI"], "dst": "54.72.130.67", "process_name": "ngjvnpslnp.iplhmk", "process_id": "2898", "log_time": "07-09 09:26:24.761", "message": "libcore.os.send(54.72.130.67) received data with tag 0x400 data=[POST /rq.php HTTP/1.1..Content-Length", "channel": "HTTP"}]

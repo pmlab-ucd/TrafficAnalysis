@@ -1,1 +1,0 @@
-[{"src": ["IMEI"], "dst": "121.14.255.100", "process_name": "com.adwo.android.snake", "process_id": "15639", "log_time": "07-10 12:18:35.945", "message": "libcore.os.send(121.14.255.100) received data with tag 0x400 data=[GET /action/connect/active?app_id=f0e6920eacc24a9bc9650bbc0213ad48&udid=351565054929465&app_version=] ", "channel": "HTTP"}]

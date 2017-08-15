@@ -1,50 +1,0 @@
-2017-07-08 04:14:27,523 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\c34f9dea764c90d559290a630b2a67e104291a0a.apk
-2017-07-08 04:14:27,523 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.alan.message
-2017-07-08 04:14:27,523 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.alan.message
-2017-07-08 04:14:28,243 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 04:14:28,243 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\c34f9dea764c90d559290a630b2a67e104291a0a.apk
-2017-07-08 04:14:30,371 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/c34f9dea764c90d559290a630b2a67e104291a0a.apk
-2017-07-08 04:14:30,371 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 04:14:30,371 - COSMOS_TRIGGER_PY-Console - DEBUG - 1957 KB/s (568959 bytes in 0.283s)
-2017-07-08 04:14:30,371 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 04:14:31,453 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 04:14:31,453 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 04:14:32,401 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 04:14:32,401 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=223ms (0ms mobile, 223ms wifi, 0ms not connected)
-2017-07-08 04:14:33,763 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 04:14:33,841 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 04:14:33,841 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 04:14:33,855 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.alan.message --ignore-crashes 1
-2017-07-08 04:14:34,729 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 04:14:34,729 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=105ms (0ms mobile, 105ms wifi, 0ms not connected)
-2017-07-08 04:14:34,801 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 04:14:34,928 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 04:14:56,405 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.message" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.message" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.message" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.message" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
-        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.alan.message" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-          <node bounds="[0,0][720,96]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.message" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-            <node bounds="[2,23][98,66]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.message" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="收信人"/>
-            <node bounds="[103,0][720,96]" checkable="false" checked="false" class="android.widget.EditText" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="1" long-clickable="true" package="com.alan.message" password="false" resource-id="id/main_editTxtPhone" scrollable="false" selected="false" text="请输入电话号码"/>
-          </node>
-          <node bounds="[0,96][720,246]" checkable="false" checked="false" class="android.widget.EditText" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="true" package="com.alan.message" password="false" resource-id="id/main_editTxtMessage" scrollable="false" selected="false" text="请编辑短信内容"/>
-          <node bounds="[0,246][720,353]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.alan.message" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-            <node bounds="[0,246][80,353]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.alan.message" password="false" resource-id="id/main_btnSend" scrollable="false" selected="false" text="发送"/>
-            <node bounds="[80,246][160,353]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.alan.message" password="false" resource-id="id/main_btnCancel" scrollable="false" selected="false" text="取消"/>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 04:14:57,566 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 04:14:57,566 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 04:14:58,145 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/c34f9dea764c90d559290a630b2a67e104291a0a/first_page.png
-2017-07-08 04:14:58,217 - COSMOS_TRIGGER_PY-Console - DEBUG - 3455 KB/s (39445 bytes in 0.011s)
-2017-07-08 04:15:03,349 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.alan.message0708-04-14-27.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/c34f9dea764c90d559290a630b2a67e104291a0a/com.alan.message0708-04-14-27.pcap
-2017-07-08 04:15:03,456 - COSMOS_TRIGGER_PY-Console - DEBUG - 888 KB/s (8658 bytes in 0.009s)
-2017-07-08 04:15:03,921 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.alan.message
-2017-07-08 04:15:05,400 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 04:15:05,400 - COSMOS_TRIGGER_PY-Console - INFO - End

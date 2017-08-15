@@ -1,75 +1,0 @@
-2017-07-08 03:53:01,329 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\a3e6c041180974a6cf9416291dd9913290f71a7b.apk
-2017-07-08 03:53:01,329 - COSMOS_TRIGGER_PY-Console - INFO - pkg:sunkay.ExpressionSMS
-2017-07-08 03:53:01,329 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall sunkay.ExpressionSMS
-2017-07-08 03:53:02,907 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 03:53:02,907 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\a3e6c041180974a6cf9416291dd9913290f71a7b.apk
-2017-07-08 03:53:04,710 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/a3e6c041180974a6cf9416291dd9913290f71a7b.apk
-2017-07-08 03:53:04,710 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 03:53:04,711 - COSMOS_TRIGGER_PY-Console - DEBUG - 2093 KB/s (454508 bytes in 0.211s)
-2017-07-08 03:53:04,711 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 03:53:05,447 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 03:53:05,447 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 03:53:06,374 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 03:53:06,374 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=189ms (0ms mobile, 189ms wifi, 0ms not connected)
-2017-07-08 03:53:07,750 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 03:53:07,878 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 03:53:07,878 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 03:53:07,905 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p sunkay.ExpressionSMS --ignore-crashes 1
-2017-07-08 03:53:08,884 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 03:53:08,885 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=200ms (0ms mobile, 200ms wifi, 0ms not connected)
-2017-07-08 03:53:08,963 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 03:53:09,055 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 03:53:52,759 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="id/title" scrollable="false" selected="false" text="表情传情发短信"/>
-      </node>
-      <node bounds="[0,100][720,660]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[0,100][720,660]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-          <node bounds="[0,100][720,660]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="NO_ID" scrollable="true" selected="false" text="">
-            <node bounds="[0,100][720,840]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-              <node bounds="[0,100][720,196]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-                <node bounds="[0,103][100,199]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="id/select" scrollable="false" selected="false" text="添加"/>
-                <node bounds="[100,127][212,165]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="联系人："/>
-                <node bounds="[212,100][612,196]" checkable="false" checked="false" class="android.widget.EditText" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="2" long-clickable="true" package="sunkay.ExpressionSMS" password="false" resource-id="id/contact" scrollable="false" selected="false" text="电话号码"/>
-              </node>
-              <node bounds="[0,196][640,396]" checkable="false" checked="false" class="android.widget.EditText" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="true" package="sunkay.ExpressionSMS" password="false" resource-id="id/sms" scrollable="false" selected="false" text="这里输入短信"/>
-              <node bounds="[0,396][720,766]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="id/face_container" scrollable="false" selected="false" text="">
-                <node bounds="[0,396][720,470]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-                  <node bounds="[0,396][212,470]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="id/bt1" scrollable="false" selected="false" text="╮(╯◇╰)╭ HO"/>
-                  <node bounds="[212,396][424,470]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="id/bt2" scrollable="false" selected="false" text="（￣ε￣）"/>
-                  <node bounds="[424,396][636,470]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="id/bt3" scrollable="false" selected="false" text="Y(^_^)Y"/>
-                </node>
-                <node bounds="[0,470][720,544]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-                  <node bounds="[0,470][212,544]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="id/bt4" scrollable="false" selected="false" text="&gt;_&lt;#"/>
-                  <node bounds="[212,470][424,544]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="id/bt5" scrollable="false" selected="false" text="(^_^)/bye"/>
-                  <node bounds="[424,470][636,544]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="id/bt6" scrollable="false" selected="false" text="︶︹︺!"/>
-                </node>
-                <node bounds="[0,544][720,618]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-                  <node bounds="[0,544][212,618]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="id/bt7" scrollable="false" selected="false" text="(^_^)"/>
-                  <node bounds="[212,544][424,618]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="id/bt8" scrollable="false" selected="false" text="( $ _ $ )"/>
-                  <node bounds="[424,544][636,618]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="id/bt9" scrollable="false" selected="false" text="(？_？)"/>
-                </node>
-                <node bounds="[0,618][720,692]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-                  <node bounds="[0,618][212,692]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="id/bt10" scrollable="false" selected="false" text="(＞﹏＜)"/>
-                  <node bounds="[212,618][424,692]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="id/bt11" scrollable="false" selected="false" text="o(╯□╰)o"/>
-                  <node bounds="[424,618][636,692]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="sunkay.ExpressionSMS" password="false" resource-id="id/bt12" scrollable="false" selected="false" text="(￣o￣). z Z"/>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 03:53:53,913 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 03:53:53,913 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 03:53:54,661 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/a3e6c041180974a6cf9416291dd9913290f71a7b/first_page.png
-2017-07-08 03:53:54,802 - COSMOS_TRIGGER_PY-Console - DEBUG - 3816 KB/s (117311 bytes in 0.030s)
-2017-07-08 03:53:59,957 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/sunkay.ExpressionSMS0708-03-53-01.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/a3e6c041180974a6cf9416291dd9913290f71a7b/sunkay.ExpressionSMS0708-03-53-01.pcap
-2017-07-08 03:54:00,059 - COSMOS_TRIGGER_PY-Console - DEBUG - 1124 KB/s (6918 bytes in 0.006s)
-2017-07-08 03:54:00,377 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall sunkay.ExpressionSMS
-2017-07-08 03:54:02,062 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 03:54:02,062 - COSMOS_TRIGGER_PY-Console - INFO - End

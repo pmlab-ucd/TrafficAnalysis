@@ -1,39 +1,0 @@
-2017-07-08 20:45:46,719 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\718b31f6ebd32ddf6f7f7378b0a92e2724e49f81.apk
-2017-07-08 20:45:46,720 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.gp.DropBubble
-2017-07-08 20:45:46,720 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.DropBubble
-2017-07-08 20:45:47,502 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 20:45:47,503 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\718b31f6ebd32ddf6f7f7378b0a92e2724e49f81.apk
-2017-07-08 20:45:54,790 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/718b31f6ebd32ddf6f7f7378b0a92e2724e49f81.apk
-2017-07-08 20:45:54,792 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 20:45:54,793 - COSMOS_TRIGGER_PY-Console - DEBUG - 2573 KB/s (1473044 bytes in 0.559s)
-2017-07-08 20:45:54,795 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 20:45:55,788 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 20:45:55,789 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 20:45:56,723 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 20:45:56,724 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=121ms (0ms mobile, 121ms wifi, 0ms not connected)
-2017-07-08 20:45:58,115 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 20:45:58,186 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 20:45:58,187 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 20:45:58,207 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.gp.DropBubble --ignore-crashes 1
-2017-07-08 20:45:59,244 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 20:45:59,246 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=180ms (0ms mobile, 180ms wifi, 0ms not connected)
-2017-07-08 20:45:59,318 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 20:45:59,460 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 20:46:18,582 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.DropBubble" password="false" resource-id="id/content" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.DropBubble" password="false" resource-id="id/content" scrollable="false" selected="false" text="">
-      <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.DropBubble" password="false" resource-id="id/content" scrollable="false" selected="false" text="">
-        <node bounds="[0,52][720,1132]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.DropBubble" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 20:46:19,755 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 20:46:19,755 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 20:46:20,645 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/718b31f6ebd32ddf6f7f7378b0a92e2724e49f81/first_page.png
-2017-07-08 20:46:20,778 - COSMOS_TRIGGER_PY-Console - DEBUG - 2932 KB/s (163517 bytes in 0.054s)
-2017-07-08 20:46:25,799 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.gp.DropBubble0708-20-45-46.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/718b31f6ebd32ddf6f7f7378b0a92e2724e49f81/com.gp.DropBubble0708-20-45-46.pcap
-2017-07-08 20:46:25,964 - COSMOS_TRIGGER_PY-Console - DEBUG - 1597 KB/s (28672 bytes in 0.017s)
-2017-07-08 20:46:26,938 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.DropBubble
-2017-07-08 20:46:28,536 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 20:46:28,536 - COSMOS_TRIGGER_PY-Console - INFO - End

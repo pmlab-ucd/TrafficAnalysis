@@ -1,51 +1,0 @@
-2017-07-07 20:54:32,187 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\012339544c49584aace4e99d6c9013d1c79e38dc.apk
-2017-07-07 20:54:32,187 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.alan.translate
-2017-07-07 20:54:32,187 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.alan.translate
-2017-07-07 20:54:32,960 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-07 20:54:32,960 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\012339544c49584aace4e99d6c9013d1c79e38dc.apk
-2017-07-07 20:54:35,250 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/012339544c49584aace4e99d6c9013d1c79e38dc.apk
-2017-07-07 20:54:35,250 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-07 20:54:35,250 - COSMOS_TRIGGER_PY-Console - DEBUG - 1651 KB/s (432694 bytes in 0.255s)
-2017-07-07 20:54:35,250 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-07 20:54:35,982 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-07 20:54:35,982 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-07 20:54:36,808 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-07 20:54:36,808 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=44ms (0ms mobile, 44ms wifi, 0ms not connected)
-2017-07-07 20:54:36,809 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-07 20:54:36,885 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-07 20:54:36,885 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-07 20:54:36,901 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.alan.translate --ignore-crashes 1
-2017-07-07 20:54:37,979 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-07 20:54:37,979 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=125ms (0ms mobile, 125ms wifi, 0ms not connected)
-2017-07-07 20:54:38,063 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-07 20:54:39,187 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-07 20:55:07,128 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[40,168][680,1015]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.translate" password="false" resource-id="id/parentPanel" scrollable="false" selected="false" text="">
-    <node bounds="[40,168][680,1015]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.translate" password="false" resource-id="id/parentPanel" scrollable="false" selected="false" text="">
-      <node bounds="[40,168][680,1015]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.translate" password="false" resource-id="id/parentPanel" scrollable="false" selected="false" text="">
-        <node bounds="[40,168][680,1015]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.translate" password="false" resource-id="id/parentPanel" scrollable="false" selected="false" text="">
-          <node bounds="[46,186][678,1009]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.translate" password="false" resource-id="id/contentPanel" scrollable="false" selected="false" text="">
-            <node bounds="[71,206][653,979]" checkable="false" checked="false" class="android.widget.ListView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="false" package="com.alan.translate" password="false" resource-id="id/select_dialog_listview" scrollable="false" selected="false" text="">
-              <node bounds="[71,206][653,334]" checkable="true" checked="true" class="android.widget.CheckedTextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.alan.translate" password="false" resource-id="id/text1" scrollable="false" selected="false" text="英译汉"/>
-              <node bounds="[71,335][653,463]" checkable="true" checked="false" class="android.widget.CheckedTextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.alan.translate" password="false" resource-id="id/text1" scrollable="false" selected="false" text="汉译英"/>
-              <node bounds="[71,464][653,592]" checkable="true" checked="false" class="android.widget.CheckedTextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.alan.translate" password="false" resource-id="id/text1" scrollable="false" selected="false" text="繁译简"/>
-              <node bounds="[71,593][653,721]" checkable="true" checked="false" class="android.widget.CheckedTextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.alan.translate" password="false" resource-id="id/text1" scrollable="false" selected="false" text="简译繁"/>
-              <node bounds="[71,722][653,850]" checkable="true" checked="false" class="android.widget.CheckedTextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.alan.translate" password="false" resource-id="id/text1" scrollable="false" selected="false" text="日译汉"/>
-              <node bounds="[71,851][653,979]" checkable="true" checked="false" class="android.widget.CheckedTextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="5" long-clickable="false" package="com.alan.translate" password="false" resource-id="id/text1" scrollable="false" selected="false" text="汉译日"/>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-07 20:55:08,286 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-07 20:55:08,286 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-07 20:55:08,862 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/012339544c49584aace4e99d6c9013d1c79e38dc/first_page.png
-2017-07-07 20:55:08,989 - COSMOS_TRIGGER_PY-Console - DEBUG - 3506 KB/s (77177 bytes in 0.021s)
-2017-07-07 20:55:08,996 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.alan.translate0707-20-54-32.pcap ../output/DroidKungFu3/012339544c49584aace4e99d6c9013d1c79e38dc/com.alan.translate0707-20-54-32.pcap
-2017-07-07 20:55:09,115 - COSMOS_TRIGGER_PY-Console - DEBUG - 158 KB/s (4096 bytes in 0.025s)
-2017-07-07 20:55:09,115 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.alan.translate0707-20-54-32.pcap
-2017-07-07 20:55:09,713 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.alan.translate
-2017-07-07 20:55:11,448 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-07 20:55:11,450 - COSMOS_TRIGGER_PY-Console - INFO - End

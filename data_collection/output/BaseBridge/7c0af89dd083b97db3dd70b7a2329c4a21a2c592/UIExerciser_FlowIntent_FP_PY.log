@@ -1,63 +1,0 @@
-2017-07-08 22:44:26,558 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\BaseBridge\7c0af89dd083b97db3dd70b7a2329c4a21a2c592.apk
-2017-07-08 22:44:26,561 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.zhangling.anTest20
-2017-07-08 22:44:26,569 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.zhangling.anTest20
-2017-07-08 22:44:27,355 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 22:44:27,358 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\BaseBridge\7c0af89dd083b97db3dd70b7a2329c4a21a2c592.apk
-2017-07-08 22:44:30,358 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/7c0af89dd083b97db3dd70b7a2329c4a21a2c592.apk
-2017-07-08 22:44:30,368 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 22:44:30,372 - COSMOS_TRIGGER_PY-Console - DEBUG - 1952 KB/s (1321640 bytes in 0.661s)
-2017-07-08 22:44:30,375 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 22:44:31,128 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 22:44:31,131 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 22:44:32,151 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 22:44:32,155 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=193ms (0ms mobile, 193ms wifi, 0ms not connected)
-2017-07-08 22:44:33,733 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 22:44:33,868 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 22:44:33,871 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 22:44:33,895 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.zhangling.anTest20 --ignore-crashes 1
-2017-07-08 22:44:35,006 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 22:44:35,009 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=254ms (0ms mobile, 254ms wifi, 0ms not connected)
-2017-07-08 22:44:35,096 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 22:44:35,296 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 22:45:02,760 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,420][360,638]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,420][360,638]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,420][360,638]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,420][360,638]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[3,430][359,500]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[29,448][333,488]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[29,448][333,488]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="通知"/>
-            </node>
-            <node bounds="[18,498][344,500]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text=""/>
-          </node>
-          <node bounds="[3,500][359,555]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[18,500][344,555]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[34,502][333,541]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="已发现有更新版本哦！"/>
-            </node>
-          </node>
-          <node bounds="[3,555][359,635]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[18,555][344,617]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[100,559][261,613]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.zhangling.anTest20" password="false" scrollable="false" selected="false" text="闪电更新"/>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 22:45:03,997 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 22:45:04,000 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 22:45:05,092 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/7c0af89dd083b97db3dd70b7a2329c4a21a2c592/first_page.png
-2017-07-08 22:45:05,387 - COSMOS_TRIGGER_PY-Console - DEBUG - 2095 KB/s (333207 bytes in 0.155s)
-2017-07-08 22:45:10,414 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.zhangling.anTest200708-22-44-26.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/7c0af89dd083b97db3dd70b7a2329c4a21a2c592/com.zhangling.anTest200708-22-44-26.pcap
-2017-07-08 22:45:15,575 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.zhangling.anTest200708-22-44-26.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/7c0af89dd083b97db3dd70b7a2329c4a21a2c592/com.zhangling.anTest200708-22-44-26.pcap
-2017-07-08 22:45:20,726 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.zhangling.anTest200708-22-44-26.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/7c0af89dd083b97db3dd70b7a2329c4a21a2c592/com.zhangling.anTest200708-22-44-26.pcap
-2017-07-08 22:45:25,877 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.zhangling.anTest200708-22-44-26.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/7c0af89dd083b97db3dd70b7a2329c4a21a2c592/com.zhangling.anTest200708-22-44-26.pcap
-2017-07-08 22:45:31,026 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.zhangling.anTest200708-22-44-26.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/7c0af89dd083b97db3dd70b7a2329c4a21a2c592/com.zhangling.anTest200708-22-44-26.pcap
-2017-07-08 22:45:36,170 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.zhangling.anTest200708-22-44-26.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/7c0af89dd083b97db3dd70b7a2329c4a21a2c592/com.zhangling.anTest200708-22-44-26.pcap
-2017-07-08 22:45:41,318 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.zhangling.anTest200708-22-44-26.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/7c0af89dd083b97db3dd70b7a2329c4a21a2c592/com.zhangling.anTest200708-22-44-26.pcap
-2017-07-08 22:45:41,418 - COSMOS_TRIGGER_PY-Console - DEBUG - 570 KB/s (4096 bytes in 0.007s)
-2017-07-08 22:45:56,427 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-08 22:45:56,434 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.zhangling.anTest20
-2017-07-08 22:45:57,963 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 22:45:57,966 - COSMOS_TRIGGER_PY-Console - INFO - End

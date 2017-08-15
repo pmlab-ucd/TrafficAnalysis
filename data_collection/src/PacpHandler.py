@@ -6,6 +6,7 @@ import dpkt
 import datetime
 import socket
 from dpkt.compat import compat_ord
+
 # import win_inet_pton
 
 '''
@@ -18,7 +19,7 @@ class PcapHandler:
     def filter_pcap_by_ip(dirname, pkts, ip):
         ip = str(ip)
         try:
-            rdpcap(dirname + '/' + ip  + '.pcap')
+            rdpcap(dirname + '/' + ip + '.pcap')
             return
         except:
             pass
@@ -35,8 +36,7 @@ class PcapHandler:
         #            TCP in pkt
         #            and (str(pkt[TCP].sport) == port or str(pkt[TCP].dport) == port)
         #            and (pkt[IP].dst == ip or pkt[IP].src == ip))
-        wrpcap(dirname + '/' + ip +  '.pcap', filtered)
-
+        wrpcap(dirname + '/' + ip + '.pcap', filtered)
 
     @staticmethod
     def filter_pcap(dirname, pkts, ip, port):
@@ -128,12 +128,15 @@ class PcapHandler:
                 print 'Timestamp: ', str(datetime.datetime.utcfromtimestamp(timestamp))
                 print 'Ethernet Frame: ', PcapHandler.mac_addr(eth.src), PcapHandler.mac_addr(eth.dst), eth.type
                 print 'IP: %s -> %s   (len=%d ttl=%d DF=%d MF=%d offset=%d)' % \
-                      (PcapHandler.inet_to_str(ip.src), PcapHandler.inet_to_str(ip.dst), ip.len, ip.ttl, do_not_fragment, more_fragments,
-                       fragment_offset)
+                      (
+                      PcapHandler.inet_to_str(ip.src), PcapHandler.inet_to_str(ip.dst), ip.len, ip.ttl, do_not_fragment,
+                      more_fragments,
+                      fragment_offset)
                 print 'HTTP request: %s\n' % repr(request)
 
+
 if __name__ == '__main__':
-    PcapHandler.print_pacp('C:\Users\hfu\PycharmProjects\TrafficAnalysis\data_collection\output'
-                                                '\DroidKungFu\\'
-                           '2f6dfbd2621805916fe22b565e7c6869d9fa3815d9cc1ebda4573ae384a952b6\\'
-                           'com.mogo.puzzle0710-09-01-13.pcap')
+    pcap_path = '/mnt/Documents/FlowIntent/output\DroidKungFu\\2f6dfbd2621805916fe22b565e7c6869d9fa3815d9cc1ebda4573ae384a952b6\com.mogo.puzzle0710-09-01-13.pcap'
+    with open(pcap_path, 'rb') as f:
+        pcap = dpkt.pcap.Reader(f)
+        PcapHandler.print_pacp(pcap)

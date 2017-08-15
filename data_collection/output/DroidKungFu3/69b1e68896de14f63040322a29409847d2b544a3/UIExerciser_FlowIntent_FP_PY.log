@@ -1,29 +1,0 @@
-2017-07-08 00:14:26,030 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\69b1e68896de14f63040322a29409847d2b544a3.apk
-2017-07-08 00:14:26,032 - COSMOS_TRIGGER_PY-Console - INFO - pkg:irdc.F1WPMS
-2017-07-08 00:14:26,032 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall irdc.F1WPMS
-2017-07-08 00:14:26,910 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 00:14:26,910 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\69b1e68896de14f63040322a29409847d2b544a3.apk
-2017-07-08 00:14:38,806 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/69b1e68896de14f63040322a29409847d2b544a3.apk
-2017-07-08 00:14:38,806 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 00:14:38,806 - COSMOS_TRIGGER_PY-Console - DEBUG - 2522 KB/s (7497279 bytes in 2.902s)
-2017-07-08 00:14:38,806 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 00:14:50,266 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 00:14:50,267 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 00:14:51,598 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 00:14:51,598 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=114ms (0ms mobile, 114ms wifi, 0ms not connected)
-2017-07-08 00:14:54,029 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 00:14:54,411 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 00:14:54,411 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 00:14:54,424 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p irdc.F1WPMS --ignore-crashes 1
-2017-07-08 00:14:56,003 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 00:14:56,003 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=131ms (0ms mobile, 131ms wifi, 0ms not connected)
-2017-07-08 00:14:56,081 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 00:14:56,184 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 00:15:16,823 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/irdc.F1WPMS0708-00-14-25.pcap ../output/DroidKungFu3/69b1e68896de14f63040322a29409847d2b544a3/irdc.F1WPMS0708-00-14-25.pcap
-2017-07-08 00:16:16,867 - COSMOS_TRIGGER_PY-Console - WARNING - __init__() takes at least 3 arguments (2 given)
-2017-07-08 00:16:21,415 - COSMOS_TRIGGER_PY-Console - DEBUG - 36 KB/s (163840 bytes in 4.369s)
-2017-07-08 00:16:21,415 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/irdc.F1WPMS0708-00-14-25.pcap
-2017-07-08 00:16:36,536 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-08 00:16:36,538 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall irdc.F1WPMS
-2017-07-08 00:16:38,535 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 00:16:38,535 - COSMOS_TRIGGER_PY-Console - INFO - End

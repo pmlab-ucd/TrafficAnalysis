@@ -1,41 +1,0 @@
-2017-07-10 08:48:57,654 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\2baf6e70672789096752383f0dfda9774a3fef55cd64c5ad7fe5ce02f4beb8fb.apk
-2017-07-10 08:48:57,654 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.livegame.android.shelves
-2017-07-10 08:48:57,654 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.livegame.android.shelves
-2017-07-10 08:48:58,427 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-10 08:48:58,427 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\2baf6e70672789096752383f0dfda9774a3fef55cd64c5ad7fe5ce02f4beb8fb.apk
-2017-07-10 08:49:00,726 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/2baf6e70672789096752383f0dfda9774a3fef55cd64c5ad7fe5ce02f4beb8fb.apk
-2017-07-10 08:49:00,726 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-10 08:49:00,727 - COSMOS_TRIGGER_PY-Console - DEBUG - 1961 KB/s (593456 bytes in 0.295s)
-2017-07-10 08:49:00,727 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-10 08:49:01,513 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-10 08:49:01,513 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-10 08:49:02,497 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-10 08:49:02,497 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=142ms (0ms mobile, 142ms wifi, 0ms not connected)
-2017-07-10 08:49:03,894 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-10 08:49:04,023 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-10 08:49:04,023 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-10 08:49:04,056 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.livegame.android.shelves --ignore-crashes 1
-2017-07-10 08:49:05,039 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-10 08:49:05,039 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=149ms (0ms mobile, 149ms wifi, 0ms not connected)
-2017-07-10 08:49:05,118 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-10 08:49:05,220 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-10 08:49:25,335 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.android.shelves" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.android.shelves" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.android.shelves" password="false" scrollable="false" selected="false" text="">
-        <!--NAF: The following control may not be accessibility friendly-->
-        <node NAF="true" bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.GridView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.livegame.android.shelves" password="false" scrollable="false" selected="false" text=""/>
-        <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.livegame.android.shelves" password="false" scrollable="false" selected="false" text=""/>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-10 08:49:26,509 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-10 08:49:26,520 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-10 08:49:27,867 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2baf6e70672789096752383f0dfda9774a3fef55cd64c5ad7fe5ce02f4beb8fb/first_page.png
-2017-07-10 08:49:28,153 - COSMOS_TRIGGER_PY-Console - DEBUG - 2572 KB/s (452487 bytes in 0.171s)
-2017-07-10 08:49:33,197 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.livegame.android.shelves0710-08-48-57.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2baf6e70672789096752383f0dfda9774a3fef55cd64c5ad7fe5ce02f4beb8fb/com.livegame.android.shelves0710-08-48-57.pcap
-2017-07-10 08:49:33,352 - COSMOS_TRIGGER_PY-Console - DEBUG - 431 KB/s (4096 bytes in 0.009s)
-2017-07-10 08:49:33,923 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.livegame.android.shelves
-2017-07-10 08:49:35,313 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-10 08:49:35,313 - COSMOS_TRIGGER_PY-Console - INFO - End

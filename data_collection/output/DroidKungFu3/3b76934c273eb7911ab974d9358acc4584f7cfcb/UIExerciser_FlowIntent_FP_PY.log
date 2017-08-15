@@ -1,42 +1,0 @@
-2017-07-07 23:15:37,805 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\3b76934c273eb7911ab974d9358acc4584f7cfcb.apk
-2017-07-07 23:15:37,805 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.livegame.rss
-2017-07-07 23:15:37,805 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.livegame.rss
-2017-07-07 23:15:38,594 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-07 23:15:38,595 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\3b76934c273eb7911ab974d9358acc4584f7cfcb.apk
-2017-07-07 23:15:41,349 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/3b76934c273eb7911ab974d9358acc4584f7cfcb.apk
-2017-07-07 23:15:41,349 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-07 23:15:41,349 - COSMOS_TRIGGER_PY-Console - DEBUG - 2365 KB/s (1320551 bytes in 0.545s)
-2017-07-07 23:15:41,351 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-07 23:15:42,095 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-07 23:15:42,095 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-07 23:15:42,976 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-07 23:15:42,976 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=40ms (0ms mobile, 40ms wifi, 0ms not connected)
-2017-07-07 23:15:42,976 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-07 23:15:43,096 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-07 23:15:43,098 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-07 23:15:43,132 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.livegame.rss --ignore-crashes 1
-2017-07-07 23:15:44,160 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-07 23:15:44,160 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=170ms (0ms mobile, 170ms wifi, 0ms not connected)
-2017-07-07 23:15:44,237 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-07 23:15:45,375 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-07 23:16:06,127 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.rss" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.rss" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.rss" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.rss" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
-        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.livegame.rss" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
-        <node bounds="[0,0][720,1124]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.livegame.rss" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-07 23:16:07,286 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-07 23:16:07,286 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-07 23:16:08,325 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/3b76934c273eb7911ab974d9358acc4584f7cfcb/first_page.png
-2017-07-07 23:16:08,454 - COSMOS_TRIGGER_PY-Console - DEBUG - 2894 KB/s (175739 bytes in 0.059s)
-2017-07-07 23:16:08,461 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.livegame.rss0707-23-15-37.pcap ../output/DroidKungFu3/3b76934c273eb7911ab974d9358acc4584f7cfcb/com.livegame.rss0707-23-15-37.pcap
-2017-07-07 23:16:08,533 - COSMOS_TRIGGER_PY-Console - DEBUG - 399 KB/s (8192 bytes in 0.020s)
-2017-07-07 23:16:08,533 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.livegame.rss0707-23-15-37.pcap
-2017-07-07 23:16:09,069 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.livegame.rss
-2017-07-07 23:16:10,648 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-07 23:16:10,648 - COSMOS_TRIGGER_PY-Console - INFO - End

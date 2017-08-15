@@ -1,47 +1,0 @@
-2017-07-10 08:18:24,966 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\20f041251009e9fd86523b5c6de64a75f461e521e0c3af811da67d6f838c73d6.apk
-2017-07-10 08:18:24,966 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.adwo.android.snake
-2017-07-10 08:18:24,966 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.adwo.android.snake
-2017-07-10 08:18:25,891 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-10 08:18:25,891 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\20f041251009e9fd86523b5c6de64a75f461e521e0c3af811da67d6f838c73d6.apk
-2017-07-10 08:18:29,697 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/20f041251009e9fd86523b5c6de64a75f461e521e0c3af811da67d6f838c73d6.apk
-2017-07-10 08:18:29,697 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-10 08:18:29,697 - COSMOS_TRIGGER_PY-Console - DEBUG - 2444 KB/s (3133093 bytes in 1.251s)
-2017-07-10 08:18:29,697 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-10 08:18:30,430 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-10 08:18:30,430 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-10 08:18:31,467 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-10 08:18:31,467 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=150ms (0ms mobile, 150ms wifi, 0ms not connected)
-2017-07-10 08:18:32,838 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-10 08:18:32,967 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-10 08:18:32,967 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-10 08:18:32,990 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.adwo.android.snake --ignore-crashes 1
-2017-07-10 08:18:34,073 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-10 08:18:34,073 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=241ms (0ms mobile, 241ms wifi, 0ms not connected)
-2017-07-10 08:18:34,153 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-10 08:18:34,257 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-10 08:18:55,321 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.adwo.android.snake" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.adwo.android.snake" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.adwo.android.snake" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.adwo.android.snake" password="false" resource-id="id/title" scrollable="false" selected="false" text="经典贪吃蛇"/>
-      </node>
-      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.adwo.android.snake" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.adwo.android.snake" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-          <node bounds="[10,110][710,148]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.adwo.android.snake" password="false" resource-id="id/label" scrollable="false" selected="false" text=""/>
-          <node bounds="[110,198][610,294]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.adwo.android.snake" password="false" resource-id="id/begin" scrollable="false" selected="false" text="开始游戏"/>
-          <node bounds="[110,344][610,440]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.adwo.android.snake" password="false" resource-id="id/help" scrollable="false" selected="false" text="关闭声音"/>
-          <node bounds="[110,490][610,586]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.adwo.android.snake" password="false" resource-id="id/exit" scrollable="false" selected="false" text="退出游戏"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-10 08:18:56,480 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-10 08:18:56,480 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-10 08:18:57,168 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/20f041251009e9fd86523b5c6de64a75f461e521e0c3af811da67d6f838c73d6/first_page.png
-2017-07-10 08:18:57,302 - COSMOS_TRIGGER_PY-Console - DEBUG - 1826 KB/s (54435 bytes in 0.029s)
-2017-07-10 08:19:02,335 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.adwo.android.snake0710-08-18-24.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/20f041251009e9fd86523b5c6de64a75f461e521e0c3af811da67d6f838c73d6/com.adwo.android.snake0710-08-18-24.pcap
-2017-07-10 08:19:02,490 - COSMOS_TRIGGER_PY-Console - DEBUG - 323 KB/s (16384 bytes in 0.049s)
-2017-07-10 08:19:02,707 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.adwo.android.snake
-2017-07-10 08:19:03,934 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-10 08:19:03,934 - COSMOS_TRIGGER_PY-Console - INFO - End

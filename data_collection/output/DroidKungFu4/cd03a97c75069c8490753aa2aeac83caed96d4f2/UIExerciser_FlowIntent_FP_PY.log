@@ -1,46 +1,0 @@
-2017-07-09 02:42:35,336 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\cd03a97c75069c8490753aa2aeac83caed96d4f2.apk
-2017-07-09 02:42:35,338 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.safetest.pvz
-2017-07-09 02:42:35,339 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.safetest.pvz
-2017-07-09 02:42:36,184 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 02:42:36,187 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\cd03a97c75069c8490753aa2aeac83caed96d4f2.apk
-2017-07-09 02:42:39,595 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/cd03a97c75069c8490753aa2aeac83caed96d4f2.apk
-2017-07-09 02:42:39,595 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 02:42:39,596 - COSMOS_TRIGGER_PY-Console - DEBUG - 1190 KB/s (1851784 bytes in 1.519s)
-2017-07-09 02:42:39,598 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 02:42:40,321 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 02:42:40,322 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 02:42:41,542 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 02:42:41,543 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=192ms (0ms mobile, 192ms wifi, 0ms not connected)
-2017-07-09 02:42:43,443 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 02:42:43,522 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 02:42:43,523 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 02:42:43,559 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.safetest.pvz --ignore-crashes 1
-2017-07-09 02:42:44,773 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 02:42:44,775 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=271ms (0ms mobile, 271ms wifi, 0ms not connected)
-2017-07-09 02:42:44,865 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 02:42:45,042 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 02:43:11,805 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.pvz" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.pvz" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.pvz" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="false" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.pvz" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-          <node bounds="[0,672][320,720]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.safetest.pvz" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-            <node bounds="[0,672][320,720]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.pvz" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-              <node bounds="[144,680][176,712]" checkable="false" checked="false" class="android.widget.ProgressBar" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.safetest.pvz" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
-            </node>
-          </node>
-        </node>
-        <node bounds="[0,0][1196,720]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.safetest.pvz" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 02:43:12,997 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 02:43:12,997 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 02:43:16,648 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/cd03a97c75069c8490753aa2aeac83caed96d4f2/first_page.png
-2017-07-09 02:43:17,237 - COSMOS_TRIGGER_PY-Console - DEBUG - 1687 KB/s (872729 bytes in 0.505s)
-2017-07-09 02:43:22,286 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.safetest.pvz0709-02-42-35.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/cd03a97c75069c8490753aa2aeac83caed96d4f2/com.safetest.pvz0709-02-42-35.pcap
-2017-07-09 02:43:22,415 - COSMOS_TRIGGER_PY-Console - DEBUG - 1199 KB/s (12288 bytes in 0.010s)
-2017-07-09 02:43:22,865 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.safetest.pvz
-2017-07-09 02:43:24,387 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 02:43:24,387 - COSMOS_TRIGGER_PY-Console - INFO - End

@@ -1,41 +1,0 @@
-2017-07-10 03:31:47,346 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\0b0625415fd2c9d06e28d4d246d202e6e2985853a6e1b9ec40eaa02bc197ba57.apk
-2017-07-10 03:31:47,346 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.evilsunflower.reader.evilGuigu
-2017-07-10 03:31:47,348 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.evilsunflower.reader.evilGuigu
-2017-07-10 03:31:48,122 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-10 03:31:48,124 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\0b0625415fd2c9d06e28d4d246d202e6e2985853a6e1b9ec40eaa02bc197ba57.apk
-2017-07-10 03:31:53,907 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/0b0625415fd2c9d06e28d4d246d202e6e2985853a6e1b9ec40eaa02bc197ba57.apk
-2017-07-10 03:31:53,907 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-10 03:31:53,908 - COSMOS_TRIGGER_PY-Console - DEBUG - 2611 KB/s (1402618 bytes in 0.524s)
-2017-07-10 03:31:53,908 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-10 03:31:54,640 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-10 03:31:54,640 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-10 03:31:55,561 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-10 03:31:55,562 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=124ms (0ms mobile, 124ms wifi, 0ms not connected)
-2017-07-10 03:31:56,940 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-10 03:31:57,015 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-10 03:31:57,015 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-10 03:31:57,035 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.evilsunflower.reader.evilGuigu --ignore-crashes 1
-2017-07-10 03:31:58,168 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-10 03:31:58,170 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=225ms (0ms mobile, 225ms wifi, 0ms not connected)
-2017-07-10 03:31:58,207 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-10 03:31:58,299 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-10 03:32:22,082 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.reader.evilGuigu" password="false" resource-id="id/root_view" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.reader.evilGuigu" password="false" resource-id="id/root_view" scrollable="false" selected="false" text="">
-      <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.reader.evilGuigu" password="false" resource-id="id/root_view" scrollable="false" selected="false" text="">
-        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.evilsunflower.reader.evilGuigu" password="false" resource-id="id/root_view" scrollable="false" selected="false" text="">
-          <node bounds="[0,0][720,1112]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="com.evilsunflower.reader.evilGuigu" password="false" resource-id="id/main_view" scrollable="false" selected="false" text=""/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-10 03:32:23,244 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-10 03:32:23,244 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-10 03:32:25,849 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/0b0625415fd2c9d06e28d4d246d202e6e2985853a6e1b9ec40eaa02bc197ba57/first_page.png
-2017-07-10 03:32:26,177 - COSMOS_TRIGGER_PY-Console - DEBUG - 3180 KB/s (838812 bytes in 0.257s)
-2017-07-10 03:32:31,219 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.evilsunflower.reader.evilGuigu0710-03-31-47.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/0b0625415fd2c9d06e28d4d246d202e6e2985853a6e1b9ec40eaa02bc197ba57/com.evilsunflower.reader.evilGuigu0710-03-31-47.pcap
-2017-07-10 03:32:31,322 - COSMOS_TRIGGER_PY-Console - DEBUG - 1998 KB/s (12288 bytes in 0.006s)
-2017-07-10 03:32:31,540 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.evilsunflower.reader.evilGuigu
-2017-07-10 03:32:32,980 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-10 03:32:32,980 - COSMOS_TRIGGER_PY-Console - INFO - End

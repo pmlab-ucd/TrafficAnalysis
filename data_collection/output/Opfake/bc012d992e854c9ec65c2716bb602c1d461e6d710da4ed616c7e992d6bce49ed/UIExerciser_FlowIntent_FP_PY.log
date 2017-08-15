@@ -1,49 +1,0 @@
-2017-07-09 17:53:00,576 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\bc012d992e854c9ec65c2716bb602c1d461e6d710da4ed616c7e992d6bce49ed.apk
-2017-07-09 17:53:00,579 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.agewap.ero.gallery
-2017-07-09 17:53:00,582 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.agewap.ero.gallery
-2017-07-09 17:53:01,509 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 17:53:01,512 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\bc012d992e854c9ec65c2716bb602c1d461e6d710da4ed616c7e992d6bce49ed.apk
-2017-07-09 17:53:04,095 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/bc012d992e854c9ec65c2716bb602c1d461e6d710da4ed616c7e992d6bce49ed.apk
-2017-07-09 17:53:04,098 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 17:53:04,101 - COSMOS_TRIGGER_PY-Console - DEBUG - 894 KB/s (379147 bytes in 0.414s)
-2017-07-09 17:53:04,102 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 17:53:04,980 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 17:53:04,983 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 17:53:05,858 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 17:53:05,861 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=157ms (0ms mobile, 157ms wifi, 0ms not connected)
-2017-07-09 17:53:07,263 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 17:53:07,335 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 17:53:07,338 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 17:53:07,358 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.agewap.ero.gallery --ignore-crashes 1
-2017-07-09 17:53:08,494 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 17:53:08,496 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=226ms (0ms mobile, 226ms wifi, 0ms not connected)
-2017-07-09 17:53:08,540 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 17:53:08,726 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 17:53:40,250 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.agewap.ero.gallery" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.agewap.ero.gallery" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,25][360,53]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.agewap.ero.gallery" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[5,26][356,51]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.agewap.ero.gallery" password="false" scrollable="false" selected="false" text="xxxVideo"/>
-      </node>
-      <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.agewap.ero.gallery" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.agewap.ero.gallery" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[0,199][360,413]" checkable="false" checked="false" class="android.widget.Gallery" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.agewap.ero.gallery" password="false" scrollable="true" selected="false" text="">
-            <node bounds="[101,199][259,413]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.agewap.ero.gallery" password="false" scrollable="false" selected="true" text=""/>
-            <node bounds="[236,199][394,413]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.agewap.ero.gallery" password="false" scrollable="false" selected="false" text=""/>
-          </node>
-          <node bounds="[95,413][264,444]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.agewap.ero.gallery" password="false" scrollable="false" selected="false" text="Картинка 1 из 8"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 17:53:41,437 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 17:53:41,440 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 17:53:42,476 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/bc012d992e854c9ec65c2716bb602c1d461e6d710da4ed616c7e992d6bce49ed/first_page.png
-2017-07-09 17:53:42,654 - COSMOS_TRIGGER_PY-Console - DEBUG - 2856 KB/s (276438 bytes in 0.094s)
-2017-07-09 17:53:47,687 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.agewap.ero.gallery0709-17-53-00.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/bc012d992e854c9ec65c2716bb602c1d461e6d710da4ed616c7e992d6bce49ed/com.agewap.ero.gallery0709-17-53-00.pcap
-2017-07-09 17:53:47,773 - COSMOS_TRIGGER_PY-Console - DEBUG - 1141 KB/s (12288 bytes in 0.010s)
-2017-07-09 17:54:02,778 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-09 17:54:02,782 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.agewap.ero.gallery
-2017-07-09 17:54:04,224 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 17:54:04,227 - COSMOS_TRIGGER_PY-Console - INFO - End

@@ -1,1 +1,0 @@
-[{"src": ["Location", "NET-based Location"], "dst": "115", "process_name": "Unknown", "process_id": "15095", "log_time": "07-09 21:26:02.592", "message": "libcore.os.write(115) writing with tag 0x21 data[[{\"alarmVolume\":71.42857360839844,\"altitude\":0,\"ringtoneVolume\":57.14285659790039,\"timestamp\":149963]", "channel": "INTERNAL"}]

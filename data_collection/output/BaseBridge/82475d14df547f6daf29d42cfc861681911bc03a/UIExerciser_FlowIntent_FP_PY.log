@@ -1,57 +1,0 @@
-2017-07-08 22:55:07,164 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\BaseBridge\82475d14df547f6daf29d42cfc861681911bc03a.apk
-2017-07-08 22:55:07,165 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.keji.sendere
-2017-07-08 22:55:07,167 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.keji.sendere
-2017-07-08 22:55:07,938 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 22:55:07,940 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\BaseBridge\82475d14df547f6daf29d42cfc861681911bc03a.apk
-2017-07-08 22:55:11,150 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/82475d14df547f6daf29d42cfc861681911bc03a.apk
-2017-07-08 22:55:11,151 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 22:55:11,151 - COSMOS_TRIGGER_PY-Console - DEBUG - 2473 KB/s (1423462 bytes in 0.561s)
-2017-07-08 22:55:11,153 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 22:55:12,032 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 22:55:12,032 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 22:55:13,209 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 22:55:13,210 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=279ms (0ms mobile, 279ms wifi, 0ms not connected)
-2017-07-08 22:55:14,933 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 22:55:15,006 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 22:55:15,007 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 22:55:15,030 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.keji.sendere --ignore-crashes 1
-2017-07-08 22:55:16,161 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 22:55:16,163 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=299ms (0ms mobile, 299ms wifi, 0ms not connected)
-2017-07-08 22:55:16,233 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 22:55:16,474 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 22:55:38,698 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,448][360,666]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,448][360,666]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,448][360,666]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,448][360,666]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[3,458][359,528]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[29,476][333,516]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[29,476][333,516]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="通知"/>
-            </node>
-            <node bounds="[18,527][344,528]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text=""/>
-          </node>
-          <node bounds="[3,528][359,583]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[18,528][344,583]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[34,530][333,569]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="1秒闪电更新！"/>
-            </node>
-          </node>
-          <node bounds="[3,583][359,663]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[18,583][344,645]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[100,587][261,641]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.keji.sendere" password="false" scrollable="false" selected="false" text="确定"/>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 22:55:39,869 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 22:55:39,871 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 22:55:40,799 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/82475d14df547f6daf29d42cfc861681911bc03a/first_page.png
-2017-07-08 22:55:40,927 - COSMOS_TRIGGER_PY-Console - DEBUG - 2809 KB/s (216118 bytes in 0.075s)
-2017-07-08 22:55:45,950 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.keji.sendere0708-22-55-07.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/BaseBridge/82475d14df547f6daf29d42cfc861681911bc03a/com.keji.sendere0708-22-55-07.pcap
-2017-07-08 22:55:46,046 - COSMOS_TRIGGER_PY-Console - DEBUG - 1471 KB/s (28672 bytes in 0.019s)
-2017-07-08 22:56:01,049 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-08 22:56:01,051 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.keji.sendere
-2017-07-08 22:56:02,568 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 22:56:02,569 - COSMOS_TRIGGER_PY-Console - INFO - End

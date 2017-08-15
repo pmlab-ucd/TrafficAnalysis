@@ -1,1 +1,0 @@
-[{"src": ["IMEI"], "dst": "38", "process_name": "com.tutusw.onekeyvpn", "process_id": "31918", "log_time": "07-10 07:36:46.896", "message": "libcore.os.write(38) writing with tag 0x400 data[351565054929465 cvpn053 Google_Galaxy_Nexus 4.1.2 16]", "channel": "INTERNAL"}]

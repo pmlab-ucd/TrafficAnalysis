@@ -1,55 +1,0 @@
-2017-07-09 11:46:49,687 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\5ec9d1853721bac5da60df1fb9b679ac80ab18b69e3f29914c210eb8b01c5c70.apk
-2017-07-09 11:46:49,687 - COSMOS_TRIGGER_PY-Console - INFO - pkg:vnpysgo.wbwkavy
-2017-07-09 11:46:49,687 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall vnpysgo.wbwkavy
-2017-07-09 11:46:50,664 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 11:46:50,664 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\5ec9d1853721bac5da60df1fb9b679ac80ab18b69e3f29914c210eb8b01c5c70.apk
-2017-07-09 11:46:56,753 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/5ec9d1853721bac5da60df1fb9b679ac80ab18b69e3f29914c210eb8b01c5c70.apk
-2017-07-09 11:46:56,753 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 11:46:56,753 - COSMOS_TRIGGER_PY-Console - DEBUG - 1887 KB/s (1098080 bytes in 0.568s)
-2017-07-09 11:46:56,755 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 11:47:05,171 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 11:47:05,171 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 11:47:06,436 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 11:47:06,436 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=199ms (0ms mobile, 199ms wifi, 0ms not connected)
-2017-07-09 11:47:07,796 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 11:47:07,930 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 11:47:07,930 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 11:47:07,948 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p vnpysgo.wbwkavy --ignore-crashes 1
-2017-07-09 11:47:10,042 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 11:47:10,042 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=195ms (0ms mobile, 195ms wifi, 0ms not connected)
-2017-07-09 11:47:10,121 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 11:47:10,220 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 11:47:30,012 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="vnpysgo.wbwkavy" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="vnpysgo.wbwkavy" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="vnpysgo.wbwkavy" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="vnpysgo.wbwkavy" password="false" resource-id="id/title" scrollable="false" selected="false" text="Power-snooker"/>
-      </node>
-      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="vnpysgo.wbwkavy" password="false" resource-id="id/webView1" scrollable="false" selected="false" text="">
-        <!--NAF: The following control may not be accessibility friendly-->
-        <node NAF="true" bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="vnpysgo.wbwkavy" password="false" resource-id="id/webView1" scrollable="false" selected="false" text=""/>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 11:47:31,161 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 11:47:31,161 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 11:47:31,790 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/5ec9d1853721bac5da60df1fb9b679ac80ab18b69e3f29914c210eb8b01c5c70/first_page.png
-2017-07-09 11:47:31,868 - COSMOS_TRIGGER_PY-Console - DEBUG - 2798 KB/s (71667 bytes in 0.025s)
-2017-07-09 11:47:36,908 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/vnpysgo.wbwkavy0709-11-46-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/5ec9d1853721bac5da60df1fb9b679ac80ab18b69e3f29914c210eb8b01c5c70/vnpysgo.wbwkavy0709-11-46-49.pcap
-2017-07-09 11:47:42,007 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/vnpysgo.wbwkavy0709-11-46-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/5ec9d1853721bac5da60df1fb9b679ac80ab18b69e3f29914c210eb8b01c5c70/vnpysgo.wbwkavy0709-11-46-49.pcap
-2017-07-09 11:47:47,117 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/vnpysgo.wbwkavy0709-11-46-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/5ec9d1853721bac5da60df1fb9b679ac80ab18b69e3f29914c210eb8b01c5c70/vnpysgo.wbwkavy0709-11-46-49.pcap
-2017-07-09 11:47:52,226 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/vnpysgo.wbwkavy0709-11-46-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/5ec9d1853721bac5da60df1fb9b679ac80ab18b69e3f29914c210eb8b01c5c70/vnpysgo.wbwkavy0709-11-46-49.pcap
-2017-07-09 11:47:57,319 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/vnpysgo.wbwkavy0709-11-46-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/5ec9d1853721bac5da60df1fb9b679ac80ab18b69e3f29914c210eb8b01c5c70/vnpysgo.wbwkavy0709-11-46-49.pcap
-2017-07-09 11:48:02,401 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/vnpysgo.wbwkavy0709-11-46-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/5ec9d1853721bac5da60df1fb9b679ac80ab18b69e3f29914c210eb8b01c5c70/vnpysgo.wbwkavy0709-11-46-49.pcap
-2017-07-09 11:48:07,503 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/vnpysgo.wbwkavy0709-11-46-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/5ec9d1853721bac5da60df1fb9b679ac80ab18b69e3f29914c210eb8b01c5c70/vnpysgo.wbwkavy0709-11-46-49.pcap
-2017-07-09 11:48:12,601 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/vnpysgo.wbwkavy0709-11-46-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/5ec9d1853721bac5da60df1fb9b679ac80ab18b69e3f29914c210eb8b01c5c70/vnpysgo.wbwkavy0709-11-46-49.pcap
-2017-07-09 11:48:17,700 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/vnpysgo.wbwkavy0709-11-46-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/5ec9d1853721bac5da60df1fb9b679ac80ab18b69e3f29914c210eb8b01c5c70/vnpysgo.wbwkavy0709-11-46-49.pcap
-2017-07-09 11:48:22,801 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/vnpysgo.wbwkavy0709-11-46-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/5ec9d1853721bac5da60df1fb9b679ac80ab18b69e3f29914c210eb8b01c5c70/vnpysgo.wbwkavy0709-11-46-49.pcap
-2017-07-09 11:48:27,901 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/vnpysgo.wbwkavy0709-11-46-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/5ec9d1853721bac5da60df1fb9b679ac80ab18b69e3f29914c210eb8b01c5c70/vnpysgo.wbwkavy0709-11-46-49.pcap
-2017-07-09 11:48:33,005 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/vnpysgo.wbwkavy0709-11-46-49.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/5ec9d1853721bac5da60df1fb9b679ac80ab18b69e3f29914c210eb8b01c5c70/vnpysgo.wbwkavy0709-11-46-49.pcap
-2017-07-09 11:48:33,104 - COSMOS_TRIGGER_PY-Console - DEBUG - 535 KB/s (4096 bytes in 0.007s)
-2017-07-09 11:48:48,105 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-09 11:48:48,105 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall vnpysgo.wbwkavy
-2017-07-09 11:48:51,253 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 11:48:51,255 - COSMOS_TRIGGER_PY-Console - INFO - End

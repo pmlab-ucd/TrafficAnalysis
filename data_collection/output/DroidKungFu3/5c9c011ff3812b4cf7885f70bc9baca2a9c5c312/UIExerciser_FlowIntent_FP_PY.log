@@ -1,50 +1,0 @@
-2017-07-08 00:04:21,607 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\5c9c011ff3812b4cf7885f70bc9baca2a9c5c312.apk
-2017-07-08 00:04:21,608 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.livegame.puke
-2017-07-08 00:04:21,608 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.livegame.puke
-2017-07-08 00:04:22,436 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 00:04:22,437 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\5c9c011ff3812b4cf7885f70bc9baca2a9c5c312.apk
-2017-07-08 00:04:26,520 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/5c9c011ff3812b4cf7885f70bc9baca2a9c5c312.apk
-2017-07-08 00:04:26,522 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 00:04:26,522 - COSMOS_TRIGGER_PY-Console - DEBUG - 2527 KB/s (3314412 bytes in 1.280s)
-2017-07-08 00:04:26,522 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 00:04:27,344 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 00:04:27,344 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 00:04:28,315 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 00:04:28,315 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=148ms (0ms mobile, 148ms wifi, 0ms not connected)
-2017-07-08 00:04:29,674 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 00:04:29,743 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 00:04:29,743 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 00:04:29,759 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.livegame.puke --ignore-crashes 1
-2017-07-08 00:04:31,085 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 00:04:31,085 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=208ms (0ms mobile, 208ms wifi, 0ms not connected)
-2017-07-08 00:04:31,154 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 00:04:31,263 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 00:04:52,428 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.puke" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.puke" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.puke" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.puke" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[97,25][262,57]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.puke" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[97,36][262,57]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.livegame.puke" password="false" scrollable="false" selected="false" text="欢迎来到Yaniv扑克世界"/>
-          </node>
-          <node bounds="[132,57][228,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.livegame.puke" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[132,223][228,273]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.livegame.puke" password="false" scrollable="false" selected="false" text="开始"/>
-            <node bounds="[132,273][228,324]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="false" focusable="true" focused="false" index="1" long-clickable="false" package="com.livegame.puke" password="false" scrollable="false" selected="false" text="继续"/>
-            <node bounds="[132,324][228,375]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.livegame.puke" password="false" scrollable="false" selected="false" text="设置"/>
-            <node bounds="[132,375][228,425]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.livegame.puke" password="false" scrollable="false" selected="false" text="退出"/>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 00:04:53,585 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 00:04:53,585 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 00:04:55,681 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/5c9c011ff3812b4cf7885f70bc9baca2a9c5c312/first_page.png
-2017-07-08 00:04:56,015 - COSMOS_TRIGGER_PY-Console - DEBUG - 3506 KB/s (860084 bytes in 0.239s)
-2017-07-08 00:04:56,038 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.livegame.puke0708-00-04-21.pcap ../output/DroidKungFu3/5c9c011ff3812b4cf7885f70bc9baca2a9c5c312/com.livegame.puke0708-00-04-21.pcap
-2017-07-08 00:04:56,164 - COSMOS_TRIGGER_PY-Console - DEBUG - 1274 KB/s (16384 bytes in 0.012s)
-2017-07-08 00:04:56,165 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.livegame.puke0708-00-04-21.pcap
-2017-07-08 00:04:57,467 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.livegame.puke
-2017-07-08 00:04:58,793 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 00:04:58,793 - COSMOS_TRIGGER_PY-Console - INFO - End

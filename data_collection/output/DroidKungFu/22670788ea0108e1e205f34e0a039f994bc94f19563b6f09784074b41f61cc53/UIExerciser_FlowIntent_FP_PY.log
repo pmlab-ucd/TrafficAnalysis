@@ -1,51 +1,0 @@
-2017-07-10 08:23:07,849 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\22670788ea0108e1e205f34e0a039f994bc94f19563b6f09784074b41f61cc53.apk
-2017-07-10 08:23:07,849 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.gp.geekadoo
-2017-07-10 08:23:07,849 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.geekadoo
-2017-07-10 08:23:08,621 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-10 08:23:08,621 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\22670788ea0108e1e205f34e0a039f994bc94f19563b6f09784074b41f61cc53.apk
-2017-07-10 08:23:12,426 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/22670788ea0108e1e205f34e0a039f994bc94f19563b6f09784074b41f61cc53.apk
-2017-07-10 08:23:12,426 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-10 08:23:12,427 - COSMOS_TRIGGER_PY-Console - DEBUG - 2716 KB/s (2972420 bytes in 1.068s)
-2017-07-10 08:23:12,427 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-10 08:23:13,160 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-10 08:23:13,160 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-10 08:23:14,094 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-10 08:23:14,094 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=117ms (0ms mobile, 117ms wifi, 0ms not connected)
-2017-07-10 08:23:15,987 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-10 08:23:16,066 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-10 08:23:16,066 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-10 08:23:16,081 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.gp.geekadoo --ignore-crashes 1
-2017-07-10 08:23:17,005 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-10 08:23:17,005 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=112ms (0ms mobile, 112ms wifi, 0ms not connected)
-2017-07-10 08:23:17,082 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-10 08:23:17,200 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-10 08:23:38,786 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.geekadoo" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.geekadoo" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.geekadoo" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,25][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.geekadoo" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[73,25][287,57]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.geekadoo" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[73,36][287,57]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.geekadoo" password="false" scrollable="false" selected="false" text="Welcome to Yaniv for Android!"/>
-          </node>
-          <node bounds="[95,57][266,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.gp.geekadoo" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[95,172][266,223]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.gp.geekadoo" password="false" scrollable="false" selected="false" text="Start"/>
-            <node bounds="[95,223][266,273]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="false" focusable="true" focused="false" index="1" long-clickable="false" package="com.gp.geekadoo" password="false" scrollable="false" selected="false" text="Resume"/>
-            <node bounds="[95,273][266,324]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.gp.geekadoo" password="false" scrollable="false" selected="false" text="Tutorial"/>
-            <node bounds="[95,324][266,375]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.gp.geekadoo" password="false" scrollable="false" selected="false" text="Settings"/>
-            <node bounds="[95,375][266,425]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="4" long-clickable="false" package="com.gp.geekadoo" password="false" scrollable="false" selected="false" text="Report an issue"/>
-            <node bounds="[95,425][266,476]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="5" long-clickable="false" package="com.gp.geekadoo" password="false" scrollable="false" selected="false" text="Exit"/>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-10 08:23:39,953 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-10 08:23:39,953 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-10 08:23:41,953 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/22670788ea0108e1e205f34e0a039f994bc94f19563b6f09784074b41f61cc53/first_page.png
-2017-07-10 08:23:42,391 - COSMOS_TRIGGER_PY-Console - DEBUG - 2470 KB/s (801906 bytes in 0.317s)
-2017-07-10 08:23:47,441 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.gp.geekadoo0710-08-23-07.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/22670788ea0108e1e205f34e0a039f994bc94f19563b6f09784074b41f61cc53/com.gp.geekadoo0710-08-23-07.pcap
-2017-07-10 08:23:47,546 - COSMOS_TRIGGER_PY-Console - DEBUG - 583 KB/s (4096 bytes in 0.006s)
-2017-07-10 08:23:47,867 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.geekadoo
-2017-07-10 08:23:49,309 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-10 08:23:49,309 - COSMOS_TRIGGER_PY-Console - INFO - End

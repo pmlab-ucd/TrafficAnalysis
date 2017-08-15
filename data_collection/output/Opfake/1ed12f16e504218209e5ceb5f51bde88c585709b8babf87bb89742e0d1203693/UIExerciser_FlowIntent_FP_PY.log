@@ -1,63 +1,0 @@
-2017-07-09 05:41:59,052 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\1ed12f16e504218209e5ceb5f51bde88c585709b8babf87bb89742e0d1203693.apk
-2017-07-09 05:41:59,053 - COSMOS_TRIGGER_PY-Console - INFO - pkg:nuu643.JJK73f
-2017-07-09 05:41:59,053 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall nuu643.JJK73f
-2017-07-09 05:41:59,878 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 05:41:59,878 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\1ed12f16e504218209e5ceb5f51bde88c585709b8babf87bb89742e0d1203693.apk
-2017-07-09 05:42:01,565 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/1ed12f16e504218209e5ceb5f51bde88c585709b8babf87bb89742e0d1203693.apk
-2017-07-09 05:42:01,566 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 05:42:01,566 - COSMOS_TRIGGER_PY-Console - DEBUG - 797 KB/s (110445 bytes in 0.135s)
-2017-07-09 05:42:01,566 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 05:42:02,299 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 05:42:02,301 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 05:42:03,233 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 05:42:03,233 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=177ms (0ms mobile, 177ms wifi, 0ms not connected)
-2017-07-09 05:42:04,601 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 05:42:04,676 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 05:42:04,676 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 05:42:04,697 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p nuu643.JJK73f --ignore-crashes 1
-2017-07-09 05:42:05,733 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 05:42:05,734 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=174ms (0ms mobile, 174ms wifi, 0ms not connected)
-2017-07-09 05:42:05,813 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 05:42:05,905 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 05:42:28,651 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="nuu643.JJK73f" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="nuu643.JJK73f" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="nuu643.JJK73f" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="nuu643.JJK73f" password="false" resource-id="id/title" scrollable="false" selected="false" text="Установка"/>
-      </node>
-      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="nuu643.JJK73f" password="false" resource-id="id/LinearLayout2" scrollable="false" selected="false" text="">
-        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="nuu643.JJK73f" password="false" resource-id="id/LinearLayout2" scrollable="false" selected="false" text="">
-          <node bounds="[0,97][720,1133]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="nuu643.JJK73f" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-            <node bounds="[0,412][720,818]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="nuu643.JJK73f" password="false" resource-id="id/LinearLayout12" scrollable="false" selected="false" text="">
-              <node bounds="[14,426][706,475]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="nuu643.JJK73f" password="false" resource-id="id/textView1" scrollable="false" selected="false" text="Успешно установлено!"/>
-              <node bounds="[16,475][704,535]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="nuu643.JJK73f" password="false" resource-id="id/LL_Seperator2" scrollable="false" selected="false" text=""/>
-              <node bounds="[24,535][696,639]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="nuu643.JJK73f" password="false" resource-id="id/text" scrollable="false" selected="false" text="Подтвердите согласие с п. соглашением Танчики-Х. Для продолжения нажмите Далее."/>
-              <node bounds="[16,639][704,699]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="nuu643.JJK73f" password="false" resource-id="id/LL_Seperator4" scrollable="false" selected="false" text=""/>
-              <node bounds="[14,699][706,804]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="nuu643.JJK73f" password="false" resource-id="id/LinearLayout7" scrollable="false" selected="false" text="">
-                <node bounds="[230,709][489,796]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="nuu643.JJK73f" password="false" resource-id="id/Button1" scrollable="false" selected="false" text="Далее"/>
-              </node>
-            </node>
-          </node>
-          <node bounds="[242,1133][477,1187]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="nuu643.JJK73f" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-            <node bounds="[242,1133][477,1193]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="nuu643.JJK73f" password="false" resource-id="id/Button2" scrollable="false" selected="false" text="Пользовательское соглашение"/>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 05:42:29,818 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 05:42:29,819 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 05:42:30,398 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/1ed12f16e504218209e5ceb5f51bde88c585709b8babf87bb89742e0d1203693/first_page.png
-2017-07-09 05:42:30,538 - COSMOS_TRIGGER_PY-Console - DEBUG - 2003 KB/s (59159 bytes in 0.028s)
-2017-07-09 05:42:35,555 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/nuu643.JJK73f0709-05-41-58.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/1ed12f16e504218209e5ceb5f51bde88c585709b8babf87bb89742e0d1203693/nuu643.JJK73f0709-05-41-58.pcap
-2017-07-09 05:42:40,651 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/nuu643.JJK73f0709-05-41-58.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/1ed12f16e504218209e5ceb5f51bde88c585709b8babf87bb89742e0d1203693/nuu643.JJK73f0709-05-41-58.pcap
-2017-07-09 05:42:45,753 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/nuu643.JJK73f0709-05-41-58.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/1ed12f16e504218209e5ceb5f51bde88c585709b8babf87bb89742e0d1203693/nuu643.JJK73f0709-05-41-58.pcap
-2017-07-09 05:42:50,851 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/nuu643.JJK73f0709-05-41-58.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/1ed12f16e504218209e5ceb5f51bde88c585709b8babf87bb89742e0d1203693/nuu643.JJK73f0709-05-41-58.pcap
-2017-07-09 05:42:55,950 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/nuu643.JJK73f0709-05-41-58.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/1ed12f16e504218209e5ceb5f51bde88c585709b8babf87bb89742e0d1203693/nuu643.JJK73f0709-05-41-58.pcap
-2017-07-09 05:43:01,049 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/nuu643.JJK73f0709-05-41-58.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/1ed12f16e504218209e5ceb5f51bde88c585709b8babf87bb89742e0d1203693/nuu643.JJK73f0709-05-41-58.pcap
-2017-07-09 05:43:06,153 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/nuu643.JJK73f0709-05-41-58.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/1ed12f16e504218209e5ceb5f51bde88c585709b8babf87bb89742e0d1203693/nuu643.JJK73f0709-05-41-58.pcap
-2017-07-09 05:43:06,263 - COSMOS_TRIGGER_PY-Console - DEBUG - 399 KB/s (4096 bytes in 0.010s)
-2017-07-09 05:43:06,480 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall nuu643.JJK73f
-2017-07-09 05:43:07,881 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 05:43:07,881 - COSMOS_TRIGGER_PY-Console - INFO - End

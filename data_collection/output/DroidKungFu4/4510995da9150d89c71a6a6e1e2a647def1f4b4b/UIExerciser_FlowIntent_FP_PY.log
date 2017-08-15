@@ -1,55 +1,0 @@
-2017-07-09 01:42:32,561 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\4510995da9150d89c71a6a6e1e2a647def1f4b4b.apk
-2017-07-09 01:42:32,562 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.testsafe.cell
-2017-07-09 01:42:32,562 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.testsafe.cell
-2017-07-09 01:42:33,346 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 01:42:33,348 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\4510995da9150d89c71a6a6e1e2a647def1f4b4b.apk
-2017-07-09 01:42:35,628 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/4510995da9150d89c71a6a6e1e2a647def1f4b4b.apk
-2017-07-09 01:42:35,630 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 01:42:35,631 - COSMOS_TRIGGER_PY-Console - DEBUG - 2048 KB/s (684863 bytes in 0.326s)
-2017-07-09 01:42:35,631 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 01:42:36,407 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 01:42:36,408 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 01:42:37,410 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 01:42:37,411 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=200ms (0ms mobile, 200ms wifi, 0ms not connected)
-2017-07-09 01:42:38,828 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 01:42:38,900 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 01:42:38,901 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 01:42:38,927 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.testsafe.cell --ignore-crashes 1
-2017-07-09 01:42:39,858 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 01:42:39,858 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=135ms (0ms mobile, 135ms wifi, 0ms not connected)
-2017-07-09 01:42:39,904 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 01:42:40,042 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 01:43:02,667 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,0][599,360]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[187,0][412,68]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="细胞大战"/>
-          <node bounds="[0,68][599,360]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[239,87][359,137]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="开始游戏"/>
-            <node bounds="[239,137][359,188]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="控制方式"/>
-            <node bounds="[239,188][359,239]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="打开声音"/>
-            <node bounds="[239,239][359,289]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="游戏背景"/>
-            <node bounds="[262,289][335,340]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="4" long-clickable="false" package="com.testsafe.cell" password="false" scrollable="false" selected="false" text="关于"/>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 01:43:03,832 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 01:43:03,834 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 01:43:06,665 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/4510995da9150d89c71a6a6e1e2a647def1f4b4b/first_page.png
-2017-07-09 01:43:07,053 - COSMOS_TRIGGER_PY-Console - DEBUG - 3257 KB/s (1091211 bytes in 0.327s)
-2017-07-09 01:43:12,071 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.testsafe.cell0709-01-42-32.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/4510995da9150d89c71a6a6e1e2a647def1f4b4b/com.testsafe.cell0709-01-42-32.pcap
-2017-07-09 01:43:17,176 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.testsafe.cell0709-01-42-32.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/4510995da9150d89c71a6a6e1e2a647def1f4b4b/com.testsafe.cell0709-01-42-32.pcap
-2017-07-09 01:43:22,278 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.testsafe.cell0709-01-42-32.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/4510995da9150d89c71a6a6e1e2a647def1f4b4b/com.testsafe.cell0709-01-42-32.pcap
-2017-07-09 01:43:27,453 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.testsafe.cell0709-01-42-32.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/4510995da9150d89c71a6a6e1e2a647def1f4b4b/com.testsafe.cell0709-01-42-32.pcap
-2017-07-09 01:43:32,552 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.testsafe.cell0709-01-42-32.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/4510995da9150d89c71a6a6e1e2a647def1f4b4b/com.testsafe.cell0709-01-42-32.pcap
-2017-07-09 01:43:37,650 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.testsafe.cell0709-01-42-32.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/4510995da9150d89c71a6a6e1e2a647def1f4b4b/com.testsafe.cell0709-01-42-32.pcap
-2017-07-09 01:43:42,739 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.testsafe.cell0709-01-42-32.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/4510995da9150d89c71a6a6e1e2a647def1f4b4b/com.testsafe.cell0709-01-42-32.pcap
-2017-07-09 01:43:42,828 - COSMOS_TRIGGER_PY-Console - DEBUG - 363 KB/s (4096 bytes in 0.011s)
-2017-07-09 01:43:57,832 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-09 01:43:57,834 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.testsafe.cell
-2017-07-09 01:43:59,266 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 01:43:59,267 - COSMOS_TRIGGER_PY-Console - INFO - End

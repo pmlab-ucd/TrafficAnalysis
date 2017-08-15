@@ -1,1 +1,0 @@
-[{"src": ["Location", "GPS Location"], "dst": "120", "process_name": "com.weather.Weather", "process_id": "16145", "log_time": "07-09 03:20:45.167", "message": "libcore.os.write(120) writing with tag 0x11 data[[{\"alarmVolume\":71.42857360839844,\"altitude\":0,\"ringtoneVolume\":71.42857360839844,\"timestamp\":149956]", "channel": "INTERNAL"}]

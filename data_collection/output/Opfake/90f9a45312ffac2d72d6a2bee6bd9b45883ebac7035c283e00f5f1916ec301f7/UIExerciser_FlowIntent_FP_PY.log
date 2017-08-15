@@ -1,43 +1,0 @@
-2017-07-09 15:57:48,451 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\90f9a45312ffac2d72d6a2bee6bd9b45883ebac7035c283e00f5f1916ec301f7.apk
-2017-07-09 15:57:48,451 - COSMOS_TRIGGER_PY-Console - INFO - pkg:xgqkjm.bfveeopo
-2017-07-09 15:57:48,453 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall xgqkjm.bfveeopo
-2017-07-09 15:57:49,384 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 15:57:49,385 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\90f9a45312ffac2d72d6a2bee6bd9b45883ebac7035c283e00f5f1916ec301f7.apk
-2017-07-09 15:57:51,963 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/90f9a45312ffac2d72d6a2bee6bd9b45883ebac7035c283e00f5f1916ec301f7.apk
-2017-07-09 15:57:51,963 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 15:57:51,963 - COSMOS_TRIGGER_PY-Console - DEBUG - 706 KB/s (344295 bytes in 0.475s)
-2017-07-09 15:57:51,963 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 15:57:52,839 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 15:57:52,839 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 15:57:53,711 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 15:57:53,711 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=94ms (0ms mobile, 94ms wifi, 0ms not connected)
-2017-07-09 15:57:55,075 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 15:57:55,148 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 15:57:55,148 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 15:57:55,164 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p xgqkjm.bfveeopo --ignore-crashes 1
-2017-07-09 15:57:56,140 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 15:57:56,141 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=146ms (0ms mobile, 146ms wifi, 0ms not connected)
-2017-07-09 15:57:56,180 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 15:57:56,292 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 15:58:15,977 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="xgqkjm.bfveeopo" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="xgqkjm.bfveeopo" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="xgqkjm.bfveeopo" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="xgqkjm.bfveeopo" password="false" resource-id="id/title" scrollable="false" selected="false" text="ДЕВОЧКА в коротких штанишках"/>
-      </node>
-      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="xgqkjm.bfveeopo" password="false" resource-id="id/webView1" scrollable="false" selected="false" text="">
-        <!--NAF: The following control may not be accessibility friendly-->
-        <node NAF="true" bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="xgqkjm.bfveeopo" password="false" resource-id="id/webView1" scrollable="false" selected="false" text=""/>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 15:58:17,140 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 15:58:17,140 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 15:58:18,433 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/90f9a45312ffac2d72d6a2bee6bd9b45883ebac7035c283e00f5f1916ec301f7/first_page.png
-2017-07-09 15:58:18,615 - COSMOS_TRIGGER_PY-Console - DEBUG - 3080 KB/s (340451 bytes in 0.107s)
-2017-07-09 15:58:23,625 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/xgqkjm.bfveeopo0709-15-57-48.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/90f9a45312ffac2d72d6a2bee6bd9b45883ebac7035c283e00f5f1916ec301f7/xgqkjm.bfveeopo0709-15-57-48.pcap
-2017-07-09 15:58:23,720 - COSMOS_TRIGGER_PY-Console - DEBUG - 887 KB/s (8192 bytes in 0.009s)
-2017-07-09 15:58:23,937 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall xgqkjm.bfveeopo
-2017-07-09 15:58:25,815 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 15:58:25,815 - COSMOS_TRIGGER_PY-Console - INFO - End

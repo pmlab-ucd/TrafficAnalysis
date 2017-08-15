@@ -1,42 +1,0 @@
-2017-07-08 11:06:22,359 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\021f3cceb79e195a0d288f39900436bb27db0a15.apk
-2017-07-08 11:06:22,361 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.jjdd
-2017-07-08 11:06:22,361 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.jjdd
-2017-07-08 11:06:23,098 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 11:06:23,098 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\AnserverBot\021f3cceb79e195a0d288f39900436bb27db0a15.apk
-2017-07-08 11:06:25,859 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/021f3cceb79e195a0d288f39900436bb27db0a15.apk
-2017-07-08 11:06:25,859 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 11:06:25,861 - COSMOS_TRIGGER_PY-Console - DEBUG - 2809 KB/s (2395357 bytes in 0.832s)
-2017-07-08 11:06:25,861 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 11:06:26,638 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 11:06:26,638 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 11:06:27,630 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 11:06:27,630 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=216ms (0ms mobile, 216ms wifi, 0ms not connected)
-2017-07-08 11:06:29,000 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 11:06:29,069 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 11:06:29,069 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 11:06:29,085 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.jjdd --ignore-crashes 1
-2017-07-08 11:06:30,061 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 11:06:30,062 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=133ms (0ms mobile, 133ms wifi, 0ms not connected)
-2017-07-08 11:06:30,132 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 11:06:30,253 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 11:06:49,627 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.jjdd" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.jjdd" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.jjdd" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.jjdd" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-          <node bounds="[106,160][613,661]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.jjdd" password="false" resource-id="id/splashView" scrollable="false" selected="false" text=""/>
-          <node bounds="[306,661][414,750]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.jjdd" password="false" scrollable="false" selected="false" text="加载中"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 11:06:50,769 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 11:06:50,769 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 11:06:51,454 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/021f3cceb79e195a0d288f39900436bb27db0a15/first_page.png
-2017-07-08 11:06:51,578 - COSMOS_TRIGGER_PY-Console - DEBUG - 1647 KB/s (106648 bytes in 0.063s)
-2017-07-08 11:06:56,696 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.jjdd0708-11-06-22.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/AnserverBot/021f3cceb79e195a0d288f39900436bb27db0a15/com.jjdd0708-11-06-22.pcap
-2017-07-08 11:06:56,875 - COSMOS_TRIGGER_PY-Console - DEBUG - 3280 KB/s (356352 bytes in 0.106s)
-2017-07-08 11:06:57,496 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.jjdd
-2017-07-08 11:06:59,141 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 11:06:59,142 - COSMOS_TRIGGER_PY-Console - INFO - End

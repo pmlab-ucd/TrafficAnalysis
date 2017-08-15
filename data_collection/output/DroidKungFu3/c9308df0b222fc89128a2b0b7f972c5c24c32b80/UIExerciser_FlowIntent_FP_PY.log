@@ -1,93 +1,0 @@
-2017-07-08 04:26:06,848 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\c9308df0b222fc89128a2b0b7f972c5c24c32b80.apk
-2017-07-08 04:26:06,848 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.ps.keepaccount
-2017-07-08 04:26:06,848 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.keepaccount
-2017-07-08 04:26:07,575 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 04:26:07,575 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\c9308df0b222fc89128a2b0b7f972c5c24c32b80.apk
-2017-07-08 04:26:09,776 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/c9308df0b222fc89128a2b0b7f972c5c24c32b80.apk
-2017-07-08 04:26:09,776 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 04:26:09,776 - COSMOS_TRIGGER_PY-Console - DEBUG - 1377 KB/s (377860 bytes in 0.267s)
-2017-07-08 04:26:09,776 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 04:26:10,673 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 04:26:10,673 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 04:26:11,719 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 04:26:11,719 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=178ms (0ms mobile, 178ms wifi, 0ms not connected)
-2017-07-08 04:26:13,084 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 04:26:13,210 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 04:26:13,210 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 04:26:13,229 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.ps.keepaccount --ignore-crashes 1
-2017-07-08 04:26:14,224 - COSMOS_TRIGGER_PY-Console - DEBUG - // CRASH: com.android.phone (pid 592)
-2017-07-08 04:26:14,224 - COSMOS_TRIGGER_PY-Console - DEBUG - // Short Msg: java.lang.NullPointerException
-2017-07-08 04:26:14,224 - COSMOS_TRIGGER_PY-Console - DEBUG - // Long Msg: java.lang.NullPointerException
-2017-07-08 04:26:14,224 - COSMOS_TRIGGER_PY-Console - DEBUG - // Build Label: google/yakju/maguro:4.1.2/JZO54K/485486:user/release-keys
-2017-07-08 04:26:14,224 - COSMOS_TRIGGER_PY-Console - DEBUG - // Build Changelist: eng.scaler.20130123.090303
-2017-07-08 04:26:14,224 - COSMOS_TRIGGER_PY-Console - DEBUG - // Build Time: 1358903009000
-2017-07-08 04:26:14,224 - COSMOS_TRIGGER_PY-Console - DEBUG - // java.lang.NullPointerException
-2017-07-08 04:26:14,224 - COSMOS_TRIGGER_PY-Console - DEBUG - // 	at android.os.Parcel.readException(Parcel.java:1507)
-2017-07-08 04:26:14,224 - COSMOS_TRIGGER_PY-Console - DEBUG - // 	at android.os.Parcel.readException(Parcel.java:1455)
-2017-07-08 04:26:14,226 - COSMOS_TRIGGER_PY-Console - DEBUG - // 	at android.os.IPowerManager$Stub$Proxy.releaseWakeLock(IPowerManager.java:408)
-2017-07-08 04:26:14,226 - COSMOS_TRIGGER_PY-Console - DEBUG - // 	at android.os.PowerManager$WakeLock.release(PowerManager.java:343)
-2017-07-08 04:26:14,226 - COSMOS_TRIGGER_PY-Console - DEBUG - // 	at android.os.PowerManager$WakeLock.release(PowerManager.java:324)
-2017-07-08 04:26:14,226 - COSMOS_TRIGGER_PY-Console - DEBUG - // 	at com.android.internal.telephony.RIL.releaseWakeLockIfDone(RIL.java:2177)
-2017-07-08 04:26:14,226 - COSMOS_TRIGGER_PY-Console - DEBUG - // 	at com.android.internal.telephony.RIL.access$000(RIL.java:208)
-2017-07-08 04:26:14,226 - COSMOS_TRIGGER_PY-Console - DEBUG - // 	at com.android.internal.telephony.RIL$RILSender.handleMessage(RIL.java:401)
-2017-07-08 04:26:14,226 - COSMOS_TRIGGER_PY-Console - DEBUG - // 	at android.os.Handler.dispatchMessage(Handler.java:99)
-2017-07-08 04:26:14,226 - COSMOS_TRIGGER_PY-Console - DEBUG - // 	at android.os.Looper.loop(Looper.java:137)
-2017-07-08 04:26:14,226 - COSMOS_TRIGGER_PY-Console - DEBUG - // 	at android.os.HandlerThread.run(HandlerThread.java:60)
-2017-07-08 04:26:14,226 - COSMOS_TRIGGER_PY-Console - DEBUG - // 
-2017-07-08 04:26:14,226 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 04:26:14,226 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=136ms (0ms mobile, 136ms wifi, 0ms not connected)
-2017-07-08 04:26:14,296 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 04:26:14,401 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 04:26:29,608 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?>
-<hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="true" selected="false" text="">
-            <node bounds="[0,147][720,1023]" checkable="false" checked="false" class="android.view.View" clickable="true" content-desc="Home screen 5" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[16,163][704,1007]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
-            </node>
-          </node>
-          <node bounds="[0,50][720,158]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[12,62][708,158]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[20,70][604,150]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="Search" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
-                <node bounds="[36,70][198,150]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
-              </node>
-              <node bounds="[604,70][700,150]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="Voice Search" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
-                <node bounds="[620,70][684,150]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
-              </node>
-            </node>
-          </node>
-          <node bounds="[560,50][720,158]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
-          <node bounds="[0,1012][720,1024]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
-          <node bounds="[0,1024][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[1,1024][718,1184]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[17,1040][702,1168]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text="">
-                <!--NAF: The following control may not be accessibility friendly-->
-                <node NAF="true" bounds="[17,1040][154,1168]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
-                <!--NAF: The following control may not be accessibility friendly-->
-                <node NAF="true" bounds="[154,1040][291,1168]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
-                <node bounds="[291,1040][428,1168]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="Apps" enabled="true" focusable="true" focused="false" index="2" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
-                <!--NAF: The following control may not be accessibility friendly-->
-                <node NAF="true" bounds="[428,1040][565,1168]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
-                <!--NAF: The following control may not be accessibility friendly-->
-                <node NAF="true" bounds="[565,1040][702,1168]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="4" long-clickable="true" package="com.cyanogenmod.trebuchet" password="false" scrollable="false" selected="false" text=""/>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-
-2017-07-08 04:26:29,730 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 04:26:29,730 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 04:26:30,967 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/c9308df0b222fc89128a2b0b7f972c5c24c32b80/first_page.png
-2017-07-08 04:26:31,153 - COSMOS_TRIGGER_PY-Console - DEBUG - 3313 KB/s (350989 bytes in 0.103s)
-2017-07-08 04:26:36,302 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.ps.keepaccount0708-04-26-06.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/c9308df0b222fc89128a2b0b7f972c5c24c32b80/com.ps.keepaccount0708-04-26-06.pcap
-2017-07-08 04:26:36,463 - COSMOS_TRIGGER_PY-Console - DEBUG - 2608 KB/s (80193 bytes in 0.030s)
-2017-07-08 04:26:36,789 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.keepaccount
-2017-07-08 04:26:38,414 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 04:26:38,414 - COSMOS_TRIGGER_PY-Console - INFO - End

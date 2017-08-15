@@ -1,69 +1,0 @@
-2017-07-07 22:39:33,756 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\338ae6ebb7ade0b875c0d9f12caefbcc17a0a52f.apk
-2017-07-07 22:39:33,756 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.ps.keepaccount
-2017-07-07 22:39:33,756 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.keepaccount
-2017-07-07 22:39:34,549 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-07 22:39:34,549 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\338ae6ebb7ade0b875c0d9f12caefbcc17a0a52f.apk
-2017-07-07 22:39:36,346 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/338ae6ebb7ade0b875c0d9f12caefbcc17a0a52f.apk
-2017-07-07 22:39:36,346 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-07 22:39:36,346 - COSMOS_TRIGGER_PY-Console - DEBUG - 1496 KB/s (376462 bytes in 0.245s)
-2017-07-07 22:39:36,348 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-07 22:39:37,084 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-07 22:39:37,085 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-07 22:39:37,864 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-07 22:39:37,864 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=46ms (0ms mobile, 46ms wifi, 0ms not connected)
-2017-07-07 22:39:37,864 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-07 22:39:37,943 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-07 22:39:37,943 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-07 22:39:37,964 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.ps.keepaccount --ignore-crashes 1
-2017-07-07 22:39:38,943 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-07 22:39:38,943 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=196ms (0ms mobile, 196ms wifi, 0ms not connected)
-2017-07-07 22:39:39,022 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-07 22:39:40,174 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-07 22:40:04,983 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-          <node bounds="[0,50][720,1070]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="id/RelativeLayout01" scrollable="false" selected="false" text="">
-            <node bounds="[0,50][720,1070]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="id/RelativeLayout01" scrollable="false" selected="false" text="">
-              <node bounds="[0,50][720,1070]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="id/RelativeLayout01" scrollable="false" selected="false" text="">
-                <node bounds="[0,50][720,1070]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="id/RelativeLayout01" scrollable="false" selected="false" text="">
-                  <node bounds="[0,50][720,1070]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="id/RelativeLayout01" scrollable="false" selected="false" text="">
-                    <node bounds="[0,330][720,368]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="id/PointsTextView" scrollable="false" selected="false" text="积分: 50"/>
-                    <node bounds="[0,368][720,464]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="id/OffersButton" scrollable="false" selected="false" text="推荐应用"/>
-                    <node bounds="[0,464][720,560]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="id/MoreButton" scrollable="false" selected="false" text="自家应用"/>
-                    <node bounds="[0,560][720,656]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="4" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="id/PointsButton" scrollable="false" selected="false" text="账户余额"/>
-                    <node bounds="[0,656][720,752]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="5" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="id/SpendPointsButton" scrollable="false" selected="false" text="消费积分(10)"/>
-                    <node bounds="[0,752][720,790]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="6" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="id/SDKVersionView" scrollable="false" selected="false" text="SDK版本: 1.4.2"/>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-          <node bounds="[0,1070][720,1184]" checkable="false" checked="false" class="android.widget.HorizontalScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="id/tabBarScroll" scrollable="false" selected="false" text="">
-            <node bounds="[0,1070][720,1168]" checkable="false" checked="false" class="android.widget.RadioGroup" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="id/tabBar" scrollable="false" selected="false" text="">
-              <!--NAF: The following control may not be accessibility friendly-->
-              <node NAF="true" bounds="[0,1070][180,1168]" checkable="true" checked="true" class="android.widget.RadioButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="id/0x0" scrollable="false" selected="false" text=""/>
-              <!--NAF: The following control may not be accessibility friendly-->
-              <node NAF="true" bounds="[180,1070][360,1168]" checkable="true" checked="false" class="android.widget.RadioButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="id/0x1" scrollable="false" selected="false" text=""/>
-              <!--NAF: The following control may not be accessibility friendly-->
-              <node NAF="true" bounds="[360,1070][540,1168]" checkable="true" checked="false" class="android.widget.RadioButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="id/0x2" scrollable="false" selected="false" text=""/>
-              <!--NAF: The following control may not be accessibility friendly-->
-              <node NAF="true" bounds="[540,1070][720,1168]" checkable="true" checked="false" class="android.widget.RadioButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.ps.keepaccount" password="false" resource-id="id/0x3" scrollable="false" selected="false" text=""/>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-07 22:40:06,158 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-07 22:40:06,160 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-07 22:40:06,844 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/338ae6ebb7ade0b875c0d9f12caefbcc17a0a52f/first_page.png
-2017-07-07 22:40:06,973 - COSMOS_TRIGGER_PY-Console - DEBUG - 2377 KB/s (79187 bytes in 0.032s)
-2017-07-07 22:40:07,006 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.ps.keepaccount0707-22-39-33.pcap ../output/DroidKungFu3/338ae6ebb7ade0b875c0d9f12caefbcc17a0a52f/com.ps.keepaccount0707-22-39-33.pcap
-2017-07-07 22:40:07,098 - COSMOS_TRIGGER_PY-Console - DEBUG - 1007 KB/s (8192 bytes in 0.007s)
-2017-07-07 22:40:07,098 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.ps.keepaccount0707-22-39-33.pcap
-2017-07-07 22:40:07,687 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.keepaccount
-2017-07-07 22:40:09,023 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-07 22:40:09,023 - COSMOS_TRIGGER_PY-Console - INFO - End

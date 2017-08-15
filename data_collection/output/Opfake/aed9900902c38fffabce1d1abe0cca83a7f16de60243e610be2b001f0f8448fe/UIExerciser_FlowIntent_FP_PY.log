@@ -1,43 +1,0 @@
-2017-07-09 17:17:46,562 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\aed9900902c38fffabce1d1abe0cca83a7f16de60243e610be2b001f0f8448fe.apk
-2017-07-09 17:17:46,562 - COSMOS_TRIGGER_PY-Console - INFO - pkg:vbkoxh.cswnpr
-2017-07-09 17:17:46,562 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall vbkoxh.cswnpr
-2017-07-09 17:17:47,845 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 17:17:47,845 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\aed9900902c38fffabce1d1abe0cca83a7f16de60243e610be2b001f0f8448fe.apk
-2017-07-09 17:17:50,483 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/aed9900902c38fffabce1d1abe0cca83a7f16de60243e610be2b001f0f8448fe.apk
-2017-07-09 17:17:50,483 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 17:17:50,484 - COSMOS_TRIGGER_PY-Console - DEBUG - 717 KB/s (307059 bytes in 0.418s)
-2017-07-09 17:17:50,484 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 17:17:51,418 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 17:17:51,421 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 17:17:52,413 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 17:17:52,413 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=149ms (0ms mobile, 149ms wifi, 0ms not connected)
-2017-07-09 17:17:53,775 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 17:17:53,894 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 17:17:53,894 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 17:17:53,940 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p vbkoxh.cswnpr --ignore-crashes 1
-2017-07-09 17:17:55,572 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 17:17:55,572 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=384ms (0ms mobile, 384ms wifi, 0ms not connected)
-2017-07-09 17:17:55,609 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 17:17:55,714 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 17:18:15,131 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="vbkoxh.cswnpr" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="vbkoxh.cswnpr" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="vbkoxh.cswnpr" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="vbkoxh.cswnpr" password="false" resource-id="id/title" scrollable="false" selected="false" text="real_racing_2_cracked_nops"/>
-      </node>
-      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="vbkoxh.cswnpr" password="false" resource-id="id/webView1" scrollable="false" selected="false" text="">
-        <!--NAF: The following control may not be accessibility friendly-->
-        <node NAF="true" bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="vbkoxh.cswnpr" password="false" resource-id="id/webView1" scrollable="false" selected="false" text=""/>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 17:18:16,311 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 17:18:16,312 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 17:18:16,950 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/aed9900902c38fffabce1d1abe0cca83a7f16de60243e610be2b001f0f8448fe/first_page.png
-2017-07-09 17:18:17,020 - COSMOS_TRIGGER_PY-Console - DEBUG - 3133 KB/s (85140 bytes in 0.026s)
-2017-07-09 17:18:22,069 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/vbkoxh.cswnpr0709-17-17-46.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/aed9900902c38fffabce1d1abe0cca83a7f16de60243e610be2b001f0f8448fe/vbkoxh.cswnpr0709-17-17-46.pcap
-2017-07-09 17:18:22,165 - COSMOS_TRIGGER_PY-Console - DEBUG - 762 KB/s (8192 bytes in 0.010s)
-2017-07-09 17:18:22,381 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall vbkoxh.cswnpr
-2017-07-09 17:18:23,723 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 17:18:23,723 - COSMOS_TRIGGER_PY-Console - INFO - End

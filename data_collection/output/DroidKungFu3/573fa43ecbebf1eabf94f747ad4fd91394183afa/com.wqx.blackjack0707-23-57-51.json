@@ -1,1 +1,0 @@
-[{"src": ["IMEI"], "dst": "42.62.76.8", "process_name": "com.wqx.blackjack", "process_id": "5531", "log_time": "07-08 03:58:00.982", "message": "libcore.os.send(42.62.76.8) received data with tag 0x400 data=[POST /ad HTTP/1.1..Content-Type", "channel": "HTTP"}]

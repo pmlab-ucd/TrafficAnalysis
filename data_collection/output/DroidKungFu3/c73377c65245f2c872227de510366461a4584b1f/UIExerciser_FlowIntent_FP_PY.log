@@ -1,50 +1,0 @@
-2017-07-08 04:20:34,384 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\c73377c65245f2c872227de510366461a4584b1f.apk
-2017-07-08 04:20:34,384 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.gp.jaro
-2017-07-08 04:20:34,384 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.jaro
-2017-07-08 04:20:35,378 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 04:20:35,378 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\c73377c65245f2c872227de510366461a4584b1f.apk
-2017-07-08 04:20:40,049 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/c73377c65245f2c872227de510366461a4584b1f.apk
-2017-07-08 04:20:40,049 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 04:20:40,049 - COSMOS_TRIGGER_PY-Console - DEBUG - 2101 KB/s (602452 bytes in 0.279s)
-2017-07-08 04:20:40,049 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 04:20:41,128 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 04:20:41,128 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 04:20:42,019 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 04:20:42,019 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=125ms (0ms mobile, 125ms wifi, 0ms not connected)
-2017-07-08 04:20:43,394 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 04:20:43,471 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 04:20:43,471 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 04:20:43,486 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.gp.jaro --ignore-crashes 1
-2017-07-08 04:20:45,585 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 04:20:45,585 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=293ms (0ms mobile, 293ms wifi, 0ms not connected)
-2017-07-08 04:20:45,663 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 04:20:45,780 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 04:21:11,094 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,353][360,631]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.jaro" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,353][360,631]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.jaro" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,353][360,631]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.jaro" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,353][360,631]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.jaro" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[3,363][359,548]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.jaro" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[18,375][344,548]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.jaro" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[34,377][333,534]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.jaro" password="false" scrollable="false" selected="false" text="Jaro is currently Beta software. This means it may have some bugs and limitations, and there aren't all that many levels. However, it should be improving quite a bit in the near future."/>
-            </node>
-          </node>
-          <node bounds="[3,548][359,628]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.gp.jaro" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[18,548][344,610]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.gp.jaro" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[100,552][261,606]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.gp.jaro" password="false" scrollable="false" selected="false" text="I Agree"/>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 04:21:12,250 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 04:21:12,250 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 04:21:12,934 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/c73377c65245f2c872227de510366461a4584b1f/first_page.png
-2017-07-08 04:21:13,069 - COSMOS_TRIGGER_PY-Console - DEBUG - 2312 KB/s (113280 bytes in 0.047s)
-2017-07-08 04:21:18,223 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.gp.jaro0708-04-20-34.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/c73377c65245f2c872227de510366461a4584b1f/com.gp.jaro0708-04-20-34.pcap
-2017-07-08 04:21:18,362 - COSMOS_TRIGGER_PY-Console - DEBUG - 1632 KB/s (45221 bytes in 0.027s)
-2017-07-08 04:21:19,035 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.gp.jaro
-2017-07-08 04:21:20,825 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 04:21:20,825 - COSMOS_TRIGGER_PY-Console - INFO - End

@@ -1,44 +1,0 @@
-2017-07-08 01:05:58,381 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\8aa591f77cdc5ef813ce42a6c284c565eb2c2e3d.apk
-2017-07-08 01:05:58,381 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.adwo.android.games.mine
-2017-07-08 01:05:58,381 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.adwo.android.games.mine
-2017-07-08 01:05:59,204 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 01:05:59,204 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\8aa591f77cdc5ef813ce42a6c284c565eb2c2e3d.apk
-2017-07-08 01:06:01,999 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/8aa591f77cdc5ef813ce42a6c284c565eb2c2e3d.apk
-2017-07-08 01:06:02,000 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 01:06:02,000 - COSMOS_TRIGGER_PY-Console - DEBUG - 2026 KB/s (1111557 bytes in 0.535s)
-2017-07-08 01:06:02,000 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 01:06:02,930 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 01:06:02,930 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 01:06:04,061 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 01:06:04,061 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=170ms (0ms mobile, 170ms wifi, 0ms not connected)
-2017-07-08 01:06:05,453 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 01:06:05,585 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 01:06:05,585 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 01:06:05,601 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.adwo.android.games.mine --ignore-crashes 1
-2017-07-08 01:06:06,729 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 01:06:06,729 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=187ms (0ms mobile, 187ms wifi, 0ms not connected)
-2017-07-08 01:06:06,799 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 01:06:06,918 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 01:06:27,177 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.adwo.android.games.mine" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.adwo.android.games.mine" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.adwo.android.games.mine" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[0,50][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.adwo.android.games.mine" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-          <node bounds="[10,60][710,98]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.adwo.android.games.mine" password="false" resource-id="id/label" scrollable="false" selected="false" text=""/>
-          <node bounds="[110,248][610,344]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.adwo.android.games.mine" password="false" resource-id="id/begin" scrollable="false" selected="false" text="开始游戏"/>
-          <node bounds="[110,394][610,490]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.adwo.android.games.mine" password="false" resource-id="id/exit" scrollable="false" selected="false" text="退出游戏"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 01:06:28,289 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 01:06:28,290 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 01:06:28,967 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/8aa591f77cdc5ef813ce42a6c284c565eb2c2e3d/first_page.png
-2017-07-08 01:06:29,105 - COSMOS_TRIGGER_PY-Console - DEBUG - 2314 KB/s (59218 bytes in 0.024s)
-2017-07-08 01:06:29,128 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.adwo.android.games.mine0708-01-05-58.pcap ../output/DroidKungFu3/8aa591f77cdc5ef813ce42a6c284c565eb2c2e3d/com.adwo.android.games.mine0708-01-05-58.pcap
-2017-07-08 01:06:29,200 - COSMOS_TRIGGER_PY-Console - DEBUG - 1228 KB/s (8192 bytes in 0.006s)
-2017-07-08 01:06:29,200 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.adwo.android.games.mine0708-01-05-58.pcap
-2017-07-08 01:06:36,625 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.adwo.android.games.mine
-2017-07-08 01:06:38,197 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 01:06:38,197 - COSMOS_TRIGGER_PY-Console - INFO - End

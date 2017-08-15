@@ -1,32 +1,0 @@
-2017-07-10 09:03:19,313 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\302dd27a8578184345eb7805ffa6f514d0a4e9a3324c0a76be327d43902cfa19.apk
-2017-07-10 09:03:19,313 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.wqx.blackjack
-2017-07-10 09:03:19,315 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.wqx.blackjack
-2017-07-10 09:03:20,384 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-10 09:03:20,384 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\302dd27a8578184345eb7805ffa6f514d0a4e9a3324c0a76be327d43902cfa19.apk
-2017-07-10 09:03:23,756 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/302dd27a8578184345eb7805ffa6f514d0a4e9a3324c0a76be327d43902cfa19.apk
-2017-07-10 09:03:23,757 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-10 09:03:23,757 - COSMOS_TRIGGER_PY-Console - DEBUG - 2039 KB/s (513897 bytes in 0.246s)
-2017-07-10 09:03:23,757 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-10 09:03:46,051 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-10 09:03:46,052 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-10 09:03:47,684 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-10 09:03:47,684 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=142ms (0ms mobile, 142ms wifi, 0ms not connected)
-2017-07-10 09:03:51,147 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-10 09:03:51,266 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-10 09:03:51,266 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-10 09:03:51,285 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.wqx.blackjack --ignore-crashes 1
-2017-07-10 09:03:55,112 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-10 09:03:55,114 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=125ms (0ms mobile, 125ms wifi, 0ms not connected)
-2017-07-10 09:03:55,184 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-10 09:03:55,375 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-10 09:06:55,184 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-10 09:06:55,184 - COSMOS_TRIGGER_PY-Console - WARNING - Time out while dumping XML for the default activity
-2017-07-10 09:06:55,267 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-10 09:09:55,267 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-10 09:09:55,267 - COSMOS_TRIGGER_PY-Console - WARNING - Time out while dumping XML for the default activity
-2017-07-10 09:10:00,269 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.wqx.blackjack0710-09-03-19.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/302dd27a8578184345eb7805ffa6f514d0a4e9a3324c0a76be327d43902cfa19/com.wqx.blackjack0710-09-03-19.pcap
-2017-07-10 09:11:00,286 - COSMOS_TRIGGER_PY-Console - WARNING - __init__() takes at least 3 arguments (2 given)
-2017-07-10 09:12:00,374 - COSMOS_TRIGGER_PY-Console - WARNING - __init__() takes at least 3 arguments (2 given)
-2017-07-10 09:12:00,456 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb reboot
-2017-07-10 09:13:00,461 - COSMOS_TRIGGER_PY-Console - WARNING - __init__() takes at least 3 arguments (2 given)
-2017-07-10 09:14:00,548 - COSMOS_TRIGGER_PY-Console - WARNING - __init__() takes at least 3 arguments (2 given)

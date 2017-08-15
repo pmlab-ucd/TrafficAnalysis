@@ -1,78 +1,0 @@
-2017-07-07 23:59:55,562 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\5791631af5c922a5d9f72721a1f0016d867a5dd3.apk
-2017-07-07 23:59:55,562 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.wqx.blackjack
-2017-07-07 23:59:55,562 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.wqx.blackjack
-2017-07-07 23:59:56,335 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-07 23:59:56,335 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\5791631af5c922a5d9f72721a1f0016d867a5dd3.apk
-2017-07-07 23:59:59,138 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/5791631af5c922a5d9f72721a1f0016d867a5dd3.apk
-2017-07-07 23:59:59,138 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-07 23:59:59,138 - COSMOS_TRIGGER_PY-Console - DEBUG - 870 KB/s (481034 bytes in 0.539s)
-2017-07-07 23:59:59,138 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-07 23:59:59,831 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-07 23:59:59,831 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 00:00:00,868 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 00:00:00,868 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=177ms (0ms mobile, 177ms wifi, 0ms not connected)
-2017-07-08 00:00:02,237 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 00:00:02,315 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 00:00:02,315 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 00:00:02,329 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.wqx.blackjack --ignore-crashes 1
-2017-07-08 00:00:03,352 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 00:00:03,352 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=167ms (0ms mobile, 167ms wifi, 0ms not connected)
-2017-07-08 00:00:03,424 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 00:00:03,523 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 00:00:30,563 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[0,0][360,149]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[0,100][360,149]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="买定离手，开始下注"/>
-          </node>
-          <node bounds="[0,171][360,297]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="">
-            <!--NAF: The following control may not be accessibility friendly-->
-            <node NAF="true" bounds="[56,171][101,218]" checkable="false" checked="false" class="android.widget.ImageButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text=""/>
-            <!--NAF: The following control may not be accessibility friendly-->
-            <node NAF="true" bounds="[107,171][152,218]" checkable="false" checked="false" class="android.widget.ImageButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text=""/>
-            <!--NAF: The following control may not be accessibility friendly-->
-            <node NAF="true" bounds="[158,171][203,218]" checkable="false" checked="false" class="android.widget.ImageButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text=""/>
-            <!--NAF: The following control may not be accessibility friendly-->
-            <node NAF="true" bounds="[208,171][253,218]" checkable="false" checked="false" class="android.widget.ImageButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text=""/>
-            <!--NAF: The following control may not be accessibility friendly-->
-            <node NAF="true" bounds="[259,171][304,218]" checkable="false" checked="false" class="android.widget.ImageButton" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="4" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text=""/>
-          </node>
-          <node bounds="[0,320][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[0,320][180,592]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[48,560][77,592]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="赢:"/>
-              <node bounds="[77,560][90,592]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="0"/>
-              <node bounds="[90,560][118,592]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="输:"/>
-              <node bounds="[118,560][132,592]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="0"/>
-            </node>
-            <node bounds="[180,320][360,592]" checkable="false" checked="false" class="android.widget.TableLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[180,497][360,529]" checkable="false" checked="false" class="android.widget.TableRow" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="">
-                <node bounds="[180,497][253,529]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="最高分:"/>
-                <node bounds="[253,497][360,529]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="5000"/>
-              </node>
-              <node bounds="[180,529][360,560]" checkable="false" checked="false" class="android.widget.TableRow" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="">
-                <node bounds="[180,529][253,560]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="下注:"/>
-                <node bounds="[253,529][360,560]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="0"/>
-              </node>
-              <node bounds="[180,560][360,592]" checkable="false" checked="false" class="android.widget.TableRow" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="">
-                <node bounds="[180,560][253,592]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="金钱:"/>
-                <node bounds="[253,560][360,592]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.wqx.blackjack" password="false" scrollable="false" selected="false" text="5000"/>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 00:00:31,736 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 00:00:31,736 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 00:00:32,974 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/5791631af5c922a5d9f72721a1f0016d867a5dd3/first_page.png
-2017-07-08 00:00:33,206 - COSMOS_TRIGGER_PY-Console - DEBUG - 3226 KB/s (404116 bytes in 0.122s)
-2017-07-08 00:00:33,223 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.wqx.blackjack0707-23-59-55.pcap ../output/DroidKungFu3/5791631af5c922a5d9f72721a1f0016d867a5dd3/com.wqx.blackjack0707-23-59-55.pcap
-2017-07-08 00:00:33,299 - COSMOS_TRIGGER_PY-Console - DEBUG - 532 KB/s (4096 bytes in 0.007s)
-2017-07-08 00:00:33,299 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.wqx.blackjack0707-23-59-55.pcap
-2017-07-08 00:00:33,628 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.wqx.blackjack
-2017-07-08 00:00:35,019 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 00:00:35,019 - COSMOS_TRIGGER_PY-Console - INFO - End

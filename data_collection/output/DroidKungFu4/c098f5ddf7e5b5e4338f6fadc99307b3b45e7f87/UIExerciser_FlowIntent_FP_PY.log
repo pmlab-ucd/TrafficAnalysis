@@ -1,49 +1,0 @@
-2017-07-09 02:36:04,345 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\c098f5ddf7e5b5e4338f6fadc99307b3b45e7f87.apk
-2017-07-09 02:36:04,346 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.droidhen.vipbasketball
-2017-07-09 02:36:04,348 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.droidhen.vipbasketball
-2017-07-09 02:36:05,526 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 02:36:05,526 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu4\c098f5ddf7e5b5e4338f6fadc99307b3b45e7f87.apk
-2017-07-09 02:36:09,486 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/c098f5ddf7e5b5e4338f6fadc99307b3b45e7f87.apk
-2017-07-09 02:36:09,487 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 02:36:09,489 - COSMOS_TRIGGER_PY-Console - DEBUG - 2173 KB/s (3173185 bytes in 1.425s)
-2017-07-09 02:36:09,490 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 02:36:10,278 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 02:36:10,279 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 02:36:11,184 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 02:36:11,186 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=94ms (0ms mobile, 94ms wifi, 0ms not connected)
-2017-07-09 02:36:12,664 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 02:36:12,736 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 02:36:12,737 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 02:36:12,753 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.droidhen.vipbasketball --ignore-crashes 1
-2017-07-09 02:36:13,683 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 02:36:13,683 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=119ms (0ms mobile, 119ms wifi, 0ms not connected)
-2017-07-09 02:36:13,721 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 02:36:13,829 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 02:36:43,436 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.droidhen.vipbasketball" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.droidhen.vipbasketball" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.droidhen.vipbasketball" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.droidhen.vipbasketball" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-          <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.droidhen.vipbasketball" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-            <node bounds="[0,0][720,677]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.droidhen.vipbasketball" password="false" resource-id="id/text_margintop" scrollable="false" selected="false" text=""/>
-            <node bounds="[0,677][720,1184]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.droidhen.vipbasketball" password="false" resource-id="id/text_marginbottom" scrollable="false" selected="false" text=""/>
-          </node>
-          <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.droidhen.vipbasketball" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-            <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.droidhen.vipbasketball" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-              <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.view.View" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.droidhen.vipbasketball" password="false" resource-id="NO_ID" scrollable="false" selected="false" text=""/>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 02:36:44,647 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 02:36:44,648 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 02:36:45,592 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/c098f5ddf7e5b5e4338f6fadc99307b3b45e7f87/first_page.png
-2017-07-09 02:36:45,683 - COSMOS_TRIGGER_PY-Console - DEBUG - 3513 KB/s (179946 bytes in 0.050s)
-2017-07-09 02:36:50,714 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.droidhen.vipbasketball0709-02-36-04.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu4/c098f5ddf7e5b5e4338f6fadc99307b3b45e7f87/com.droidhen.vipbasketball0709-02-36-04.pcap
-2017-07-09 02:36:50,855 - COSMOS_TRIGGER_PY-Console - DEBUG - 2311 KB/s (151552 bytes in 0.064s)
-2017-07-09 02:37:05,838 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.droidhen.vipbasketball
-2017-07-09 02:37:08,615 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 02:37:08,617 - COSMOS_TRIGGER_PY-Console - INFO - End

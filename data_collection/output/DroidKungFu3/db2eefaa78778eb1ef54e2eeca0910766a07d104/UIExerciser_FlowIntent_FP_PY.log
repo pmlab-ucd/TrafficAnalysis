@@ -1,89 +1,0 @@
-2017-07-08 04:46:07,076 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\db2eefaa78778eb1ef54e2eeca0910766a07d104.apk
-2017-07-08 04:46:07,076 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.ps.pintu.view
-2017-07-08 04:46:07,076 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.pintu.view
-2017-07-08 04:46:07,923 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 04:46:07,924 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\db2eefaa78778eb1ef54e2eeca0910766a07d104.apk
-2017-07-08 04:46:10,275 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/db2eefaa78778eb1ef54e2eeca0910766a07d104.apk
-2017-07-08 04:46:10,276 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 04:46:10,276 - COSMOS_TRIGGER_PY-Console - DEBUG - 1996 KB/s (1024521 bytes in 0.501s)
-2017-07-08 04:46:10,276 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 04:46:11,003 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 04:46:11,003 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 04:46:12,030 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 04:46:12,032 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=120ms (0ms mobile, 120ms wifi, 0ms not connected)
-2017-07-08 04:46:13,417 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 04:46:13,502 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 04:46:13,503 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 04:46:13,516 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.ps.pintu.view --ignore-crashes 1
-2017-07-08 04:46:14,565 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 04:46:14,565 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=235ms (0ms mobile, 235ms wifi, 0ms not connected)
-2017-07-08 04:46:14,635 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 04:46:14,734 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 04:46:53,621 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,25][360,53]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[5,26][356,51]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="拼图终结者"/>
-      </node>
-      <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,53][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[3,56][357,588]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[10,63][350,124]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[10,70][62,101]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="等级:"/>
-              <!--NAF: The following control may not be accessibility friendly-->
-              <node NAF="true" bounds="[62,63][212,118]" checkable="false" checked="false" class="android.widget.Spinner" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="true" selected="false" text="">
-                <node bounds="[75,75][153,100]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="---3X3---"/>
-              </node>
-              <node bounds="[234,70][350,131]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="手机图片拼图"/>
-            </node>
-            <node bounds="[3,131][357,512]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[3,131][357,162]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="选择图片区"/>
-              <!--NAF: The following control may not be accessibility friendly-->
-              <node NAF="true" bounds="[3,169][357,512]" checkable="false" checked="false" class="android.widget.GridView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="1" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="">
-                <node bounds="[9,177][119,266]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="">
-                  <node bounds="[9,177][119,261]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text=""/>
-                </node>
-                <node bounds="[125,177][235,266]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="">
-                  <node bounds="[125,177][235,261]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text=""/>
-                </node>
-                <node bounds="[241,177][351,267]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="">
-                  <node bounds="[241,177][351,262]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text=""/>
-                </node>
-                <node bounds="[9,272][119,361]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="">
-                  <node bounds="[9,272][119,357]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text=""/>
-                </node>
-                <node bounds="[125,272][235,361]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="4" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="">
-                  <node bounds="[125,272][235,357]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text=""/>
-                </node>
-                <node bounds="[241,272][351,361]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="5" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="">
-                  <node bounds="[241,272][351,357]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text=""/>
-                </node>
-                <node bounds="[9,367][119,456]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="6" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="">
-                  <node bounds="[9,367][119,451]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text=""/>
-                </node>
-                <node bounds="[125,367][235,456]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="7" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="">
-                  <node bounds="[125,367][235,451]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text=""/>
-                </node>
-                <node bounds="[241,367][351,456]" checkable="false" checked="false" class="android.widget.RelativeLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="8" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="">
-                  <node bounds="[241,367][351,451]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text=""/>
-                </node>
-              </node>
-            </node>
-            <node bounds="[3,512][357,588]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[142,512][218,566]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.ps.pintu.view" password="false" scrollable="false" selected="false" text="确定"/>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 04:46:54,823 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 04:46:54,823 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 04:46:56,415 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/db2eefaa78778eb1ef54e2eeca0910766a07d104/first_page.png
-2017-07-08 04:46:56,654 - COSMOS_TRIGGER_PY-Console - DEBUG - 4117 KB/s (569854 bytes in 0.135s)
-2017-07-08 04:47:01,869 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.ps.pintu.view0708-04-46-07.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu3/db2eefaa78778eb1ef54e2eeca0910766a07d104/com.ps.pintu.view0708-04-46-07.pcap
-2017-07-08 04:47:02,022 - COSMOS_TRIGGER_PY-Console - DEBUG - 2661 KB/s (156746 bytes in 0.057s)
-2017-07-08 04:47:02,338 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.ps.pintu.view
-2017-07-08 04:47:03,816 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 04:47:03,816 - COSMOS_TRIGGER_PY-Console - INFO - End

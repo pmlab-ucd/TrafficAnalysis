@@ -1,54 +1,0 @@
-2017-07-10 08:53:54,213 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\2d1eee053f84bfff1c9f4f82cad96dd60d04596236df9b929a921e32bf4efb0a.apk
-2017-07-10 08:53:54,213 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.romario.opensudoku
-2017-07-10 08:53:54,213 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.romario.opensudoku
-2017-07-10 08:53:55,039 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-10 08:53:55,039 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\DroidKungFu\2d1eee053f84bfff1c9f4f82cad96dd60d04596236df9b929a921e32bf4efb0a.apk
-2017-07-10 08:53:57,792 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/2d1eee053f84bfff1c9f4f82cad96dd60d04596236df9b929a921e32bf4efb0a.apk
-2017-07-10 08:53:57,792 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-10 08:53:57,792 - COSMOS_TRIGGER_PY-Console - DEBUG - 871 KB/s (616465 bytes in 0.690s)
-2017-07-10 08:53:57,792 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-10 08:53:58,573 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-10 08:53:58,573 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-10 08:53:59,960 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-10 08:53:59,960 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=525ms (0ms mobile, 525ms wifi, 0ms not connected)
-2017-07-10 08:54:01,381 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-10 08:54:01,456 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-10 08:54:01,456 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-10 08:54:01,470 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.romario.opensudoku --ignore-crashes 1
-2017-07-10 08:54:02,657 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-10 08:54:02,657 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=201ms (0ms mobile, 201ms wifi, 0ms not connected)
-2017-07-10 08:54:02,736 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-10 08:54:02,869 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-10 08:54:25,088 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.romario.opensudoku" password="false" resource-id="id/list" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.romario.opensudoku" password="false" resource-id="id/list" scrollable="false" selected="false" text="">
-      <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.romario.opensudoku" password="false" resource-id="id/list" scrollable="false" selected="false" text="">
-        <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.romario.opensudoku" password="false" resource-id="id/list" scrollable="false" selected="false" text="">
-          <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.ListView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="com.romario.opensudoku" password="false" resource-id="id/list" scrollable="false" selected="false" text="">
-            <node bounds="[0,0][720,128]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="true" package="com.romario.opensudoku" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-              <node bounds="[0,15][720,74]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.romario.opensudoku" password="false" resource-id="id/name" scrollable="false" selected="false" text="容易"/>
-              <node bounds="[0,74][720,112]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.romario.opensudoku" password="false" resource-id="id/detail" scrollable="false" selected="false" text="30 个数独 (30 个未解)"/>
-            </node>
-            <node bounds="[0,129][720,257]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="true" package="com.romario.opensudoku" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-              <node bounds="[0,144][720,203]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.romario.opensudoku" password="false" resource-id="id/name" scrollable="false" selected="false" text="中级"/>
-              <node bounds="[0,203][720,241]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.romario.opensudoku" password="false" resource-id="id/detail" scrollable="false" selected="false" text="30 个数独 (30 个未解)"/>
-            </node>
-            <node bounds="[0,258][720,386]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="true" package="com.romario.opensudoku" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-              <node bounds="[0,273][720,332]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.romario.opensudoku" password="false" resource-id="id/name" scrollable="false" selected="false" text="困难"/>
-              <node bounds="[0,332][720,370]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.romario.opensudoku" password="false" resource-id="id/detail" scrollable="false" selected="false" text="30 个数独 (30 个未解)"/>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-10 08:54:26,289 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-10 08:54:26,290 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-10 08:54:26,930 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2d1eee053f84bfff1c9f4f82cad96dd60d04596236df9b929a921e32bf4efb0a/first_page.png
-2017-07-10 08:54:27,062 - COSMOS_TRIGGER_PY-Console - DEBUG - 2968 KB/s (45582 bytes in 0.014s)
-2017-07-10 08:54:32,078 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.romario.opensudoku0710-08-53-54.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/DroidKungFu/2d1eee053f84bfff1c9f4f82cad96dd60d04596236df9b929a921e32bf4efb0a/com.romario.opensudoku0710-08-53-54.pcap
-2017-07-10 08:54:32,177 - COSMOS_TRIGGER_PY-Console - DEBUG - 1411 KB/s (24576 bytes in 0.017s)
-2017-07-10 08:54:36,423 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.romario.opensudoku
-2017-07-10 08:54:38,151 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-10 08:54:38,151 - COSMOS_TRIGGER_PY-Console - INFO - End

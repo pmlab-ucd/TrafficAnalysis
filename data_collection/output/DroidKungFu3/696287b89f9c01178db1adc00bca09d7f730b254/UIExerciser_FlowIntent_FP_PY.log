@@ -1,50 +1,0 @@
-2017-07-08 00:13:07,901 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\696287b89f9c01178db1adc00bca09d7f730b254.apk
-2017-07-08 00:13:07,901 - COSMOS_TRIGGER_PY-Console - INFO - pkg:sunkay.BookYuanyangdao
-2017-07-08 00:13:07,903 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall sunkay.BookYuanyangdao
-2017-07-08 00:13:09,686 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 00:13:09,687 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\696287b89f9c01178db1adc00bca09d7f730b254.apk
-2017-07-08 00:13:15,019 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/696287b89f9c01178db1adc00bca09d7f730b254.apk
-2017-07-08 00:13:15,019 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 00:13:15,019 - COSMOS_TRIGGER_PY-Console - DEBUG - 1741 KB/s (426827 bytes in 0.239s)
-2017-07-08 00:13:15,019 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 00:13:36,023 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 00:13:36,023 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 00:13:38,009 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 00:13:38,009 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=357ms (0ms mobile, 357ms wifi, 0ms not connected)
-2017-07-08 00:13:39,928 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 00:13:40,250 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 00:13:40,250 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 00:13:40,269 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p sunkay.BookYuanyangdao --ignore-crashes 1
-2017-07-08 00:13:45,555 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 00:13:45,555 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=207ms (0ms mobile, 207ms wifi, 0ms not connected)
-2017-07-08 00:13:45,635 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 00:13:50,197 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 00:14:16,990 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.BookYuanyangdao" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.BookYuanyangdao" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.BookYuanyangdao" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,0][360,592]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.BookYuanyangdao" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[0,0][360,75]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.BookYuanyangdao" password="false" scrollable="false" selected="false" text="鸳鸯刀"/>
-          <node bounds="[0,75][360,233]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="sunkay.BookYuanyangdao" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[0,75][360,233]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.BookYuanyangdao" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[0,75][360,115]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="sunkay.BookYuanyangdao" password="false" scrollable="false" selected="false" text="一"/>
-              <node bounds="[0,115][360,154]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="sunkay.BookYuanyangdao" password="false" scrollable="false" selected="false" text="二"/>
-              <node bounds="[0,154][360,194]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="sunkay.BookYuanyangdao" password="false" scrollable="false" selected="false" text="三"/>
-              <node bounds="[0,194][360,233]" checkable="false" checked="false" class="android.widget.TextView" clickable="true" content-desc="" enabled="true" focusable="false" focused="false" index="3" long-clickable="false" package="sunkay.BookYuanyangdao" password="false" scrollable="false" selected="false" text="四"/>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 00:14:18,075 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 00:14:18,076 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 00:14:18,924 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/696287b89f9c01178db1adc00bca09d7f730b254/first_page.png
-2017-07-08 00:14:23,178 - COSMOS_TRIGGER_PY-Console - DEBUG - 6 KB/s (28596 bytes in 4.126s)
-2017-07-08 00:14:23,223 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/sunkay.BookYuanyangdao0708-00-13-07.pcap ../output/DroidKungFu3/696287b89f9c01178db1adc00bca09d7f730b254/sunkay.BookYuanyangdao0708-00-13-07.pcap
-2017-07-08 00:14:23,403 - COSMOS_TRIGGER_PY-Console - DEBUG - 2378 KB/s (167936 bytes in 0.068s)
-2017-07-08 00:14:23,404 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/sunkay.BookYuanyangdao0708-00-13-07.pcap
-2017-07-08 00:14:24,165 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall sunkay.BookYuanyangdao
-2017-07-08 00:14:25,811 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 00:14:25,811 - COSMOS_TRIGGER_PY-Console - INFO - End

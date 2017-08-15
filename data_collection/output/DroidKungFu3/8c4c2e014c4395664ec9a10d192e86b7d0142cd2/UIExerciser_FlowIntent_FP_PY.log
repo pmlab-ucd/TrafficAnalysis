@@ -1,59 +1,0 @@
-2017-07-08 01:07:15,515 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\8c4c2e014c4395664ec9a10d192e86b7d0142cd2.apk
-2017-07-08 01:07:15,515 - COSMOS_TRIGGER_PY-Console - INFO - pkg:com.cosina.game.activity
-2017-07-08 01:07:15,515 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.cosina.game.activity
-2017-07-08 01:07:16,288 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-08 01:07:16,289 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\ncsumalware\DroidKungFu3\8c4c2e014c4395664ec9a10d192e86b7d0142cd2.apk
-2017-07-08 01:07:18,181 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/8c4c2e014c4395664ec9a10d192e86b7d0142cd2.apk
-2017-07-08 01:07:18,181 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 01:07:18,181 - COSMOS_TRIGGER_PY-Console - DEBUG - 1003 KB/s (192362 bytes in 0.187s)
-2017-07-08 01:07:18,183 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-08 01:07:18,913 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-08 01:07:18,913 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-08 01:07:19,789 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 01:07:19,789 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=184ms (0ms mobile, 184ms wifi, 0ms not connected)
-2017-07-08 01:07:21,180 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-08 01:07:21,306 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-08 01:07:21,308 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-08 01:07:21,338 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.cosina.game.activity --ignore-crashes 1
-2017-07-08 01:07:22,371 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-08 01:07:22,371 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=124ms (0ms mobile, 124ms wifi, 0ms not connected)
-2017-07-08 01:07:22,447 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-08 01:07:22,555 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-08 01:07:42,448 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,367][360,632]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cosina.game.activity" password="false" scrollable="false" selected="false" text="">
-    <node bounds="[0,367][360,632]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cosina.game.activity" password="false" scrollable="false" selected="false" text="">
-      <node bounds="[0,367][360,632]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cosina.game.activity" password="false" scrollable="false" selected="false" text="">
-        <node bounds="[0,367][360,632]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cosina.game.activity" password="false" scrollable="false" selected="false" text="">
-          <node bounds="[3,377][359,447]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cosina.game.activity" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[29,395][333,435]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cosina.game.activity" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[29,395][333,435]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cosina.game.activity" password="false" scrollable="false" selected="false" text="BesiegeBalls"/>
-            </node>
-            <node bounds="[18,446][344,447]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.cosina.game.activity" password="false" scrollable="false" selected="false" text=""/>
-          </node>
-          <node bounds="[3,447][359,549]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="com.cosina.game.activity" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[18,447][344,549]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cosina.game.activity" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[34,449][333,536]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cosina.game.activity" password="false" scrollable="false" selected="false" text="滑动手指画出线条，让小球在尽量少的空间内活动，注意：不要让球碰到未闭合的分割线..."/>
-            </node>
-          </node>
-          <node bounds="[3,549][359,629]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="2" long-clickable="false" package="com.cosina.game.activity" password="false" scrollable="false" selected="false" text="">
-            <node bounds="[18,549][344,611]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="com.cosina.game.activity" password="false" scrollable="false" selected="false" text="">
-              <node bounds="[20,554][181,608]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="0" long-clickable="false" package="com.cosina.game.activity" password="false" scrollable="false" selected="false" text="重新开始"/>
-              <node bounds="[181,554][342,608]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="com.cosina.game.activity" password="false" scrollable="false" selected="false" text="继续游戏"/>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-08 01:07:43,608 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-08 01:07:43,608 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-08 01:07:44,565 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png ../output/DroidKungFu3/8c4c2e014c4395664ec9a10d192e86b7d0142cd2/first_page.png
-2017-07-08 01:07:44,697 - COSMOS_TRIGGER_PY-Console - DEBUG - 1848 KB/s (102106 bytes in 0.053s)
-2017-07-08 01:07:44,711 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/com.cosina.game.activity0708-01-07-15.pcap ../output/DroidKungFu3/8c4c2e014c4395664ec9a10d192e86b7d0142cd2/com.cosina.game.activity0708-01-07-15.pcap
-2017-07-08 01:07:44,881 - COSMOS_TRIGGER_PY-Console - DEBUG - 2076 KB/s (192512 bytes in 0.090s)
-2017-07-08 01:07:44,881 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell rm /sdcard/com.cosina.game.activity0708-01-07-15.pcap
-2017-07-08 01:08:00,009 - COSMOS_TRIGGER_PY-Console - WARNING - Timeout!!!
-2017-07-08 01:08:00,015 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall com.cosina.game.activity
-2017-07-08 01:08:02,151 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-08 01:08:02,151 - COSMOS_TRIGGER_PY-Console - INFO - End

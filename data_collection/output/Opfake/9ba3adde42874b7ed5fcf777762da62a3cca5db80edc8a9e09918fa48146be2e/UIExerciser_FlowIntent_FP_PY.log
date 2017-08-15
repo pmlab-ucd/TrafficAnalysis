@@ -1,43 +1,0 @@
-2017-07-09 16:15:23,542 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\9ba3adde42874b7ed5fcf777762da62a3cca5db80edc8a9e09918fa48146be2e.apk
-2017-07-09 16:15:23,543 - COSMOS_TRIGGER_PY-Console - INFO - pkg:ynlxcd.cwductjwjc
-2017-07-09 16:15:23,543 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall ynlxcd.cwductjwjc
-2017-07-09 16:15:24,315 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 16:15:24,315 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\9ba3adde42874b7ed5fcf777762da62a3cca5db80edc8a9e09918fa48146be2e.apk
-2017-07-09 16:15:26,292 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/9ba3adde42874b7ed5fcf777762da62a3cca5db80edc8a9e09918fa48146be2e.apk
-2017-07-09 16:15:26,293 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 16:15:26,295 - COSMOS_TRIGGER_PY-Console - DEBUG - 783 KB/s (394662 bytes in 0.491s)
-2017-07-09 16:15:26,295 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 16:15:26,967 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 16:15:26,969 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 16:15:27,911 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 16:15:27,911 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=203ms (0ms mobile, 203ms wifi, 0ms not connected)
-2017-07-09 16:15:29,295 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 16:15:29,362 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 16:15:29,362 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 16:15:29,381 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p ynlxcd.cwductjwjc --ignore-crashes 1
-2017-07-09 16:15:30,358 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 16:15:30,358 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=131ms (0ms mobile, 131ms wifi, 0ms not connected)
-2017-07-09 16:15:30,395 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 16:15:30,505 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 16:15:50,115 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ynlxcd.cwductjwjc" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ynlxcd.cwductjwjc" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ynlxcd.cwductjwjc" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="ynlxcd.cwductjwjc" password="false" resource-id="id/title" scrollable="false" selected="false" text="World-of-Goo"/>
-      </node>
-      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="ynlxcd.cwductjwjc" password="false" resource-id="id/webView1" scrollable="false" selected="false" text="">
-        <!--NAF: The following control may not be accessibility friendly-->
-        <node NAF="true" bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.webkit.WebView" clickable="true" content-desc="" enabled="true" focusable="true" focused="true" index="0" long-clickable="true" package="ynlxcd.cwductjwjc" password="false" resource-id="id/webView1" scrollable="false" selected="false" text=""/>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 16:15:51,240 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 16:15:51,240 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 16:15:52,079 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/9ba3adde42874b7ed5fcf777762da62a3cca5db80edc8a9e09918fa48146be2e/first_page.png
-2017-07-09 16:15:52,224 - COSMOS_TRIGGER_PY-Console - DEBUG - 3186 KB/s (186700 bytes in 0.057s)
-2017-07-09 16:15:57,249 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/ynlxcd.cwductjwjc0709-16-15-23.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/9ba3adde42874b7ed5fcf777762da62a3cca5db80edc8a9e09918fa48146be2e/ynlxcd.cwductjwjc0709-16-15-23.pcap
-2017-07-09 16:15:57,351 - COSMOS_TRIGGER_PY-Console - DEBUG - 694 KB/s (8192 bytes in 0.011s)
-2017-07-09 16:15:57,582 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall ynlxcd.cwductjwjc
-2017-07-09 16:15:59,122 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 16:15:59,122 - COSMOS_TRIGGER_PY-Console - INFO - End

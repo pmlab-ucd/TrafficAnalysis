@@ -1,56 +1,0 @@
-2017-07-09 21:29:37,573 - COSMOS_TRIGGER_PY-Console - INFO - apk:C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\efd95f6d1841e79054f8a78913e9ea0fd7e2ecea3cb853bbb7b7e72e8a21357e.apk
-2017-07-09 21:29:37,575 - COSMOS_TRIGGER_PY-Console - INFO - pkg:tp5x.WGt12
-2017-07-09 21:29:37,575 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall tp5x.WGt12
-2017-07-09 21:29:38,395 - COSMOS_TRIGGER_PY-Console - DEBUG - Failure
-2017-07-09 21:29:38,397 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb install C:\Users\majes\Documents\FlowIntent\apks\drebin\Opfake\efd95f6d1841e79054f8a78913e9ea0fd7e2ecea3cb853bbb7b7e72e8a21357e.apk
-2017-07-09 21:29:40,470 - COSMOS_TRIGGER_PY-Console - DEBUG - 	pkg: /data/local/tmp/efd95f6d1841e79054f8a78913e9ea0fd7e2ecea3cb853bbb7b7e72e8a21357e.apk
-2017-07-09 21:29:40,471 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 21:29:40,471 - COSMOS_TRIGGER_PY-Console - DEBUG - 336 KB/s (94727 bytes in 0.274s)
-2017-07-09 21:29:40,473 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell "su 0 date -s `date +%Y%m%d.%H%M%S`"
-2017-07-09 21:29:41,144 - COSMOS_TRIGGER_PY-Console - DEBUG - sh: date: No such file or directory
-2017-07-09 21:29:41,145 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p com.lexa.fakegps --ignore-crashes 1
-2017-07-09 21:29:42,066 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 21:29:42,066 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=177ms (0ms mobile, 177ms wifi, 0ms not connected)
-2017-07-09 21:29:43,426 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb logcat -c
-2017-07-09 21:29:43,502 - COSMOS_TRIGGER_PY-Console - INFO - clear logcat
-2017-07-09 21:29:43,502 - COSMOS_TRIGGER_PY-Console - INFO - tcpdump begins
-2017-07-09 21:29:43,523 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell monkey -p tp5x.WGt12 --ignore-crashes 1
-2017-07-09 21:29:44,463 - COSMOS_TRIGGER_PY-Console - DEBUG - Events injected: 1
-2017-07-09 21:29:44,464 - COSMOS_TRIGGER_PY-Console - DEBUG - ## Network stats: elapsed time=136ms (0ms mobile, 136ms wifi, 0ms not connected)
-2017-07-09 21:29:44,502 - COSMOS_TRIGGER_PY-Console - INFO - Try to dump layout XML of 
-2017-07-09 21:29:44,799 - COSMOS_TRIGGER_PY-Console - INFO - Dumping...first_page
-2017-07-09 21:30:05,471 - COSMOS_TRIGGER_PY-Console - INFO - <?xml version="1.0" ?><hierarchy>
-  <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="tp5x.WGt12" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-    <node bounds="[0,0][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="tp5x.WGt12" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-      <node bounds="[0,50][720,100]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="tp5x.WGt12" password="false" resource-id="NO_ID" scrollable="false" selected="false" text="">
-        <node bounds="[8,51][712,97]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="tp5x.WGt12" password="false" resource-id="id/title" scrollable="false" selected="false" text="Установка"/>
-      </node>
-      <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.FrameLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="1" long-clickable="false" package="tp5x.WGt12" password="false" resource-id="id/LinearLayout2" scrollable="false" selected="false" text="">
-        <node bounds="[0,100][720,1184]" checkable="false" checked="false" class="android.widget.LinearLayout" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="tp5x.WGt12" password="false" resource-id="id/LinearLayout2" scrollable="false" selected="false" text="">
-          <node bounds="[0,100][720,199]" checkable="false" checked="false" class="android.widget.ImageView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="tp5x.WGt12" password="false" resource-id="id/logo" scrollable="false" selected="false" text=""/>
-          <node bounds="[0,199][720,992]" checkable="false" checked="false" class="android.widget.ScrollView" clickable="false" content-desc="" enabled="true" focusable="true" focused="false" index="1" long-clickable="false" package="tp5x.WGt12" password="false" resource-id="id/ScrollView1" scrollable="false" selected="false" text="">
-            <node bounds="[0,199][720,270]" checkable="false" checked="false" class="android.widget.TextView" clickable="false" content-desc="" enabled="true" focusable="false" focused="false" index="0" long-clickable="false" package="tp5x.WGt12" password="false" resource-id="id/text" scrollable="false" selected="false" text="Вы согласны с условиями  загрузки Google Maps 7. Для продолжения загрузки нажмите кнопку Далее."/>
-          </node>
-          <node bounds="[0,992][720,1088]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="2" long-clickable="false" package="tp5x.WGt12" password="false" resource-id="id/Button1" scrollable="false" selected="false" text="Далее"/>
-          <node bounds="[0,1088][720,1184]" checkable="false" checked="false" class="android.widget.Button" clickable="true" content-desc="" enabled="true" focusable="true" focused="false" index="3" long-clickable="false" package="tp5x.WGt12" password="false" resource-id="id/Button2" scrollable="false" selected="false" text="Правила"/>
-        </node>
-      </node>
-    </node>
-  </node>
-</hierarchy>
-2017-07-09 21:30:06,621 - COSMOS_TRIGGER_PY-Console - ERROR - JsonRPC Error code: -32003, Message: com.github.uiautomatorstub.NotImplementedException: takeScreenshot is not yet implemented in API level 16.
-2017-07-09 21:30:06,621 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb shell /system/bin/screencap -p /sdcard/screenshot.png
-2017-07-09 21:30:07,247 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/screenshot.png C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/efd95f6d1841e79054f8a78913e9ea0fd7e2ecea3cb853bbb7b7e72e8a21357e/first_page.png
-2017-07-09 21:30:07,321 - COSMOS_TRIGGER_PY-Console - DEBUG - 3580 KB/s (67952 bytes in 0.018s)
-2017-07-09 21:30:12,342 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/tp5x.WGt120709-21-29-37.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/efd95f6d1841e79054f8a78913e9ea0fd7e2ecea3cb853bbb7b7e72e8a21357e/tp5x.WGt120709-21-29-37.pcap
-2017-07-09 21:30:17,427 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/tp5x.WGt120709-21-29-37.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/efd95f6d1841e79054f8a78913e9ea0fd7e2ecea3cb853bbb7b7e72e8a21357e/tp5x.WGt120709-21-29-37.pcap
-2017-07-09 21:30:22,516 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/tp5x.WGt120709-21-29-37.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/efd95f6d1841e79054f8a78913e9ea0fd7e2ecea3cb853bbb7b7e72e8a21357e/tp5x.WGt120709-21-29-37.pcap
-2017-07-09 21:30:27,609 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/tp5x.WGt120709-21-29-37.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/efd95f6d1841e79054f8a78913e9ea0fd7e2ecea3cb853bbb7b7e72e8a21357e/tp5x.WGt120709-21-29-37.pcap
-2017-07-09 21:30:32,696 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/tp5x.WGt120709-21-29-37.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/efd95f6d1841e79054f8a78913e9ea0fd7e2ecea3cb853bbb7b7e72e8a21357e/tp5x.WGt120709-21-29-37.pcap
-2017-07-09 21:30:37,778 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/tp5x.WGt120709-21-29-37.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/efd95f6d1841e79054f8a78913e9ea0fd7e2ecea3cb853bbb7b7e72e8a21357e/tp5x.WGt120709-21-29-37.pcap
-2017-07-09 21:30:42,862 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/tp5x.WGt120709-21-29-37.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/efd95f6d1841e79054f8a78913e9ea0fd7e2ecea3cb853bbb7b7e72e8a21357e/tp5x.WGt120709-21-29-37.pcap
-2017-07-09 21:30:47,950 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb pull /sdcard/tp5x.WGt120709-21-29-37.pcap C:\Users\majes\PycharmProjects\TrafficAnalysis\data_collection\output/Opfake/efd95f6d1841e79054f8a78913e9ea0fd7e2ecea3cb853bbb7b7e72e8a21357e/tp5x.WGt120709-21-29-37.pcap
-2017-07-09 21:30:48,032 - COSMOS_TRIGGER_PY-Console - DEBUG - 570 KB/s (4096 bytes in 0.007s)
-2017-07-09 21:30:48,249 - COSMOS_TRIGGER_PY-Console - DEBUG - Run cmd: adb -s 014E233C1300800B uninstall tp5x.WGt12
-2017-07-09 21:30:49,723 - COSMOS_TRIGGER_PY-Console - DEBUG - Success
-2017-07-09 21:30:49,723 - COSMOS_TRIGGER_PY-Console - INFO - End
