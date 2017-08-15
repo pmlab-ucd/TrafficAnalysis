@@ -26,7 +26,7 @@ if __name__ == '__main__':
 
     user = 'Hao'
     aapt_loc = 'C:\Users\\' + user + '\AppData\Local\Android\sdk/build-tools/25.0.0/aapt.exe'
-    apk_dir = 'C:\Users\\' + user + '\Documents\COSMOS\\apk\\Finance\\'
+    apk_dir = 'C:\Users\\' + user + '\Documents\COSMOS\\apk\\News_Magazines\\'
     UIExerciser.emu_loc = 'C:\Users\hfu\AppData\Local\Android\sdk/tools/emulator.exe'
     UIExerciser.emu_name = 'Qvga'
 
