@@ -4,6 +4,9 @@ import subprocess
 import Queue
 import re
 
+'''
+Read the TaintDroid during execution of the apps
+'''
 class TaintDroidLogHandler():
     @staticmethod
     def parse_taint_log(line):
@@ -19,7 +22,7 @@ class TaintDroidLogHandler():
 
         taint_log['log_time'] = line.split(' W')[0]
         taint_log['process_id'] = line.split('):')[0].split('(')[1].replace(' ', '')
-        taint_log['process_name'] =  Utilities.adb_id2process(taint_log['process_id']).replace('\r', '')
+        taint_log['process_name'] = Utilities.adb_id2process(taint_log['process_id']).replace('\r', '')
         message = line.split(': ')[1]
         taint_log['message'] = message
         taint_log['dst'] = TaintDroidLogHandler.get_dst(message)
@@ -57,22 +60,22 @@ class TaintDroidLogHandler():
     @staticmethod
     def get_taint_src(msg):
         MAP = {'1': "Location",
-        '2': "Address Book (ContactsProvider)",
-        '4': "Microphone Input",
-        '8': "Phone Number",
-        '10': "GPS Location",
-        '20': "NET-based Location",
-        '40': "Last known Location",
-        '80': "camera",
-        '100': "accelerometer",
-        '200': "SMS",
-        '400': "IMEI",
-        '800': "IMSI",
-        '1000': "ICCID (SIM card identifier)",
-        '2000': "Device serial number",
-        '4000': "User account information",
-        '8000': "browser history"}
-        
+               '2': "Address Book (ContactsProvider)",
+               '4': "Microphone Input",
+               '8': "Phone Number",
+               '10': "GPS Location",
+               '20': "NET-based Location",
+               '40': "Last known Location",
+               '80': "camera",
+               '100': "accelerometer",
+               '200': "SMS",
+               '400': "IMEI",
+               '800': "IMSI",
+               '1000': "ICCID (SIM card identifier)",
+               '2000': "Device serial number",
+               '4000': "User account information",
+               '8000': "browser history"}
+
         MAP = {
             0x00000001: "Location",
             0x00000002: "Address Book (ContactsProvider)",
@@ -105,7 +108,7 @@ class TaintDroidLogHandler():
                 tags.append(MAP[t])
             else:
                 pass
-                #tags.append("Unknown")
+                # tags.append("Unknown")
         return tags
 
     @staticmethod

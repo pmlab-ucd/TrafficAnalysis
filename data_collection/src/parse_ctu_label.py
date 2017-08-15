@@ -2,7 +2,7 @@ import csv
 
 from scapy.layers.inet import IP, TCP
 from scapy.all import *
-
+from PacpHandler import PcapHandler
 
 
 def get_packets(dirname, pcap):
@@ -12,33 +12,6 @@ def get_packets(dirname, pcap):
     except IOError as e:
         print e.args
         return
-
-
-def filter_pcap(dirname, pkts, ip, port):
-    ip = str(ip)
-    port = str(port)
-    try:
-        rdpcap(dirname + '/' + ip + '_filtered_port_num_' + str(port) + '.pcap')
-        return
-    except:
-        pass
-
-    print port
-
-    filtered = []
-    for pkt in pkts:
-        if TCP in pkt:
-            # print pkt[TCP].sport
-            if str(pkt[TCP].sport) == str(port) or str(pkt[TCP].dport) == str(port) \
-                    and pkt[IP].dst == ip or pkt[IP].src == ip:
-                print 'Found: ' + pkt[IP].dst
-                filtered.append(pkt)
-
-    # filtered = (pkt for pkt in pkts if
-    #            TCP in pkt
-    #            and (str(pkt[TCP].sport) == port or str(pkt[TCP].dport) == port)
-    #            and (pkt[IP].dst == ip or pkt[IP].src == ip))
-    wrpcap(dirname + '/' + ip + '_filtered_port_num_' + str(port) + '.pcap', filtered)
 
 
 def csv_filter_http_c2(item=None, items=None):
@@ -90,4 +63,4 @@ if __name__ == '__main__':
     pcap = 'botnet-capture-20110810-neris.pcap'
     pkts = get_packets(dirname, pcap)
     for packet in packets:
-        filter_pcap(dirname, pkts, packet['DstAddr'], packet['Sport'])
+        PcapHandler.filter_pcap(dirname, pkts, packet['DstAddr'], packet['Sport'])
