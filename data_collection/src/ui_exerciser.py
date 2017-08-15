@@ -135,7 +135,11 @@ class UIExerciser:
         self.logger.info('Dumping...' + activity)
         if first_page:
             UIExerciser.pass_first_page(dev)
-        xml_data = dev.dump()
+        try:
+            xml_data = dev.dump()
+        except Exception as e:
+            print e
+            exit(1)
 
         self.is_crashed(dev, xml_data)
         while self.is_SMS_alarm(dev, xml_data):
