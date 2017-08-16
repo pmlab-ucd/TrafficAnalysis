@@ -92,6 +92,82 @@ class PcapHandler:
             return socket.inet_ntop(socket.AF_INET6, inet)
 
     @staticmethod
+    def match_http_requests(pcap, filter_func, args):
+        '''
+        Match requests based filter_func
+        :param pcap:
+        :param label:
+        :param filter_func:
+        :param args:
+        :return: flows
+        '''
+        # For each packet in the pcap process the contents
+        flows = []
+        for timestamp, buf in pcap:
+
+            # Unpack the Ethernet frame (mac src/dst, ethertype)
+            eth = dpkt.ethernet.Ethernet(buf)
+
+            # Make sure the Ethernet data contains an IP packet
+            if not isinstance(eth.data, dpkt.ip.IP):
+                print('Non IP Packet type not supported %s\n' % eth.data.__class__.__name__)
+                continue
+
+            # Now grab the data within the Ethernet frame (the IP packet)
+            packet = eth.data
+
+            # Check for TCP in the transport layer
+            if isinstance(packet.data, dpkt.tcp.TCP):
+                if filter_func and not filter_func(args, packet):
+                    continue
+
+                # Set the TCP data
+                tcp = packet.data
+
+                # Now see if we can parse the contents as a HTTP request
+                try:
+                    request = dpkt.http.Request(tcp.data)
+                except (dpkt.dpkt.NeedData, dpkt.dpkt.UnpackError):
+                    continue
+
+                flow = dict()
+                # Pull out fragment information (flags and offset all packed into off field, so use bitmasks)
+                do_not_fragment = bool(packet.off & dpkt.ip.IP_DF)
+                more_fragments = bool(packet.off & dpkt.ip.IP_MF)
+                fragment_offset = packet.off & dpkt.ip.IP_OFFMASK
+
+                # Print out the info
+                timestamp = str(datetime.datetime.utcfromtimestamp(timestamp))
+                print('Timestamp: ', timestamp)
+                print('Ethernet Frame: ', PcapHandler.mac_addr(eth.src), PcapHandler.mac_addr(eth.dst), eth.type)
+                print('IP: %s -> %s   (len=%d ttl=%d DF=%d MF=%d offset=%d)' %
+                      (PcapHandler.inet_to_str(packet.src), PcapHandler.inet_to_str(packet.dst), packet.len, packet.ttl, do_not_fragment,
+                       more_fragments, fragment_offset))
+                print('HTTP request: %s\n' % repr(request))
+                print tcp.sport, tcp.dport
+                flow['post_body'] = request.body
+                try:
+                    flow['domain'] = request.headers['host']
+                except:
+                    flow['domain'] = str(PcapHandler.inet_to_str(packet.dst))
+                flow['uri'] = request.uri
+                flow['headers'] = request.headers
+                flow['platform'] = 'unknown'
+                flow['referrer'] = 'unknown'
+                timestamp = timestamp.replace(':', '-')
+                timestamp = timestamp.replace('.', '-')
+                timestamp = timestamp.replace(' ', '_')
+                flow['timestamp'] = timestamp
+                print repr(flow)
+                flows.append(flow)
+
+                # Check for Header spanning acrossed TCP segments
+                if not tcp.data.endswith(b'\r\n'):
+                    print('\nHEADER TRUNCATED! Reassemble TCP segments!\n')
+        return flows
+
+
+    @staticmethod
     def print_pacp(pcap):
         # For each packet in the pcap process the contents
         for timestamp, buf in pcap:
