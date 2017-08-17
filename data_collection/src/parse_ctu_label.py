@@ -5,13 +5,7 @@ from scapy.all import *
 from PacpHandler import PcapHandler
 
 
-def get_packets(dirname, pcap):
-    try:
-        pkts = rdpcap(dirname + '/' + pcap)
-        return pkts
-    except IOError as e:
-        print e.args
-        return
+
 
 
 def csv_filter_http_c2(item=None, items=None):
@@ -61,6 +55,6 @@ if __name__ == '__main__':
 
     dirname = '/mnt/Documents/flows/CTU-13/CTU-13-1/0/'
     pcap = 'botnet-capture-20110810-neris.pcap'
-    pkts = get_packets(dirname, pcap)
+    pkts = PcapHandler.get_packets(os.path.join(dirname, pcap))
     for packet in packets:
         PcapHandler.filter_pcap(dirname, pkts, packet['DstAddr'], packet['Sport'])
