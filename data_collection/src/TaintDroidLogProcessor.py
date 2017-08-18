@@ -4,19 +4,23 @@ import os
 import re
 from PacpHandler import PcapHandler
 import dpkt
+from shutil import copytree
 
-'''
+"""
 Process the generated logs from TaintDroid after the execution of the apps
-'''
+"""
 
 
 class TaintDroidLogProcessor():
     @staticmethod
     def parse_exerciser_log(log_file):
-        with open(log_file) as lines:
-            for line in lines:
-                if 'pkg:' in line:
-                    return line.split('pkg:')[1].replace('\n', '')
+        try:
+            with open(log_file) as lines:
+                for line in lines:
+                    if 'pkg:' in line:
+                        return line.split('pkg:')[1].replace('\n', '')
+        except:
+            return
 
     @staticmethod
     def parse_json_log(log_file, pkg):
@@ -150,7 +154,41 @@ class TaintDroidLogProcessor():
                             flows[str(taint)] = TaintDroidLogProcessor.extract_flow_pcap(taint, os.path.join(root, dir))
         return flows
 
+    @staticmethod
+    def organize_dir_based_tsrc(base_dir, out_dir, tsrc='Location', sub_dataset=True):
+        """
+        Copy the dir to the ground dir based on taint src
+        :return:
+        """
+        for root, dirs, files in os.walk(base_dir, topdown=False):
+            for filename in files:
+                if re.search('filter', filename) and tsrc in filename:
+                    dirname = os.path.basename(os.path.dirname(os.path.join(root, filename)))
+                    dest_dir = out_dir
+                    if sub_dataset:
+                        dataset_name = os.path.basename(os.path.abspath(os.path.join(root, os.pardir)))
+                        dest_dir = os.path.join(out_dir, dataset_name)
+                    print 'root:', root
+                    print 'dirname:', dirname
+                    dest_dir = os.path.join(dest_dir, dirname)
+                    if not os.path.exists(dest_dir):
+                        copytree(root, dest_dir)
+
+
 if __name__ == '__main__':
-    taints = TaintDroidLogProcessor.parse_dir('/mnt/Documents/FlowIntent/output/drebin/')
-    for taint in taints:
-        print taint, taints[taint]
+    gen_filtered_taint_pcap = False
+    dataset = 'drebin'
+    sub_dataset = True # Whether contain sub dataset
+    base_dir = os.path.join('/mnt/Documents/FlowIntent/output/', dataset)
+    if gen_filtered_taint_pcap:
+        """
+        Run this first: derive the filtered pcap based on the taint src
+        """
+        taints = TaintDroidLogProcessor.parse_dir(base_dir)
+        for taint in taints:
+            print taint, taints[taint]
+    else:
+        tsrc='accelerometer'
+        out_dir = os.path.join('/mnt/Documents/FlowIntent/output/ground/', tsrc)
+        out_dir = os.path.join(out_dir, dataset)
+        TaintDroidLogProcessor.organize_dir_based_tsrc(base_dir, out_dir, tsrc=tsrc, sub_dataset=sub_dataset)
