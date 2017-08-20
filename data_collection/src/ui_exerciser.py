@@ -472,7 +472,7 @@ class UIExerciser:
             UIExerciser.run_adb_cmd(cmd)
             #if not os.path.exists(out_pcap):
                 #raise Exception('The pcap does not exist.')
-        #UIExerciser.run_adb_cmd('shell rm /sdcard/' + package + current_time + '.pcap')
+            UIExerciser.run_adb_cmd('shell rm /sdcard/' + package + current_time + '.pcap')
 
         #UIExerciser.run_adb_cmd('pull /sdcard/' + package + current_time + '.log ' + output_dir)
         #UIExerciser.run_adb_cmd('shell rm /sdcard/' + package + current_time + '.log')
