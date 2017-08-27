@@ -5,17 +5,14 @@ from scapy.all import *
 from PacpHandler import PcapHandler
 
 
-
-
-
-def csv_filter_http_c2(item=None, items=None):
-    if item['Proto'] != 'tcp' or '-TCP-CC' not in item['Label']:
+def csv_filter_http(label='-TCP-CC', item=None, items=None):
+    if item['Proto'] != 'tcp' or not label in item['Label']:
         return
     items.append(item)
     print item
 
 
-def read_csv(csv_path, csv_filter):
+def read_csv(csv_path, csv_filter, label='-TCP-CC'):
     f = open(csv_path)
     reader = csv.reader(f)
     headers = next(reader, None)
@@ -27,7 +24,7 @@ def read_csv(csv_path, csv_filter):
         for h, v in zip(headers, row):
             item[h] = v
             # columns[h].append(v)
-        csv_filter(item=item, items=items)
+        csv_filter(label = label, item=item, items=items)
     # print(columns)
     print(len(items))
 
@@ -51,7 +48,7 @@ def read_csv(csv_path, csv_filter):
 
 if __name__ == '__main__':
     headers, packets = read_csv('/mnt/Documents/flows/CTU-13/CTU-13-1/0/capture20110810.binetflow.2format',
-                                csv_filter_http_c2)
+                                csv_filter_http, label = 'SPAM')
 
     dirname = '/mnt/Documents/flows/CTU-13/CTU-13-1/0/'
     pcap = 'botnet-capture-20110810-neris.pcap'

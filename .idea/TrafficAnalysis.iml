@@ -5,7 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/data_collection/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/data_collection/output" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 2.7.13 (C:\Python27\python.exe)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 2.7.12 (/usr/bin/python2.7)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">

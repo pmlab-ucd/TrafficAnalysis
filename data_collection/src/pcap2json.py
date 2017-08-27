@@ -10,7 +10,7 @@ from dpkt.compat import compat_ord
 # import win_inet_pton
 import json
 import os
-from parse_ctu_label import read_csv, csv_filter_http_c2
+from parse_ctu_label import read_csv, csv_filter_http
 
 
 def mac_addr(address):
@@ -134,7 +134,7 @@ def print_http_requests(pcap, label, filter_func, args):
     return flows
 
 
-def pcap2jsons(pcap_dir, filter_func=None, *args):
+def pcap2jsons(pcap_dir, out_dir, filter_func=None, *args):
     for root, dirs, files in os.walk(pcap_dir, topdown=True):
         for name in files:
             # print(os.path.join(root, name))
@@ -151,13 +151,15 @@ def pcap2jsons(pcap_dir, filter_func=None, *args):
                 with open(pcap_path, 'rb') as f:
                     pcap = dpkt.pcap.Reader(f)
                     flows = print_http_requests(pcap, label, filter_func, args)
-                    out_dir = os.curdir + '/output/' + os.path.basename(os.path.abspath(os.path.join(root, os.pardir))) + '/' + str(
-                        label) + '/'
+                    #out_dir = os.curdir + '/output/' + os.path.basename(os.path.abspath(os.path.join(root, os.pardir))) + '/' + str(
+                     #   label) + '/'
                     print out_dir
                     if not os.path.exists(out_dir):
                         os.makedirs(out_dir)
                     for flow in flows:
-                        with open(out_dir + flow['domain'] + '_' + flow['timestamp'] + '.json', 'w') as outfile:
+                        filename = str(flow['domain'] + '_' + flow['timestamp'] + '.json').replace(':', '_')
+
+                        with open(out_dir + '/' + filename, 'w') as outfile:
                             try:
                                 json.dump(flow, outfile)
                             except UnicodeDecodeError as e:
@@ -165,10 +167,11 @@ def pcap2jsons(pcap_dir, filter_func=None, *args):
 
 
 if __name__ == '__main__':
-    dir = '/mnt/Documents/flows/CTU-13/CTU-13-1/'
+    dir = '/mnt/Documents/flows/CTU-13/CTU-13-9/'
     dir_0 = dir + '0/'
-    headers, csv_packets = read_csv(dir_0 + 'capture20110810.binetflow.2format',
-                                    csv_filter_http_c2)
-    pcap2jsons(dir_0, filter_pcap, csv_packets)
-    dir_1 = dir + '1/'
-    pcap2jsons(dir_1)
+    label = 'Ad'
+    headers, csv_packets = read_csv(dir_0 + 'capture20110817.binetflow.2format',
+                                    csv_filter_http, label = 'SPAM')
+    pcap2jsons(dir_0, dir_0 + '/' + label, filter_pcap, csv_packets)
+    #dir_1 = dir + '1/'
+    #pcap2jsons(dir_1)

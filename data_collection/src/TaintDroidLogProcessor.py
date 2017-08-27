@@ -176,8 +176,8 @@ class TaintDroidLogProcessor():
 
 
 if __name__ == '__main__':
-    gen_filtered_taint_pcap = False
-    dataset = 'drebin'
+    gen_filtered_taint_pcap = True
+    dataset = 'virusshare'
     sub_dataset = True # Whether contain sub dataset
     base_dir = os.path.join('/mnt/Documents/FlowIntent/output/', dataset)
     if gen_filtered_taint_pcap:
@@ -188,7 +188,7 @@ if __name__ == '__main__':
         for taint in taints:
             print taint, taints[taint]
     else:
-        tsrc='accelerometer'
+        tsrc='IMEI'
         out_dir = os.path.join('/mnt/Documents/FlowIntent/output/ground/', tsrc)
         out_dir = os.path.join(out_dir, dataset)
         TaintDroidLogProcessor.organize_dir_based_tsrc(base_dir, out_dir, tsrc=tsrc, sub_dataset=sub_dataset)
