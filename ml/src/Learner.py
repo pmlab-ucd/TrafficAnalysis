@@ -9,7 +9,8 @@ from sklearn import tree
 import pydotplus
 import codecs
 import cPickle
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, precision_score
+from sklearn import svm
 
 import simplejson
 from utils import Utilities
@@ -33,6 +34,8 @@ class Learner:
     @staticmethod
     def dir2jsons(json_dir):
         jsons = []
+        if json_dir == None:
+            return jsons
         for root, dirs, files in os.walk(json_dir, topdown=False):
             for filename in files:
                 if re.search('json$', filename):
@@ -94,8 +97,8 @@ class Learner:
     def gen_instances(pos_json_dir, neg_json_dir, output_dir=os.curdir, to_vec=True):
         pos_jsons = Learner.dir2jsons(pos_json_dir)
         neg_jsons = Learner.dir2jsons(neg_json_dir)
-        logger.info(len(pos_jsons))
-        logger.info(len(neg_jsons))
+        logger.info('lenPos: ' + str(len(pos_jsons)))
+        logger.info('lenNeg: ' + str(len(neg_jsons)))
         docs = Learner.gen_docs(pos_jsons)
         docs = docs + (Learner.gen_docs(neg_jsons))
         instances = []
@@ -133,7 +136,17 @@ class Learner:
         return train_data, labels, vocab
 
     @staticmethod
-    def train(train_data, labels, feature_names=None, output_dir=os.curdir, tree_name='tree'):
+    def ocsvm(train_data, labels, output_dir=os.curdir):
+        nu = float(labels.count(0)) / len(labels)
+
+        clf = svm.OneClassSVM(nu=nu, kernel="rbf", gamma=0.1)
+        clf.fit(train_data)
+
+        with open(output_dir + '/' + 'ocsvm.pkl', 'wb') as fid:
+            cPickle.dump(clf, fid)
+
+    @staticmethod
+    def train_tree(train_data, labels, feature_names=None, output_dir=os.curdir, tree_name='tree'):
         # Initialize a Random Forest classifier with 100 trees
         cv = KFold(n_splits=10, random_state=33, shuffle=True)
         clf = DecisionTreeClassifier(class_weight='balanced')
@@ -151,12 +164,11 @@ class Learner:
         graph = pydotplus.graph_from_dot_data(dotfile.read())
         graph.write_pdf(output_dir + '/' + tree_name +'.pdf')
         dotfile.close()
-        simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'), separators=(',', ':'), sort_keys=True, indent=4)
+        simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
+                        separators=(',', ':'), sort_keys=True, indent=4)
         # save the classifier
         with open(output_dir + '/' + 'classifier.pkl', 'wb') as fid:
             cPickle.dump(clf, fid)
-
-
 
     @staticmethod
     def gen_docs(jsons):
@@ -174,25 +186,50 @@ class Learner:
         loaded_vec = CountVectorizer(decode_error="replace", vocabulary=voc)
         data = loaded_vec.fit_transform(instances)
         y_1 = model.predict(data)
+        logger.info(y_1)
         if labels:
             logger.info(accuracy_score(labels, y_1))
 
 if __name__ == '__main__':
     logger = Utilities.set_logger('Learner')
     base_dir = 'C:\\Users\\hfu\\Documents\\flows\\CTU-13\\'
-    dataset_num = '10'
+    dataset_num = '2'
     dataset = 'CTU-13-' + dataset_num + '\\'
 
+
     train = False
+    learner = 'ocsvm'
     if train:
-        data, labels, feature_names = Learner.gen_instances(base_dir + 'CTU-13-1\\' + '\\1',
-                                                            base_dir + dataset + '\\0',
-                                                            output_dir=base_dir + dataset)
         #"C:\Users\hfu\IdeaProjects\\recon\\test\\1",
          #                 "C:\Users\hfu\IdeaProjects\\recon\\test\\0")
-        Learner.train(data, labels, feature_names=feature_names, output_dir=base_dir + dataset, tree_name='Fig_tree_' + dataset_num)
+        if learner == 'tree':
+            classifier_dir = base_dir + dataset
+            vocab_dir = base_dir + dataset
+            data, labels, feature_names = Learner.gen_instances(base_dir + 'CTU-13-1\\' + '\\1',
+                                                                base_dir + dataset + '\\0',
+                                                                output_dir=vocab_dir)
+            Learner.train_tree(data, labels, feature_names=feature_names, output_dir=classifier_dir, tree_name='Fig_tree_' + dataset_num)
+        elif learner == 'ocsvm':
+            classifier_dir = base_dir + 'CTU-13-1\\' + '\\1'
+            vocab_dir = base_dir + 'CTU-13-1\\' + '\\1'
+            data, labels, feature_names = Learner.gen_instances(vocab_dir,
+                                                                base_dir + 'CTU-13-1\\' + '\\0\\CC',
+                                                                output_dir=vocab_dir)
+            Learner.ocsvm(data, labels, output_dir=classifier_dir)
     else:
+
+        if learner == 'tree':
+            classifier_dir = base_dir + dataset
+            vocab_dir = base_dir + dataset
+            learner_path = classifier_dir + '\\' + 'classifier.pkl'
+        elif learner == 'ocsvm':
+            classifier_dir = base_dir + 'CTU-13-1\\' + '\\1'
+            vocab_dir = base_dir + 'CTU-13-1\\' + '\\1'
+            learner_path = classifier_dir + '\\' + 'ocsvm.pkl'
+
         data, labels = Learner.gen_instances('', base_dir + dataset + '\\0', to_vec=False)
-        Learner.predict(cPickle.load(open(base_dir + 'CTU-13-13\\'  + 'classifier.pkl', 'rb')),
-                            cPickle.load(open(base_dir + 'CTU-13-13\\' + 'vocabulary.pkl', "rb")), data, labels=labels)
+        if learner == 'ocsvm':
+            labels = [-1.] * len(labels)
+        Learner.predict(cPickle.load(open(learner_path, 'rb')),
+                            cPickle.load(open(vocab_dir + '\\' + 'vocabulary.pkl', "rb")), data, labels=labels)
 
