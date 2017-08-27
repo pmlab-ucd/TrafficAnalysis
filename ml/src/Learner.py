@@ -16,6 +16,9 @@ import simplejson
 from utils import Utilities
 from itertools import takewhile, izip
 
+import string
+import random
+
 import sys
 
 reload(sys)
@@ -94,13 +97,16 @@ class Learner:
         return train_data, labels
 
     @staticmethod
-    def gen_instances(pos_json_dir, neg_json_dir, output_dir=os.curdir, to_vec=True):
+    def gen_instances(pos_json_dir, neg_json_dir, output_dir=os.curdir, to_vec=True, simulate=False):
         pos_jsons = Learner.dir2jsons(pos_json_dir)
         neg_jsons = Learner.dir2jsons(neg_json_dir)
         logger.info('lenPos: ' + str(len(pos_jsons)))
         logger.info('lenNeg: ' + str(len(neg_jsons)))
         docs = Learner.gen_docs(pos_jsons)
         docs = docs + (Learner.gen_docs(neg_jsons))
+        if simulate:
+            if len(neg_jsons) == 0:
+                docs = docs + Learner.simulate_flows(len(pos_jsons), 0)
         instances = []
         labels = []
         for doc in docs:
@@ -171,6 +177,17 @@ class Learner:
             cPickle.dump(clf, fid)
 
     @staticmethod
+    def rand_str(size=6, chars=string.ascii_uppercase + string.digits):
+        return ''.join(random.choice(chars) for _ in range(size))
+
+    @staticmethod
+    def simulate_flows(size, label):
+        docs = []
+        for _ in range(size):
+            docs.append(Learner.LabelledDocs(Learner.rand_str(), label))
+        return docs
+
+    @staticmethod
     def gen_docs(jsons):
         docs = []
         for flow in jsons:
@@ -197,18 +214,29 @@ if __name__ == '__main__':
     dataset = 'CTU-13-' + dataset_num + '\\'
 
 
-    train = False
-    learner = 'ocsvm'
+    train = True
+    learner = 'tree'
     if train:
         #"C:\Users\hfu\IdeaProjects\\recon\\test\\1",
          #                 "C:\Users\hfu\IdeaProjects\\recon\\test\\0")
         if learner == 'tree':
             classifier_dir = base_dir + dataset
             vocab_dir = base_dir + dataset
-            data, labels, feature_names = Learner.gen_instances(base_dir + 'CTU-13-1\\' + '\\1',
+            simulate = True
+            if simulate:
+                classifier_dir = base_dir + 'CTU-13-1\\' + '1'
+                vocab_dir = base_dir + 'CTU-13-1\\' + '1'
+                data, labels, feature_names = Learner.gen_instances(base_dir + 'CTU-13-1\\' + '1',
+                                                                    None,
+                                                                    output_dir=vocab_dir, simulate=simulate)
+                Learner.train_tree(data, labels, feature_names=feature_names, output_dir=classifier_dir,
+                                   tree_name='Fig_tree_normal')
+            else:
+                data, labels, feature_names = Learner.gen_instances(base_dir + 'CTU-13-1\\' + '\\1',
                                                                 base_dir + dataset + '\\0',
-                                                                output_dir=vocab_dir)
-            Learner.train_tree(data, labels, feature_names=feature_names, output_dir=classifier_dir, tree_name='Fig_tree_' + dataset_num)
+                                                                output_dir=vocab_dir, simulate=False)
+                Learner.train_tree(data, labels, feature_names=feature_names, output_dir=classifier_dir,
+                                   tree_name='Fig_tree_' + dataset_num)
         elif learner == 'ocsvm':
             classifier_dir = base_dir + 'CTU-13-1\\' + '\\1'
             vocab_dir = base_dir + 'CTU-13-1\\' + '\\1'
@@ -217,10 +245,13 @@ if __name__ == '__main__':
                                                                 output_dir=vocab_dir)
             Learner.ocsvm(data, labels, output_dir=classifier_dir)
     else:
-
         if learner == 'tree':
+            simulate = True
             classifier_dir = base_dir + dataset
             vocab_dir = base_dir + dataset
+            if simulate:
+                classifier_dir = base_dir + 'CTU-13-1\\' + '\\1'
+                vocab_dir = base_dir + 'CTU-13-1\\' + '\\1'
             learner_path = classifier_dir + '\\' + 'classifier.pkl'
         elif learner == 'ocsvm':
             classifier_dir = base_dir + 'CTU-13-1\\' + '\\1'
