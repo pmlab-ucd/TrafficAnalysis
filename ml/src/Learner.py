@@ -11,6 +11,7 @@ import codecs
 import cPickle
 from sklearn.metrics import accuracy_score, precision_score
 from sklearn import svm
+import numpy as np
 
 import simplejson
 from utils import Utilities
@@ -143,7 +144,7 @@ class Learner:
         # Save vectorizer.vocabulary_
         cPickle.dump(vectorizer.vocabulary_, open(output_dir + '/' + "vocabulary.pkl", "wb"))
 
-        return train_data, labels, vocab
+        return train_data, labels, vocab, vectorizer
 
     @staticmethod
     def ocsvm(train_data, labels, output_dir=os.curdir):
@@ -182,6 +183,7 @@ class Learner:
         with open(output_dir + '/' + 'classifier.pkl', 'wb') as fid:
             cPickle.dump(clf, fid)
 
+
     @staticmethod
     def rand_str(size=6, chars=string.ascii_uppercase + string.digits):
         return ''.join(random.choice(chars) for _ in range(size))
@@ -214,8 +216,16 @@ class Learner:
             logger.info(accuracy_score(labels, y_1))
 
     @staticmethod
-    def feature_selection(X, y, k):
-        return SelectKBest(chi2, k=k).fit_transform(X, y)
+    def feature_selection(X, y, k, output_dir, count_vectorizer, feature_names=None):
+        ch2 = SelectKBest(chi2, k=k)
+        X_new = ch2.fit_transform(X, y)
+        if feature_names != None:
+            feature_names = [feature_names[i] for i
+                         in ch2.get_support(indices=True)]
+        dict = np.asarray(count_vectorizer.get_feature_names())[ch2.get_support()]
+        count_vectorizer = CountVectorizer(analyzer="word", vocabulary=dict)
+        cPickle.dump(count_vectorizer.vocabulary, open(output_dir + '/' + "vocabulary.pkl", "wb"))
+        return X_new, feature_names
 
     @staticmethod
     def pipe_feature_selection(X, y):
@@ -242,17 +252,18 @@ if __name__ == '__main__':
             vocab_dir = base_dir + dataset
             simulate = True
             if simulate:
-                classifier_dir = base_dir + 'CTU-13-1\\' + '0\\n'
-                vocab_dir = base_dir + 'CTU-13-1\\' + '0\\n'
-                data, labels, feature_names = Learner.gen_instances(base_dir + 'CTU-13-1\\' + '0\\n',
+                classifier_dir = base_dir + 'CTU-13-1\\' + '1'
+                vocab_dir = base_dir + 'CTU-13-1\\' + '1'
+                data, labels, feature_names, vec = Learner.gen_instances(base_dir + 'CTU-13-1\\' + '1',
                                                                     None,
                                                                     output_dir=vocab_dir, simulate=simulate)
-                data = Learner.feature_selection(data, labels, 10)
+                data, feature_names = Learner.feature_selection(data, labels, 20000, vocab_dir, vec,
+                                                                feature_names=feature_names)
                 logger.info(data.shape)
                 Learner.train_tree(data, labels, feature_names=feature_names, output_dir=classifier_dir,
                                    tree_name='Fig_tree_normal')
             else:
-                data, labels, feature_names = Learner.gen_instances(base_dir + 'CTU-13-1\\' + '\\1',
+                data, labels, feature_names, vec = Learner.gen_instances(base_dir + 'CTU-13-1\\' + '\\1',
                                                                 base_dir + dataset + '\\0',
                                                                 output_dir=vocab_dir, simulate=False)
                 Learner.train_tree(data, labels, feature_names=feature_names, output_dir=classifier_dir,
@@ -260,7 +271,7 @@ if __name__ == '__main__':
         elif learner == 'ocsvm':
             classifier_dir = base_dir + 'CTU-13-1\\' + '\\1'
             vocab_dir = base_dir + 'CTU-13-1\\' + '\\1'
-            data, labels, feature_names = Learner.gen_instances(vocab_dir,
+            data, labels, feature_names, vec = Learner.gen_instances(vocab_dir,
                                                                 base_dir + 'CTU-13-1\\' + '\\0\\CC',
                                                                 output_dir=vocab_dir)
             Learner.ocsvm(data, labels, output_dir=classifier_dir)
