@@ -186,13 +186,19 @@ class Learner:
 
     @staticmethod
     def rand_str(size=6, chars=string.ascii_uppercase + string.digits):
-        return ''.join(random.choice(chars) for _ in range(size))
+        url = ''.join(random.choice(chars) for _ in range(size))
+        if url[0] < 'k':
+            url = url + 'net'
+        else:
+            url = url + 'com'
+        url = 'www.' + url
+        return url
 
     @staticmethod
     def simulate_flows(size, label):
         docs = []
         for _ in range(size):
-            docs.append(Learner.LabelledDocs(Learner.rand_str(), label))
+            docs.append(Learner.LabelledDocs('www.' + Learner.rand_str() + '', label))
         return docs
 
     @staticmethod
