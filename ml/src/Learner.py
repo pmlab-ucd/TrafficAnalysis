@@ -19,6 +19,10 @@ from itertools import takewhile, izip
 import string
 import random
 
+from sklearn.feature_selection import SelectKBest
+from sklearn.feature_selection import chi2
+from sklearn.pipeline import Pipeline
+
 import sys
 
 reload(sys)
@@ -41,7 +45,7 @@ class Learner:
             return jsons
         for root, dirs, files in os.walk(json_dir, topdown=False):
             for filename in files:
-                if re.search('json$', filename):
+                if 'cv' not in filename and re.search('json$', filename):
                     with open(os.path.join(root, filename), "rb") as fin:
                         try:
                             jsons.append(simplejson.load(fin))
@@ -152,12 +156,14 @@ class Learner:
             cPickle.dump(clf, fid)
 
     @staticmethod
-    def train_tree(train_data, labels, feature_names=None, output_dir=os.curdir, tree_name='tree'):
-        # Initialize a Random Forest classifier with 100 trees
-        cv = KFold(n_splits=10, random_state=33, shuffle=True)
+    def train_tree(train_data, labels, cross_vali=True, feature_names=None, output_dir=os.curdir, tree_name='tree'):
         clf = DecisionTreeClassifier(class_weight='balanced')
-        results = cross_val_score(clf, train_data, labels, cv=cv, scoring='f1')
-        logger.info(results)
+        if cross_vali == True:
+            # Initialize a Random Forest classifier with 100 trees
+            cv = KFold(n_splits=10, random_state=33, shuffle=True)
+
+            results = cross_val_score(clf, train_data, labels, cv=cv, scoring='f1')
+            logger.info(results)
 
         # Fit the forest to the training set, using the bag of words as
         # features and the sentiment labels as the response variable
@@ -207,6 +213,18 @@ class Learner:
         if labels:
             logger.info(accuracy_score(labels, y_1))
 
+    @staticmethod
+    def feature_selection(X, y, k):
+        return SelectKBest(chi2, k=k).fit_transform(X, y)
+
+    @staticmethod
+    def pipe_feature_selection(X, y):
+        clf = Pipeline([
+            ('feature_selection', SelectKBest(chi2, k=2).fit_transform(X, y)),
+            ('classification', RandomForestClassifier())
+        ])
+        clf.fit(X, y)
+
 if __name__ == '__main__':
     logger = Utilities.set_logger('Learner')
     base_dir = 'C:\\Users\\hfu\\Documents\\flows\\CTU-13\\'
@@ -224,11 +242,13 @@ if __name__ == '__main__':
             vocab_dir = base_dir + dataset
             simulate = True
             if simulate:
-                classifier_dir = base_dir + 'CTU-13-1\\' + '1'
-                vocab_dir = base_dir + 'CTU-13-1\\' + '1'
-                data, labels, feature_names = Learner.gen_instances(base_dir + 'CTU-13-1\\' + '1',
+                classifier_dir = base_dir + 'CTU-13-1\\' + '0\\n'
+                vocab_dir = base_dir + 'CTU-13-1\\' + '0\\n'
+                data, labels, feature_names = Learner.gen_instances(base_dir + 'CTU-13-1\\' + '0\\n',
                                                                     None,
                                                                     output_dir=vocab_dir, simulate=simulate)
+                data = Learner.feature_selection(data, labels, 10)
+                logger.info(data.shape)
                 Learner.train_tree(data, labels, feature_names=feature_names, output_dir=classifier_dir,
                                    tree_name='Fig_tree_normal')
             else:
