@@ -9,7 +9,7 @@ def csv_filter_http(label='-TCP-CC', item=None, items=None):
     if item['Proto'] != 'tcp' or not label in item['Label']:
         return
     items.append(item)
-    print item
+    #print item
 
 
 def read_csv(csv_path, csv_filter, label='-TCP-CC'):
@@ -26,7 +26,7 @@ def read_csv(csv_path, csv_filter, label='-TCP-CC'):
             # columns[h].append(v)
         csv_filter(label = label, item=item, items=items)
     # print(columns)
-    print(len(items))
+    # print(len(items))
 
     columns = {}
     for h in headers:
@@ -35,7 +35,7 @@ def read_csv(csv_path, csv_filter, label='-TCP-CC'):
     for row in reader:
         for h, v in zip(headers, row):
             columns[h].append(v)
-    print(len(columns))
+    # print(len(columns))
 
     headers = []
     for h in columns:
@@ -47,10 +47,10 @@ def read_csv(csv_path, csv_filter, label='-TCP-CC'):
 
 
 if __name__ == '__main__':
-    headers, packets = read_csv('/mnt/Documents/flows/CTU-13/CTU-13-1/0/capture20110810.binetflow.2format',
+    headers, packets = read_csv('/mnt/Documents/flows/CTU-13/CTU-13-1/0/capture20110818.binetflow.2format',
                                 csv_filter_http, label = 'SPAM')
 
-    dirname = '/mnt/Documents/flows/CTU-13/CTU-13-1/0/'
+    dirname = '/mnt/Documents/flows/CTU-13/CTU-13-10/0/'
     pcap = 'botnet-capture-20110810-neris.pcap'
     pkts = PcapHandler.get_packets(os.path.join(dirname, pcap))
     for packet in packets:
