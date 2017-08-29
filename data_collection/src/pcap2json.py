@@ -128,7 +128,7 @@ def get_all_flows(pcap):
             #       more_fragments, fragment_offset))
             #print('HTTP request: %s\n' % repr(request))
             #print tcp.sport, tcp.dport
-            flow['label'] = label
+            flow['label'] = '' #label
             flow['post_body'] = request.body
             try:
                 flow['domain'] = request.headers['host']
@@ -157,80 +157,8 @@ def get_all_flows(pcap):
     return flows
 
 
-def print_http_requests(pcap, label, filter_func, args):
-    """Print out information about each packet in a pcap
-
-       Args:
-           pcap: dpkt pcap reader object (dpkt.pcap.Reader)
-    """
-    # For each packet in the pcap process the contents
-    flows = []
-    for timestamp, buf in pcap:
-
-        # Unpack the Ethernet frame (mac src/dst, ethertype)
-        eth = dpkt.ethernet.Ethernet(buf)
-
-        # Make sure the Ethernet data contains an IP packet
-        if not isinstance(eth.data, dpkt.ip.IP):
-            print('Non IP Packet type not supported %s\n' % eth.data.__class__.__name__)
-            continue
-
-        # Now grab the data within the Ethernet frame (the IP packet)
-        packet = eth.data
-
-        # Check for TCP in the transport layer
-        if isinstance(packet.data, dpkt.tcp.TCP):
-            if filter_func and not filter_func(args, packet):
-                continue
-
-            # Set the TCP data
-            tcp = packet.data
-
-            # Now see if we can parse the contents as a HTTP request
-            try:
-                request = dpkt.http.Request(tcp.data)
-            except (dpkt.dpkt.NeedData, dpkt.dpkt.UnpackError):
-                continue
-
-            flow = dict()
-            # Pull out fragment information (flags and offset all packed into off field, so use bitmasks)
-            do_not_fragment = bool(packet.off & dpkt.ip.IP_DF)
-            more_fragments = bool(packet.off & dpkt.ip.IP_MF)
-            fragment_offset = packet.off & dpkt.ip.IP_OFFMASK
-
-            # Print out the info
-            timestamp = str(datetime.datetime.utcfromtimestamp(timestamp))
-            print('Timestamp: ', timestamp)
-            print('Ethernet Frame: ', mac_addr(eth.src), mac_addr(eth.dst), eth.type)
-            print('IP: %s -> %s   (len=%d ttl=%d DF=%d MF=%d offset=%d)' %
-                  (inet_to_str(packet.src), inet_to_str(packet.dst), packet.len, packet.ttl, do_not_fragment,
-                   more_fragments, fragment_offset))
-            print('HTTP request: %s\n' % repr(request))
-            print tcp.sport, tcp.dport
-            flow['label'] = label
-            flow['post_body'] = request.body
-            try:
-                flow['domain'] = request.headers['host']
-            except:
-                flow['domain'] = str(inet_to_str(packet.dst))
-            flow['uri'] = request.uri
-            flow['headers'] = request.headers
-            flow['platform'] = 'unknown'
-            flow['referrer'] = 'unknown'
-            timestamp = timestamp.replace(':', '-')
-            timestamp = timestamp.replace('.', '-')
-            timestamp = timestamp.replace(' ', '_')
-            flow['timestamp'] = timestamp
-            print repr(flow)
-            flows.append(flow)
-
-            # Check for Header spanning acrossed TCP segments
-            if not tcp.data.endswith(b'\r\n'):
-                print('\nHEADER TRUNCATED! Reassemble TCP segments!\n')
-    return flows
-
-
 def pcap2jsons(pcap_dir, out_dir, filter_func=None, *args):
+    filtered = []
     for root, dirs, files in os.walk(pcap_dir, topdown=True):
         for name in files:
             # print(os.path.join(root, name))
@@ -256,11 +184,11 @@ def pcap2jsons(pcap_dir, out_dir, filter_func=None, *args):
                         os.makedirs(out_dir)
                     #print len(args[0])
                     count = 0
-                    filtered = []
+
                     for flow in flows:
                         count += 1
                         #print flow['dest'], flow['sport']
-                        if not filter_flow(args, flow):
+                        if filter_func != None and not filter_func(args, flow):
                             continue
                         #count += 1
                         timestamp = flow['timestamp'].replace(':', '-')
@@ -274,11 +202,12 @@ def pcap2jsons(pcap_dir, out_dir, filter_func=None, *args):
                             except UnicodeDecodeError as e:
                                 print e
                     #print 'count', count
-                    return filtered
+    return filtered
 
 
 if __name__ == '__main__':
-    dir = '/mnt/Documents/flows/CTU-13/CTU-13-11/'
+    '''
+    dir = '/mnt/Documents/flows/CTU-13/CTU-13-1/'
     dir_0 = dir + '0/'
     label = 'Ad' #TCP-CC' #SPAM'
     for root, dirs, files in os.walk(dir_0, topdown=True):
@@ -296,6 +225,6 @@ if __name__ == '__main__':
                 for flow in flows:
                     print flow['dest'], flow['sport'], flow['uri']
 
-
-    #dir_1 = dir + '1/'
-    #pcap2jsons(dir_1)
+    '''
+    dir_1 = '/mnt/Documents/flows/normal'
+    pcap2jsons(dir_1, dir_1)
