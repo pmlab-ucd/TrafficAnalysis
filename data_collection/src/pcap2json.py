@@ -278,19 +278,24 @@ def pcap2jsons(pcap_dir, out_dir, filter_func=None, *args):
 
 
 if __name__ == '__main__':
-    dir = '/mnt/Documents/flows/CTU-13/CTU-13-7/'
+    dir = '/mnt/Documents/flows/CTU-13/CTU-13-11/'
     dir_0 = dir + '0/'
-    label = 'TCP-CC'
-    headers, csv_packets = read_csv(dir_0 + 'capture20110816-2.binetflow.2format',
+    label = 'Ad' #TCP-CC' #SPAM'
+    for root, dirs, files in os.walk(dir_0, topdown=True):
+        for name in files:
+            # print(os.path.join(root, name))
+            if str(name).endswith('binetflow.2format'):
+                headers, csv_packets = read_csv(os.path.join(dir_0, name),
                                     csv_filter_http, label=label)
-    flows = pcap2jsons(dir_0, dir_0 + '/' + label, filter_flow, csv_packets)
-    print len(csv_packets), len(flows)
+                flows = pcap2jsons(dir_0, dir_0 + '/' + label, filter_flow, csv_packets)
+                print len(csv_packets), len(flows)
 
-    for csv_packet in csv_packets:
-        print csv_packet['DstAddr'], csv_packet['Sport'], csv_packet['StartTime'], csv_packet['LastTime']
-    print '_________________________________'
-    for flow in flows:
-        print flow['dest'], flow['sport'], flow['uri']
+                for csv_packet in csv_packets:
+                    print csv_packet['DstAddr'], csv_packet['Sport'], csv_packet['StartTime'], csv_packet['LastTime']
+                print '_________________________________'
+                for flow in flows:
+                    print flow['dest'], flow['sport'], flow['uri']
+
 
     #dir_1 = dir + '1/'
     #pcap2jsons(dir_1)
