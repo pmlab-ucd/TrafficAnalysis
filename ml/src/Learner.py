@@ -14,6 +14,7 @@ from sklearn import svm
 import numpy as np
 
 import simplejson
+import json
 from utils import Utilities
 from itertools import takewhile, izip
 
@@ -46,7 +47,7 @@ class Learner:
             return jsons
         for root, dirs, files in os.walk(json_dir, topdown=False):
             for filename in files:
-                if 'cv' not in filename and re.search('json$', filename):
+                if '201' in filename and re.search('json$', filename):
                     with open(os.path.join(root, filename), "rb") as fin:
                         try:
                             jsons.append(simplejson.load(fin))
@@ -102,13 +103,13 @@ class Learner:
         return train_data, labels
 
     @staticmethod
-    def gen_instances(pos_json_dir, neg_json_dir, output_dir=os.curdir, to_vec=True, simulate=False):
+    def gen_instances(pos_json_dir, neg_json_dir, to_vec=True, simulate=False):
         pos_jsons = Learner.dir2jsons(pos_json_dir)
         neg_jsons = Learner.dir2jsons(neg_json_dir)
         logger.info('lenPos: ' + str(len(pos_jsons)))
         logger.info('lenNeg: ' + str(len(neg_jsons)))
-        docs = Learner.gen_docs(pos_jsons)
-        docs = docs + (Learner.gen_docs(neg_jsons))
+        docs = Learner.gen_docs(pos_jsons, 1)
+        docs = docs + (Learner.gen_docs(neg_jsons, -1))
         if simulate:
             if len(neg_jsons) == 0:
                 docs = docs + Learner.simulate_flows(len(pos_jsons), 0)
@@ -141,8 +142,6 @@ class Learner:
         vocab = vectorizer.get_feature_names()
         # logger.info(vocab)
         #train_data, labels = Learner.feature_filter_by_prefix(vocab, docs)
-        # Save vectorizer.vocabulary_
-        cPickle.dump(vectorizer.vocabulary_, open(output_dir + '/' + "vocabulary.pkl", "wb"))
 
         return train_data, labels, vocab, vectorizer
 
@@ -159,11 +158,15 @@ class Learner:
     @staticmethod
     def train_tree(train_data, labels, cross_vali=True, feature_names=None, output_dir=os.curdir, tree_name='tree'):
         clf = DecisionTreeClassifier(class_weight='balanced')
+        results = None
         if cross_vali == True:
             # Initialize a Random Forest classifier with 100 trees
-            cv = KFold(n_splits=10, random_state=33, shuffle=True)
+            cv = KFold(n_splits=5, random_state=33, shuffle=True)
 
-            results = cross_val_score(clf, train_data, labels, cv=cv, scoring='f1')
+
+            results = cross_val_score(clf, train_data, labels, cv=cv, scoring='f1').tolist()
+            #simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
+                            #separators=(',', ':'), sort_keys=True, indent=4)
             logger.info(results)
 
         # Fit the forest to the training set, using the bag of words as
@@ -171,18 +174,15 @@ class Learner:
         #
         # This may take a few minutes to run
         clf = clf.fit(train_data, labels)
+
         dot_data = tree.export_graphviz(clf, out_file=output_dir + '/' + tree_name +'.dot', feature_names=feature_names,
                                         label='root', impurity=False, special_characters=True, max_depth=5)
         dotfile = open(output_dir + '/' + tree_name +'.dot', 'r')
         graph = pydotplus.graph_from_dot_data(dotfile.read())
         graph.write_pdf(output_dir + '/' + tree_name +'.pdf')
         dotfile.close()
-        simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
-                        separators=(',', ':'), sort_keys=True, indent=4)
-        # save the classifier
-        with open(output_dir + '/' + 'classifier.pkl', 'wb') as fid:
-            cPickle.dump(clf, fid)
 
+        return clf, results
 
     @staticmethod
     def rand_str(size=6, chars=string.ascii_uppercase + string.digits):
@@ -202,10 +202,27 @@ class Learner:
         return docs
 
     @staticmethod
-    def gen_docs(jsons):
+    def tree_info(clf):
+        info = dict()
+        n_nodes = clf.tree_.node_count
+        # children_left = clf.tree_.children_left
+        # children_right = clf.tree_.children_right
+        # feature = clf.tree_.max_features
+        # n_feature = clf.tree_.n_features_
+        # The tree structure can be traversed to compute various properties such
+        # as the depth of each node and whether or not it is a leaf.
+        depth = clf.tree_.max_depth
+        info['n_nodes'] = n_nodes
+        info['depth'] = depth
+        logger.info(info)
+        return info
+
+
+    @staticmethod
+    def gen_docs(jsons, label):
         docs = []
         for flow in jsons:
-            label = flow['label']
+            label = label #flow['label']
             line = ''
             line += flow['domain']
             line += flow['uri']
@@ -222,7 +239,7 @@ class Learner:
             logger.info(accuracy_score(labels, y_1))
 
     @staticmethod
-    def feature_selection(X, y, k, output_dir, count_vectorizer, feature_names=None):
+    def feature_selection(X, y, k, count_vectorizer, feature_names=None):
         ch2 = SelectKBest(chi2, k=k)
         X_new = ch2.fit_transform(X, y)
         if feature_names != None:
@@ -230,8 +247,8 @@ class Learner:
                          in ch2.get_support(indices=True)]
         dict = np.asarray(count_vectorizer.get_feature_names())[ch2.get_support()]
         count_vectorizer = CountVectorizer(analyzer="word", vocabulary=dict)
-        cPickle.dump(count_vectorizer.vocabulary, open(output_dir + '/' + "vocabulary.pkl", "wb"))
-        return X_new, feature_names
+        # cPickle.dump(count_vectorizer.vocabulary, open(output_dir + '/' + "vocabulary.pkl", "wb"))
+        return X_new, feature_names, count_vectorizer
 
     @staticmethod
     def pipe_feature_selection(X, y):
@@ -241,13 +258,62 @@ class Learner:
         ])
         clf.fit(X, y)
 
+    @staticmethod
+    def cmp_feature_selection(data_path, output_dir, dataset=None):
+        data, labels, feature_names, vec = Learner.gen_instances('C:\Users\hfu\Documents\\flows\\normal\\March',
+                                                                 data_path, simulate=False)
+        back = [data, labels, feature_names, vec]
+
+        Learner.save2file(vec.vocabulary_, output_dir + '/' + "vocabulary.pkl")
+        logger.info(data.shape)
+        clf, cv = Learner.train_tree(data, labels, cross_vali=True, feature_names=feature_names,
+                                     tree_name='Fig_tree_' + dataset, output_dir=output_dir)
+        Learner.save2file(clf, classifier_dir + '\\' + 'classifier.pkl')
+
+        clf_info = Learner.tree_info(clf)
+        clf_info['cv'] = cv
+
+        simplejson.dump(clf_info, codecs.open(output_dir + '/tree_info.json', 'w', encoding='utf-8'))
+
+        data, labels, feature_names, vec = back
+        data, feature_names, vec = Learner.feature_selection(data, labels, 200,  vec,
+                                                             feature_names=feature_names)
+        Learner.save2file(vec.vocabulary, output_dir + '/' + "vocabulary_sel.pkl")
+        logger.info(data.shape)
+        clf, cv = Learner.train_tree(data, labels, cross_vali=True, feature_names=feature_names,
+                                     tree_name='Fig_tree_sel_' + dataset, output_dir=output_dir)
+        Learner.save2file(clf, classifier_dir + '\\' + 'classifier_sel.pkl')
+
+        clf_info = Learner.tree_info(clf)
+        clf_info['cv'] = cv
+
+        json.dump(clf_info, codecs.open(output_dir + '/tree_info_sel.json', 'w', encoding='utf-8'))
+
+
+        #simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'))
+        # separators=(',', ':'), sort_keys=True, indent=4)
+
+    @staticmethod
+    def save2file(obj, path):
+        # save the obj
+        with open(path, 'wb') as fid:
+            cPickle.dump(obj, fid)
+
+    @staticmethod
+    def obj_from_file(path):
+        return cPickle.load(open(path, 'rb'))
+
+
 if __name__ == '__main__':
     logger = Utilities.set_logger('Learner')
-    base_dir = 'C:\\Users\\hfu\\Documents\\flows\\CTU-13\\'
-    dataset_num = '2'
-    dataset = 'CTU-13-' + dataset_num + '\\'
+    base_dir = 'C:\Users\hfu\Documents\\flows\CTU-13-Family\TCP-CC\\' #''C:\\Users\\hfu\\Documents\\flows\\CTU-13\\'
+    #dataset_num = 'Neris' #'2'
+    dataset = 'Virut' #''CTU-13-' + dataset_num + '\\'
 
+    classifier_dir = base_dir + dataset
+    Learner.cmp_feature_selection(classifier_dir, classifier_dir, dataset=dataset)
 
+    """
     train = True
     learner = 'tree'
     if train:
@@ -256,7 +322,7 @@ if __name__ == '__main__':
         if learner == 'tree':
             classifier_dir = base_dir + dataset
             vocab_dir = base_dir + dataset
-            simulate = True
+            simulate = False
             if simulate:
                 classifier_dir = base_dir + 'CTU-13-1\\' + '1'
                 vocab_dir = base_dir + 'CTU-13-1\\' + '1'
@@ -269,11 +335,16 @@ if __name__ == '__main__':
                 Learner.train_tree(data, labels, feature_names=feature_names, output_dir=classifier_dir,
                                    tree_name='Fig_tree_normal')
             else:
-                data, labels, feature_names, vec = Learner.gen_instances(base_dir + 'CTU-13-1\\' + '\\1',
-                                                                base_dir + dataset + '\\0',
-                                                                output_dir=vocab_dir, simulate=False)
-                Learner.train_tree(data, labels, feature_names=feature_names, output_dir=classifier_dir,
+                data, labels, feature_names, vec = Learner.gen_instances('C:\Users\hfu\Documents\\flows\\normal\\March',
+                                                                base_dir + dataset, simulate=False)
+                data, feature_names, vec = Learner.feature_selection(data, labels, 200, vocab_dir, vec,
+                                                                feature_names=feature_names)
+                Learner.save2file(vec.vocabulary_, vocab_dir + '/' + "vocabulary.pkl")
+                logger.info(data.shape)
+                clf, cv = Learner.train_tree(data, labels, cross_vali=True, feature_names=feature_names,
                                    tree_name='Fig_tree_' + dataset_num)
+                Learner.save2file(clf, classifier_dir + '\\' + 'classifier.pkl')
+
         elif learner == 'ocsvm':
             classifier_dir = base_dir + 'CTU-13-1\\' + '\\1'
             vocab_dir = base_dir + 'CTU-13-1\\' + '\\1'
@@ -282,9 +353,13 @@ if __name__ == '__main__':
                                                                 output_dir=vocab_dir)
             Learner.ocsvm(data, labels, output_dir=classifier_dir)
     else:
+        train_tree = 'Neris'
+        test_data = 'Virut'
+        test_normal = True
+
         if learner == 'tree':
-            simulate = True
-            classifier_dir = base_dir + dataset
+            simulate = False
+            classifier_dir = base_dir + train_tree
             vocab_dir = base_dir + dataset
             if simulate:
                 classifier_dir = base_dir + 'CTU-13-1\\' + '\\1'
@@ -295,9 +370,15 @@ if __name__ == '__main__':
             vocab_dir = base_dir + 'CTU-13-1\\' + '\\1'
             learner_path = classifier_dir + '\\' + 'ocsvm.pkl'
 
-        data, labels = Learner.gen_instances('', base_dir + dataset + '\\0', to_vec=False)
+        if test_normal == True:
+            base_dir = 'C:\Users\hfu\Documents\\flows\\normal\\'
+            test_data = 'April'
+            data, labels = Learner.gen_instances(base_dir + test_data, '', to_vec=False)
+        else:
+            data, labels = Learner.gen_instances('', base_dir + test_data, to_vec=False)
         if learner == 'ocsvm':
             labels = [-1.] * len(labels)
-        Learner.predict(cPickle.load(open(learner_path, 'rb')),
-                            cPickle.load(open(vocab_dir + '\\' + 'vocabulary.pkl', "rb")), data, labels=labels)
+        Learner.predict(Learner.obj_from_file(learner_path),
+                            Learner.obj_from_file(vocab_dir + '\\' + 'vocabulary.pkl'), data, labels=labels)
 
+    """
