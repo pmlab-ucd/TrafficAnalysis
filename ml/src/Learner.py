@@ -149,14 +149,19 @@ class Learner:
         return train_data, labels, vocab, vectorizer
 
     @staticmethod
-    def ocsvm(train_data, labels, output_dir=os.curdir):
-        nu = float(labels.count(0)) / len(labels)
-
+    def ocsvm(train_data, labels, output_dir=os.curdir, cross_vali=True):
+        nu = float(labels.count(-1)) / len(labels)
         clf = svm.OneClassSVM(nu=nu, kernel="rbf", gamma=0.1)
+        results = None
+        if cross_vali == True:
+            results = Learner.cross_validation(clf, train_data, labels)
+            # simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
+            # separators=(',', ':'), sort_keys=True, indent=4)
+            logger.info('OCSVM: ' + str(results))
+
         clf.fit(train_data)
 
-        with open(output_dir + '/' + 'ocsvm.pkl', 'wb') as fid:
-            cPickle.dump(clf, fid)
+        return clf, results
 
     @staticmethod
     def train_bayes(train_data, labels, cross_vali=True, feature_names=None):
@@ -373,7 +378,7 @@ class Learner:
         return cPickle.load(open(path, 'rb'))
 
     @staticmethod
-    def cmp_classifiers(data_path, output_dir, dataset=None):
+    def cmp_models_cv(data_path, output_dir, dataset=None):
         data, labels, feature_names, vec = Learner.gen_instances('C:\Users\hfu\Documents\\flows\\normal\\March',
                                                                  data_path, simulate=False)
         data, feature_names, vec = Learner.feature_selection(data, labels, 200, vec,
@@ -396,6 +401,10 @@ class Learner:
         Learner.save2file(clf, classifier_dir + '\\' + 'svm_sel.pkl')
         cv_res['svm'] = cv_r
 
+        clf, cv_r = Learner.ocsvm(data, labels, cross_vali=True)
+        Learner.save2file(clf, classifier_dir + '\\' + 'ocsvm_sel.pkl')
+        cv_res['ocsvm'] = cv_r
+
         json.dump(cv_res, codecs.open(output_dir + '/cv_res.json', 'w', encoding='utf-8'))
 
 
@@ -403,11 +412,11 @@ if __name__ == '__main__':
     logger = Utilities.set_logger('Learner')
     base_dir = 'C:\Users\hfu\Documents\\flows\CTU-13-Family\TCP-CC\\' #''C:\\Users\\hfu\\Documents\\flows\\CTU-13\\'
     #dataset_num = 'Neris' #'2'
-    dataset = 'Neris' #''CTU-13-' + dataset_num + '\\'
+    dataset = 'Neris' #Murlo' #''CTU-13-' + dataset_num + '\\'
 
     classifier_dir = base_dir + dataset
     #Learner.cmp_feature_selection(classifier_dir, classifier_dir, dataset=dataset)
-    Learner.cmp_classifiers(classifier_dir, classifier_dir, dataset=dataset)
+    Learner.cmp_models_cv(classifier_dir, classifier_dir, dataset=dataset)
 
     """
     train = True
