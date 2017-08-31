@@ -6,12 +6,15 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import KFold
 from sklearn import tree
+from sklearn.naive_bayes import BernoulliNB
 import pydotplus
 import codecs
 import cPickle
 from sklearn.metrics import accuracy_score, precision_score
 from sklearn import svm
 import numpy as np
+from sklearn.linear_model import LogisticRegression
+from time import time
 
 import simplejson
 import json
@@ -156,18 +159,84 @@ class Learner:
             cPickle.dump(clf, fid)
 
     @staticmethod
+    def train_bayes(train_data, labels, cross_vali=True, feature_names=None):
+        clf = BernoulliNB()
+        results = None
+        if cross_vali == True:
+            results = Learner.cross_validation(clf, train_data, labels)
+            # simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
+            # separators=(',', ':'), sort_keys=True, indent=4)
+            logger.info('Bayes: ' + str(results))
+
+        # Fit the forest to the training set, using the bag of words as
+        # features and the sentiment labels as the response variable
+        #
+        # This may take a few minutes to run
+        clf = clf.fit(train_data, labels)
+
+        return clf, results
+
+    @staticmethod
+    def cross_validation(clf, data, labels, scoring='f1', n_splits=5):
+        t0 = time()
+        results = dict()
+        cv = KFold(n_splits=5, shuffle=True)
+
+        cv_res = cross_val_score(clf, data, labels, cv=cv, scoring='f1').tolist()
+        # simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
+        # separators=(',', ':'), sort_keys=True, indent=4)
+        duration = time() - t0
+        results['duration'] = duration
+        results['cv_res'] = cv_res
+        results['cv_res_mean'] = sum(cv_res) / n_splits
+        return results
+
+
+    @staticmethod
+    def train_SVM(train_data, labels, cross_vali=True, feature_names=None):
+        clf = svm.SVC(class_weight='balanced')
+        results = None
+        if cross_vali == True:
+            results = Learner.cross_validation(clf, train_data, labels)
+            # simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
+            # separators=(',', ':'), sort_keys=True, indent=4)
+            logger.info('SVM: ' + str(results))
+
+        # Fit the forest to the training set, using the bag of words as
+        # features and the sentiment labels as the response variable
+        #
+        # This may take a few minutes to run
+        clf = clf.fit(train_data, labels)
+
+        return clf, results
+
+    @staticmethod
+    def train_logistic(train_data, labels, cross_vali=True, feature_names=None):
+        clf = LogisticRegression(class_weight='balanced')
+        results = None
+        if cross_vali == True:
+            results = Learner.cross_validation(clf, train_data, labels)
+            # simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
+            # separators=(',', ':'), sort_keys=True, indent=4)
+            logger.info('Logistic: ' + str(results))
+
+        # Fit the forest to the training set, using the bag of words as
+        # features and the sentiment labels as the response variable
+        #
+        # This may take a few minutes to run
+        clf = clf.fit(train_data, labels)
+
+        return clf, results
+
+    @staticmethod
     def train_tree(train_data, labels, cross_vali=True, feature_names=None, output_dir=os.curdir, tree_name='tree'):
         clf = DecisionTreeClassifier(class_weight='balanced')
         results = None
         if cross_vali == True:
-            # Initialize a Random Forest classifier with 100 trees
-            cv = KFold(n_splits=5, random_state=33, shuffle=True)
-
-
-            results = cross_val_score(clf, train_data, labels, cv=cv, scoring='f1').tolist()
+            results = Learner.cross_validation(clf, train_data, labels)
             #simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
                             #separators=(',', ':'), sort_keys=True, indent=4)
-            logger.info(results)
+            logger.info('Tree: ' + str(results))
 
         # Fit the forest to the training set, using the bag of words as
         # features and the sentiment labels as the response variable
@@ -176,7 +245,7 @@ class Learner:
         clf = clf.fit(train_data, labels)
 
         dot_data = tree.export_graphviz(clf, out_file=output_dir + '/' + tree_name +'.dot', feature_names=feature_names,
-                                        label='root', impurity=False, special_characters=True, max_depth=5)
+                                        label='root', impurity=False, special_characters=True) #, max_depth=5)
         dotfile = open(output_dir + '/' + tree_name +'.dot', 'r')
         graph = pydotplus.graph_from_dot_data(dotfile.read())
         graph.write_pdf(output_dir + '/' + tree_name +'.pdf')
@@ -303,15 +372,42 @@ class Learner:
     def obj_from_file(path):
         return cPickle.load(open(path, 'rb'))
 
+    @staticmethod
+    def cmp_classifiers(data_path, output_dir, dataset=None):
+        data, labels, feature_names, vec = Learner.gen_instances('C:\Users\hfu\Documents\\flows\\normal\\March',
+                                                                 data_path, simulate=False)
+        data, feature_names, vec = Learner.feature_selection(data, labels, 200, vec,
+                                                             feature_names=feature_names)
+        cv_res = dict()
+        clf, cv_r = Learner.train_tree(data, labels, cross_vali=True, feature_names=feature_names,
+                                     tree_name='Fig_tree_sel_' + dataset, output_dir=output_dir)
+        Learner.save2file(clf, classifier_dir + '\\' + 'tree_sel.pkl')
+        cv_res['tree'] = cv_r
+
+        clf, cv_r = Learner.train_bayes(data, labels, cross_vali=True)
+        Learner.save2file(clf, classifier_dir + '\\' + 'bayes_sel.pkl')
+        cv_res['bayes'] = cv_r
+
+        clf, cv_r = Learner.train_logistic(data, labels, cross_vali=True)
+        Learner.save2file(clf, classifier_dir + '\\' + 'logistic_sel.pkl')
+        cv_res['logistic'] = cv_r
+
+        clf, cv_r = Learner.train_SVM(data, labels, cross_vali=True)
+        Learner.save2file(clf, classifier_dir + '\\' + 'svm_sel.pkl')
+        cv_res['svm'] = cv_r
+
+        json.dump(cv_res, codecs.open(output_dir + '/cv_res.json', 'w', encoding='utf-8'))
+
 
 if __name__ == '__main__':
     logger = Utilities.set_logger('Learner')
     base_dir = 'C:\Users\hfu\Documents\\flows\CTU-13-Family\TCP-CC\\' #''C:\\Users\\hfu\\Documents\\flows\\CTU-13\\'
     #dataset_num = 'Neris' #'2'
-    dataset = 'Virut' #''CTU-13-' + dataset_num + '\\'
+    dataset = 'Neris' #''CTU-13-' + dataset_num + '\\'
 
     classifier_dir = base_dir + dataset
-    Learner.cmp_feature_selection(classifier_dir, classifier_dir, dataset=dataset)
+    #Learner.cmp_feature_selection(classifier_dir, classifier_dir, dataset=dataset)
+    Learner.cmp_classifiers(classifier_dir, classifier_dir, dataset=dataset)
 
     """
     train = True
