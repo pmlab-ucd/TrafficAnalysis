@@ -15,6 +15,8 @@ from sklearn import svm
 import numpy as np
 from sklearn.linear_model import LogisticRegression
 from time import time
+from sklearn import metrics
+from sklearn.model_selection import StratifiedKFold
 
 import simplejson
 import json
@@ -55,7 +57,8 @@ class Learner:
                         try:
                             jsons.append(simplejson.load(fin))
                         except Exception as e:
-                            Utilities.logger.error(e)
+                            pass
+                            #Utilities.logger.error(e)
         return jsons
 
     @staticmethod
@@ -146,18 +149,20 @@ class Learner:
         # logger.info(vocab)
         #train_data, labels = Learner.feature_filter_by_prefix(vocab, docs)
 
-        return train_data, labels, vocab, vectorizer
+        return train_data, np.array(labels), vocab, vectorizer
 
     @staticmethod
     def ocsvm(train_data, labels, output_dir=os.curdir, cross_vali=True):
-        nu = float(labels.count(-1)) / len(labels)
+        nu = float(np.count_nonzero(labels == -1)) / len(labels)
         clf = svm.OneClassSVM(nu=nu, kernel="rbf", gamma=0.1)
         results = None
         if cross_vali == True:
             results = Learner.cross_validation(clf, train_data, labels)
             # simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
             # separators=(',', ':'), sort_keys=True, indent=4)
-            logger.info('OCSVM: ' + str(results))
+            logger.info('OCSVM: ' + str(results['duration']))
+            logger.info('mean scores:' + str(results['mean_scores']))
+            logger.info('mean_conf:' + str(results['mean_conf_mat']))
 
         clf.fit(train_data)
 
@@ -171,7 +176,9 @@ class Learner:
             results = Learner.cross_validation(clf, train_data, labels)
             # simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
             # separators=(',', ':'), sort_keys=True, indent=4)
-            logger.info('Bayes: ' + str(results))
+            logger.info('Bayes: ' + str(results['duration']))
+            logger.info('mean scores:' + str(results['mean_scores']))
+            logger.info('mean_conf:' + str(results['mean_conf_mat']))
 
         # Fit the forest to the training set, using the bag of words as
         # features and the sentiment labels as the response variable
@@ -182,30 +189,129 @@ class Learner:
         return clf, results
 
     @staticmethod
-    def cross_validation(clf, data, labels, scoring='f1', n_splits=5):
+    def perf_measure(y_actual, y_hat):
+        TP = 0
+        FP = 0
+        TN = 0
+        FN = 0
+
+        for i in range(len(y_hat)):
+            if y_actual[i] == y_hat[i] == 1:
+                TP += 1
+        for i in range(len(y_hat)):
+            if y_hat[i] == 1 and y_actual != y_hat[i]:
+                FP += 1
+        for i in range(len(y_hat)):
+            if y_actual[i] == y_hat[i] == 0:
+                TN += 1
+        for i in range(len(y_hat)):
+            if y_hat[i] == 0 and y_actual != y_hat[i]:
+                FN += 1
+
+        return (TP, FP, TN, FN)
+
+
+    @staticmethod
+    def class_report(conf_mat):
+        tp, fp, fn, tn = conf_mat.flatten()
+        measures = {}
+        measures['accuracy'] = (tp + tn) / (tp + fp + fn + tn)
+        measures['fp_rate'] = fp / (tn + fp)
+        #measures['tn_rate'] = tn / (tn + fp)  # (true negative rate)
+        measures['recall'] = tp / (tp + fn)  # (recall, true positive rate)
+        measures['precision'] = tp / (tp + fp)
+        measures['f1score'] = 2 * tp / (2 * tp + fp + fn)
+        return measures
+
+    @staticmethod
+    def cross_validation(clf, data, labels, scoring='f1', n_fold=5):
+        X = data
+        y = np.array(labels)
+        ''' Run x-validation and return scores, averaged confusion matrix, and df with false positives and negatives '''
         t0 = time()
         results = dict()
-        cv = KFold(n_splits=5, shuffle=True)
+        #cv = KFold(n_splits=5, shuffle=True)
 
-        cv_res = cross_val_score(clf, data, labels, cv=cv, scoring='f1').tolist()
+        # I generate a KFold in order to make cross validation
+        shuffle = True
+        kf = StratifiedKFold(n_splits=n_fold, shuffle=shuffle, random_state=42)
+        scores = []
+        conf_mat = np.zeros((2, 2))  # Binary classification
+
+        # I start the cross validation
+        for fold, (train_index, test_index) in enumerate(kf.split(X, y)):
+            result = dict()
+            X_train, X_test = X[train_index], X[test_index]
+            y_train, y_test = y[train_index], y[test_index]
+
+            # I train the classifier
+            trained = clf.fit(X_train, y_train)
+
+            # I make the predictions
+            predicted = clf.predict(X_test)
+            y_plabs = np.squeeze(predicted)
+            if hasattr(clf, 'predict_proba'):
+                y_pprobs = clf.predict_proba(X_test)  # Predicted probabilitie
+                result['roc'] = metrics.roc_auc_score(y_test, y_pprobs[:, 1])
+            else: # for SVM
+                y_decision = clf.decision_function(X_test)
+                try:
+                    result['roc'] = metrics.roc_auc_score(y_test, y_decision[:, 1])
+                except: # OCSVM
+                    result['roc'] = metrics.roc_auc_score(y_test, y_decision)
+            #metrics.roc_curve(y_test, y_pprobs[:, 1])
+            scores.append(result['roc'])
+
+            #Learner.perf_measure(predicted, y_test)
+
+            # I obtain the accuracy of this fold
+            #ac = accuracy_score(predicted, y_test)
+
+            # I obtain the confusion matrix
+            confusion = metrics.confusion_matrix(y_test, predicted)
+            conf_mat += confusion
+            result['conf_mat'] = confusion.tolist()
+
+            # Collect indices of false positive and negatives, effective only shuffle=False, or backup the original data
+            if not shuffle:
+                fp_i = np.where((y_plabs == 1) & (y_test == -1))[0]
+                fn_i = np.where((y_plabs == -1) & (y_test == 1))[0]
+                result['fp_item'] = test_index[fp_i]
+                result['fn_item'] = test_index[fn_i]
+            results['fold_' + str(fold)] = result
+
+
+        # cv_res = cross_val_score(clf, data, labels, cv=cv, scoring='f1').tolist()
         # simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
         # separators=(',', ':'), sort_keys=True, indent=4)
         duration = time() - t0
         results['duration'] = duration
-        results['cv_res'] = cv_res
-        results['cv_res_mean'] = sum(cv_res) / n_splits
+        # results['cv_res'] = cv_res
+        # results['cv_res_mean'] = sum(cv_res) / n_splits
+
+        #print "\nMean score: %0.2f (+/- %0.2f)" % (np.mean(scores), np.std(scores) * 2)
+        results['mean_scores'] = np.mean(scores)
+        results['std_scores'] = np.std(scores)
+        conf_mat /= n_fold
+        # print "Mean CM: \n", conf_mat
+
+        # print "\nMean classification measures: \n"
+        results['mean_conf_mat'] = Learner.class_report(conf_mat)
+        #return scores, conf_mat, {'fp': sorted(false_pos), 'fn': sorted(false_neg)}
         return results
 
 
     @staticmethod
     def train_SVM(train_data, labels, cross_vali=True, feature_names=None):
-        clf = svm.SVC(class_weight='balanced')
+        clf = svm.SVC(class_weight='balanced', probability=True)
         results = None
         if cross_vali == True:
             results = Learner.cross_validation(clf, train_data, labels)
             # simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
             # separators=(',', ':'), sort_keys=True, indent=4)
-            logger.info('SVM: ' + str(results))
+            logger.info('SVM: ' + str(results['duration']))
+            logger.info('mean scores:' + str(results['mean_scores']))
+            logger.info('mean_conf:' + str(results['mean_conf_mat']))
 
         # Fit the forest to the training set, using the bag of words as
         # features and the sentiment labels as the response variable
@@ -223,7 +329,9 @@ class Learner:
             results = Learner.cross_validation(clf, train_data, labels)
             # simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
             # separators=(',', ':'), sort_keys=True, indent=4)
-            logger.info('Logistic: ' + str(results))
+            logger.info('Logistic: ' + str(results['duration']))
+            logger.info('mean scores:' + str(results['mean_scores']))
+            logger.info('mean_conf:' + str(results['mean_conf_mat']))
 
         # Fit the forest to the training set, using the bag of words as
         # features and the sentiment labels as the response variable
@@ -241,7 +349,9 @@ class Learner:
             results = Learner.cross_validation(clf, train_data, labels)
             #simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
                             #separators=(',', ':'), sort_keys=True, indent=4)
-            logger.info('Tree: ' + str(results))
+            logger.info('Tree: ' + str(results['duration']))
+            logger.info('mean scores:' + str(results['mean_scores']))
+            logger.info('mean_conf:' + str(results['mean_conf_mat']))
 
         # Fit the forest to the training set, using the bag of words as
         # features and the sentiment labels as the response variable
@@ -308,9 +418,9 @@ class Learner:
         loaded_vec = CountVectorizer(decode_error="replace", vocabulary=voc)
         data = loaded_vec.fit_transform(instances)
         y_1 = model.predict(data)
-        logger.info(y_1)
+        #logger.info(y_1)
         if labels:
-            logger.info(accuracy_score(labels, y_1))
+            return accuracy_score(labels, y_1)
 
     @staticmethod
     def feature_selection(X, y, k, count_vectorizer, feature_names=None):
@@ -334,6 +444,7 @@ class Learner:
 
     @staticmethod
     def cmp_feature_selection(data_path, output_dir, dataset=None):
+        classifier_dir = base_dir + dataset
         data, labels, feature_names, vec = Learner.gen_instances('C:\Users\hfu\Documents\\flows\\normal\\March',
                                                                  data_path, simulate=False)
         back = [data, labels, feature_names, vec]
@@ -379,44 +490,99 @@ class Learner:
 
     @staticmethod
     def cmp_models_cv(data_path, output_dir, dataset=None):
-        data, labels, feature_names, vec = Learner.gen_instances('C:\Users\hfu\Documents\\flows\\normal\\March',
+        classifier_dir = base_dir + dataset
+        if os.path.exists(os.path.join(output_dir ,  "X.pkl")):
+            X = Learner.obj_from_file(os.path.join(output_dir ,  "X.pkl"))
+            y = Learner.obj_from_file(os.path.join(output_dir ,  "y.pkl"))
+            feature_names = Learner.obj_from_file(os.path.join(output_dir ,  "feature_names.pkl"))
+        else:
+            X, y, feature_names, vec = Learner.gen_instances('C:\Users\hfu\Documents\\flows\\normal\\March',
                                                                  data_path, simulate=False)
-        data, feature_names, vec = Learner.feature_selection(data, labels, 200, vec,
+            X, feature_names, vec = Learner.feature_selection(X, y, 200, vec,
                                                              feature_names=feature_names)
+            Learner.save2file(X, os.path.join(output_dir, "X.pkl"))
+            Learner.save2file(y, os.path.join(output_dir, "y.pkl"))
+            Learner.save2file(vec.vocabulary, os.path.join(output_dir ,  "vocabulary_sel.pkl"))
+            Learner.save2file(feature_names, os.path.join(output_dir, "feature_names.pkl"))
         cv_res = dict()
-        clf, cv_r = Learner.train_tree(data, labels, cross_vali=True, feature_names=feature_names,
+        clf, cv_r = Learner.train_tree(X, y, cross_vali=True, feature_names=feature_names,
                                      tree_name='Fig_tree_sel_' + dataset, output_dir=output_dir)
         Learner.save2file(clf, classifier_dir + '\\' + 'tree_sel.pkl')
         cv_res['tree'] = cv_r
 
-        clf, cv_r = Learner.train_bayes(data, labels, cross_vali=True)
+        clf, cv_r = Learner.train_bayes(X, y, cross_vali=True)
         Learner.save2file(clf, classifier_dir + '\\' + 'bayes_sel.pkl')
         cv_res['bayes'] = cv_r
 
-        clf, cv_r = Learner.train_logistic(data, labels, cross_vali=True)
+        clf, cv_r = Learner.train_logistic(X, y, cross_vali=True)
         Learner.save2file(clf, classifier_dir + '\\' + 'logistic_sel.pkl')
         cv_res['logistic'] = cv_r
 
-        clf, cv_r = Learner.train_SVM(data, labels, cross_vali=True)
+
+        clf, cv_r = Learner.train_SVM(X, y, cross_vali=True)
         Learner.save2file(clf, classifier_dir + '\\' + 'svm_sel.pkl')
         cv_res['svm'] = cv_r
 
-        clf, cv_r = Learner.ocsvm(data, labels, cross_vali=True)
+        clf, cv_r = Learner.ocsvm(X, y, cross_vali=True)
         Learner.save2file(clf, classifier_dir + '\\' + 'ocsvm_sel.pkl')
         cv_res['ocsvm'] = cv_r
-
+        
         json.dump(cv_res, codecs.open(output_dir + '/cv_res.json', 'w', encoding='utf-8'))
 
+    @staticmethod
+    def zero_day_helper(base_dir, src_name, model_name, target_name, normal_dir=None):
+        vocab_dir = os.path.join(base_dir, src_name)
+        model_path = os.path.join(vocab_dir, model_name + '_sel.pkl')
+        target_path = os.path.join(base_dir, target_name)
+        if normal_dir == None:
+            data, labels = Learner.gen_instances('', target_path, to_vec=False)
+        else:
+            data, labels = Learner.gen_instances(os.path.join(normal_dir, target_name), '', to_vec=False)
+        return Learner.predict(Learner.obj_from_file(model_path),
+                        Learner.obj_from_file(vocab_dir + '\\' + 'vocabulary_sel.pkl'), data, labels=labels)
+
+    @staticmethod
+    def zero_day(base_dir, output_dir):
+        results = dict()
+        for model_name in ['tree', 'bayes', 'logistic', 'svm', 'ocsvm']:
+            for src_name in ['Neris', 'Murlo', 'Virut', 'Sogou']:
+                for target_name in ['Neris', 'Murlo', 'Virut', 'Sogou']:
+                    res = Learner.zero_day_helper(base_dir, src_name, model_name, target_name)
+                    if model_name not in results:
+                        results[model_name] = dict()
+                    if src_name not in results[model_name]:
+                        results[model_name][src_name] = dict()
+                    results[model_name][src_name][target_name] = res
+                    #name = src_name + '_' + model_name + '_' + target_name
+                    #logger.info(name + ':' + str(res))
+                normal_dir = 'C:\Users\hfu\Documents\\flows\\normal\\'
+                target_name = 'April'
+                res = Learner.zero_day_helper(base_dir, src_name, model_name, target_name, normal_dir=normal_dir)
+                #name = src_name + '_' + model_name + '_' + target_name
+                #logger.info(name + ':' + str(res))
+                results[model_name][src_name][target_name] = res
+        json.dump(results, codecs.open(output_dir + '/pred_res.json', 'w', encoding='utf-8'))
+
+
+        for model_name in ['tree', 'bayes', 'logistic', 'svm', 'ocsvm']:
+            for src_name in ['Neris', 'Murlo', 'Virut', 'Sogou']:
+                output = ''
+                for target_name in ['Neris', 'Murlo', 'Virut', 'Sogou']:
+                    output = output + str(results[model_name][src_name][target_name] * 100)  + '\%' + ' & '
+                logger.info(model_name + ' & ' + src_name + ' & ' + output)
 
 if __name__ == '__main__':
     logger = Utilities.set_logger('Learner')
     base_dir = 'C:\Users\hfu\Documents\\flows\CTU-13-Family\TCP-CC\\' #''C:\\Users\\hfu\\Documents\\flows\\CTU-13\\'
     #dataset_num = 'Neris' #'2'
-    dataset = 'Neris' #Murlo' #''CTU-13-' + dataset_num + '\\'
 
-    classifier_dir = base_dir + dataset
     #Learner.cmp_feature_selection(classifier_dir, classifier_dir, dataset=dataset)
-    Learner.cmp_models_cv(classifier_dir, classifier_dir, dataset=dataset)
+
+    for dataset in ['Neris', 'Murlo', 'Virut', 'Sogou']:
+        classifier_dir = base_dir + dataset
+        Learner.cmp_models_cv(classifier_dir, classifier_dir, dataset=dataset)
+
+    #Learner.zero_day(base_dir, base_dir)
 
     """
     train = True
