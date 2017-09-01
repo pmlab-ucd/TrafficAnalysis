@@ -14,7 +14,7 @@ from sklearn.linear_model import LogisticRegression
 from time import time
 from sklearn import metrics
 from sklearn.model_selection import StratifiedKFold
-
+from sklearn.feature_extraction.text import TfidfVectorizer
 import simplejson
 import json
 from utils import Utilities
@@ -107,7 +107,7 @@ class Learner:
         return train_data, labels
 
     @staticmethod
-    def gen_instances(pos_json_dir, neg_json_dir, to_vec=True, simulate=False):
+    def gen_instances(pos_json_dir, neg_json_dir, to_vec=True, simulate=False, tf=False, ngrams_range=None):
         pos_jsons = Learner.dir2jsons(pos_json_dir)
         neg_jsons = Learner.dir2jsons(neg_json_dir)
         logger.info('lenPos: ' + str(len(pos_jsons)))
@@ -126,12 +126,32 @@ class Learner:
             return instances, labels
         # Initialize the "CountVectorizer" object, which is scikit-learn's
         # bag of words tool.
-        vectorizer = CountVectorizer(analyzer="word",
-                                     tokenizer=None,
-                                     preprocessor=None,
-                                     stop_words=None,
-                                     max_features=100000)
-
+        if not tf:
+            if ngrams_range is None:
+                vectorizer = CountVectorizer(analyzer="word",
+                                             tokenizer=None,
+                                             preprocessor=None,
+                                             stop_words=None,
+                                             max_features=100000)
+            else:
+                vectorizer = CountVectorizer(analyzer='char_wb',
+                                             tokenizer=None,
+                                             preprocessor=None,
+                                             stop_words=None,
+                                             max_features=100000, ngram_range=ngrams_range)
+        else:
+            if ngrams_range is None:
+                vectorizer = TfidfVectorizer(analyzer="word",
+                                             tokenizer=None,
+                                             preprocessor=None,
+                                             stop_words=None,
+                                             max_features=100000)
+            else:
+                vectorizer = TfidfVectorizer(analyzer='char_wb',
+                                             tokenizer=None,
+                                             preprocessor=None,
+                                             stop_words=None,
+                                             max_features=500000, ngram_range=ngrams_range)
         # fit_transform() does two functions: First, it fits the model
         # and learns the vocabulary; second, it transforms our training data
         # into feature vectors. The input to fit_transform should be a list of
@@ -216,7 +236,7 @@ class Learner:
             y_train, y_test = y[train_index], y[test_index]
 
             # I train the classifier
-            trained = clf.fit(X_train, y_train)
+            clf.fit(X_train, y_train)
 
             # I make the predictions
             predicted = clf.predict(X_test)
@@ -458,44 +478,65 @@ class Learner:
         return cPickle.load(open(path, 'rb'))
 
     @staticmethod
-    def cmp_models_cv(data_path, output_dir, dataset=None):
+    def cmp_model_cv(base_dir):
+        """
+        Cmp between bag-of-words, Tf-idf, bag-ngrams, Tf-ngrams
+        :return:
+        """
+        for model_name in ['bag-ngram', 'tf-ngram', 'bag', 'tf']:
+            logger.info(model_name + "----------------------------------")
+            for dataset in ['Neris', 'Murlo', 'Virut', 'Sogou']:
+                classifier_dir = base_dir + dataset
+                Learner.cmp_algorithm_cv(classifier_dir, classifier_dir, dataset=dataset, model_name=model_name + '_')
+
+    @staticmethod
+    def cmp_algorithm_cv(data_path, output_dir, dataset=None, model_name=''):
+        if 'tf' in model_name:
+            tf = True
+        else:
+            tf = False
+        if 'ngram' in model_name:
+            ngram = (6, 10)
+        else:
+            ngram = None
+
         classifier_dir = base_dir + dataset
-        if os.path.exists(os.path.join(output_dir, "X.pkl")):
-            X = Learner.obj_from_file(os.path.join(output_dir, "X.pkl"))
-            y = Learner.obj_from_file(os.path.join(output_dir, "y.pkl"))
-            feature_names = Learner.obj_from_file(os.path.join(output_dir, "feature_names.pkl"))
+        if os.path.exists(os.path.join(output_dir, model_name + "vec_sel.pkl")):
+            X = Learner.obj_from_file(os.path.join(output_dir, model_name + "X.pkl"))
+            y = Learner.obj_from_file(os.path.join(output_dir, model_name + "y.pkl"))
+            feature_names = Learner.obj_from_file(os.path.join(output_dir, model_name + "feature_names.pkl"))
         else:
             X, y, feature_names, vec = Learner.gen_instances('C:\Users\hfu\Documents\\flows\\normal\\March',
-                                                             data_path, simulate=False)
+                                                             data_path, simulate=False, tf=tf, ngrams_range=ngram)
             X, feature_names, vec = Learner.feature_selection(X, y, 200, vec,
                                                               feature_names=feature_names)
-            Learner.save2file(X, os.path.join(output_dir, "X.pkl"))
-            Learner.save2file(y, os.path.join(output_dir, "y.pkl"))
-            Learner.save2file(vec.vocabulary, os.path.join(output_dir, "vocabulary_sel.pkl"))
-            Learner.save2file(feature_names, os.path.join(output_dir, "feature_names.pkl"))
+            Learner.save2file(X, os.path.join(output_dir, model_name + "X.pkl"))
+            Learner.save2file(y, os.path.join(output_dir, model_name + "y.pkl"))
+            Learner.save2file(vec, os.path.join(output_dir, model_name + "vec_sel.pkl"))
+            Learner.save2file(feature_names, os.path.join(output_dir, model_name + "feature_names.pkl"))
         cv_res = dict()
         clf, cv_r = Learner.train_tree(X, y, cross_vali=True, feature_names=feature_names,
                                        tree_name='Fig_tree_sel_' + dataset, output_dir=output_dir)
-        Learner.save2file(clf, classifier_dir + '\\' + 'tree_sel.pkl')
+        Learner.save2file(clf, classifier_dir + '\\' + model_name + 'tree_sel.pkl')
         cv_res['tree'] = cv_r
-
+        """
         clf, cv_r = Learner.train_bayes(X, y, cross_vali=True)
-        Learner.save2file(clf, classifier_dir + '\\' + 'bayes_sel.pkl')
+        Learner.save2file(clf, classifier_dir + '\\' + model_name + 'bayes_sel.pkl')
         cv_res['bayes'] = cv_r
 
         clf, cv_r = Learner.train_logistic(X, y, cross_vali=True)
-        Learner.save2file(clf, classifier_dir + '\\' + 'logistic_sel.pkl')
+        Learner.save2file(clf, classifier_dir + '\\' + model_name + 'logistic_sel.pkl')
         cv_res['logistic'] = cv_r
 
         clf, cv_r = Learner.train_SVM(X, y, cross_vali=True)
-        Learner.save2file(clf, classifier_dir + '\\' + 'svm_sel.pkl')
+        Learner.save2file(clf, classifier_dir + '\\' + model_name + 'svm_sel.pkl')
         cv_res['svm'] = cv_r
 
         clf, cv_r = Learner.ocsvm(X, y, cross_vali=True)
-        Learner.save2file(clf, classifier_dir + '\\' + 'ocsvm_sel.pkl')
+        Learner.save2file(clf, classifier_dir + '\\' + model_name + 'ocsvm_sel.pkl')
         cv_res['ocsvm'] = cv_r
-
-        json.dump(cv_res, codecs.open(output_dir + '/cv_res.json', 'w', encoding='utf-8'))
+        """
+        json.dump(cv_res, codecs.open(os.path.join(output_dir, model_name + 'cv_res.json'), 'w', encoding='utf-8'))
 
     @staticmethod
     def zero_day_helper(base_dir, src_name, model_name, target_name, normal_dir=None):
@@ -507,7 +548,7 @@ class Learner:
         else:
             data, labels = Learner.gen_instances(os.path.join(normal_dir, target_name), '', to_vec=False)
         return Learner.predict(Learner.obj_from_file(model_path),
-                               Learner.obj_from_file(vocab_dir + '\\' + 'vocabulary_sel.pkl'), data, labels=labels)
+                               Learner.obj_from_file(vocab_dir + '\\' + 'vec_sel.pkl'), data, labels=labels)
 
     @staticmethod
     def zero_day(base_dir, output_dir):
@@ -546,9 +587,7 @@ if __name__ == '__main__':
 
     # Learner.cmp_feature_selection(classifier_dir, classifier_dir, dataset=dataset)
 
-    for dataset in ['Neris', 'Murlo', 'Virut', 'Sogou']:
-        classifier_dir = base_dir + dataset
-        Learner.cmp_models_cv(classifier_dir, classifier_dir, dataset=dataset)
+    Learner.cmp_model_cv(base_dir)
 
     # Learner.zero_day(base_dir, base_dir)
 
