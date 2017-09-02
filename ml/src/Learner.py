@@ -25,6 +25,8 @@ import random
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
 from sklearn.pipeline import Pipeline
+from nltk.stem.porter import PorterStemmer
+import nltk
 
 import sys
 
@@ -35,11 +37,31 @@ import os
 
 os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz2.38/bin/'
 
+class StemmedCountVectorizer(CountVectorizer):
+    def build_analyzer(self):
+        analyzer = super(StemmedCountVectorizer, self).build_analyzer()
+        return lambda doc: ([PorterStemmer().stem(w) for w in analyzer(doc)])
+
+class StemmedTfidfVectorizer(TfidfVectorizer):
+    def build_analyzer(self):
+        analyzer = super(StemmedTfidfVectorizer, self).build_analyzer()
+        return lambda doc: ([PorterStemmer().stem(w) for w in analyzer(doc)])
 
 class Learner:
     global logger
 
     class LabelledDocs:
+        def stem_tokens(tokens, stemmer):
+            stemmed = []
+            for item in tokens:
+                stemmed.append(stemmer.stem(item))
+            return stemmed
+
+        def tokenize(self, text, stemmer):
+            tokens = nltk.word_tokenize(text)
+            stems = self.stem_tokens(tokens, stemmer)
+            return stems
+
         def __init__(self, doc, label):
             self.doc = doc
             self.label = label
@@ -93,11 +115,10 @@ class Learner:
         for doc in docs:
             instances.append(doc.doc)
             labels.append(doc.label)
-        vectorizer = CountVectorizer(analyzer="word",
+        vectorizer = StemmedCountVectorizer(analyzer="word",
                                      tokenizer=None,
                                      preprocessor=None,
-                                     stop_words=None,
-                                     max_features=100000)
+                                     stop_words=None)
         train_data = vectorizer.fit_transform(instances)
 
         # Numpy arrays are easy to work with, so convert the result to an
@@ -128,30 +149,28 @@ class Learner:
         # bag of words tool.
         if not tf:
             if ngrams_range is None:
-                vectorizer = CountVectorizer(analyzer="word",
+                vectorizer = StemmedCountVectorizer(analyzer="word",
                                              tokenizer=None,
                                              preprocessor=None,
-                                             stop_words=None,
-                                             max_features=100000)
+                                             stop_words=['http'])
             else:
-                vectorizer = CountVectorizer(analyzer='char_wb',
+                vectorizer = StemmedCountVectorizer(analyzer='char_wb',
                                              tokenizer=None,
                                              preprocessor=None,
-                                             stop_words=None,
-                                             max_features=100000, ngram_range=ngrams_range)
+                                             stop_words=['http'],
+                                             ngram_range=ngrams_range)
         else:
             if ngrams_range is None:
-                vectorizer = TfidfVectorizer(analyzer="word",
+                vectorizer = StemmedTfidfVectorizer(analyzer="word",
                                              tokenizer=None,
                                              preprocessor=None,
-                                             stop_words=None,
-                                             max_features=100000)
+                                             stop_words=['http'])
             else:
-                vectorizer = TfidfVectorizer(analyzer='char_wb',
+                vectorizer = StemmedTfidfVectorizer(analyzer='char_wb',
                                              tokenizer=None,
                                              preprocessor=None,
                                              stop_words=None,
-                                             max_features=500000, ngram_range=ngrams_range)
+                                             ngram_range=ngrams_range)
         # fit_transform() does two functions: First, it fits the model
         # and learns the vocabulary; second, it transforms our training data
         # into feature vectors. The input to fit_transform should be a list of
@@ -291,7 +310,7 @@ class Learner:
         return results
 
     @staticmethod
-    def train_SVM(train_data, labels, cross_vali=True, feature_names=None):
+    def train_SVM(train_data, labels, cross_vali=True):
         clf = svm.SVC(class_weight='balanced', probability=True)
         results = None
         if cross_vali == True:
@@ -311,7 +330,7 @@ class Learner:
         return clf, results
 
     @staticmethod
-    def train_logistic(train_data, labels, cross_vali=True, feature_names=None):
+    def train_logistic(train_data, labels, cross_vali=True):
         clf = LogisticRegression(class_weight='balanced')
         results = None
         if cross_vali == True:
@@ -331,7 +350,7 @@ class Learner:
         return clf, results
 
     @staticmethod
-    def train_tree(train_data, labels, cross_vali=True, feature_names=None, output_dir=os.curdir, tree_name='tree'):
+    def train_tree(train_data, labels, cross_vali=True, output_dir=os.curdir, tree_name='tree'):
         clf = DecisionTreeClassifier(class_weight='balanced')
         results = None
         if cross_vali == True:
@@ -347,7 +366,7 @@ class Learner:
         #
         # This may take a few minutes to run
         clf = clf.fit(train_data, labels)
-
+        """
         tree.export_graphviz(clf, out_file=output_dir + '/' + tree_name + '.dot',
                              feature_names=feature_names,
                              label='root', impurity=False, special_characters=True)  # , max_depth=5)
@@ -355,7 +374,7 @@ class Learner:
         graph = pydotplus.graph_from_dot_data(dotfile.read())
         graph.write_pdf(output_dir + '/' + tree_name + '.pdf')
         dotfile.close()
-
+        """
         return clf, results
 
     @staticmethod
@@ -399,27 +418,38 @@ class Learner:
             line = ''
             line += flow['domain']
             line += flow['uri']
+
             docs.append(Learner.LabelledDocs(line, label))
         return docs
 
     @staticmethod
     def predict(model, vec, instances, labels=None):
         # loaded_vec = CountVectorizer(decode_error="replace", vocabulary=voc)
-        data = vec.fit_transform(instances)
+        data = vec.transform(instances)
         y_1 = model.predict(data)
         # logger.info(y_1)
         if labels:
             return accuracy_score(labels, y_1)
 
     @staticmethod
-    def feature_selection(X, y, k, count_vectorizer, feature_names=None):
+    def feature_selection(X, y, k, count_vectorizer, tf=False, ngram_range=None):
         ch2 = SelectKBest(chi2, k=k)
         X_new = ch2.fit_transform(X, y)
+        feature_names = count_vectorizer.get_feature_names()
         if feature_names != None:
             feature_names = [feature_names[i] for i
                              in ch2.get_support(indices=True)]
         dict = np.asarray(count_vectorizer.get_feature_names())[ch2.get_support()]
-        count_vectorizer = CountVectorizer(analyzer="word", vocabulary=dict)
+        if tf:
+            if ngram_range is not None:
+                count_vectorizer = StemmedTfidfVectorizer(analyzer='char_wb', ngram_range=ngram_range, vocabulary=dict)
+            else:
+                count_vectorizer = StemmedTfidfVectorizer(analyzer='char_wb', vocabulary=dict)
+        else:
+            if ngram_range is not None:
+                count_vectorizer = StemmedCountVectorizer(analyzer='word', vocabulary=dict, ngram_range=ngram_range)
+            else:
+                count_vectorizer = StemmedCountVectorizer(analyzer="word", vocabulary=dict)
         # cPickle.dump(count_vectorizer.vocabulary, open(output_dir + '/' + "vocabulary.pkl", "wb"))
         return X_new, feature_names, count_vectorizer
 
@@ -434,7 +464,7 @@ class Learner:
     @staticmethod
     def cmp_feature_selection(data_path, output_dir, dataset=None):
         classifier_dir = base_dir + dataset
-        data, labels, feature_names, vec = Learner.gen_instances('C:\Users\hfu\Documents\\flows\\normal\\March',
+        data, labels, feature_names, vec = Learner.gen_instances(os.path.join(normal_dir, 'March'),
                                                                  data_path, simulate=False)
         back = [data, labels, feature_names, vec]
 
@@ -496,30 +526,31 @@ class Learner:
         else:
             tf = False
         if 'ngram' in model_name:
-            ngram = (6, 10)
+            ngram = (2, 15)
         else:
             ngram = None
 
         classifier_dir = base_dir + dataset
         if os.path.exists(os.path.join(output_dir, model_name + "vec_sel.pkl")):
-            X = Learner.obj_from_file(os.path.join(output_dir, model_name + "X.pkl"))
-            y = Learner.obj_from_file(os.path.join(output_dir, model_name + "y.pkl"))
-            feature_names = Learner.obj_from_file(os.path.join(output_dir, model_name + "feature_names.pkl"))
+            X = Learner.obj_from_file(os.path.join(output_dir, model_name + "X_sel.pkl"))
+            y = Learner.obj_from_file(os.path.join(output_dir, model_name + "y_sel.pkl"))
         else:
-            X, y, feature_names, vec = Learner.gen_instances('C:\Users\hfu\Documents\\flows\\normal\\March',
+            X, y, feature_names, vec = Learner.gen_instances(os.path.join(normal_dir, 'March'),
                                                              data_path, simulate=False, tf=tf, ngrams_range=ngram)
-            X, feature_names, vec = Learner.feature_selection(X, y, 200, vec,
-                                                              feature_names=feature_names)
             Learner.save2file(X, os.path.join(output_dir, model_name + "X.pkl"))
             Learner.save2file(y, os.path.join(output_dir, model_name + "y.pkl"))
-            Learner.save2file(vec, os.path.join(output_dir, model_name + "vec_sel.pkl"))
+            Learner.save2file(vec, os.path.join(output_dir, model_name + "vec.pkl"))
             Learner.save2file(feature_names, os.path.join(output_dir, model_name + "feature_names.pkl"))
+            X, feature_names, vec = Learner.feature_selection(X, y, 500, vec, tf=tf, ngram_range=ngram)
+            Learner.save2file(X, os.path.join(output_dir, model_name + "X_sel.pkl"))
+            Learner.save2file(y, os.path.join(output_dir, model_name + "y_sel.pkl"))
+            Learner.save2file(vec, os.path.join(output_dir, model_name + "vec_sel.pkl"))
+            Learner.save2file(feature_names, os.path.join(output_dir, model_name + "feature_names_sel.pkl"))
         cv_res = dict()
-        clf, cv_r = Learner.train_tree(X, y, cross_vali=True, feature_names=feature_names,
-                                       tree_name='Fig_tree_sel_' + dataset, output_dir=output_dir)
+        clf, cv_r = Learner.train_tree(X, y, cross_vali=True, tree_name='Fig_tree_sel_' + dataset, output_dir=output_dir)
         Learner.save2file(clf, classifier_dir + '\\' + model_name + 'tree_sel.pkl')
         cv_res['tree'] = cv_r
-        """
+
         clf, cv_r = Learner.train_bayes(X, y, cross_vali=True)
         Learner.save2file(clf, classifier_dir + '\\' + model_name + 'bayes_sel.pkl')
         cv_res['bayes'] = cv_r
@@ -535,8 +566,8 @@ class Learner:
         clf, cv_r = Learner.ocsvm(X, y, cross_vali=True)
         Learner.save2file(clf, classifier_dir + '\\' + model_name + 'ocsvm_sel.pkl')
         cv_res['ocsvm'] = cv_r
-        """
-        json.dump(cv_res, codecs.open(os.path.join(output_dir, model_name + 'cv_res.json'), 'w', encoding='utf-8'))
+
+        json.dump(cv_res, codecs.open(os.path.join(output_dir, model_name + 'cv_res_sel.json'), 'w', encoding='utf-8'))
 
     @staticmethod
     def zero_day_helper(base_dir, src_name, model_name, target_name, normal_dir=None):
@@ -564,7 +595,6 @@ class Learner:
                     results[model_name][src_name][target_name] = res
                     # name = src_name + '_' + model_name + '_' + target_name
                     # logger.info(name + ':' + str(res))
-                normal_dir = 'C:\Users\hfu\Documents\\flows\\normal\\'
                 target_name = 'April'
                 res = Learner.zero_day_helper(base_dir, src_name, model_name, target_name, normal_dir=normal_dir)
                 # name = src_name + '_' + model_name + '_' + target_name
@@ -582,7 +612,8 @@ class Learner:
 
 if __name__ == '__main__':
     logger = Utilities.set_logger('Learner')
-    base_dir = 'C:\Users\hfu\Documents\\flows\CTU-13-Family\TCP-CC\\'  # ''C:\\Users\\hfu\\Documents\\flows\\CTU-13\\'
+    base_dir = 'E:\\flows\CTU-13-Family\TCP-CC\\'  # ''C:\\Users\\hfu\\Documents\\flows\\CTU-13\\'
+    normal_dir = 'E:\\flows\\normal\\'
     # dataset_num = 'Neris' #'2'
 
     # Learner.cmp_feature_selection(classifier_dir, classifier_dir, dataset=dataset)
