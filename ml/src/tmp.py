@@ -5,6 +5,7 @@ import numpy as np
 
 from sklearn.feature_extraction.text import CountVectorizer
 from nltk.stem.snowball import PorterStemmer
+import nltk
 
 
 stemmer = PorterStemmer()
@@ -46,3 +47,8 @@ vectorizer = StemmedCountVectorizer(analyzer='char_wb', ngram_range=(6, 8))
 counts = vectorizer.fit_transform(['appverify', 'appverifying', 'clientnew', 'www'])
 print len(vectorizer.get_feature_names()), vectorizer.get_feature_names()
 print vectorizer.transform(['appverify'])
+
+vectorizer = CountVectorizer(analyzer='word')
+vectorizer.fit_transform(['www.appverify'])
+tokens = vectorizer.get_feature_names()
+print tokens

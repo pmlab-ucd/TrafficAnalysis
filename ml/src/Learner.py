@@ -37,15 +37,41 @@ import os
 
 os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz2.38/bin/'
 
+
 class StemmedCountVectorizer(CountVectorizer):
     def build_analyzer(self):
         analyzer = super(StemmedCountVectorizer, self).build_analyzer()
         return lambda doc: ([PorterStemmer().stem(w) for w in analyzer(doc)])
 
+
 class StemmedTfidfVectorizer(TfidfVectorizer):
     def build_analyzer(self):
         analyzer = super(StemmedTfidfVectorizer, self).build_analyzer()
         return lambda doc: ([PorterStemmer().stem(w) for w in analyzer(doc)])
+
+
+class LatexTableGenerator():
+    @staticmethod
+    def feature_tab(base_dir):
+        # Open X and output the attribute amount
+        for model_name in ['bag', 'tf', 'bag-ngram', 'tf-ngram']:
+            model_name = model_name + '_'
+            for dataset in ['Neris', 'Murlo', 'Virut', 'Sogou']:
+                line = model_name + dataset + '& '
+                output_dir = base_dir + dataset
+                X = Learner.obj_from_file(os.path.join(output_dir, model_name + "X.pkl"))
+                line += str(X.shape[1]) + ' & 500 & '
+                #print X.shape[1]
+                feature_names = Learner.obj_from_file(os.path.join(output_dir, model_name + "feature_names_sel.pkl"))
+                for feature_name in feature_names:
+                    line += feature_name + ', '
+                line += ' \\ '
+                print line
+
+    @staticmethod
+    def gen_latex_table():
+        pass
+
 
 class Learner:
     global logger
@@ -57,14 +83,21 @@ class Learner:
                 stemmed.append(stemmer.stem(item))
             return stemmed
 
-        def tokenize(self, text, stemmer):
-            tokens = nltk.word_tokenize(text)
-            stems = self.stem_tokens(tokens, stemmer)
-            return stems
+        def tokenize(self, text):
+            vectorizer = CountVectorizer(analyzer='word')
+            vectorizer.fit_transform([text])
+            tokens = vectorizer.get_feature_names()
+            #stems = self.stem_tokens(tokens, stemmer)
+            return tokens
 
-        def __init__(self, doc, label):
+        def __init__(self, doc, label, char_wb=False):
             self.doc = doc
             self.label = label
+            tokens = self.tokenize(doc)
+            if char_wb:
+                self.doc = ''.join(tokens)
+            else:
+                self.doc = ' '.join(tokens)
 
     @staticmethod
     def dir2jsons(json_dir):
@@ -116,9 +149,9 @@ class Learner:
             instances.append(doc.doc)
             labels.append(doc.label)
         vectorizer = StemmedCountVectorizer(analyzer="word",
-                                     tokenizer=None,
-                                     preprocessor=None,
-                                     stop_words=None)
+                                            tokenizer=None,
+                                            preprocessor=None,
+                                            stop_words=None)
         train_data = vectorizer.fit_transform(instances)
 
         # Numpy arrays are easy to work with, so convert the result to an
@@ -128,13 +161,13 @@ class Learner:
         return train_data, labels
 
     @staticmethod
-    def gen_instances(pos_json_dir, neg_json_dir, to_vec=True, simulate=False, tf=False, ngrams_range=None):
+    def gen_instances(pos_json_dir, neg_json_dir, char_wb=False, to_vec=True, simulate=False, tf=False, ngrams_range=None):
         pos_jsons = Learner.dir2jsons(pos_json_dir)
         neg_jsons = Learner.dir2jsons(neg_json_dir)
         logger.info('lenPos: ' + str(len(pos_jsons)))
         logger.info('lenNeg: ' + str(len(neg_jsons)))
-        docs = Learner.gen_docs(pos_jsons, 1)
-        docs = docs + (Learner.gen_docs(neg_jsons, -1))
+        docs = Learner.gen_docs(pos_jsons, 1, char_wb)
+        docs = docs + (Learner.gen_docs(neg_jsons, -1, char_wb))
         if simulate:
             if len(neg_jsons) == 0:
                 docs = docs + Learner.simulate_flows(len(pos_jsons), 0)
@@ -150,27 +183,27 @@ class Learner:
         if not tf:
             if ngrams_range is None:
                 vectorizer = StemmedCountVectorizer(analyzer="word",
-                                             tokenizer=None,
-                                             preprocessor=None,
-                                             stop_words=['http'])
+                                                    tokenizer=None,
+                                                    preprocessor=None,
+                                                    stop_words=['http'])
             else:
                 vectorizer = StemmedCountVectorizer(analyzer='char_wb',
-                                             tokenizer=None,
-                                             preprocessor=None,
-                                             stop_words=['http'],
-                                             ngram_range=ngrams_range)
+                                                    tokenizer=None,
+                                                    preprocessor=None,
+                                                    stop_words=['http'],
+                                                    ngram_range=ngrams_range)
         else:
             if ngrams_range is None:
                 vectorizer = StemmedTfidfVectorizer(analyzer="word",
-                                             tokenizer=None,
-                                             preprocessor=None,
-                                             stop_words=['http'])
+                                                    tokenizer=None,
+                                                    preprocessor=None,
+                                                    stop_words=['http'])
             else:
                 vectorizer = StemmedTfidfVectorizer(analyzer='char_wb',
-                                             tokenizer=None,
-                                             preprocessor=None,
-                                             stop_words=None,
-                                             ngram_range=ngrams_range)
+                                                    tokenizer=None,
+                                                    preprocessor=None,
+                                                    stop_words=None,
+                                                    ngram_range=ngrams_range)
         # fit_transform() does two functions: First, it fits the model
         # and learns the vocabulary; second, it transforms our training data
         # into feature vectors. The input to fit_transform should be a list of
@@ -411,15 +444,17 @@ class Learner:
         return info
 
     @staticmethod
-    def gen_docs(jsons, label):
+    def gen_docs(jsons, label, char_wb=False):
         docs = []
         for flow in jsons:
             label = label  # flow['label']
             line = ''
             line += flow['domain']
             line += flow['uri']
-
-            docs.append(Learner.LabelledDocs(line, label))
+            try:
+                docs.append(Learner.LabelledDocs(line, label, char_wb=char_wb))
+            except:
+                print line
         return docs
 
     @staticmethod
@@ -521,12 +556,14 @@ class Learner:
 
     @staticmethod
     def cmp_algorithm_cv(data_path, output_dir, dataset=None, model_name=''):
+        char_wb = False
         if 'tf' in model_name:
             tf = True
         else:
             tf = False
         if 'ngram' in model_name:
             ngram = (2, 15)
+            #char_wb = True
         else:
             ngram = None
 
@@ -536,7 +573,7 @@ class Learner:
             y = Learner.obj_from_file(os.path.join(output_dir, model_name + "y_sel.pkl"))
         else:
             X, y, feature_names, vec = Learner.gen_instances(os.path.join(normal_dir, 'March'),
-                                                             data_path, simulate=False, tf=tf, ngrams_range=ngram)
+                                                             data_path, char_wb=char_wb, simulate=False, tf=tf, ngrams_range=ngram)
             Learner.save2file(X, os.path.join(output_dir, model_name + "X.pkl"))
             Learner.save2file(y, os.path.join(output_dir, model_name + "y.pkl"))
             Learner.save2file(vec, os.path.join(output_dir, model_name + "vec.pkl"))
@@ -547,7 +584,8 @@ class Learner:
             Learner.save2file(vec, os.path.join(output_dir, model_name + "vec_sel.pkl"))
             Learner.save2file(feature_names, os.path.join(output_dir, model_name + "feature_names_sel.pkl"))
         cv_res = dict()
-        clf, cv_r = Learner.train_tree(X, y, cross_vali=True, tree_name='Fig_tree_sel_' + dataset, output_dir=output_dir)
+        clf, cv_r = Learner.train_tree(X, y, cross_vali=True, tree_name='Fig_tree_sel_' + dataset,
+                                       output_dir=output_dir)
         Learner.save2file(clf, classifier_dir + '\\' + model_name + 'tree_sel.pkl')
         cv_res['tree'] = cv_r
 
