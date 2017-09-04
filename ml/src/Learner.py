@@ -142,7 +142,7 @@ class LatexTableGenerator():
                     mean_score = str('{:.3%}'.format(results['mean_scores'])).replace('%', '\%')
                     print algorithm_name + ' & ' + dataset + ' & ' + str(results['duration']) + ' & ' + recall \
                          + ' & ' + fp + ' & ' + precision  \
-                         + ' & ' + f1 + ' & ' + mean_score + ' \\\\ ' 
+                         + ' & ' + f1 + ' & ' + mean_score + ' \\\\ '
 
 class Learner:
     global logger, tmp_vec
