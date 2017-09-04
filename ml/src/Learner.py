@@ -714,7 +714,7 @@ class Learner:
         cv_res['ocsvm'] = cv_r
 
         json.dump(cv_res, codecs.open(os.path.join(output_dir, model_name + 'cv_res_sel.json'), 'w', encoding='utf-8'))
-        
+
 
     @staticmethod
     def zero_day_helper(base_dir, src_name, model_name, algorithm, target_name, normal_dir=None):
