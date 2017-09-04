@@ -18,37 +18,31 @@ class PcapHandler:
     @staticmethod
     def filter_pcap_by_ip(dirname, pkts, ip):
         ip = str(ip)
-        try:
-            rdpcap(dirname + '/' + ip + '.pcap')
+        output_path = os.path.join(dirname, ip + '.pcap')
+        if os.path.exists(output_path):
             return
-        except:
-            pass
 
         filtered = []
         for pkt in pkts:
             if TCP in pkt:
                 # print pkt[TCP].sport
                 if pkt[IP].dst == ip or pkt[IP].src == ip:
-                    print 'Found: ' + pkt[IP].dst
+                    #print 'Found: ' + pkt[IP].dst
                     filtered.append(pkt)
 
         # filtered = (pkt for pkt in pkts if
         #            TCP in pkt
         #            and (str(pkt[TCP].sport) == port or str(pkt[TCP].dport) == port)
         #            and (pkt[IP].dst == ip or pkt[IP].src == ip))
-        wrpcap(dirname + '/' + ip + '.pcap', filtered)
+        wrpcap(output_path, filtered)
 
     @staticmethod
     def filter_pcap(dirname, pkts, ip, port, tag=''):
         ip = str(ip)
         port = str(port)
-        try:
-            rdpcap(dirname + '/' + ip + '_filtered_' + str(port) + '_' + tag + '.pcap')
+        output_path = os.path.join(dirname, ip + '_filtered_' + tag + '_' + str(port) + '.pcap')
+        if os.path.exists(output_path):
             return
-        except:
-            pass
-
-        print port
 
         filtered = []
         for pkt in pkts:
@@ -56,14 +50,125 @@ class PcapHandler:
                 # print pkt[TCP].sport
                 if str(pkt[TCP].sport) == str(port) or str(pkt[TCP].dport) == str(port) \
                         and pkt[IP].dst == ip or pkt[IP].src == ip:
-                    print 'Found: ' + pkt[IP].dst
+                    # print 'Found: ' + pkt[IP].dst
                     filtered.append(pkt)
 
         # filtered = (pkt for pkt in pkts if
         #            TCP in pkt
         #            and (str(pkt[TCP].sport) == port or str(pkt[TCP].dport) == port)
         #            and (pkt[IP].dst == ip or pkt[IP].src == ip))
-        wrpcap(dirname + '/' + ip + '_filtered_'  + tag + str(port) + '.pcap', filtered)
+        wrpcap(output_path, filtered)
+
+    @staticmethod
+    def http_requests(pcap_path, label='', filter_func=None, filter_flow=None, args=None):
+        with open(pcap_path, 'rb') as f:
+            pcap = dpkt.pcap.Reader(f)
+            # flows = print_http_requests(pcap, label, filter_func, args)
+            return PcapHandler.http_requests_helper(pcap, label, filter_func=filter_func,
+                                                    filter_flow=filter_flow, args=args)
+            # out_dir = os.curdir + '/output/' + os.path.basename(os.path.abspath(os.path.join(root, os.pardir))) + '/' + str(
+            #   label) + '/'
+
+    @staticmethod
+    def inet_to_str(inet):
+        """Convert inet object to a string
+
+            Args:
+                inet (inet struct): inet network address
+            Returns:
+                str: Printable/readable IP address
+        """
+        # First try ipv4 and then ipv6
+        try:
+            return socket.inet_ntop(socket.AF_INET, inet)
+        except ValueError:
+            return socket.inet_ntop(socket.AF_INET6, inet)
+
+    @staticmethod
+    def http_requests_helper(pcap, label='', filter_func=None, filter_flow=None, args=None):
+        """Print out information about each packet in a pcap
+
+               Args:
+                   pcap: dpkt pcap reader object (dpkt.pcap.Reader)
+            """
+        # For each packet in the pcap process the contents
+        flows = []
+        examined = []  # Do not know why there are redundant flows
+        for timestamp, buf in pcap:
+
+            # Unpack the Ethernet frame (mac src/dst, ethertype)
+            try:
+                eth = dpkt.ethernet.Ethernet(buf)
+            except:
+                continue
+            # Make sure the Ethernet data contains an IP packet
+            if not isinstance(eth.data, dpkt.ip.IP):
+                # print('Non IP Packet type not supported %s\n' % eth.data.__class__.__name__)
+                continue
+
+            # Now grab the data within the Ethernet frame (the IP packet)
+            packet = eth.data
+
+            # Check for TCP in the transport layer
+            if isinstance(packet.data, dpkt.tcp.TCP):
+
+                # Set the TCP data
+                tcp = packet.data
+
+                # Now see if we can parse the contents as a HTTP request
+                try:
+                    request = dpkt.http.Request(tcp.data)
+                except (dpkt.dpkt.NeedData, dpkt.dpkt.UnpackError):
+                    continue
+
+                if filter_func is not None and not filter_func(args, packet):
+                        continue
+                flow = dict()
+                # Pull out fragment information (flags and offset all packed into off field, so use bitmasks)
+                do_not_fragment = bool(packet.off & dpkt.ip.IP_DF)
+                more_fragments = bool(packet.off & dpkt.ip.IP_MF)
+                fragment_offset = packet.off & dpkt.ip.IP_OFFMASK
+
+                # Print out the info
+                timestamp = str(datetime.datetime.utcfromtimestamp(timestamp))
+
+                # print('Timestamp: ', timestamp)
+                # print('Ethernet Frame: ', mac_addr(eth.src), mac_addr(eth.dst), eth.type)
+                # print('IP: %s -> %s   (len=%d ttl=%d DF=%d MF=%d offset=%d)' %
+                #      (inet_to_str(packet.src), inet_to_str(packet.dst), packet.len, packet.ttl, do_not_fragment,
+                #       more_fragments, fragment_offset))
+                # print('HTTP request: %s\n' % repr(request))
+                # print tcp.sport, tcp.dport
+                flow['label'] = label
+                flow['post_body'] = request.body
+                try:
+                    flow['domain'] = request.headers['host']
+                except:
+                    flow['domain'] = str(PcapHandler.inet_to_str(packet.dst))
+                flow['uri'] = request.uri
+                flow['headers'] = request.headers
+                flow['platform'] = 'unknown'
+                flow['referrer'] = 'unknown'
+                flow['src'] = PcapHandler.inet_to_str(packet.src)
+                flow['sport'] = tcp.sport
+                flow['dest'] = PcapHandler.inet_to_str(packet.dst)
+                flow['dport'] = tcp.dport
+                flow['request'] = repr(request)
+                flow['timestamp'] = timestamp
+                # print repr(flow)
+                id = flow['dest'] + str(flow['sport']) + flow['uri']
+                if filter_flow is not None and filter_flow(args, flow):
+                    continue
+
+                if id not in examined:
+                    flows.append(flow)
+                    examined.append(id)
+
+                # Check for Header spanning acrossed TCP segments
+                if not tcp.data.endswith(b'\r\n'):
+                    # print('\nHEADER TRUNCATED! Reassemble TCP segments!\n')
+                    pass
+        return flows
 
     @staticmethod
     def mac_addr(address):
@@ -90,6 +195,7 @@ class PcapHandler:
             return socket.inet_ntop(socket.AF_INET, inet)
         except ValueError:
             return socket.inet_ntop(socket.AF_INET6, inet)
+
 
     @staticmethod
     def match_http_requests(pcap_path, filter_func, args, gen_pcap=False, tag=''):
@@ -176,7 +282,7 @@ class PcapHandler:
 
                     if gen_pcap:
                         '''
-                        # It does not count http response
+                        # The following way does not count http response
                         file = open('file.pcap', 'wb')
                         pcapfile = dpkt.pcap.Writer(file)
                         pcapfile.writepkt(buf, time_stamp)
@@ -188,6 +294,7 @@ class PcapHandler:
                                                 tcp.sport, tag=tag)
 
             return flows
+
 
     @staticmethod
     def print_pacp(pcap):
@@ -242,7 +349,7 @@ class PcapHandler:
             return
 
 if __name__ == '__main__':
-    pcap_path = '/mnt/Documents/FlowIntent/output\DroidKungFu\\2f6dfbd2621805916fe22b565e7c6869d9fa3815d9cc1ebda4573ae384a952b6\com.mogo.puzzle0710-09-01-13.pcap'
+    pcap_path = '/mnt/Documents/FlowIntent/output/test/cfa9c6ea949a3fc002c38ca3510acfbb5ec5a210d56c12ecac815b8806718602/com.appspot.swisscodemonkeys.steam0711-21-34-02.pcap'
     with open(pcap_path, 'rb') as f:
         pcap = dpkt.pcap.Reader(f)
         PcapHandler.print_pacp(pcap)

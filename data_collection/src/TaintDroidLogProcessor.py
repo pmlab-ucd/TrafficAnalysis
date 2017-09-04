@@ -74,6 +74,12 @@ class TaintDroidLogProcessor():
 
     @staticmethod
     def filter_pcap(args, packet):
+        """
+        Filter pcap based on TaintLog: ip and data
+        :param args:
+        :param packet:
+        :return:
+        """
         ip = args[0]
         data = args[1]
         # print 'called'
@@ -99,15 +105,18 @@ class TaintDroidLogProcessor():
             tag += 'accelerometer_'
         if 'camera' in src:
             tag += 'camera'
+        if tag.endswith('_'):
+            tag = tag[:-1]
         return tag
 
     @staticmethod
     def extract_flow_pcap_helper(taint, pcap_path):
         '''
-        Given a taint record, extract the flow in the pcap file and output the pcap flow
+        Given a taint record, extract the flow in the pcap file and output the pcap flow.
         :param taint:
         :return:
         '''
+        print pcap_path
         ip = taint['dst']
         if 'data=' in taint['message']:
             data = taint['message'].split('data=')[1]
@@ -116,9 +125,21 @@ class TaintDroidLogProcessor():
         else:
             raise Exception
         try:
-            return PcapHandler.match_http_requests(pcap_path, TaintDroidLogProcessor.filter_pcap, [ip, data],
-                                                   gen_pcap=True, tag=TaintDroidLogProcessor.gen_tag(taint['src']))
-        except:
+        #if True:
+            # Get filtered http requests based on Taintlogs (ip, data)
+            flows = PcapHandler.http_requests(pcap_path, filter_func=TaintDroidLogProcessor.filter_pcap, args=[ip, data])
+            print len(flows)
+            # Output to pcaps
+            for flow in flows:
+                print flow
+                pkts = PcapHandler.get_packets(pcap_path)
+                PcapHandler.filter_pcap(os.path.dirname(pcap_path), pkts, flow['dest'],
+                                        flow['sport'], tag=TaintDroidLogProcessor.gen_tag(taint['src']))
+            return flows
+            #return PcapHandler.match_http_requests(pcap_path, TaintDroidLogProcessor.filter_pcap, [ip, data],
+             #                                      gen_pcap=True, tag=TaintDroidLogProcessor.gen_tag(taint['src']))
+        except Exception as e:
+            print e
             return []
 
     @staticmethod
@@ -177,8 +198,8 @@ class TaintDroidLogProcessor():
 
 if __name__ == '__main__':
     gen_filtered_taint_pcap = True
-    dataset = 'virusshare'
-    sub_dataset = True # Whether contain sub dataset
+    dataset = 'test' #virusshare'
+    sub_dataset = False #True # Whether contain sub dataset
     base_dir = os.path.join('/mnt/Documents/FlowIntent/output/', dataset)
     if gen_filtered_taint_pcap:
         """
