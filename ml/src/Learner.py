@@ -54,24 +54,82 @@ class LatexTableGenerator():
     @staticmethod
     def feature_tab(base_dir):
         # Open X and output the attribute amount
-        for model_name in ['bag', 'tf', 'bag-ngram', 'tf-ngram']:
+        for model_name in ['bag', 'bag-ngram', 'tf', 'tf-ngram']:
+            if model_name == 'bag':
+                model_n = 'Bag-of-word'
+            elif model_name == 'tf':
+                model_n = 'Tf-idf'
+            elif model_name == 'bag-ngram':
+                model_n = 'Bag-of-word-NGram'
+            else:
+                model_n = 'Tf-idf-NGram'
             model_name = model_name + '_'
             for dataset in ['Neris', 'Murlo', 'Virut', 'Sogou']:
-                line = model_name + dataset + '& '
+                if dataset != 'Neris':
+                    model_n = ''
+                line = model_n + ' & ' + dataset + '& '
                 output_dir = base_dir + dataset
                 X = Learner.obj_from_file(os.path.join(output_dir, model_name + "X.pkl"))
                 line += str(X.shape[1]) + ' & 500 & '
-                #print X.shape[1]
+                # print X.shape[1]
                 feature_names = Learner.obj_from_file(os.path.join(output_dir, model_name + "feature_names_sel.pkl"))
-                for feature_name in feature_names:
+                for i in range(1, 5):
+                    feature_name = feature_names[i]
+                    if len(feature_name) > 8:
+                        feature_name = str(feature_name)[0:8]
                     line += feature_name + ', '
-                line += ' \\ '
+                line += ' ...\\\\ '
                 print line
 
     @staticmethod
-    def gen_latex_table():
-        pass
+    def cv_result_table(base_dir):
+        for model_name in ['bag', 'bag-ngram', 'tf', 'tf-ngram']:
+            print model_name + '__________________________'
+            model = dict()
 
+            model_name = model_name + '_'
+
+            for dataset in ['Neris', 'Murlo', 'Virut', 'Sogou']:
+                output_dir = base_dir + dataset
+
+                with open(os.path.join(output_dir, model_name + 'cv_res_sel.json'), "rb") as fin:
+                    cv_res = simplejson.load(fin)
+                    #print cv_res
+                    for algorithm in cv_res:
+                        if algorithm not in model:
+                            model[algorithm] = dict()
+                        results = cv_res[algorithm]
+                        model[algorithm][dataset] = results
+                        #print(algorithm + ': ' + str(results['duration']))
+                        #print('mean scores:' + str(results['mean_scores']))
+                        #print('mean_conf:' + str(results['mean_conf_mat']))
+
+            for algorithm in ['tree', 'bayes', 'logistic', 'svm', 'ocsvm']:
+                print '\\\\'
+                if algorithm == 'tree':
+                    algorithm_name = 'Decision Tree'
+                elif algorithm == 'bayes':
+                    algorithm_name = 'Naive Bayes'
+                elif algorithm == 'logistic':
+                    algorithm_name = 'Logistic Regreesion'
+                elif algorithm == 'svm':
+                    algorithm_name = 'SVM'
+                else:
+                    algorithm_name = 'OCSVM'
+
+                for dataset in ['Neris', 'Murlo', 'Virut', 'Sogou']:
+                    if dataset != 'Neris':
+                        algorithm_name = ''
+                    results = model[algorithm][dataset]
+                    mean_conf = results['mean_conf_mat']
+                    recall = str('{:.3%}'.format(mean_conf['recall'])).replace('%', '\%')
+                    fp = str('{:.3%}'.format(mean_conf['fp_rate'])).replace('%', '\%')
+                    precision = str('{:.3%}'.format(mean_conf['precision'])).replace('%', '\%')
+                    f1 = str('{:.3%}'.format(mean_conf['f1score'])).replace('%', '\%')
+                    mean_score = str('{:.3%}'.format(results['mean_scores'])).replace('%', '\%')
+                    print algorithm_name + ' & ' + dataset + ' & ' + str(results['duration']) + ' & ' + recall \
+                         + ' & ' + fp + ' & ' + precision  \
+                         + ' & ' + f1 + ' & ' + mean_score + ' \\\\ ' \
 
 class Learner:
     global logger
@@ -87,7 +145,7 @@ class Learner:
             vectorizer = CountVectorizer(analyzer='word')
             vectorizer.fit_transform([text])
             tokens = vectorizer.get_feature_names()
-            #stems = self.stem_tokens(tokens, stemmer)
+            # stems = self.stem_tokens(tokens, stemmer)
             return tokens
 
         def __init__(self, doc, label, char_wb=False):
@@ -161,7 +219,8 @@ class Learner:
         return train_data, labels
 
     @staticmethod
-    def gen_instances(pos_json_dir, neg_json_dir, char_wb=False, to_vec=True, simulate=False, tf=False, ngrams_range=None):
+    def gen_instances(pos_json_dir, neg_json_dir, char_wb=False, to_vec=True, simulate=False, tf=False,
+                      ngrams_range=None):
         pos_jsons = Learner.dir2jsons(pos_json_dir)
         neg_jsons = Learner.dir2jsons(neg_json_dir)
         logger.info('lenPos: ' + str(len(pos_jsons)))
@@ -563,7 +622,7 @@ class Learner:
             tf = False
         if 'ngram' in model_name:
             ngram = (2, 15)
-            #char_wb = True
+            # char_wb = True
         else:
             ngram = None
 
@@ -573,7 +632,8 @@ class Learner:
             y = Learner.obj_from_file(os.path.join(output_dir, model_name + "y_sel.pkl"))
         else:
             X, y, feature_names, vec = Learner.gen_instances(os.path.join(normal_dir, 'March'),
-                                                             data_path, char_wb=char_wb, simulate=False, tf=tf, ngrams_range=ngram)
+                                                             data_path, char_wb=char_wb, simulate=False, tf=tf,
+                                                             ngrams_range=ngram)
             Learner.save2file(X, os.path.join(output_dir, model_name + "X.pkl"))
             Learner.save2file(y, os.path.join(output_dir, model_name + "y.pkl"))
             Learner.save2file(vec, os.path.join(output_dir, model_name + "vec.pkl"))
