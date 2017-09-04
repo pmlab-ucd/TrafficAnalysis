@@ -82,6 +82,19 @@ class LatexTableGenerator():
                 print line
 
     @staticmethod
+    def parse_zero_day_res(base_dir):
+        for model_name in ['bag', 'bag-ngram', 'tf', 'tf-ngram']:
+            print model_name + '__________________________'
+            model = dict()
+
+            model_name = model_name + '_'
+            with open(os.path.join(base_dir, model_name + 'pred_res.json'), "rb") as fin:
+                    pred_res = simplejson.load(fin)
+                    print pred_res
+                    #for algorithm in cv_res:
+
+
+    @staticmethod
     def cv_result_table(base_dir):
         for model_name in ['bag', 'bag-ngram', 'tf', 'tf-ngram']:
             print model_name + '__________________________'
@@ -129,10 +142,10 @@ class LatexTableGenerator():
                     mean_score = str('{:.3%}'.format(results['mean_scores'])).replace('%', '\%')
                     print algorithm_name + ' & ' + dataset + ' & ' + str(results['duration']) + ' & ' + recall \
                          + ' & ' + fp + ' & ' + precision  \
-                         + ' & ' + f1 + ' & ' + mean_score + ' \\\\ ' \
+                         + ' & ' + f1 + ' & ' + mean_score + ' \\\\ ' 
 
 class Learner:
-    global logger
+    global logger, tmp_vec
 
     class LabelledDocs:
         def stem_tokens(tokens, stemmer):
@@ -219,8 +232,7 @@ class Learner:
         return train_data, labels
 
     @staticmethod
-    def gen_instances(pos_json_dir, neg_json_dir, char_wb=False, to_vec=True, simulate=False, tf=False,
-                      ngrams_range=None):
+    def gen_instances(pos_json_dir, neg_json_dir, simulate=False, char_wb=False):
         pos_jsons = Learner.dir2jsons(pos_json_dir)
         neg_jsons = Learner.dir2jsons(neg_json_dir)
         logger.info('lenPos: ' + str(len(pos_jsons)))
@@ -235,8 +247,11 @@ class Learner:
         for doc in docs:
             instances.append(doc.doc)
             labels.append(doc.label)
-        if not to_vec:
-            return instances, labels
+
+        return instances, np.array(labels)
+
+    @staticmethod
+    def gen_X_matrix(instances, tf=False, ngrams_range=None):
         # Initialize the "CountVectorizer" object, which is scikit-learn's
         # bag of words tool.
         if not tf:
@@ -278,7 +293,7 @@ class Learner:
         # logger.info(vocab)
         # train_data, labels = Learner.feature_filter_by_prefix(vocab, docs)
 
-        return train_data, np.array(labels), vocab, vectorizer
+        return train_data,  vocab, vectorizer
 
     @staticmethod
     def ocsvm(train_data, labels, cross_vali=True):
@@ -517,16 +532,38 @@ class Learner:
         return docs
 
     @staticmethod
-    def predict(model, vec, instances, labels=None):
+    def predict(model, vec, instances, labels=None, src_name='', model_name=''):
         # loaded_vec = CountVectorizer(decode_error="replace", vocabulary=voc)
-        data = vec.transform(instances)
-        y_1 = model.predict(data)
+        global tmp_vec
+
+        print instances
+        try:
+            data = vec.transform(instances)
+            y_1 = model.predict(data)
+        except:
+                tf = True
+                if 'tf' not in model_name:
+                    tf = False
+                if 'ng' in model_name:
+                    ngram = (3, 15)
+                else:
+                    ngram = None
+                output_dir = os.path.join(base_dir, src_name)
+                data_path = output_dir
+                X, y = Learner.gen_instances(os.path.join(normal_dir, 'March'), data_path)
+
+                vec.fit_transform(X)
+                Learner.save2file(vec, os.path.join(output_dir, model_name + "vec_sel.pkl"))
+
+                data = vec.transform(instances)
+
+                y_1 = model.predict(data)
         # logger.info(y_1)
-        if labels:
+        if labels is not None:
             return accuracy_score(labels, y_1)
 
     @staticmethod
-    def feature_selection(X, y, k, count_vectorizer, tf=False, ngram_range=None):
+    def feature_selection(X, y, k, count_vectorizer, instances, tf=False, ngram_range=None):
         ch2 = SelectKBest(chi2, k=k)
         X_new = ch2.fit_transform(X, y)
         feature_names = count_vectorizer.get_feature_names()
@@ -544,6 +581,7 @@ class Learner:
                 count_vectorizer = StemmedCountVectorizer(analyzer='word', vocabulary=dict, ngram_range=ngram_range)
             else:
                 count_vectorizer = StemmedCountVectorizer(analyzer="word", vocabulary=dict)
+        count_vectorizer.fir_transform(instances)
         # cPickle.dump(count_vectorizer.vocabulary, open(output_dir + '/' + "vocabulary.pkl", "wb"))
         return X_new, feature_names, count_vectorizer
 
@@ -558,8 +596,9 @@ class Learner:
     @staticmethod
     def cmp_feature_selection(data_path, output_dir, dataset=None):
         classifier_dir = base_dir + dataset
-        data, labels, feature_names, vec = Learner.gen_instances(os.path.join(normal_dir, 'March'),
+        instances, labels = Learner.gen_instances(os.path.join(normal_dir, 'March'),
                                                                  data_path, simulate=False)
+        data, feature_names, vec = Learner.gen_X_matrix(instances)
         back = [data, labels, feature_names, vec]
 
         Learner.save2file(vec.vocabulary_, output_dir + '/' + "vocabulary.pkl")
@@ -574,11 +613,11 @@ class Learner:
         simplejson.dump(clf_info, codecs.open(output_dir + '/tree_info.json', 'w', encoding='utf-8'))
 
         data, labels, feature_names, vec = back
-        data, feature_names, vec = Learner.feature_selection(data, labels, 200, vec,
-                                                             feature_names=feature_names)
+        data, feature_names, vec = Learner.feature_selection(data, labels, 200, vec, instances)
+
         Learner.save2file(vec.vocabulary, output_dir + '/' + "vocabulary_sel.pkl")
         logger.info(data.shape)
-        clf, cv = Learner.train_tree(data, labels, cross_vali=True, feature_names=feature_names,
+        clf, cv = Learner.train_tree(data, labels, cross_vali=True,
                                      tree_name='Fig_tree_sel_' + dataset, output_dir=output_dir)
         Learner.save2file(clf, classifier_dir + '\\' + 'classifier_sel.pkl')
 
@@ -607,7 +646,7 @@ class Learner:
         Cmp between bag-of-words, Tf-idf, bag-ngrams, Tf-ngrams
         :return:
         """
-        for model_name in ['bag-ngram', 'tf-ngram', 'bag', 'tf']:
+        for model_name in 'tf': # ['bag-ngram', 'tf-ngram', 'bag',
             logger.info(model_name + "----------------------------------")
             for dataset in ['Neris', 'Murlo', 'Virut', 'Sogou']:
                 classifier_dir = base_dir + dataset
@@ -631,14 +670,15 @@ class Learner:
             X = Learner.obj_from_file(os.path.join(output_dir, model_name + "X_sel.pkl"))
             y = Learner.obj_from_file(os.path.join(output_dir, model_name + "y_sel.pkl"))
         else:
-            X, y, feature_names, vec = Learner.gen_instances(os.path.join(normal_dir, 'March'),
-                                                             data_path, char_wb=char_wb, simulate=False, tf=tf,
-                                                             ngrams_range=ngram)
+            instances, y = Learner.gen_instances(os.path.join(normal_dir, 'March'),
+                                                             data_path, char_wb=char_wb, simulate=False)
+            X, feature_names, vec = Learner.gen_X_matrix(instances, tf=tf, ngrams_range=ngram)
+
             Learner.save2file(X, os.path.join(output_dir, model_name + "X.pkl"))
             Learner.save2file(y, os.path.join(output_dir, model_name + "y.pkl"))
             Learner.save2file(vec, os.path.join(output_dir, model_name + "vec.pkl"))
             Learner.save2file(feature_names, os.path.join(output_dir, model_name + "feature_names.pkl"))
-            X, feature_names, vec = Learner.feature_selection(X, y, 500, vec, tf=tf, ngram_range=ngram)
+            X, feature_names, vec = Learner.feature_selection(X, y, 500, vec, instances, tf=tf, ngram_range=ngram)
             Learner.save2file(X, os.path.join(output_dir, model_name + "X_sel.pkl"))
             Learner.save2file(y, os.path.join(output_dir, model_name + "y_sel.pkl"))
             Learner.save2file(vec, os.path.join(output_dir, model_name + "vec_sel.pkl"))
@@ -668,44 +708,53 @@ class Learner:
         json.dump(cv_res, codecs.open(os.path.join(output_dir, model_name + 'cv_res_sel.json'), 'w', encoding='utf-8'))
 
     @staticmethod
-    def zero_day_helper(base_dir, src_name, model_name, target_name, normal_dir=None):
-        vocab_dir = os.path.join(base_dir, src_name)
-        model_path = os.path.join(vocab_dir, model_name + '_sel.pkl')
+    def zero_day_helper(base_dir, src_name, model_name, algorithm, target_name, normal_dir=None):
+        vec_dir = os.path.join(base_dir, src_name)
+        model_path = os.path.join(vec_dir, model_name  + algorithm + '_sel.pkl')
         target_path = os.path.join(base_dir, target_name)
         if normal_dir is None:
-            data, labels = Learner.gen_instances('', target_path, to_vec=False)
+            data, labels = Learner.gen_instances('', target_path)
         else:
-            data, labels = Learner.gen_instances(os.path.join(normal_dir, target_name), '', to_vec=False)
+            data, labels = Learner.gen_instances(os.path.join(normal_dir, target_name), '')
         return Learner.predict(Learner.obj_from_file(model_path),
-                               Learner.obj_from_file(vocab_dir + '\\' + 'vec_sel.pkl'), data, labels=labels)
+                               Learner.obj_from_file(vec_dir + '\\' + model_name + 'vec_sel.pkl'), data, labels=labels, src_name=src_name, model_name=model_name)
 
     @staticmethod
-    def zero_day(base_dir, output_dir):
+    def zero_day_sub(base_dir, model_name, output_dir):
+        if os.path.exists(os.path.join(output_dir, model_name + 'pred_res.json')):
+            return
         results = dict()
-        for model_name in ['tree', 'bayes', 'logistic', 'svm', 'ocsvm']:
+        for algorithm in ['tree', 'bayes', 'logistic', 'svm', 'ocsvm']:
             for src_name in ['Neris', 'Murlo', 'Virut', 'Sogou']:
                 for target_name in ['Neris', 'Murlo', 'Virut', 'Sogou']:
-                    res = Learner.zero_day_helper(base_dir, src_name, model_name, target_name)
-                    if model_name not in results:
-                        results[model_name] = dict()
-                    if src_name not in results[model_name]:
-                        results[model_name][src_name] = dict()
-                    results[model_name][src_name][target_name] = res
+                    res = Learner.zero_day_helper(base_dir, src_name, model_name, algorithm, target_name)
+                    if algorithm not in results:
+                        results[algorithm] = dict()
+                    if src_name not in results[algorithm]:
+                        results[algorithm][src_name] = dict()
+                    results[algorithm][src_name][target_name] = res
                     # name = src_name + '_' + model_name + '_' + target_name
                     # logger.info(name + ':' + str(res))
                 target_name = 'April'
-                res = Learner.zero_day_helper(base_dir, src_name, model_name, target_name, normal_dir=normal_dir)
+                res = Learner.zero_day_helper(base_dir, src_name, model_name, algorithm, target_name, normal_dir=normal_dir)
                 # name = src_name + '_' + model_name + '_' + target_name
                 # logger.info(name + ':' + str(res))
-                results[model_name][src_name][target_name] = res
-        json.dump(results, codecs.open(output_dir + '/pred_res.json', 'w', encoding='utf-8'))
+                results[algorithm][src_name][target_name] = res
+        json.dump(results, codecs.open(os.path.join(output_dir, model_name + 'pred_res.json'), 'w', encoding='utf-8'))
 
-        for model_name in ['tree', 'bayes', 'logistic', 'svm', 'ocsvm']:
+        for algorithm in ['tree', 'bayes', 'logistic', 'svm', 'ocsvm']:
             for src_name in ['Neris', 'Murlo', 'Virut', 'Sogou']:
                 output = ''
                 for target_name in ['Neris', 'Murlo', 'Virut', 'Sogou']:
-                    output = output + str(results[model_name][src_name][target_name] * 100) + '\%' + ' & '
-                logger.info(model_name + ' & ' + src_name + ' & ' + output)
+                    output = output + str(results[algorithm][src_name][target_name] * 100) + '\%' + ' & '
+                logger.info(algorithm + ' & ' + src_name + ' & ' + output)
+
+    @staticmethod
+    def zero_day(base_dir):
+        global tmp_vec
+        for model_name in ['bag', 'bag-ngram', 'tf', 'tf-ngram']:
+            tmp_vec = None
+            Learner.zero_day_sub(base_dir, model_name + '_', base_dir)
 
 
 if __name__ == '__main__':
@@ -716,9 +765,9 @@ if __name__ == '__main__':
 
     # Learner.cmp_feature_selection(classifier_dir, classifier_dir, dataset=dataset)
 
-    Learner.cmp_model_cv(base_dir)
+    #Learner.cmp_model_cv(base_dir)
 
-    # Learner.zero_day(base_dir, base_dir)
+    Learner.zero_day(base_dir)
 
     """
     train = True
