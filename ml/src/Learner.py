@@ -26,7 +26,6 @@ from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
 from sklearn.pipeline import Pipeline
 from nltk.stem.porter import PorterStemmer
-import nltk
 
 import sys
 
@@ -49,127 +48,8 @@ class StemmedTfidfVectorizer(TfidfVectorizer):
         analyzer = super(StemmedTfidfVectorizer, self).build_analyzer()
         return lambda doc: ([PorterStemmer().stem(w) for w in analyzer(doc)])
 
-
-class LatexTableGenerator():
-    @staticmethod
-    def feature_tab(base_dir):
-        # Open X and output the attribute amount
-        for model_name in ['bag', 'bag-ngram', 'tf', 'tf-ngram']:
-            if model_name == 'bag':
-                model_n = 'Bag-of-word'
-            elif model_name == 'tf':
-                model_n = 'Tf-idf'
-            elif model_name == 'bag-ngram':
-                model_n = 'Bag-of-word-NGram'
-            else:
-                model_n = 'Tf-idf-NGram'
-            model_name = model_name + '_'
-            for dataset in ['Neris', 'Murlo', 'Virut', 'Sogou']:
-                if dataset != 'Neris':
-                    model_n = ''
-                line = model_n + ' & ' + dataset + '& '
-                output_dir = base_dir + dataset
-                X = Learner.obj_from_file(os.path.join(output_dir, model_name + "X.pkl"))
-                line += str(X.shape[1]) + ' & 500 & '
-                # print X.shape[1]
-                feature_names = Learner.obj_from_file(os.path.join(output_dir, model_name + "feature_names_sel.pkl"))
-                for i in range(1, 5):
-                    feature_name = feature_names[i]
-                    if len(feature_name) > 8:
-                        feature_name = str(feature_name)[0:8]
-                    line += feature_name + ', '
-                line += ' ...\\\\ '
-                print line
-
-    @staticmethod
-    def parse_zero_day_res(base_dir):
-        for model_name in ['bag', 'bag-ngram', 'tf', 'tf-ngram']:
-            print model_name + '__________________________'
-            model = dict()
-
-            model_name = model_name + '_'
-            with open(os.path.join(base_dir, model_name + 'pred_res.json'), "rb") as fin:
-                pred_res = simplejson.load(fin)
-                for algorithm in ['tree', 'bayes', 'logistic', 'svm', 'ocsvm']:
-                    print '\\\\'
-                    if algorithm == 'tree':
-                        algorithm_name = 'Decision Tree'
-                    elif algorithm == 'bayes':
-                        algorithm_name = 'Naive Bayes'
-                    elif algorithm == 'logistic':
-                        algorithm_name = 'Logistic Regression'
-                    elif algorithm == 'svm':
-                        algorithm_name = 'SVM'
-                    else:
-                        algorithm_name = 'OCSVM'
-
-                    for src in ['Neris', 'Murlo', 'Virut', 'Sogou']:
-                        if src != 'Neris':
-                            algorithm_name = ''
-                        results = pred_res[algorithm][src]
-                        line = algorithm_name + ' & '
-                        line += src + ' & '
-                        for tgt in ['Neris', 'Murlo', 'Virut', 'Sogou', 'April']:
-                            res = str('{:.3%}'.format(results[tgt])).replace('%', '\%')
-                            line += res
-                            line += ' & '
-                        line = line[:-2]
-                        line += '\\\\'
-                        print line
-
-    @staticmethod
-    def cv_result_table(base_dir):
-        for model_name in ['bag', 'bag-ngram', 'tf', 'tf-ngram']:
-            print model_name + '__________________________'
-            model = dict()
-
-            model_name = model_name + '_'
-
-            for dataset in ['Neris', 'Murlo', 'Virut', 'Sogou']:
-                output_dir = base_dir + dataset
-
-                with open(os.path.join(output_dir, model_name + 'cv_res_sel.json'), "rb") as fin:
-                    cv_res = simplejson.load(fin)
-                    # print cv_res
-                    for algorithm in cv_res:
-                        if algorithm not in model:
-                            model[algorithm] = dict()
-                        results = cv_res[algorithm]
-                        model[algorithm][dataset] = results
-                        # print(algorithm + ': ' + str(results['duration']))
-                        # print('mean scores:' + str(results['mean_scores']))
-                        # print('mean_conf:' + str(results['mean_conf_mat']))
-
-            for algorithm in ['tree', 'bayes', 'logistic', 'svm', 'ocsvm']:
-                print '\\\\'
-                if algorithm == 'tree':
-                    algorithm_name = 'Decision Tree'
-                elif algorithm == 'bayes':
-                    algorithm_name = 'Naive Bayes'
-                elif algorithm == 'logistic':
-                    algorithm_name = 'Logistic Regreesion'
-                elif algorithm == 'svm':
-                    algorithm_name = 'SVM'
-                else:
-                    algorithm_name = 'OCSVM'
-
-                for dataset in ['Neris', 'Murlo', 'Virut', 'Sogou']:
-                    if dataset != 'Neris':
-                        algorithm_name = ''
-                    results = model[algorithm][dataset]
-                    mean_conf = results['mean_conf_mat']
-                    recall = str('{:.3%}'.format(mean_conf['recall'])).replace('%', '\%')
-                    fp = str('{:.3%}'.format(mean_conf['fp_rate'])).replace('%', '\%')
-                    precision = str('{:.3%}'.format(mean_conf['precision'])).replace('%', '\%')
-                    f1 = str('{:.3%}'.format(mean_conf['f1score'])).replace('%', '\%')
-                    mean_score = str('{:.3%}'.format(results['mean_scores'])).replace('%', '\%')
-                    print algorithm_name + ' & ' + dataset + ' & ' + str(results['duration']) + ' & ' + recall \
-                          + ' & ' + fp + ' & ' + precision \
-                          + ' & ' + f1 + ' & ' + mean_score + ' \\\\ '
-
-
 class Learner:
-    global logger
+    logger = Utilities.set_logger('Learner')
 
     class LabelledDocs:
         def stem_tokens(tokens, stemmer):
@@ -224,16 +104,16 @@ class Learner:
     def feature_filter_by_prefix(vocab, docs):
         examined = []
         for i in range(len(vocab)):
-            logger.info('i: ' + vocab[i] + ' ' + str(i))
+            Learner.logger.info('i: ' + vocab[i] + ' ' + str(i))
             if len(vocab[i]) < 6 or vocab[i] in examined:
                 continue
             for j in range(i + 1, len(vocab)):
-                # logger.info('j: ' + vocab[j] + ' ' + str(j))
+                # Learner.logger.info('j: ' + vocab[j] + ' ' + str(j))
                 if len(vocab[j]) < 6:
                     examined.append(vocab[j])
                     continue
                 if vocab[i] in vocab[j] or vocab[j] in vocab[i]:  # Learner.same_prefix(vocab[i], vocab[j]):
-                    # logger.info('Found ' + vocab[i] + ' ' + vocab[j] + ' ' + str(i))
+                    # Learner.logger.info('Found ' + vocab[i] + ' ' + vocab[j] + ' ' + str(i))
                     examined.append(vocab[j])
                     for doc in docs:
                         if vocab[j] in doc.doc:
@@ -252,15 +132,15 @@ class Learner:
         # Numpy arrays are easy to work with, so convert the result to an
         # array
         # train_data = train_data.toarray()
-        logger.info(train_data.shape)
+        Learner.logger.info(train_data.shape)
         return train_data, labels
 
     @staticmethod
     def gen_instances(pos_json_dir, neg_json_dir, simulate=False, char_wb=False):
         pos_jsons = Learner.dir2jsons(pos_json_dir)
         neg_jsons = Learner.dir2jsons(neg_json_dir)
-        logger.info('lenPos: ' + str(len(pos_jsons)))
-        logger.info('lenNeg: ' + str(len(neg_jsons)))
+        Learner.logger.info('lenPos: ' + str(len(pos_jsons)))
+        Learner.logger.info('lenNeg: ' + str(len(neg_jsons)))
         docs = Learner.gen_docs(pos_jsons, 1, char_wb)
         docs = docs + (Learner.gen_docs(neg_jsons, -1, char_wb))
         if simulate:
@@ -315,10 +195,10 @@ class Learner:
         # Numpy arrays are easy to work with, so convert the result to an
         # array
         # train_data = train_data.toarray()
-        logger.info(train_data.shape)
+        Learner.logger.info(train_data.shape)
         # Take a look at the words in the vocabulary
         vocab = vectorizer.get_feature_names()
-        # logger.info(vocab)
+        # Learner.logger.info(vocab)
         # train_data, labels = Learner.feature_filter_by_prefix(vocab, docs)
 
         return train_data, vocab, vectorizer
@@ -332,9 +212,9 @@ class Learner:
             results = Learner.cross_validation(clf, train_data, labels)
             # simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
             # separators=(',', ':'), sort_keys=True, indent=4)
-            logger.info('OCSVM: ' + str(results['duration']))
-            logger.info('mean scores:' + str(results['mean_scores']))
-            logger.info('mean_conf:' + str(results['mean_conf_mat']))
+            Learner.logger.info('OCSVM: ' + str(results['duration']))
+            Learner.logger.info('mean scores:' + str(results['mean_scores']))
+            Learner.logger.info('mean_conf:' + str(results['mean_conf_mat']))
 
         clf.fit(train_data)
 
@@ -348,9 +228,9 @@ class Learner:
             results = Learner.cross_validation(clf, train_data, labels)
             # simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
             # separators=(',', ':'), sort_keys=True, indent=4)
-            logger.info('Bayes: ' + str(results['duration']))
-            logger.info('mean scores:' + str(results['mean_scores']))
-            logger.info('mean_conf:' + str(results['mean_conf_mat']))
+            Learner.logger.info('Bayes: ' + str(results['duration']))
+            Learner.logger.info('mean scores:' + str(results['mean_scores']))
+            Learner.logger.info('mean_conf:' + str(results['mean_conf_mat']))
 
         # Fit the forest to the training set, using the bag of words as
         # features and the sentiment labels as the response variable
@@ -452,9 +332,9 @@ class Learner:
             results = Learner.cross_validation(clf, train_data, labels)
             # simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
             # separators=(',', ':'), sort_keys=True, indent=4)
-            logger.info('SVM: ' + str(results['duration']))
-            logger.info('mean scores:' + str(results['mean_scores']))
-            logger.info('mean_conf:' + str(results['mean_conf_mat']))
+            Learner.logger.info('SVM: ' + str(results['duration']))
+            Learner.logger.info('mean scores:' + str(results['mean_scores']))
+            Learner.logger.info('mean_conf:' + str(results['mean_conf_mat']))
 
         # Fit the forest to the training set, using the bag of words as
         # features and the sentiment labels as the response variable
@@ -472,9 +352,9 @@ class Learner:
             results = Learner.cross_validation(clf, train_data, labels)
             # simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
             # separators=(',', ':'), sort_keys=True, indent=4)
-            logger.info('Logistic: ' + str(results['duration']))
-            logger.info('mean scores:' + str(results['mean_scores']))
-            logger.info('mean_conf:' + str(results['mean_conf_mat']))
+            Learner.logger.info('Logistic: ' + str(results['duration']))
+            Learner.logger.info('mean scores:' + str(results['mean_scores']))
+            Learner.logger.info('mean_conf:' + str(results['mean_conf_mat']))
 
         # Fit the forest to the training set, using the bag of words as
         # features and the sentiment labels as the response variable
@@ -485,16 +365,16 @@ class Learner:
         return clf, results
 
     @staticmethod
-    def train_tree(train_data, labels, cross_vali=True, output_dir=os.curdir, tree_name='tree'):
+    def train_tree(train_data, labels, cross_vali=True, res=None, output_dir=os.curdir, tree_name='tree'):
         clf = DecisionTreeClassifier(class_weight='balanced')
         results = None
         if cross_vali == True:
             results = Learner.cross_validation(clf, train_data, labels)
             # simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'),
             # separators=(',', ':'), sort_keys=True, indent=4)
-            logger.info('Tree: ' + str(results['duration']))
-            logger.info('mean scores:' + str(results['mean_scores']))
-            logger.info('mean_conf:' + str(results['mean_conf_mat']))
+            Learner.logger.info('Tree: ' + str(results['duration']))
+            Learner.logger.info('mean scores:' + str(results['mean_scores']))
+            Learner.logger.info('mean_conf:' + str(results['mean_conf_mat']))
 
         # Fit the forest to the training set, using the bag of words as
         # features and the sentiment labels as the response variable
@@ -510,7 +390,14 @@ class Learner:
         graph.write_pdf(output_dir + '/' + tree_name + '.pdf')
         dotfile.close()
         """
+        if res is not None:
+            res['tree'] = results
         return clf, results
+
+    @staticmethod
+    def train_classifier(func, args):
+        return func(args)
+
 
     @staticmethod
     def rand_str(size=6, chars=string.ascii_uppercase + string.digits):
@@ -542,7 +429,7 @@ class Learner:
         depth = clf.tree_.max_depth
         info['n_nodes'] = n_nodes
         info['depth'] = depth
-        logger.info(info)
+        Learner.logger.info(info)
         return info
 
     @staticmethod
@@ -565,7 +452,7 @@ class Learner:
         data = vec.transform(instances)
         y_1 = model.predict(data)
 
-        # logger.info(y_1)
+        # Learner.logger.info(y_1)
         if labels is not None:
             return accuracy_score(labels, y_1)
 
@@ -602,42 +489,7 @@ class Learner:
         ])
         clf.fit(X, y)
 
-    @staticmethod
-    def cmp_feature_selection(data_path, output_dir, dataset=None):
-        classifier_dir = base_dir + dataset
-        instances, labels = Learner.gen_instances(os.path.join(normal_dir, 'March'),
-                                                  data_path, simulate=False)
-        data, feature_names, vec = Learner.gen_X_matrix(instances)
-        back = [data, labels, feature_names, vec]
 
-        Learner.save2file(vec.vocabulary_, output_dir + '/' + "vocabulary.pkl")
-        logger.info(data.shape)
-        clf, cv = Learner.train_tree(data, labels, cross_vali=True, feature_names=feature_names,
-                                     tree_name='Fig_tree_' + dataset, output_dir=output_dir)
-        Learner.save2file(clf, classifier_dir + '\\' + 'classifier.pkl')
-
-        clf_info = Learner.tree_info(clf)
-        clf_info['cv'] = cv
-
-        simplejson.dump(clf_info, codecs.open(output_dir + '/tree_info.json', 'w', encoding='utf-8'))
-
-        data, labels, feature_names, vec = back
-        data, feature_names, vec = Learner.feature_selection(data, labels, 200, vec, instances)
-
-        Learner.save2file(vec.vocabulary, output_dir + '/' + "vocabulary_sel.pkl")
-        logger.info(data.shape)
-        clf, cv = Learner.train_tree(data, labels, cross_vali=True,
-                                     tree_name='Fig_tree_sel_' + dataset, output_dir=output_dir)
-        Learner.save2file(clf, classifier_dir + '\\' + 'classifier_sel.pkl')
-
-        clf_info = Learner.tree_info(clf)
-        clf_info['cv'] = cv
-
-        json.dump(clf_info, codecs.open(output_dir + '/tree_info_sel.json', 'w', encoding='utf-8'))
-
-
-        # simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'))
-        # separators=(',', ':'), sort_keys=True, indent=4)
 
     @staticmethod
     def save2file(obj, path):
@@ -649,206 +501,7 @@ class Learner:
     def obj_from_file(path):
         return cPickle.load(open(path, 'rb'))
 
-    @staticmethod
-    def cmp_model_cv(base_dir):
-        """
-        Cmp between bag-of-words, Tf-idf, bag-ngrams, Tf-ngrams
-        :return:
-        """
-        for model_name in ['bag']: # 'bag', 'bag', 'bag-ngram',
-            logger.info(model_name + "----------------------------------")
-            for dataset in ['Neris', 'Murlo', 'Virut', 'Sogou']:
-                classifier_dir = base_dir + dataset
-                Learner.cmp_algorithm_cv(classifier_dir, classifier_dir, dataset=dataset, model_name=model_name + '_')
-
-    @staticmethod
-    def cmp_algorithm_cv(data_path, output_dir, dataset=None, model_name=''):
-        char_wb = False
-        if 'tf' in model_name:
-            tf = True
-        else:
-            tf = False
-        if 'ngram' in model_name:
-            ngram = (2, 15)
-            # char_wb = True
-        else:
-            ngram = None
-
-        classifier_dir = base_dir + dataset
-        if os.path.exists(os.path.join(output_dir, model_name + "vec_sel.pkl")):
-            X = Learner.obj_from_file(os.path.join(output_dir, model_name + "X_sel.pkl"))
-            y = Learner.obj_from_file(os.path.join(output_dir, model_name + "y_sel.pkl"))
-        else:
-            instances, y = Learner.gen_instances(os.path.join(normal_dir, 'March'),
-                                                 data_path, char_wb=char_wb, simulate=False)
-            X, feature_names, vec = Learner.gen_X_matrix(instances, tf=tf, ngrams_range=ngram)
-
-            Learner.save2file(X, os.path.join(output_dir, model_name + "X.pkl"))
-            Learner.save2file(y, os.path.join(output_dir, model_name + "y.pkl"))
-            Learner.save2file(vec, os.path.join(output_dir, model_name + "vec.pkl"))
-            Learner.save2file(feature_names, os.path.join(output_dir, model_name + "feature_names.pkl"))
-            X, feature_names, vec = Learner.feature_selection(X, y, 500, vec, instances, tf=tf, ngram_range=ngram)
-            Learner.save2file(X, os.path.join(output_dir, model_name + "X_sel.pkl"))
-            Learner.save2file(y, os.path.join(output_dir, model_name + "y_sel.pkl"))
-            Learner.save2file(vec, os.path.join(output_dir, model_name + "vec_sel.pkl"))
-            Learner.save2file(feature_names, os.path.join(output_dir, model_name + "feature_names_sel.pkl"))
-        """
-        cv_res = dict()
-        clf, cv_r = Learner.train_tree(X, y, cross_vali=True, tree_name='Fig_tree_sel_' + dataset,
-                                       output_dir=output_dir)
-        Learner.save2file(clf, classifier_dir + '\\' + model_name + 'tree_sel.pkl')
-        cv_res['tree'] = cv_r
-
-        clf, cv_r = Learner.train_bayes(X, y, cross_vali=True)
-        Learner.save2file(clf, classifier_dir + '\\' + model_name + 'bayes_sel.pkl')
-        cv_res['bayes'] = cv_r
-
-        clf, cv_r = Learner.train_logistic(X, y, cross_vali=True)
-        Learner.save2file(clf, classifier_dir + '\\' + model_name + 'logistic_sel.pkl')
-        cv_res['logistic'] = cv_r
-
-        clf, cv_r = Learner.train_SVM(X, y, cross_vali=True)
-        Learner.save2file(clf, classifier_dir + '\\' + model_name + 'svm_sel.pkl')
-        cv_res['svm'] = cv_r
-
-        clf, cv_r = Learner.ocsvm(X, y, cross_vali=True)
-        Learner.save2file(clf, classifier_dir + '\\' + model_name + 'ocsvm_sel.pkl')
-        cv_res['ocsvm'] = cv_r
-
-        json.dump(cv_res, codecs.open(os.path.join(output_dir, model_name + 'cv_res_sel.json'), 'w', encoding='utf-8'))
-        """
-
-    @staticmethod
-    def zero_day_helper(base_dir, src_name, model_name, algorithm, target_name, normal_dir=None):
-        vec_dir = os.path.join(base_dir, src_name)
-        model_path = os.path.join(vec_dir, model_name + algorithm + '_sel.pkl')
-        target_path = os.path.join(base_dir, target_name)
-        if normal_dir is None:
-            data, labels = Learner.gen_instances('', target_path)
-        else:
-            data, labels = Learner.gen_instances(os.path.join(normal_dir, target_name), '')
-        vec = Learner.obj_from_file(os.path.join(vec_dir, model_name + 'vec.pkl'))
-        vec_sel = Learner.obj_from_file(os.path.join(vec_dir, model_name + 'vec_sel.pkl'))
-        data, vocab, vec = Learner.gen_X_matrix(data, vec=vec)
-        return Learner.predict(Learner.obj_from_file(model_path),
-                               vec_sel, data, labels=labels,
-                               src_name=src_name, model_name=model_name)
-
-    @staticmethod
-    def zero_day_sub(base_dir, model_name, output_dir):
-        if os.path.exists(os.path.join(output_dir, model_name + 'pred_res.json')):
-            return
-        results = dict()
-        for algorithm in ['tree', 'bayes', 'logistic', 'svm', 'ocsvm']:
-            for src_name in ['Neris', 'Murlo', 'Virut', 'Sogou']:
-                for target_name in ['Neris', 'Murlo', 'Virut', 'Sogou']:
-                    res = Learner.zero_day_helper(base_dir, src_name, model_name, algorithm, target_name)
-                    if algorithm not in results:
-                        results[algorithm] = dict()
-                    if src_name not in results[algorithm]:
-                        results[algorithm][src_name] = dict()
-                    results[algorithm][src_name][target_name] = res
-                    # name = src_name + '_' + model_name + '_' + target_name
-                    # logger.info(name + ':' + str(res))
-                target_name = 'April'
-                res = Learner.zero_day_helper(base_dir, src_name, model_name, algorithm, target_name,
-                                              normal_dir=normal_dir)
-                # name = src_name + '_' + model_name + '_' + target_name
-                # logger.info(name + ':' + str(res))
-                results[algorithm][src_name][target_name] = res
-        json.dump(results, codecs.open(os.path.join(output_dir, model_name + 'pred_res.json'), 'w', encoding='utf-8'))
-
-        for algorithm in ['tree', 'bayes', 'logistic', 'svm', 'ocsvm']:
-            for src_name in ['Neris', 'Murlo', 'Virut', 'Sogou']:
-                output = ''
-                for target_name in ['Neris', 'Murlo', 'Virut', 'Sogou']:
-                    output = output + str(results[algorithm][src_name][target_name] * 100) + '\%' + ' & '
-                logger.info(algorithm + ' & ' + src_name + ' & ' + output)
-
-    @staticmethod
-    def zero_day(base_dir):
-        for model_name in ['bag']: #['bag', 'bag-ngram', 'tf', 'tf-ngram']:
-            Learner.zero_day_sub(base_dir, model_name + '_', base_dir)
-
-
 if __name__ == '__main__':
     logger = Utilities.set_logger('Learner')
-    base_dir = 'E:\\flows\CTU-13-Family\TCP-CC\\'  # ''C:\\Users\\hfu\\Documents\\flows\\CTU-13\\'
-    normal_dir = 'E:\\flows\\normal\\'
-    # dataset_num = 'Neris' #'2'
 
-    # Learner.cmp_feature_selection(classifier_dir, classifier_dir, dataset=dataset)
 
-    Learner.cmp_model_cv(base_dir)
-
-    Learner.zero_day(base_dir)
-
-    """
-    train = True
-    learner = 'tree'
-    if train:
-        #"C:\Users\hfu\IdeaProjects\\recon\\test\\1",
-         #                 "C:\Users\hfu\IdeaProjects\\recon\\test\\0")
-        if learner == 'tree':
-            classifier_dir = base_dir + dataset
-            vocab_dir = base_dir + dataset
-            simulate = False
-            if simulate:
-                classifier_dir = base_dir + 'CTU-13-1\\' + '1'
-                vocab_dir = base_dir + 'CTU-13-1\\' + '1'
-                data, labels, feature_names, vec = Learner.gen_instances(base_dir + 'CTU-13-1\\' + '1',
-                                                                    None,
-                                                                    output_dir=vocab_dir, simulate=simulate)
-                data, feature_names = Learner.feature_selection(data, labels, 20000, vocab_dir, vec,
-                                                                feature_names=feature_names)
-                logger.info(data.shape)
-                Learner.train_tree(data, labels, feature_names=feature_names, output_dir=classifier_dir,
-                                   tree_name='Fig_tree_normal')
-            else:
-                data, labels, feature_names, vec = Learner.gen_instances('C:\Users\hfu\Documents\\flows\\normal\\March',
-                                                                base_dir + dataset, simulate=False)
-                data, feature_names, vec = Learner.feature_selection(data, labels, 200, vocab_dir, vec,
-                                                                feature_names=feature_names)
-                Learner.save2file(vec.vocabulary_, vocab_dir + '/' + "vocabulary.pkl")
-                logger.info(data.shape)
-                clf, cv = Learner.train_tree(data, labels, cross_vali=True, feature_names=feature_names,
-                                   tree_name='Fig_tree_' + dataset_num)
-                Learner.save2file(clf, classifier_dir + '\\' + 'classifier.pkl')
-
-        elif learner == 'ocsvm':
-            classifier_dir = base_dir + 'CTU-13-1\\' + '\\1'
-            vocab_dir = base_dir + 'CTU-13-1\\' + '\\1'
-            data, labels, feature_names, vec = Learner.gen_instances(vocab_dir,
-                                                                base_dir + 'CTU-13-1\\' + '\\0\\CC',
-                                                                output_dir=vocab_dir)
-            Learner.ocsvm(data, labels, output_dir=classifier_dir)
-    else:
-        train_tree = 'Neris'
-        test_data = 'Virut'
-        test_normal = True
-
-        if learner == 'tree':
-            simulate = False
-            classifier_dir = base_dir + train_tree
-            vocab_dir = base_dir + dataset
-            if simulate:
-                classifier_dir = base_dir + 'CTU-13-1\\' + '\\1'
-                vocab_dir = base_dir + 'CTU-13-1\\' + '\\1'
-            learner_path = classifier_dir + '\\' + 'classifier.pkl'
-        elif learner == 'ocsvm':
-            classifier_dir = base_dir + 'CTU-13-1\\' + '\\1'
-            vocab_dir = base_dir + 'CTU-13-1\\' + '\\1'
-            learner_path = classifier_dir + '\\' + 'ocsvm.pkl'
-
-        if test_normal == True:
-            base_dir = 'C:\Users\hfu\Documents\\flows\\normal\\'
-            test_data = 'April'
-            data, labels = Learner.gen_instances(base_dir + test_data, '', to_vec=False)
-        else:
-            data, labels = Learner.gen_instances('', base_dir + test_data, to_vec=False)
-        if learner == 'ocsvm':
-            labels = [-1.] * len(labels)
-        Learner.predict(Learner.obj_from_file(learner_path),
-                            Learner.obj_from_file(vocab_dir + '\\' + 'vocabulary.pkl'), data, labels=labels)
-
-    """
