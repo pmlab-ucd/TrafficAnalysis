@@ -207,7 +207,6 @@ class CtuCCAnalyzer:
         result5 = Pool().map(Learner.ocsvm, [X], [y], [True])
         '''
 
-
     @staticmethod
     def cmp_algorithm_cv(base_dir, normal_dir, data_path, output_dir, dataset='', model_name=''):
         char_wb = False
