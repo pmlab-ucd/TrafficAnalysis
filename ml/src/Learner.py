@@ -97,7 +97,7 @@ class LatexTableGenerator():
                     elif algorithm == 'bayes':
                         algorithm_name = 'Naive Bayes'
                     elif algorithm == 'logistic':
-                        algorithm_name = 'Logistic Regreesion'
+                        algorithm_name = 'Logistic Regression'
                     elif algorithm == 'svm':
                         algorithm_name = 'SVM'
                     else:
@@ -113,6 +113,8 @@ class LatexTableGenerator():
                             res = str('{:.3%}'.format(results[tgt])).replace('%', '\%')
                             line += res
                             line += ' & '
+                        line = line[:-2]
+                        line += '\\\\'
                         print line
 
     @staticmethod
@@ -653,7 +655,7 @@ class Learner:
         Cmp between bag-of-words, Tf-idf, bag-ngrams, Tf-ngrams
         :return:
         """
-        for model_name in ['bag-ngram']: # 'bag', 'bag', 'bag-ngram',
+        for model_name in ['bag']: # 'bag', 'bag', 'bag-ngram',
             logger.info(model_name + "----------------------------------")
             for dataset in ['Neris', 'Murlo', 'Virut', 'Sogou']:
                 classifier_dir = base_dir + dataset
@@ -690,7 +692,7 @@ class Learner:
             Learner.save2file(y, os.path.join(output_dir, model_name + "y_sel.pkl"))
             Learner.save2file(vec, os.path.join(output_dir, model_name + "vec_sel.pkl"))
             Learner.save2file(feature_names, os.path.join(output_dir, model_name + "feature_names_sel.pkl"))
-
+        """
         cv_res = dict()
         clf, cv_r = Learner.train_tree(X, y, cross_vali=True, tree_name='Fig_tree_sel_' + dataset,
                                        output_dir=output_dir)
@@ -714,7 +716,7 @@ class Learner:
         cv_res['ocsvm'] = cv_r
 
         json.dump(cv_res, codecs.open(os.path.join(output_dir, model_name + 'cv_res_sel.json'), 'w', encoding='utf-8'))
-
+        """
 
     @staticmethod
     def zero_day_helper(base_dir, src_name, model_name, algorithm, target_name, normal_dir=None):
@@ -765,7 +767,7 @@ class Learner:
 
     @staticmethod
     def zero_day(base_dir):
-        for model_name in ['bag-ngram']: #['bag', 'bag-ngram', 'tf', 'tf-ngram']:
+        for model_name in ['bag']: #['bag', 'bag-ngram', 'tf', 'tf-ngram']:
             Learner.zero_day_sub(base_dir, model_name + '_', base_dir)
 
 
