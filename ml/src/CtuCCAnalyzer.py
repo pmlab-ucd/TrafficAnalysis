@@ -4,9 +4,11 @@ import json
 import os
 import simplejson
 import codecs
-from pathos.multiprocessing import ProcessingPool as Pool
-#import pathos.multiprocessing
-#import multiprocessing
+# from pathos.multiprocessing import ProcessingPool as Pool
+# import pathos.multiprocessing
+# import multiprocessing
+from threading import Thread
+
 
 class LatexTableGenerator():
     @staticmethod
@@ -128,7 +130,7 @@ class LatexTableGenerator():
 
 class CtuCCAnalyzer:
     logger = Utilities.set_logger('CTU-13-CC')
-    
+
     @staticmethod
     def cmp_feature_selection(base_dir, normal_dir, data_path, output_dir, dataset=None):
         classifier_dir = base_dir + dataset
@@ -164,7 +166,6 @@ class CtuCCAnalyzer:
         # simplejson.dump(results.tolist(), codecs.open(output_dir + '/cv.json', 'w', encoding='utf-8'))
         # separators=(',', ':'), sort_keys=True, indent=4)
 
-
     @staticmethod
     def cmp_model_cv(base_dir, normal_dir):
         """
@@ -181,10 +182,43 @@ class CtuCCAnalyzer:
     @staticmethod
     def train_and_save(X, y, model_name, classifier_dir):
         cv_res = dict()
+        results = dict()
+        thread1 = Thread(target=Learner.train_classifier, args=(Learner.train_tree, X, y, True, results, 'tree'))
+        thread2 = Thread(target=Learner.train_classifier, args=(Learner.train_bayes, X, y, True, results, 'bayes'))
+        thread3 = Thread(target=Learner.train_classifier,
+                         args=(Learner.train_logistic, X, y, True, results, 'logistic'))
+        thread4 = Thread(target=Learner.train_classifier, args=(Learner.train_SVM, X, y, True, results, 'svm'))
+        thread5 = Thread(target=Learner.train_classifier, args=(Learner.ocsvm, X, y, True, results, 'ocsvm'))
 
+        thread1.start()
+        thread2.start()
+        thread3.start()
+        thread4.start()
+        thread5.start()
+
+        thread1.join()
+        thread2.join()
+        thread3.join()
+        thread4.join()
+        thread5.join()
+
+        clf_tree, cv_res['tree'] = results['tree']
+        clf_bayes, cv_res['bayes'] = results['bayes']
+        clf_logistic, cv_res['logistic'] = results['logistic']
+        clf_svm, cv_res['svm'] = results['svm']
+        clf_ocsvm, cv_res['ocsvm'] = results['ocsvm']
+        Learner.save2file(clf_tree, os.path.join(classifier_dir, model_name + 'tree_sel.pkl'))
+        Learner.save2file(clf_bayes, os.path.join(classifier_dir, model_name + 'bayes_sel.pkl'))
+        Learner.save2file(clf_logistic, os.path.join(classifier_dir, model_name + 'logistic_sel.pkl'))
+        Learner.save2file(clf_svm, os.path.join(classifier_dir, model_name + 'svm_sel.pkl'))
+        Learner.save2file(clf_ocsvm, os.path.join(classifier_dir, model_name + 'ocsvm_sel.pkl'))
+        CtuCCAnalyzer.logger.info('Threads Done! Saving cv_res...')
+        json.dump(cv_res, codecs.open(outfile, 'w', encoding='utf-8'))
+        """
+        
         result1, result2, result3, result4, result5 = Pool().map(Learner.train_classifier,
                             [Learner.train_tree, Learner.train_bayes, Learner.train_logistic, Learner.train_SVM, Learner.ocsvm],
-                            [[X, y, True] * 5])
+                            [X, X, X, X, X], [y, y, y, y, y], [True, True, True, True, True])
 
         clf_tree, cv_res['tree'] = result1
         clf_bayes, cv_res['bayes'] = result2
@@ -206,9 +240,10 @@ class CtuCCAnalyzer:
         result4 = Pool().map(Learner.train_SVM, [X], [y], [True])
         result5 = Pool().map(Learner.ocsvm, [X], [y], [True])
         '''
+        """
 
     @staticmethod
-    def cmp_algorithm_cv(base_dir, normal_dir, data_path, output_dir, dataset='', model_name=''):
+    def cmp_algorithm_cv(base_dir, normal_dir, data_path, output_dir, model_name='', dataset=''):
         char_wb = False
         if 'tf' in model_name:
             tf = True
@@ -221,12 +256,16 @@ class CtuCCAnalyzer:
             ngram = None
 
         classifier_dir = base_dir + dataset
+        outfile = os.path.join(classifier_dir, model_name + 'cv_res_sel.json')
+        if os.path.exists(outfile):
+            return
+
         if os.path.exists(os.path.join(output_dir, model_name + "vec_sel.pkl")):
             X = Learner.obj_from_file(os.path.join(output_dir, model_name + "X_sel.pkl"))
             y = Learner.obj_from_file(os.path.join(output_dir, model_name + "y_sel.pkl"))
         else:
             instances, y = Learner.gen_instances(os.path.join(normal_dir, 'March'),
-                                                 data_path, char_wb=char_wb, simulate=False)
+                                             data_path, char_wb=char_wb, simulate=False)
             X, feature_names, vec = Learner.gen_X_matrix(instances, tf=tf, ngrams_range=ngram)
 
             Learner.save2file(X, os.path.join(output_dir, model_name + "X.pkl"))
@@ -274,7 +313,7 @@ class CtuCCAnalyzer:
                     # CtuCCAnalyzer.logger.info(name + ':' + str(res))
                 target_name = 'April'
                 res = CtuCCAnalyzer.zero_day_helper(base_dir, src_name, model_name, algorithm, target_name,
-                                              normal_dir=normal_dir)
+                                                    normal_dir=normal_dir)
                 # name = src_name + '_' + model_name + '_' + target_name
                 # CtuCCAnalyzer.logger.info(name + ':' + str(res))
                 results[algorithm][src_name][target_name] = res
@@ -291,8 +330,6 @@ class CtuCCAnalyzer:
     def zero_day(base_dir, normal_dir):
         for model_name in ['bag']:  # ['bag', 'bag-ngram', 'tf', 'tf-ngram']:
             CtuCCAnalyzer.zero_day_sub(base_dir, normal_dir, model_name + '_', base_dir)
-
-
 
 
 if __name__ == '__main__':

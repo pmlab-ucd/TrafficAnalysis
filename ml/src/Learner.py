@@ -395,9 +395,8 @@ class Learner:
         return clf, results
 
     @staticmethod
-    def train_classifier(func, args):
-        return func(args)
-
+    def train_classifier(func, X, y, cv, result_dict, tag):
+        result_dict[tag] = func(X, y, cv)
 
     @staticmethod
     def rand_str(size=6, chars=string.ascii_uppercase + string.digits):
