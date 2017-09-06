@@ -123,7 +123,8 @@ class LatexTableGenerator():
                     precision = str('{:.3%}'.format(mean_conf['precision'])).replace('%', '\%')
                     f1 = str('{:.3%}'.format(mean_conf['f1score'])).replace('%', '\%')
                     mean_score = str('{:.3%}'.format(results['mean_scores'])).replace('%', '\%')
-                    print algorithm_name + ' & ' + dataset + ' & ' + str(results['duration']) + ' & ' + recall \
+                    duration = str('{:.3}'.format(results['duration']))
+                    print algorithm_name + ' & ' + dataset + ' & ' + duration + ' & ' + recall \
                           + ' & ' + fp + ' & ' + precision \
                           + ' & ' + f1 + ' & ' + mean_score + ' \\\\ '
 
@@ -140,7 +141,7 @@ class CtuCCAnalyzer:
         back = [data, labels, feature_names, vec]
 
         Learner.save2file(vec.vocabulary_, output_dir + '/' + "vocabulary.pkl")
-        CtuCCAnalyzer.CtuCCAnalyzer.logger.info(data.shape)
+        CtuCCAnalyzer.logger.info(data.shape)
         clf, cv = Learner.train_tree(data, labels, cross_vali=True,
                                      tree_name='Fig_tree_' + dataset, output_dir=output_dir)
         Learner.save2file(clf, classifier_dir + '\\' + 'classifier.pkl')
@@ -172,7 +173,7 @@ class CtuCCAnalyzer:
         Cmp between bag-of-words, Tf-idf, bag-ngrams, Tf-ngrams
         :return:
         """
-        for model_name in ['bag', 'bag-ngram', 'tf', 'tf-ngram']:
+        for model_name in ['bag']: # 'bag-ngram', 'tf', 'tf-ngram']:
             CtuCCAnalyzer.logger.info(model_name + "----------------------------------")
             for dataset in ['Neris', 'Murlo', 'Virut', 'Sogou']:
                 classifier_dir = base_dir + dataset
@@ -181,6 +182,7 @@ class CtuCCAnalyzer:
 
     @staticmethod
     def train_and_save(X, y, model_name, classifier_dir):
+        outfile = os.path.join(classifier_dir, model_name + 'cv_res_sel.json')
         cv_res = dict()
         results = dict()
         thread1 = Thread(target=Learner.train_classifier, args=(Learner.train_tree, X, y, True, results, 'tree'))

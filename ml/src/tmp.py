@@ -2,6 +2,8 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
 import numpy as np
+from Learner import StemmedCountVectorizer
+from CtuAdAnalyzer import CtuAdAnalyzer
 
 from sklearn.feature_extraction.text import CountVectorizer
 from nltk.stem.snowball import PorterStemmer
@@ -47,9 +49,19 @@ vectorizer = StemmedCountVectorizer(analyzer='char_wb', ngram_range=(6, 8))
 counts = vectorizer.fit_transform(['appverify', 'appverifying', 'clientnew', 'www'])
 print len(vectorizer.get_feature_names()), vectorizer.get_feature_names()
 print vectorizer.transform(['appverify'])
-'''
-vectorizer = TfidfVectorizer(analyzer='word')
-vectorizer.fit_transform(['www.appverify'])
+
+vectorizer = StemmedCountVectorizer(analyzer='word')
+vectorizer.fit_transform(['www.appverify.appverifying'])
 tokens = vectorizer.get_feature_names()
 print vectorizer.transform(['haha', 'www'])
 print tokens
+
+vectorizer = StemmedCountVectorizer(analyzer='char_wb', ngram_range=(3, 6))
+vectorizer.fit_transform(['appverify'])
+tokens = vectorizer.get_feature_names()
+print vectorizer.transform(['haha', 'www'])
+print tokens
+'''
+
+base_dir = 'E\\flows\CTU-13-Family\Ad'
+CtuAdAnalyzer.cv_result_table(base_dir)
