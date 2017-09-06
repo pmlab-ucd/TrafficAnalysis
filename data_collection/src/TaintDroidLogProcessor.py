@@ -197,9 +197,9 @@ class TaintDroidLogProcessor():
 
 
 if __name__ == '__main__':
-    gen_filtered_taint_pcap = True
-    dataset = 'test' #virusshare'
-    sub_dataset = False #True # Whether contain sub dataset
+    gen_filtered_taint_pcap = False
+    dataset = 'virusshare'
+    sub_dataset = True # Whether contain sub dataset
     base_dir = os.path.join('/mnt/Documents/FlowIntent/output/', dataset)
     if gen_filtered_taint_pcap:
         """

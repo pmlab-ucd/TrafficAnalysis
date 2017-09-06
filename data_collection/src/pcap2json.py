@@ -91,7 +91,6 @@ def pcap2jsons(pcap_dir, out_dir, filter_func=None, *args):
         timestamp = timestamp.replace('.', '-')
         timestamp = timestamp.replace(' ', '_')
         filename = str(flow['domain'] + '_' + timestamp + '.json').replace(':', '_').replace('/', '_')
-        filtered.append(flow)
         with open(os.path.join(out_dir, filename), 'w') as outfile:
             try:
                 json.dump(flow, outfile)
@@ -121,5 +120,5 @@ if __name__ == '__main__':
                     print flow['dest'], flow['sport'], flow['uri']
 
     '''
-    dir_1 = '/mnt/Documents/flows/normal/April'
+    dir_1 = '/mnt/Documents/flows/FlowIntent/Location'
     pcap2jsons(dir_1, dir_1)
