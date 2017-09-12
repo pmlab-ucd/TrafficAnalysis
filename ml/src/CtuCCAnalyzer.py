@@ -45,7 +45,6 @@ class LatexTableGenerator():
     def parse_zero_day_res(base_dir):
         for model_name in ['bag', 'bag-ngram', 'tf', 'tf-ngram']:
             print model_name + '__________________________'
-            model = dict()
 
             model_name = model_name + '_'
             with open(os.path.join(base_dir, model_name + 'pred_res.json'), "rb") as fin:
@@ -86,7 +85,7 @@ class LatexTableGenerator():
             model_name = model_name + '_'
 
             for dataset in ['Neris', 'Murlo', 'Virut', 'Sogou']:
-                output_dir = base_dir + dataset
+                output_dir = os.path.join(base_dir, dataset)
 
                 with open(os.path.join(output_dir, model_name + 'cv_res_sel.json'), "rb") as fin:
                     cv_res = simplejson.load(fin)
@@ -107,7 +106,7 @@ class LatexTableGenerator():
                 elif algorithm == 'bayes':
                     algorithm_name = 'Naive Bayes'
                 elif algorithm == 'logistic':
-                    algorithm_name = 'Logistic Regreesion'
+                    algorithm_name = 'Logistic Regression'
                 elif algorithm == 'svm':
                     algorithm_name = 'SVM'
                 else:
@@ -173,7 +172,7 @@ class CtuCCAnalyzer:
         Cmp between bag-of-words, Tf-idf, bag-ngrams, Tf-ngrams
         :return:
         """
-        for model_name in ['bag']: # 'bag-ngram', 'tf', 'tf-ngram']:
+        for model_name in ['bag']:  # 'bag-ngram', 'tf', 'tf-ngram']:
             CtuCCAnalyzer.logger.info(model_name + "----------------------------------")
             for dataset in ['Neris', 'Murlo', 'Virut', 'Sogou']:
                 classifier_dir = base_dir + dataset
@@ -217,7 +216,7 @@ class CtuCCAnalyzer:
         CtuCCAnalyzer.logger.info('Threads Done! Saving cv_res...')
         json.dump(cv_res, codecs.open(outfile, 'w', encoding='utf-8'))
         """
-        
+
         result1, result2, result3, result4, result5 = Pool().map(Learner.train_classifier,
                             [Learner.train_tree, Learner.train_bayes, Learner.train_logistic, Learner.train_SVM, Learner.ocsvm],
                             [X, X, X, X, X], [y, y, y, y, y], [True, True, True, True, True])
@@ -267,7 +266,7 @@ class CtuCCAnalyzer:
             y = Learner.obj_from_file(os.path.join(output_dir, model_name + "y_sel.pkl"))
         else:
             instances, y = Learner.gen_instances(os.path.join(normal_dir, 'March'),
-                                             data_path, char_wb=char_wb, simulate=False)
+                                                 data_path, char_wb=char_wb, simulate=False)
             X, feature_names, vec = Learner.gen_X_matrix(instances, tf=tf, ngrams_range=ngram)
 
             Learner.save2file(X, os.path.join(output_dir, model_name + "X.pkl"))
