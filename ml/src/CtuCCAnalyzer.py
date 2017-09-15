@@ -8,6 +8,10 @@ import codecs
 # import pathos.multiprocessing
 # import multiprocessing
 from threading import Thread
+from datetime import datetime
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.dates as dt
 
 
 class LatexTableGenerator():
@@ -126,6 +130,18 @@ class LatexTableGenerator():
                     print algorithm_name + ' & ' + dataset + ' & ' + duration + ' & ' + recall \
                           + ' & ' + fp + ' & ' + precision \
                           + ' & ' + f1 + ' & ' + mean_score + ' \\\\ '
+
+    @staticmethod
+    def event_duration():
+        df = pd.read_csv('data.csv')
+        df.amin = pd.to_datetime(df.amin).astype(datetime)
+        df.amax = pd.to_datetime(df.amax).astype(datetime)
+
+        fig = plt.figure()
+        ax = fig.add_subplot(111)
+        ax = ax.xaxis_date()
+        ax = plt.hlines(df.index, dt.date2num(df.amin), dt.date2num(df.amax))
+
 
 
 class CtuCCAnalyzer:
