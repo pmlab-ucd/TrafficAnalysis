@@ -10,6 +10,8 @@ from dpkt.compat import compat_ord
 # import win_inet_pton
 import json
 import os
+import simplejson
+import re
 
 from PacpHandler import PcapHandler
 from parse_ctu_label import read_csv, csv_filter_http
@@ -99,6 +101,39 @@ def pcap2jsons(pcap_dir, out_dir, filter_func=None, *args):
     return filtered
 
 
+def dir2jsons(json_dir):
+        jsons = []
+        if json_dir is None:
+            return jsons
+        for root, dirs, files in os.walk(json_dir, topdown=False):
+            for filename in files:
+                if '201' in filename and re.search('json$', filename):
+                    with open(os.path.join(root, filename), "rb") as fin:
+                        try:
+                            jsons.append(simplejson.load(fin))
+                        except Exception as e:
+                            pass
+                            # Utilities.logger.error(e)
+        return jsons
+
+
+def json2pcap(json_dir, pcap_path, out_dir, tag=''):
+    """
+    Parse json and filter the pcap to generte subpcap
+    :param json_dir:
+    :param pcap_path:
+    :param out_dir:
+    :return:
+    """
+    jsons = dir2jsons(json_dir)
+    print len(jsons)
+    pkts = PcapHandler.get_packets(pcap_path)
+    for json in jsons:
+        print json
+        PcapHandler.filter_pcap(out_dir, pkts, json['dest'],
+                            json['sport'], tag=tag)
+
+
 if __name__ == '__main__':
     '''
     dir = '/mnt/Documents/flows/CTU-13/CTU-13-1/'
@@ -120,5 +155,8 @@ if __name__ == '__main__':
                     print flow['dest'], flow['sport'], flow['uri']
 
     '''
-    dir_1 = '/mnt/Documents/flows/FlowIntent/Location'
-    pcap2jsons(dir_1, dir_1)
+    #dir_1 = '/mnt/Documents/flows/FlowIntent/Address'
+    #pcap2jsons(dir_1, dir_1)
+
+    json2pcap('/mnt/Documents/flows/Event/TCP-CC', '/mnt/Documents/flows/Event/botnet-capture-20110817-bot.pcap',
+              '/mnt/Documents/flows/Event/TCP-CC', tag='TCP-CC')
