@@ -12,7 +12,7 @@ from datetime import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as dt
-
+from PacpHandler import PcapHandler
 
 class LatexTableGenerator():
     @staticmethod
@@ -132,7 +132,16 @@ class LatexTableGenerator():
                           + ' & ' + f1 + ' & ' + mean_score + ' \\\\ '
 
     @staticmethod
-    def event_duration():
+    def event_duration(out_dir):
+        timestamps = []
+        for root, dirs, files in os.walk(out_dir, topdown=True):
+            for name in files:
+                # print(os.path.join(root, name))
+                if str(name).endswith('.pcap'):
+                    pcap_path = os.path.join(root, name)
+                    timestamps.append(PcapHandler.duration_pcap(pcap_path))
+        print timestamps
+        '''
         df = pd.read_csv('data.csv')
         df.amin = pd.to_datetime(df.amin).astype(datetime)
         df.amax = pd.to_datetime(df.amax).astype(datetime)
@@ -141,7 +150,7 @@ class LatexTableGenerator():
         ax = fig.add_subplot(111)
         ax = ax.xaxis_date()
         ax = plt.hlines(df.index, dt.date2num(df.amin), dt.date2num(df.amax))
-
+        '''
 
 
 class CtuCCAnalyzer:

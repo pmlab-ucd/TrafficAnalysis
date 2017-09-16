@@ -99,7 +99,7 @@ class PcapHandler:
             print session
             for packet in sessions[session]:
                 timestamps.append(packet.time)
-        print min(timestamps), max(timestamps)
+        return min(timestamps), max(timestamps)
         '''
         with open(pcap_path, 'rb') as f:
             print pcap_path
