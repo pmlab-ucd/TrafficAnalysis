@@ -38,6 +38,15 @@ class PcapHandler:
 
     @staticmethod
     def filter_pcap(dirname, pkts, ip, port, tag=''):
+        """
+        Timestamp is not accurate
+        :param dirname:
+        :param pkts:
+        :param ip:
+        :param port:
+        :param tag:
+        :return:
+        """
         ip = str(ip)
         port = str(port)
         output_path = os.path.join(dirname, ip + '_filtered_' + tag + '_' + str(port) + '.pcap')
@@ -60,9 +69,74 @@ class PcapHandler:
         wrpcap(output_path, filtered)
 
     @staticmethod
+    def filter_pcap_tshark(dirname, pcap_path, ip, port, tag=''):
+        '''
+        This does not include the HTTP response
+        :param dirname:
+        :param pcap_path:
+        :param ip:
+        :param port:
+        :param tag:
+        :return:
+        '''
+        ip = str(ip)
+        port = str(port)
+        output_path = os.path.join(dirname, ip + '_filtered_' + tag + '_' + str(port) + '.pcap')
+        if os.path.exists(output_path):
+            return
+        os.system('tshark -r ' + pcap_path + ' -Y "ip.addr==' + ip + ' and tcp.srcport==' + port + '" -w ' + output_path)
+
+    @staticmethod
+    def duration_pcap(pcap_path):
+        pkts = rdpcap(pcap_path)
+        return PcapHandler.duration(pkts)
+
+    @staticmethod
+    def duration(pkts):
+        timestamps = []
+        sessions = pkts.sessions()
+        for session in sessions:
+            print session
+            for packet in sessions[session]:
+                timestamps.append(packet.time)
+        print min(timestamps), max(timestamps)
+        '''
+        with open(pcap_path, 'rb') as f:
+            print pcap_path
+            timestamps = []
+            try:
+                pcap = dpkt.pcap.Reader(f)
+            except Exception as e:
+                return
+            for timestamp, buf in pcap:
+                # Unpack the Ethernet frame (mac src/dst, ethertype)
+                try:
+                    eth = dpkt.ethernet.Ethernet(buf)
+                except Exception as e:
+                    print e
+                    continue
+                # Make sure the Ethernet data contains an IP packet
+
+
+                # Now grab the data within the Ethernet frame (the IP packet)
+                packet = eth.data
+
+                # Check for TCP in the transport layer
+                if isinstance(packet.data, dpkt.tcp.TCP):
+                    # Set the TCP data
+                    tcp = packet.data
+                    timestamps.append(timestamp)
+            print min(timestamps), max(timestamps)
+        '''
+
+
+    @staticmethod
     def http_requests(pcap_path, label='', filter_func=None, filter_flow=None, args=None):
         with open(pcap_path, 'rb') as f:
-            pcap = dpkt.pcap.Reader(f)
+            try:
+                pcap = dpkt.pcap.Reader(f)
+            except:
+                return
             # flows = print_http_requests(pcap, label, filter_func, args)
             return PcapHandler.http_requests_helper(pcap, label, filter_func=filter_func,
                                                     filter_flow=filter_flow, args=args)
@@ -348,8 +422,66 @@ class PcapHandler:
             print e.args
             return
 
+    @staticmethod
+    def tcp_streams(pcap_path, out_dir=None):
+        amount = os.popen('tshark -r ' + pcap_path + ' -T fields -e tcp.stream | sort -n | tail -1').read()
+        print amount
+
+        streams = []
+
+        for i in range(int(amount)):
+            stream = dict()
+            cmd = 'tshark -r ' + pcap_path + ' -qz follow,tcp,ascii,' + str(i)
+            output = os.popen(cmd).readlines()
+            for line in output:
+                if 'Node 0' in line:
+                    line = line.replace(': ', '-')
+
+                    ip = line.split(':')[0].split('-')[1]
+                    port = line.split(':')[1].replace('\n', '')
+                    stream['src'] = ip
+                    stream['sport'] = port
+                if 'Node 1' in line:
+                    line = line.replace(': ', '-')
+
+                    ip = line.split(':')[0].split('-')[1]
+                    port = line.split(':')[1].replace('\n', '')
+                    stream['dest'] = ip
+                    stream['dport'] = port
+                    stream['index'] = i
+                    print stream
+                    streams.append(stream)
+
+        if out_dir is None:
+            return
+        for i in range(int(amount)):
+            out_pcap = os.path.join(out_dir, os.path.basename(pcap_path).replace('.pcap', '') + '_ts_' + str(i) + '.pcap')
+            if os.path.exists(out_pcap):
+                continue
+            cmd = 'tshark -r ' + pcap_path + ' -Y "tcp.stream==' + str(i) + '" -w ' + out_pcap
+            print cmd
+            os.system(cmd)
+        return streams
+
 if __name__ == '__main__':
-    pcap_path = '/mnt/Documents/FlowIntent/output/test/cfa9c6ea949a3fc002c38ca3510acfbb5ec5a210d56c12ecac815b8806718602/com.appspot.swisscodemonkeys.steam0711-21-34-02.pcap'
-    with open(pcap_path, 'rb') as f:
-        pcap = dpkt.pcap.Reader(f)
-        PcapHandler.print_pacp(pcap)
+    pcap_path = '/mnt/Documents/FlowIntent/output/test/2421536307fd9a885cc66c58419cea2e307620dfb67ab96f11aa33380da14c93' \
+                '/com.mogo.katongllk0710-08-27-45.pcap'
+    PcapHandler.tcp_streams(pcap_path)
+
+    """
+    p = rdpcap(pcap_path)
+    sessions = p.sessions()
+    for session in sessions:
+        http_payload = ""
+        print sessions[session]
+        for packet in sessions[session]:
+            try:
+                if packet[TCP].dport == 80 or packet[TCP].sport == 80:
+                    http_payload += str(packet[TCP].payload)
+                print packet[TCP].sport
+                break
+            except:
+                pass
+
+    """
+

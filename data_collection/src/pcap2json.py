@@ -16,6 +16,9 @@ import re
 from PacpHandler import PcapHandler
 from parse_ctu_label import read_csv, csv_filter_http
 
+from scapy.all import *
+from scapy.layers.inet import IP, TCP
+
 
 def mac_addr(address):
     """Convert a MAC address to a readable/printable string
@@ -116,8 +119,21 @@ def dir2jsons(json_dir):
                             # Utilities.logger.error(e)
         return jsons
 
+def examin_session(session, ip, port):
+    for pkt in session:
+        if IP in pkt and TCP in pkt:
+            ip_src = pkt[IP].src
+            ip_dst = pkt[IP].dst
+            tcp_sport = pkt[TCP].sport
+            tcp_dport = pkt[TCP].dport
 
-def json2pcap(json_dir, pcap_path, out_dir, tag=''):
+            if (ip_src == ip or ip_dst == ip) and (
+                    tcp_dport == port or tcp_sport == port):
+                return True
+    return False
+
+
+def filter_tcp_streams(pcap_path, out_dir, json_dir, gen_streams=False, tag=''):
     """
     Parse json and filter the pcap to generte subpcap
     :param json_dir:
@@ -125,13 +141,65 @@ def json2pcap(json_dir, pcap_path, out_dir, tag=''):
     :param out_dir:
     :return:
     """
-    jsons = dir2jsons(json_dir)
-    print len(jsons)
-    pkts = PcapHandler.get_packets(pcap_path)
-    for json in jsons:
-        print json
-        PcapHandler.filter_pcap(out_dir, pkts, json['dest'],
-                            json['sport'], tag=tag)
+    #pkts = PcapHandler.get_packets(pcap_path)
+    if gen_streams:
+        if not os.path.exists(out_dir):
+            os.makedirs(out_dir)
+        pkts = rdpcap(pcap_path)
+        jsons = dir2jsons(json_dir)
+        print len(jsons)
+        for json in jsons:
+            if json['src'] != '147.32.84.165' and json['dest'] != '147.32.84.165':
+                continue
+            print json
+            PcapHandler.filter_pcap(out_dir, pkts, json['dest'],
+                                    json['sport'], tag=tag)
+
+        """
+        streams = PcapHandler.tcp_streams(pcap_path)
+        jsons = dir2jsons(json_dir)
+        print len(jsons)
+        for json in jsons:
+            if json['src'] != '147.32.84.165' and json['dest'] != '147.32.84.165':
+                continue
+            print json
+            ip_src = stream['src']
+            ip_dest = stream['dest']
+            tcp_sport = stream['sport']
+            tcp_dport = stream['dport']
+            ip = json['dest']
+            port = json['sport']
+            for stream in streams:
+                if (ip_src == ip or ip_dest == ip) and (
+                                tcp_dport == port or tcp_sport == port):
+                    i  = stream['index']
+                    out_pcap = os.path.join(out_dir, ip + '_filtered_' + tag + '_' + str(port) + '.pcap')
+                    cmd = 'tshark -r ' + pcap_path + ' -Y "tcp.stream==' + str(i) + '" -w ' + out_pcap
+                    print cmd
+                    os.system(cmd)
+            """
+        return
+
+
+
+
+
+    ts_pks = []
+    for root, dirs, files in os.walk(out_dir, topdown=True):
+        for name in files:
+            # print(os.path.join(root, name))
+            if '_ts_' in name and str(name).endswith('.pcap'):
+                ts_pcap_path = os.path.join(root, name)
+                if os.path.exists(ts_pcap_path):
+                    try:
+                        pkts = rdpcap(pcap_path)
+                        ts_pks.append(pkts)
+                    except:
+                        continue
+                    PcapHandler.duration_pcap(ts_pcap_path)
+
+
+
 
 
 if __name__ == '__main__':
@@ -157,6 +225,7 @@ if __name__ == '__main__':
     '''
     #dir_1 = '/mnt/Documents/flows/FlowIntent/Address'
     #pcap2jsons(dir_1, dir_1)
-
-    json2pcap('/mnt/Documents/flows/Event/TCP-CC', '/mnt/Documents/flows/Event/botnet-capture-20110817-bot.pcap',
-              '/mnt/Documents/flows/Event/TCP-CC', tag='TCP-CC')
+    label = 'Ad'
+    filter_tcp_streams('/mnt/Documents/flows/Event/147-32-84-165/147-32-84-165.pcap',
+              '/mnt/Documents/flows/Event/147-32-84-165/' + label, '/mnt/Documents/flows/Event/' + label,
+                       tag=label, gen_streams=True)
