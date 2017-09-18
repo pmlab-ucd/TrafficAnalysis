@@ -425,9 +425,10 @@ class PcapHandler:
     @staticmethod
     def tcp_streams(pcap_path, out_dir=None):
         amount = os.popen('tshark -r ' + pcap_path + ' -T fields -e tcp.stream | sort -n | tail -1').read()
-        print amount
-
         streams = []
+        print amount
+        '''
+        
 
         for i in range(int(amount)):
             stream = dict()
@@ -451,6 +452,7 @@ class PcapHandler:
                     stream['index'] = i
                     print stream
                     streams.append(stream)
+        '''
 
         if out_dir is None:
             return

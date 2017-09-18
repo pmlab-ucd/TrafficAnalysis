@@ -226,6 +226,8 @@ if __name__ == '__main__':
     #dir_1 = '/mnt/Documents/flows/FlowIntent/Address'
     #pcap2jsons(dir_1, dir_1)
     label = 'Ad'
-    filter_tcp_streams('/mnt/Documents/flows/Event/147-32-84-165/147-32-84-165.pcap',
-              '/mnt/Documents/flows/Event/147-32-84-165/' + label, '/mnt/Documents/flows/Event/' + label,
-                       tag=label, gen_streams=True)
+    pcap_path = '/mnt/Documents/flows/Event/147-32-84-165/147-32-84-165.pcap'
+    #filter_tcp_streams(pcap_path,
+     #         '/mnt/Documents/flows/Event/147-32-84-165/' + label, '/mnt/Documents/flows/Event/' + label,
+      #                 tag=label, gen_streams=True)
+    streams = PcapHandler.tcp_streams(pcap_path, out_dir='/mnt/Documents/flows/Event/147-32-84-165/')
