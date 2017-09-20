@@ -3,19 +3,10 @@
     Convert pcap files into jsons, each trace has a json
     Filter traces based on the given labels
 """
-import dpkt
-import datetime
-import socket
 from dpkt.compat import compat_ord
-# import win_inet_pton
 import json
-import os
 import simplejson
-import re
-import csv
 import pandas as pd
-from datetime import datetime
-import matplotlib.pyplot as plt
 import matplotlib.dates as dt
 import pylab
 import datetime
