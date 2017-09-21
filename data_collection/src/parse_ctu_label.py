@@ -89,7 +89,45 @@ def mapping_c2_attack(csv_path, json_path=None, gexf_path=''):
         os.remove(gexf_path)
     nx.write_gexf(G, gexf_path)
 
-    nx.draw(G, cmap=plt.get_cmap('jet'), node_color=color_map)
+    pos = nx.spring_layout(G, scale=2)
+    src = list(map.keys())
+    dst = []
+    for node in G.node:
+        if node not in src:
+            dst.append(node)
+    labels = {}
+    counts = 1
+    countt = 1
+    for node in G:
+        if node in map:
+            labels[node] = (str(counts))
+            counts += 1
+        else:
+            labels[node] = (str(countt))
+            countt += 1
+
+    pos = nx.shell_layout(G, nlist=[src, dst])
+
+    nx.draw(G, pos, scale=5, node_color=color_map, with_labels=False)
+
+
+    nx.draw_networkx_labels(G, pos, labels)
+    '''
+    #nx.draw(G, cmap=plt.get_cmap('jet'), node_color=color_map)
+    #nx.draw_circular(G, with_labels=False, center=list(map.keys()))
+    # plt.plot([10,10,14,14,10],[2,4,4,2,2],'r')
+    col_labels = ['index', 'ip']
+    table_vals = []
+    for label in labels:
+        table_vals.append([label, labels[label]])
+    # the rectangle is where I want to place the table
+    the_table = plt.table(cellText=table_vals,
+                          colWidths=[0.01] * 2,
+                          colLabels=col_labels,
+                          bbox=[0.25, -0.5, 0.5, 0.3],
+                          loc='center right')
+    plt.text(12, 3.4, 'Table Title', size=8)
+    '''
     plt.show()
 
     #app = Viewer(G)
